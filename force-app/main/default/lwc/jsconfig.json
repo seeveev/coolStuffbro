@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/demo": [
+                "../staticresources/Jtreeview/Jquerytreeview/demo/demo.js"
+            ],
+            "c/ckeditor": [
+                "../staticresources/richtextareaStatic1/ckeditor/ckeditor.js"
+            ],
+            "c/codemirror": [
+                "../staticresources/richtextareaStatic1/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

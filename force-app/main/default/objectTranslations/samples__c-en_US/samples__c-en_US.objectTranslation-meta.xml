@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>samples</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>sampless</value>
+    </caseValues>
+    <layouts>
+        <layout>samples Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- sample --></label>
+        <name>sample</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Get well soon nana --></errorMessage>
+        <name>Ruleforprofile</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- orey jaffaa .. dobinaiyaa kalluuu --></errorMessage>
+        <name>error_prompt</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR ERROR --></errorMessage>
+        <name>namerule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- orey yedhava.. value marchaku ra --></errorMessage>
+        <name>rule_2</name>
+    </validationRules>
+</CustomObjectTranslation>

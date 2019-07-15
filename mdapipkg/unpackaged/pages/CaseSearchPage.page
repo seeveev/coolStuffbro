@@ -1,0 +1,58 @@
+<apex:page standardController="Case" extensions="ClsCase" showHeader="true" sidebar="true" >
+<script>
+    var myWindow;
+    function pop(idValue) {
+       // alert(idValue);
+        myWindow = window.open('/apex/CaseSearchPagePopUp?id=' + idValue,'','width=550,height=450,status=yes,scrollbars=no,resizable=no');
+    }
+</script>
+
+<apex:form >
+    <apex:image url="https://c.na12.content.force.com/servlet/servlet.FileDownload?file=015U000000065P1" width="250" height="50" />
+    <apex:pageBlock title="Search Section" id="block">
+        <apex:pageblockButtons >
+           <apex:commandButton value="Search" rerender="refreshdata" action="{!InsertFindResult}" />
+           <apex:commandButton value="Search Store" action="{!PageFindResult}" />
+        </apex:pageblockButtons>
+        
+        <apex:pageblockSection title="Case Fields" columns="2">
+        
+            <apex:pageblockSectionItem >
+                <apex:outputLabel value="Number of Records: " for="numberField" tabindex="1" />
+                <apex:inputtext id="numberField" value="{!typeVal}"    />
+            </apex:pageblockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Type : " for="type" tabindex="1" />
+                <apex:selectList id="type" size="1" value="{!typeValDropDown}" >
+                    <apex:selectOptions value="{!TypeDD}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="From Date : " for="fromDateField" tabindex="3" />
+                <apex:Inputfield id="fromDateField" value="{!fromDate.date__c}"  />
+            </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="To Date : " for="toDateField" tabindex="4" />
+                <apex:Inputfield id="toDateField" value="{!toDate.date__c}"  />
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageblockSection>
+        
+        <apex:pageblockSection title="Filtered Data"  id="blockSection"  >
+       
+            <apex:outputPanel id="refreshdata" >
+                <apex:pageBlockTable id="blocktab" value="{!customs}" var="merD" style="width: 800px" rendered="{!NOT(ISNULL(customs))}" >
+                    <apex:column value="{!merD.CaseNumber}" onclick="pop('{!merD.id}');return true;"/>
+                    <apex:column value="{!merD.Type}"/>
+                    <apex:column value="{!merD.Subject}"/>
+                    <apex:column value="{!merD.Priority}"/>
+                    <apex:column value="{!merD.Yes__c}"/>
+                    <apex:column value="{!merD.No__c}"/>
+                    <apex:column value="{!merD.Not_Applicable__c}"/>
+                </apex:pageBlockTable>
+                  
+            </apex:outputPanel>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

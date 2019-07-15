@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>User Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Users Management</value>
+    </caseValues>
+    <fields>
+        <label><!-- Agency Code --></label>
+        <name>Agency_Code__c</name>
+        <picklistValues>
+            <masterLabel>DHAF - OIG</masterLabel>
+            <translation><!-- DHAF - OIG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHAM - BARDA</masterLabel>
+            <translation><!-- DHAM - BARDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHGO - CMS</masterLabel>
+            <translation><!-- DHGO - CMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHRA - PSC</masterLabel>
+            <translation><!-- DHRA - PSC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHRC - CDC</masterLabel>
+            <translation><!-- DHRC - CDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHRF - FDA</masterLabel>
+            <translation><!-- DHRF - FDA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Middle Name --></label>
+        <name>Middle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Office Code --></label>
+        <name>Office_Code__c</name>
+        <picklistValues>
+            <masterLabel>00100 OS DCG, Washington DC</masterLabel>
+            <translation><!-- 00100 OS DCG, Washington DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>00500 00500 CMS, Baltimore, MD</masterLabel>
+            <translation><!-- 00500 00500 CMS, Baltimore, MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>00NAF CMS NAF CONTRACTS</masterLabel>
+            <translation><!-- 00NAF CMS NAF CONTRACTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>750401 OFFICE OF INSPECTOR GENERAL</masterLabel>
+            <translation><!-- 750401 OFFICE OF INSPECTOR GENERAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</masterLabel>
+            <translation><!-- 75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</masterLabel>
+            <translation><!-- 75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trouble Ticket</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trouble Tickets</value>
+    </caseValues>
+    <fields>
+        <label><!-- checkbox --></label>
+        <name>checkbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- dependebale --></label>
+        <name>dependebale__c</name>
+        <picklistValues>
+            <masterLabel>x</masterLabel>
+            <translation><!-- x --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>y</masterLabel>
+            <translation><!-- y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>z</masterLabel>
+            <translation><!-- z --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- fffff --></label>
+        <name>fffff__c</name>
+        <picklistValues>
+            <masterLabel>fffggf</masterLabel>
+            <translation><!-- fffggf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>fgfhgfh</masterLabel>
+            <translation><!-- fgfhgfh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gfjghjghkgj</masterLabel>
+            <translation><!-- gfjghjghkgj --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

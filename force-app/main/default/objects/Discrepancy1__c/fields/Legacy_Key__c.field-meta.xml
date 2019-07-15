@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Key__c</fullName>
+    <description>Source table: rod / csc_mst 
+Source column: rod_key / csc_mst_key
+Web service: name: N/A
+Web service field:  N/A</description>
+    <externalId>true</externalId>
+    <label>Legacy Key</label>
+    <length>40</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

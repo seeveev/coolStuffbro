@@ -1,0 +1,27 @@
+<apex:page controller="Sample_Accounts">
+    <apex:form >
+      <!--  <apex:pageblock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!listName_Nandith}" var="item">
+                    <apex:column value="{!item.id}"/>
+                    <apex:column value="{!item.name}"/>
+                    
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageblock> -->
+        <!-- Search code-->
+        <apex:pageblock >
+            <apex:pageBlockSection columns="1">
+                
+                <apex:inputtext value="{!searchText}"></apex:inputtext>
+                <apex:commandButton action="{!searchValue}" value="Search Data"/>
+                
+                <apex:pageBlockTable value="{!listName_Nandith}" var="item">
+                    <apex:column value="{!item.id}"/>
+                    <apex:column value="{!item.name}"/>
+                    
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

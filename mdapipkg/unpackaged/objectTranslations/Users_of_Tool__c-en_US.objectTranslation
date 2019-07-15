@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Users of Tool</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Users of Tools</value>
+    </caseValues>
+    <fields>
+        <label><!-- User Count --></label>
+        <name>User_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Id --></label>
+        <name>User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Information --></label>
+        <name>User_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Record Id --></label>
+        <name>User_Record_Id__c</name>
+        <relationshipLabel><!-- Users of Tools --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

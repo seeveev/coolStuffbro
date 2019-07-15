@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Handshake transaction History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Handshake transaction Historys</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACT --></label>
+        <name>ACT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Core --></label>
+        <name>Core__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>Customer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time --></label>
+        <name>Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dish Account Number --></label>
+        <name>Dish_Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

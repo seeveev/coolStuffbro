@@ -1,0 +1,48 @@
+<apex:page standardController="Opportunity" extensions="opportunitydetails">
+
+<apex:form >
+   
+<!-- <apex:detail relatedList="true" title="true"/> -->
+
+
+<apex:pageBlock >
+{!SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(LEFT($Api.Partner_Server_URL_210, FIND( '/services', $Api.Partner_Server_URL_260)), 'visual.force', 'visual.force'), 'c.', ''),'https://',''),'/','')}<br/>
+{!$Api.Partner_Server_URL_210}
+{!$CurrentPage.URL}
+        <apex:pageBlockButtons >
+              <apex:commandButton value="Edit" action="{!edit}"/>
+              <apex:commandButton value="Delete" action="{!delete}"/>
+              <apex:commandButton value="Clone" action="{!clone}"/>
+              <apex:commandButton value="save" action="{!save}"/>
+
+</apex:pageBlockButtons>
+<apex:outputpanel rendered="{!!bolReadOnly}">
+    <apex:pageblockSection title="Opportunity" >
+         <apex:inputField value="{!objOpp.Name}"/>
+         <apex:inputField value="{!objOpp.OwnerId}"/>
+           <apex:inputField value="{!objOpp.Amount}"/>
+         <apex:inputField value="{!objOpp.CloseDate}"/>
+         <apex:inputField value="{!objOpp.ExpectedRevenue}"/>
+         <apex:inputField value="{!objOpp.ForecastCategoryName}"/>
+         <apex:inputField value="{!objOpp.NextStep}"/>
+         <apex:inputField value="{!objOpp.Probability}"/>
+    </apex:pageblockSection>
+</apex:outputpanel>
+<apex:outputpanel rendered="{!bolReadOnly}">
+    <apex:pageblockSection title="Opportunity" >
+         <apex:outputField value="{!objOpp.Name}"/>
+         <apex:outputField value="{!objOpp.OwnerId}"/>
+          <apex:outputField value="{!objOpp.Amount}"/>
+         <apex:outputField value="{!objOpp.CloseDate}"/>
+         <apex:outputField value="{!objOpp.ExpectedRevenue}"/>
+         <apex:outputField value="{!objOpp.ForecastCategoryName}"/>
+         <apex:outputField value="{!objOpp.NextStep}"/>
+         <apex:outputField value="{!objOpp.Probability}"/>
+    </apex:pageblockSection>
+</apex:outputpanel>
+
+</apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

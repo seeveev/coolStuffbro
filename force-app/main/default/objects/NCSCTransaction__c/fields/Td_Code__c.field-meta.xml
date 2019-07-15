@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Td_Code__c</fullName>
+    <description>Target Table: fin_305/a15/zla
+Target Column: fin_305_t_d_cde/ a15_td/  zla_original_td_cde / zsa_acn_cde</description>
+    <externalId>false</externalId>
+    <label>Td Code</label>
+    <length>2</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

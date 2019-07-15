@@ -1,0 +1,17 @@
+<apex:page standardController="Contract" extensions="ContractOverrideController">
+      <apex:form >
+          <apex:pageblock >
+              <apex:pageblockbuttons >
+                  <apex:commandbutton value="Save" action="{!save}"/>
+              </apex:pageblockbuttons>
+              <apex:pageblockSection >
+                  <apex:inputfield value="{!objCon.Name}"/>
+                  <apex:inputfield value="{!objCon.AccountID}"/>
+                  <apex:inputfield value="{!objCon.Opportunity__c}"/>
+                  <apex:inputfield value="{!objCon.Status}"/>
+                  <apex:inputfield value="{!objCon.StartDate}"/>
+                  <apex:inputfield value="{!objCon.ContractTerm}"/>
+              </apex:pageblockSection>
+          </apex:pageblock>
+      </apex:form>
+</apex:page>

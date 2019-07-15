@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sample_record_type</fullName>
+    <active>true</active>
+    <businessProcess>sample</businessProcess>
+    <description>this is my first sample record type</description>
+    <label>sample record type</label>
+    <picklistValues>
+        <picklist>DeliveryInstallationStatus__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yet to begin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>%224%2F27%2F11 WR Sales Blitz%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%2425 BHSI OFFER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2F19%2F12 CPE Sales Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2F17%2F12 CPE Sales Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5-24-11 CPE Flyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%2F3%2F11 WR Sales Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%408</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avaya Triple 7 Promo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B Customer Referral Prog%2E May-10-2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BANT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE32212</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPE71912</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cha-Ching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citynet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colusa%2FWilliams Field Blitz - 12%2F16%2F09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colusa42612</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comcast Competitive Threat 2-15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comstock%27s Ad July 2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DW - Existing Unassigned Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Main</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door to Door Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durham Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Durham Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethernet62112</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IP Connect leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June HSI Sales Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List - Purchased</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List - Rented</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest DIA Campaign Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest DIA Campaign Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moab Sales Blitz - September 2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Myrtle Beach WOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NorCal Edge Out Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obrien 2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Alternate Channel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rochester Prospect List 12%2F2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB %E2%80%93 National Winback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB %E2%80%93 West Winback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB %E2%80%93West field blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMB -National field blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SWATT Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spinco Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>StratusWave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Winback 2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Take the Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Team Stidolph Sales Blitz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing Sales Blitz - 9%2F17%2F09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV Winback - Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WV Winback - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Region CPE TTL Blitz 1%2F25%2F12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WinWenatchee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WinbackWA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wireless 22412</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>coosbay51612</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>elkgrove52312</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>patterson52412</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Customer - Downgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer - Replacement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer - Upgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

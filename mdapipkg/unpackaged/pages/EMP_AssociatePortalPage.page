@@ -1,0 +1,423 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" docType="html-5.0" controller="EMP_AssociatePortalPage_Controller">
+    <head>
+        <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="CDK Global" content="" />
+        <meta name="description" content="" />
+        
+        <title>CDK Global Associate Community</title>
+        <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'css/bootstrap.min.css')}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.BootstrapYAMM, 'yamm/yamm.css')}"/>
+          <apex:stylesheet value="{!URLFOR($Resource.FontAwesome, '4.3.0/css/font-awesome.min.css')}"/>
+        <apex:stylesheet value="{!$Resource.EMP_AssociatePortalPage_CSS}" />
+        
+        <!-- Bootstrap core JavaScript -->
+        <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Bootstrap, 'js/bootstrap.min.js')}"/>
+        
+    </head>
+    
+    <script type="text/javascript"> 
+    jQuery(document).ready(function(){
+        jQuery("marquee").hover(function(){
+            this.stop();
+        }, function() {
+            this.start();
+        });
+    });
+    
+    function openSearchPage() {
+        var searchTerm = jQuery("#searchTxt").val();
+        if(searchTerm.length === 0 || !searchTerm.trim()) {
+            jQuery("#errorMsg").text(' Enter a search term!');
+            return false;
+        }
+        searchTerm = '{!$Site.Prefix}/_ui/search/ui/UnifiedSearchResults?initialViewMode=feeds&str=' + searchTerm;
+        jQuery("#errorMsg").text('');
+        
+        var newWin = window.open(searchTerm, '_self');
+        newWin.focus();
+    }
+    
+    function searchEnterKeyPressed(evt)
+    {
+        // look for window.event in case event isn't passed in
+        evt = evt || window.event;
+        if (evt.keyCode == 13)
+        {
+            openSearchPage();
+            return false;
+        }
+        return true;
+    }
+    
+    </script>
+    <style type="text/css">
+        .dropdown:hover > .dropdown-menu { display: block;}
+    </style>
+    <body>        
+        <div class="wrapper container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href='http://cdkglobal.com/' target="_Blank">
+                            <!-- <apex:image style="max-width:100px; float:left;" value="{!URLFOR($Resource.EMP_PortalImages, 'CDK_Logo_TM_RGB_300dpi_155x125.png')}" ></apex:image>
+-->                       
+                        </a>
+                    </div>
+                    <div class="col-md-8 header-right branded-links">
+                        <apex:form >
+                            <i class="fa fa-user"></i>
+                            <a href="{!$Site.Prefix}/_ui/core/userprofile/UserProfilePage?u={!$User.Id}" target="">Welcome {!$User.FirstName} {!$User.LastName}</a>! 
+                            <br/>
+                            
+                            <i class="fa fa-sign-out"></i>
+                            Not {!$User.FirstName}? <a href="{!$Site.Prefix}/secur/logout.jsp" target="_top">Logout</a>
+                            <br/>
+                            
+                            <i class="fa fa-weixin"></i> <span>Need Help? </span><a href="{!$Site.Prefix}/apex/EMP_AssociatePortalPage?page=EMP_ITSupportCommunity" >Contact Support</a><br/>
+                            <i class="fa fa-flag"></i> <span>Community Home: </span>
+                            
+                            <select id="CommunityHome" autocomplete="off" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                                <apex:repeat value="{!CommunityHomeOptions}" var="item" >
+                                    <option value="{!CommunityHomeOptions[item]}">{!item}</option>
+                                </apex:repeat>
+                            </select>
+                            
+                            <script type="text/javascript">
+                            var CommunityHomeOptions = document.getElementById("CommunityHome").options;
+                            var CommunityHomeParameter = "{!$CurrentPage.parameters.home}";
+                            if (CommunityHomeOptions && CommunityHomeParameter != "") {
+                                for(var opt in CommunityHomeOptions) { 
+                                    if (CommunityHomeOptions[opt] && CommunityHomeOptions[opt].text &&
+                                        CommunityHomeOptions[opt].text.toLowerCase() == CommunityHomeParameter.toLowerCase()) 
+                                    {
+                                        CommunityHomeOptions[opt].selected = true;
+                                    }
+                                } 
+                            }
+                            </script>
+                        </apex:form>
+                    </div> 
+                </div> 
+            </div>
+            
+            <div class="yamm navbar navbar-static-top navbar-default margin-bottom">
+                
+                
+                <div class="container">
+                    <!-- NAVBAR -->                     
+                    
+                    <div class="navbar-header">
+                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"> 
+                            <span class="icon-bar"></span><span class="icon-bar">
+                            </span>
+                            <span class="icon-bar"></span> 
+                        </button> 
+                        <a class="navbar-brand" href="/Employees/apex/EMP_AssociatePortalPage"><i class="fa fa-home"></i>&nbsp;Associate Community</a>
+                    </div>
+                    
+                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Mega Menu Nav - ->  
+
+<apex:repeat value="{!AllNodes}" var="menuItem" id="theRepeat1">
+<apex:repeat value="{!AllNodes[menuItem].FirstLevelSObjects}" var="men" id="theRepeat1">
+{!men.Name}
+<br/>
+</apex:repeat>
+<li class="{!AllNodes[menuItem].Value.Style_Class__c} {!IF(AllNodes[menuItem].Value.RecordType.Name = 'Mega Menu','dropdown','')}" >
+<a href="{!IF(ISBLANK(AllNodes[menuItem].Value.URL__c),AllNodes[menuItem].Value.URL__c,'#')}" 
+class="dropdown-toggle" style="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Mega Menu','','display: None;')}">
+{!AllNodes[menuItem].Value.name}
+<b class="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Mega Menu','caret','')}"></b>
+</a>
+<!--if recordtype is mega menu.. only - ->
+<ul class="dropdown-menu">
+<li class="">
+<!-- Content container to add padding - ->
+<div class="yamm-content">
+<div class="row">
+<apex:repeat value="{!AllNodes[menuItem].SubTrees}" var="subMenu">
+<ul class="{!AllNodes[menuItem].SubTrees[subMenu].Value.Style_Class__c} list-unstyled">
+<li style="{!IF(ISBLANK(AllNodes[menuItem].SubTrees[subMenu].Value.Label__c),'display:none;','')}">
+<h4>
+{!AllNodes[menuItem].SubTrees[subMenu].Value.Label__c}
+</h4>
+</li>
+<apex:repeat value="{!AllNodes[menuItem].SubTrees[subMenu].SubTrees}" var="subMenuItems">
+<li>
+<a tabindex="-1" href="{!AllNodes[menuItem].SubTrees[subMenu].SubTrees[subMenuItems].Value.URL__c}">
+{!AllNodes[menuItem].SubTrees[subMenu].SubTrees[subMenuItems].Value.Name}
+</a>
+</li>
+</apex:repeat>
+</ul>
+</apex:repeat>
+</div>
+</div>
+</li>
+</ul>
+
+</li>
+<!-- Pictures - ->
+
+<!-- Classic Nav - ->
+<li class="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Mega Menu','','dropdown')}">
+<a href="{!AllNodes[menuItem].Value.URL__c}" data-toggle="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Menu Label','','dropdown')}"
+class="dropdown-toggle" style="{!IF(AllNodes[menuItem].Value.RecordType.Name != 'Mega Menu' || AllNodes[menuItem].Value.RecordType.Name == 'StandAlone'  ,'','Display:None;')}">
+{!AllNodes[menuItem].Value.name}
+<b class="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Main Menu','caret','')}"></b>
+</a>
+<ul role="menu" class="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Main Menu','dropdown-menu','')}">
+<apex:repeat value="{!AllNodes[menuItem].SubTrees}" var="subMenu" rendered="{!IF(AllNodes[menuItem].Value.RecordType.Name = 'Main Menu',True,false)}">
+<li>
+<a tabindex="-1" href="{!AllNodes[menuItem].SubTrees[subMenu].Value.URL__C}">    
+{!AllNodes[menuItem].SubTrees[subMenu].Value.Name}
+</a>
+</li>                                              
+</apex:repeat>
+</ul>
+</li>                       
+</apex:repeat> -->
+                            <apex:repeat value="{!lstNode}" var="menuItem" id="theRepeat1">
+                                <!--     <apex:repeat value="{!menuItem.FirstLevelSObjects}" var="men" id="theRepeat1">
+{!men['Name']} 
+
+</apex:repeat>
+-->
+                                <li class="{!menuItem.Value['Style_Class__c']} {!IF(menuItem.Value['RecordType'].Name = 'Mega Menu','dropdown','')}" >
+                                    <a href="{!IF(ISBLANK(menuItem.Value['URL__c']),menuItem.Value['URL__c'],'#')}" 
+                                       class="dropdown-toggle" style="{!IF(menuItem.Value['RecordType'].Name = 'Mega Menu','','display: None;')}">
+                                        {!menuItem.Value['Name']}
+                                        <b class="{!IF(menuItem.Value['RecordType'].Name = 'Mega Menu','caret','')}"></b>
+                                    </a>
+                                    <!--if recordtype is mega menu.. only -->
+                                    <ul class="dropdown-menu">
+                                        <li class="">
+                                            <!-- Content container to add padding -->
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <apex:repeat value="{!menuItem.lstSubTree}" var="subMenu">
+                                                        <ul class="{!subMenu.Value['Style_Class__c']} list-unstyled">
+                                                            <li style="{!IF(ISBLANK(subMenu.Value['Label__c']),'display:none;','')}">
+                                                                <h4>
+                                                                    {!subMenu.Value['Label__c']}
+                                                                </h4>
+                                                            </li>
+                                                            <apex:repeat value="{!subMenu.lstSubTree}" var="subMenuItems">
+                                                                <li>
+                                                                    <a tabindex="-1" href="{!subMenuItems.Value['URL__c']}">
+                                                                        {!subMenuItems.Value['Name']}
+                                                                    </a>
+                                                                </li>
+                                                            </apex:repeat>
+                                                        </ul>
+                                                    </apex:repeat>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    
+                                </li>
+                                <!-- Pictures -->
+                                
+                                <!-- Classic Nav -->
+                                <li class="{!IF(menuItem.Value['RecordType'].Name = 'Mega Menu','','dropdown')}">
+                                    <a href="{!menuItem.Value['URL__c']}" data-toggle="{!IF(menuItem.Value['RecordType'].Name = 'Menu Label','','dropdown')}"
+                                       class="dropdown-toggle" style="{!IF(menuItem.Value['RecordType'].Name != 'Mega Menu' || menuItem.Value['RecordType'].Name == 'StandAlone'  ,'','Display:None;')}">
+                                        {!menuItem.Value['Name']}
+                                        <b class="{!IF(menuItem.Value['RecordType'].Name = 'Main Menu','caret','')}"></b>
+                                    </a>
+                                    <ul role="menu" class="{!IF(menuItem.Value['RecordType'].Name = 'Main Menu','dropdown-menu','')}">
+                                        <apex:repeat value="{!menuItem.SubTrees}" var="subMenu" rendered="{!IF(menuItem.Value['RecordType'].Name = 'Main Menu',True,false)}">
+                                            <li>
+                                                <a tabindex="-1" href="{!menuItem.SubTrees[subMenu].Value['URL__c']}">    
+                                                    {!menuItem.SubTrees[subMenu].Value['Name']}
+                                                </a>
+                                            </li>                                              
+                                        </apex:repeat>
+                                    </ul>
+                                </li>                       
+                            </apex:repeat>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="" data-toggle="dropdown" class="dropdown-toggle">
+                                    <i class="fa fa-search"></i>
+                                    <b class="caret"></b>
+                                </a>
+                                <ul role="menu" class="dropdown-menu col-md-3">
+                                    <li>
+                                        <div class="yamm-content control-group">
+                                            <label class="control-label" for="searchTxt">Search Posts</label>
+                                            <div class="controls form-inline">
+                                                <input type="text" id="searchTxt" size="15" class="form-control"
+                                                       onkeypress="return searchEnterKeyPressed(event);" placeholder="Search" />
+                                                <button class="btn btn-success"  onclick="javascript:openSearchPage()">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                            <p id="errorMsg" class="text-danger"></p>
+                                        </div>
+                                    </li>                                              
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="{!ComponentZero.Class_Tag__c} {!if(ComponentZero.RecordType.Name == 'Content', 'remove-style', '')} {!if(CONTAINS(LOWER(ComponentZero.VFPageName__c),'carousel'), '', 'pad-bottom page-component branded-links')}">
+                        <apex:include pageName="{!ComponentZero.VFPageName__c}" rendered="{!if(ComponentZero.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentZero.Main_Content__c}" escape="false" rendered="{!if(ComponentZero.RecordType.Name == 'Content', true, false)}"/>
+                        </div> 
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentZero.Chatter_Group__c}" rendered="{!if(ComponentZero.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentZero.Main_Content__c}" VideoId="{!ComponentZero.Video_ID__c}" rendered="{!if(ComponentZero.RecordType.Name == 'Video', true, false)}"/>
+                    </div>
+                </div>
+            </div>
+            
+            <apex:outputpanel rendered="{!IF(NOT(ISBLANK(ScrollingMessage)),'true','false')}">
+                <marquee direction="left" width="100%" onmouseover="this.stop();" onmouseout="this.start();" class="ScrollingMsg">
+                    {!ScrollingMessage}
+                </marquee>
+            </apex:outputpanel>
+            
+            <div class="container marketing"> 
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                    <div class="col-md-12 pad-top">
+                        <apex:messages styleClass="red-text page-messages"></apex:messages>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="{!ComponentOne.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentOne.VFPageName__c}" rendered="{!if(Componentone.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentOne.Main_Content__c}" escape="false" rendered="{!if(Componentone.RecordType.Name == 'Content', true, false)}"/>
+                        </div> 
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentOne.Chatter_Group__c}" rendered="{!if(Componentone.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <apex:iframe src="/apex/chatter?id=0F98A0000004GQL" scrolling="true"/>   
+                        <div style="display:none">
+                            <embed src="/_swf/192001/sfc/flex/DocViewer.swf" flashvars="/sfc/servlet.shepherd&v=0688A0000008Z5I&operationContext=CHATTER&contentId=05T8A0000008XYW&mode=details" width="100%" height="100%" align="middle" id="renditionSmall" quality="high" bgcolor="#ffffff" name="renditionSmall" allowscriptaccess="sameDomain" allowfullscreen="true" pluginspage="http://www.adobe.com/go/getflashplayer" wmode="opaque" type="application/x-shockwave-flash" rendered="false"/>
+                        </div>
+                        <c:EMP_PortalVideoComponent Content="{!ComponentOne.Main_Content__c}" VideoId="{!ComponentOne.Video_ID__c}" rendered="{!if(ComponentOne.RecordType.Name == 'Video', true, false)}"/>
+                    </div>
+                    <div class="{!ComponentTwo.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentTwo.VFPageName__c}" rendered="{!if(Componenttwo == null,false,true)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentTwo.Main_Content__c}" escape="false" rendered="{!if(ComponentTwo.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentTwo.Chatter_Group__c}" rendered="{!if(ComponentTwo.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentTwo.Main_Content__c}" VideoId="{!ComponentTwo.Video_ID__c}" rendered="{!if(ComponentTwo.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div> 
+                    <div class="{!ComponentThree.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentThree.VFPageName__c}" rendered="{!if(ComponentThree.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentThree.Main_Content__c}" escape="false" rendered="{!if(ComponentThree.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentThree.Chatter_Group__c}" rendered="{!if(ComponentThree.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentThree.Main_Content__c}" VideoId="{!ComponentThree.Video_ID__c}" rendered="{!if(ComponentThree.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div>
+                    <div class="{!ComponentFour.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentFour.VFPageName__c}" rendered="{!if(ComponentFour.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentFour.Main_Content__c}" escape="false" rendered="{!if(ComponentFour.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentFour.Chatter_Group__c}" rendered="{!if(ComponentFour.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentFour.Main_Content__c}" VideoId="{!ComponentFour.Video_ID__c}" rendered="{!if(ComponentFour.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div> 
+                    <div class="{!ComponentFive.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentFive.VFPageName__c}" rendered="{!if(ComponentFive.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentFive.Main_Content__c}" escape="false" rendered="{!if(ComponentFive.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentFive.Chatter_Group__c}" rendered="{!if(ComponentFive.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentFive.Main_Content__c}" VideoId="{!ComponentFive.Video_ID__c}" rendered="{!if(ComponentFive.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div>
+                    <div class="{!ComponentSix.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentSix.VFPageName__c}" rendered="{!if(ComponentSix.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentSix.Main_Content__c}" escape="false" rendered="{!if(ComponentSix.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <!--<apex:iframe src="/apex/chatter?id={!ComponentSix.Chatter_Group__c}" scrolling="true" />-->
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentSix.Chatter_Group__c}" rendered="{!if(ComponentSix.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentSix.Main_Content__c}" VideoId="{!ComponentSix.Video_ID__c}" rendered="{!if(ComponentSix.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div>
+                    <div class="{!ComponentSeven.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentSeven.VFPageName__c}" rendered="{!if(ComponentSeven.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentSeven.Main_Content__c}" escape="false" rendered="{!if(ComponentSeven.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentSeven.Chatter_Group__c}" rendered="{!if(ComponentSeven.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentSeven.Main_Content__c}" VideoId="{!ComponentSeven.Video_ID__c}" rendered="{!if(ComponentSeven.RecordType.Name == 'Video', true, false)}"/>
+                        
+                    </div>
+                    <div class="{!ComponentEight.Class_Tag__c} {!if(Componentone.RecordType.Name == 'Content', 'remove-style', '')} pad-bottom page-component branded-links">
+                        <apex:include pageName="{!ComponentEight.VFPageName__c}" rendered="{!if(ComponentEight.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentEight.Main_Content__c}" escape="false" rendered="{!if(ComponentEight.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentEight.Chatter_Group__c}" rendered="{!if(ComponentEight.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentEight.Main_Content__c}" VideoId="{!ComponentEight.Video_ID__c}" rendered="{!if(ComponentEight.RecordType.Name == 'Video', true, false)}"/>
+                    </div>                
+                </div>
+                
+                <hr class="featurette-divider" />
+                <div class="row featurette">
+                    <div class="{!ComponentNine.Class_Tag__c}">
+                        <apex:include pageName="{!ComponentNine.VFPageName__c}" rendered="{!if(Componentnine.RecordType.Name == 'Visualforce Page', true, false)}" />
+                        <div class="pad-horizontal">
+                            <apex:outputtext value="{!ComponentNine.Main_Content__c}" escape="false" rendered="{!if(ComponentNine.RecordType.Name == 'Content', true, false)}"/> 
+                        </div>
+                        <c:EMP_Chatter ChatterGroupId="{!ComponentNine.Chatter_Group__c}" rendered="{!if(Componentnine.RecordType.Name == 'Chatter', true, false)}"/> 
+                        <c:EMP_PortalVideoComponent Content="{!ComponentNine.Main_Content__c}" VideoId="{!ComponentNine.Video_ID__c}" rendered="{!if(ComponentNine.RecordType.Name == 'Video', true, false)}"/>
+                    </div>
+                </div><!-- /.container -->
+            </div>
+            
+            <div class="container footer">
+                <footer>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p>&copy; 2015 CDK Global &middot; </p>
+                </footer>
+            </div> 
+        </div>
+        <!-- /.wrapper .container -->
+        
+        <script>
+        (function(i,s,o,g,r,a,m){
+            i['GoogleAnalyticsObject']=r;
+            i[r]=i[r]||function(){ 
+                (i[r].q=i[r].q||[]).push(arguments)
+            },
+                i[r].l=1*new Date();
+            a=s.createElement(o), 
+                m=s.getElementsByTagName(o)[0];
+            a.async=1;
+            a.src=g;
+            m.parentNode.insertBefore(a,m) 
+        })
+        (window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+        ga('create', 'UA-58410620-1', 'auto'); 
+        ga('send', 'pageview'); 
+        
+        /* remove content styles */
+        jQuery(".remove-style span, .remove-style div").children().removeAttr("style");
+        
+        </script>   
+        
+    </body>
+</apex:page>

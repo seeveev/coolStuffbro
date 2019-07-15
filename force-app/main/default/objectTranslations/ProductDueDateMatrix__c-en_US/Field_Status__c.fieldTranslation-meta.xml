@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Field Status --></label>
+    <name>Field_Status__c</name>
+    <picklistValues>
+        <masterLabel>Facilities Available</masterLabel>
+        <translation><!-- Facilities Available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facilities Not Available,ICB Required</masterLabel>
+        <translation><!-- Facilities Not Available,ICB Required --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

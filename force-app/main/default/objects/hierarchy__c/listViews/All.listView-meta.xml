@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Name__c</columns>
+    <columns>GAN__c</columns>
+    <columns>Summary_Id__c</columns>
+    <columns>Summary_master_phone__c</columns>
+    <columns>billing_id__c</columns>
+    <columns>BTN_Phone__c</columns>
+    <columns>WTN__c</columns>
+    <columns>WTN_ID__c</columns>
+    <columns>Account_id__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>BTN_Phone__c</field>
+        <operation>equals</operation>
+        <value>(415) 765-4536</value>
+    </filters>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

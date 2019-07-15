@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Ser_Cntl_No__c</columns>
+    <columns>SAM_Seq_No__c</columns>
+    <columns>City_Abbreviation__c</columns>
+    <columns>State_Abbre__c</columns>
+    <columns>Status_Code__c</columns>
+    <columns>Street_Name__c</columns>
+    <columns>Street_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Building_Name__c</columns>
+    <columns>FTTP_Flag__c</columns>
+    <columns>H_Ows_Identifi__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

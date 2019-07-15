@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SterlingQuoteItem</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SterlingQuoteItems</value>
+    </caseValues>
+    <layouts>
+        <layout>SterlingQuoteItem Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- submit_for_approval_custom --></label>
+        <name>submit_for_approval_custom</name>
+    </webLinks>
+</CustomObjectTranslation>

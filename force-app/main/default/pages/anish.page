@@ -1,0 +1,7 @@
+<apex:page controller="anishcontroller">
+<apex:form >
+  <apex:commandButton action="{!anish}" value="Next"/>
+  
+  </apex:form>
+  
+</apex:page>

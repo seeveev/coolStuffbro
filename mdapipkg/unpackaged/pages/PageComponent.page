@@ -1,0 +1,12 @@
+<apex:page standardController="page_component__c" extensions="PageComponentController" tabStyle="page_component__c"  standardStylesheets="false" showHeader="false" sidebar="false">
+  <apex:sectionHeader title="page component Edit" subTitle="{!oPageComponent.Name}"/>
+  <apex:form >
+  <apex:pageBlock >
+	<apex:pageblocksection >
+		<apex:repeat value="{!lstFields}" var="f"> 
+	      <apex:inputField value="{!oPageComponent[f]}" />
+	  	</apex:repeat>
+	</apex:pageblocksection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

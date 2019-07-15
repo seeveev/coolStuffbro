@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Identification number used in conjunction with the AAC Also called Access code or ACC --></help>
+    <label><!-- PIN --></label>
+    <name>PIN__c</name>
+</CustomFieldTranslation>

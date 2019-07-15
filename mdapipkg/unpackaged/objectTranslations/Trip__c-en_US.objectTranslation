@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trip</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trips</value>
+    </caseValues>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Trips --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Difficulty Level --></label>
+        <name>Primary_Difficulty_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Difficulty Level --></label>
+        <name>Secondary_Difficulty_Level__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

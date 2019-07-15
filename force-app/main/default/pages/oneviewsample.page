@@ -1,0 +1,95 @@
+<apex:page id="thePage" controller="treenodes1"  showHeader="true" sidebar="false" tabStyle="Account" >
+<apex:form >
+ <!-- <style> 
+   .activeTab {background-color: yellow; color:white;   
+          background-image:none}  
+      .inactiveTab {background-color:white; color:black;   
+          background-image:none} 
+        .panelBar { background-color: lightgreen; color:black;   
+             background-image:none} 
+           .iTab1 {background-color: orange; color:black;   
+                background-image:none}
+            .iTab2 {background-color: lightpink; color:black;   
+                  background-image:none}
+        </style> -->
+          <apex:pageBlock title="Search"> 
+  <apex:pageBlockSection columns="2">
+    
+     <apex:pageblockSectionItem >  
+         
+     </apex:pageblockSectionItem>
+         
+     </apex:pageBlockSection>         
+       <apex:pageblockButtons location="top">      
+          <apex:commandButton action="{!searchData}" value="Search" style="color: blue;" reRender="hir"/>
+       </apex:pageblockButtons>
+   </apex:pageBlock>
+
+    <apex:pageBlock > 
+      <apex:panelGrid columns="2"> 
+         <apex:panelBar height="400" width="200" >
+            <apex:panelBarItem label="Hierarchy" headerClass="panelBar">
+            
+            <apex:outputtext >al;sjf;lasjf;jlsf</apex:outputtext>
+            <table border="2">
+            <tr>
+            <td>
+            <ul id="tree">
+                <apex:repeat value="{!lstclsHirarchy}" var="parent" id="hir">
+                    <li><strong><apex:outputtext style="color:blue;" escape="false" value="{!parent.strLevel1}"/></strong>
+                         <ul>
+                             <apex:repeat value="{!parent.lstLevel2}" var="child">
+                                <li><span class="formattextcon"><apex:outputtext style="color:green;" escape="false" value="{!child}"/></span> 
+                                </li>
+                             </apex:repeat>  
+                         </ul>
+                    </li>
+                </apex:repeat>
+            </ul>           
+            </td>
+            </tr>
+            </table>
+            </apex:panelBarItem>
+               </apex:panelBar>
+
+         <apex:panelBar height="400" width="1000"> 
+           <apex:panelBarItem label="Summary" headerClass="panelBar" > 
+            <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab">
+              <apex:tab label="Summary View" name="name1" id="tabOne" >
+
+                <apex:pageBlock >                                   
+                  <apex:pageblockSection title="Billing"> 
+                    <apex:pageBlockSectionItem >                                   
+                      <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel" tabClass="iTab1" inactiveTabClass="iTab2">
+                         <apex:tab label="Subscriber Billing" name="name1" id="tab1" labelWidth="100">
+                           
+                            <apex:panelBarItem label="History" headerClass="panelBar">  </apex:panelBarItem></apex:tab>                                                                                                                                                                                                                    
+
+                           <apex:tab label="Credit&Prior biling" name="name2" id="tab2" labelWidth="100">content</apex:tab>                           <apex:tab label="Subscriber A/R Info" name="name3" id="tab3" labelWidth="100">content</apex:tab>                               <apex:tab label="EAS/LMS History" name="name4" id="tab4" labelWidth="100">content</apex:tab>                               <apex:tab label="Dep/Refund info" name="name5" id="tab5" labelWidth="100">content</apex:tab>                                <apex:tab label="Taxes" name="name6" id="tab6" labelWidth="100">content</apex:tab>                         
+                          <apex:tab label="Payment info" name="name7" id="tab7" labelWidth="100">content</apex:tab>  
+                         <apex:tab label="Directory" name="name8" id="tab8" labelWidth="100">content</apex:tab>  
+                        <apex:tab label="Toll Inv" name="name9" id="tab9" labelWidth="100">content</apex:tab> 
+                       <apex:tab label="Statement" name="name10" id="tab10" labelWidth="100">content</apex:tab>                                               
+                      </apex:tabpanel>                                                                      
+                     </apex:pageBlockSectionItem>                                   
+                    </apex:pageBlockSection>                               
+
+                   <apex:pageBlockSection title="Collection">
+                         <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel" tabClass="iTab1" inactiveTabClass="iTab2">
+                            <apex:tab label="Treatment info" name="name1" id="tab11">content</apex:tab>
+                            <apex:tab label="Treatment Main" name="name2" id="tab12">content</apex:tab>
+                          </apex:tabpanel>
+                    </apex:pageBlockSection>
+                   </apex:pageBlock> </apex:tab>                                                                                       
+                           <apex:tab label="Service Order" name="name2" id="tabTwo">content for tab two</apex:tab>
+                         <apex:tab label="Trouble Ticket" name="name3" id="tabThree">content for tab Three</apex:tab>
+                       <apex:tab label="Products" name="name4" id="tabFour">content for tab Four</apex:tab>
+                     <apex:tab label="Documents" name="name5" id="tabFive">content for tab Five</apex:tab>
+                   </apex:tabPanel>
+             </apex:panelBarItem>
+         </apex:panelBar>
+      </apex:panelGrid>
+    </apex:pageBlock>
+    
+  </apex:form>
+</apex:page>

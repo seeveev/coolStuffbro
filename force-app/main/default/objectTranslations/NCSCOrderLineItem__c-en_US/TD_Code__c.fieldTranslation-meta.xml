@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- TD Code --></label>
+    <name>TD_Code__c</name>
+    <picklistValues>
+        <masterLabel>00	CTC</masterLabel>
+        <translation><!-- 00	CTC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>01	CANCELED, OUT OF STOCK</masterLabel>
+        <translation><!-- 01	CANCELED, OUT OF STOCK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>02	TELEPHONE RFS&#39;S</masterLabel>
+        <translation><!-- 02	TELEPHONE RFS&apos;S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>03	STOCK DIRECT DELIVERY</masterLabel>
+        <translation><!-- 03	STOCK DIRECT DELIVERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04	REFERRAL</masterLabel>
+        <translation><!-- 04	REFERRAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>06	CANCELED, DISCONTINUED ITEM</masterLabel>
+        <translation><!-- 06	CANCELED, DISCONTINUED ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>07	NON-STOCK, DIRECT DELIVERY</masterLabel>
+        <translation><!-- 07	NON-STOCK, DIRECT DELIVERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09	CANCELLATION</masterLabel>
+        <translation><!-- 09	CANCELLATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10	STOCK ISSUE</masterLabel>
+        <translation><!-- 10	STOCK ISSUE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11	STOCK ISSUE SUBSTITUTE</masterLabel>
+        <translation><!-- 11	STOCK ISSUE SUBSTITUTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>15	SUPPLEMENTAL</masterLabel>
+        <translation><!-- 15	SUPPLEMENTAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20	BACK ORDER NORMAL</masterLabel>
+        <translation><!-- 20	BACK ORDER NORMAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>21	BACK ORDER SUBSTITUTE ITEM</masterLabel>
+        <translation><!-- 21	BACK ORDER SUBSTITUTE ITEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>22	BACK ORDER WAREHOUSE REFUSAL</masterLabel>
+        <translation><!-- 22	BACK ORDER WAREHOUSE REFUSAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>23	FUTURE DELIVERY, CREATION</masterLabel>
+        <translation><!-- 23	FUTURE DELIVERY, CREATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>24	BACK ORDER ADMINISTRATIVE</masterLabel>
+        <translation><!-- 24	BACK ORDER ADMINISTRATIVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</masterLabel>
+        <translation><!-- 26	RECREATION OF PARTIAL BACK ORDER QUANTITY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30	STOCK BACKORDER RELEASE</masterLabel>
+        <translation><!-- 30	STOCK BACKORDER RELEASE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>31	STOCK BACKORDER RELEASE SUBSTITUTE</masterLabel>
+        <translation><!-- 31	STOCK BACKORDER RELEASE SUBSTITUTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>33	FUTURE RELEASE NORMAL</masterLabel>
+        <translation><!-- 33	FUTURE RELEASE NORMAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40	STOCK REPLENDISHMENT</masterLabel>
+        <translation><!-- 40	STOCK REPLENDISHMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>41	STOCK REPLENDISHMENT SUBSTITUTE</masterLabel>
+        <translation><!-- 41	STOCK REPLENDISHMENT SUBSTITUTE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>48	DI CREATION, OTHER GOV&#39;T. (FPI,BMP,GPO,CP)</masterLabel>
+        <translation><!-- 48	DI CREATION, OTHER GOV&apos;T. (FPI,BMP,GPO,CP) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>80	REPOSITION STOCK REQUEST (WITHIN REGION)</masterLabel>
+        <translation><!-- 80	REPOSITION STOCK REQUEST (WITHIN REGION) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>81	ITW (INTER-WAREHOUSE TRANSFER)</masterLabel>
+        <translation><!-- 81	ITW (INTER-WAREHOUSE TRANSFER) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>82	CSC DISCREPANCIES</masterLabel>
+        <translation><!-- 82	CSC DISCREPANCIES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</masterLabel>
+        <translation><!-- 88	STOCK ISSUE SELF SERVICE STORE BACKORDER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</masterLabel>
+        <translation><!-- 90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>96	WAREHOUSE DENIALS</masterLabel>
+        <translation><!-- 96	WAREHOUSE DENIALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>97	PSUEDO RECEIPTS</masterLabel>
+        <translation><!-- 97	PSUEDO RECEIPTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>98	MISDIRECTED FREIGHT</masterLabel>
+        <translation><!-- 98	MISDIRECTED FREIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>99	BOWEN SPECIAL PROJECT</masterLabel>
+        <translation><!-- 99	BOWEN SPECIAL PROJECT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

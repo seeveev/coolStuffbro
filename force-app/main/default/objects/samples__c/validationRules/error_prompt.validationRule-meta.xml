@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>error_prompt</fullName>
+    <active>true</active>
+    <description>this is an rule which should say .. if the value is not entered into the field.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Sample_names__c , &#39;price&#39;) ,
+               ISBLANK(  tax_paid__c ) )</errorConditionFormula>
+    <errorMessage>orey jaffaa .. dobinaiyaa kalluuu</errorMessage>
+</ValidationRule>

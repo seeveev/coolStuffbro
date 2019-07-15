@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action Td Cd 2 --></label>
+        <name>Action_Td_Cd_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Td Code1 --></label>
+        <name>Action_Td_Code1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Ship Date --></label>
+        <name>Actual_Ship_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Quantity --></label>
+        <name>Adjusted_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Value --></label>
+        <name>Adjusted_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advice Code --></label>
+        <name>Advice_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Bureau Code --></label>
+        <name>Agency_Bureau_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- BOAC --></label>
+        <name>BOAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card No 2 --></label>
+        <name>Card_No_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Card Number --></label>
+        <name>Card_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chargeback Ind --></label>
+        <name>Chargeback_Ind__c</name>
+    </fields>
+    <fields>
+        <label><!-- City Code --></label>
+        <name>City_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cost Price --></label>
+        <name>Cost_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Date --></label>
+        <name>Current_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cycle Date --></label>
+        <name>Cycle_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIC --></label>
+        <name>DIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy Order --></label>
+        <name>DiscrepancyOrder__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy region --></label>
+        <name>Discrepancy_region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution code --></label>
+        <name>Distribution_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doc Id --></label>
+        <name>Doc_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excep Bill to Ind --></label>
+        <name>Excep_Bill_to_Ind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Export Domestic code --></label>
+        <name>Export_Domestic_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ext Sell Val --></label>
+        <name>Ext_Sell_Val__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Id --></label>
+        <name>File_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- First character of PO number --></label>
+        <name>First_character_of_PO_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fund Code --></label>
+        <name>Fund_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hdr --></label>
+        <name>Hdr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imq --></label>
+        <name>Imq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inquiry Code --></label>
+        <name>Inquiry_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Mgr --></label>
+        <name>Item_Mgr__c</name>
+    </fields>
+    <fields>
+        <label><!-- MRA Liability Code --></label>
+        <name>MRA_Liability_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Media Status --></label>
+        <name>Media_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mode of Ship --></label>
+        <name>Mode_of_Ship__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSN --></label>
+        <name>NSN__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Cards --></label>
+        <name>No_of_Cards__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Line Item --></label>
+        <name>Order_Line_Item__c</name>
+        <relationshipLabel><!-- Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Original document identifier code --></label>
+        <name>Original_document_identifier_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO Number --></label>
+        <name>PO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending  Flag --></label>
+        <name>Pending_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority code --></label>
+        <name>Priority_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Problem Type --></label>
+        <name>Problem_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project code --></label>
+        <name>Project_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Id --></label>
+        <name>Record_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Type --></label>
+        <name>Report_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requisition Number --></label>
+        <name>Requisition_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requisition  Suffix --></label>
+        <name>Requisition_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Routing Code Reg --></label>
+        <name>Routing_Code_Reg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Routing Code --></label>
+        <name>Routing_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Routing Identifier Code --></label>
+        <name>Routing_Identifier_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rtg Id --></label>
+        <name>Rtg_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIG code --></label>
+        <name>SIG_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sell Price --></label>
+        <name>Sell_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Code --></label>
+        <name>State_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Td Code --></label>
+        <name>Td_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Td Ser 8 Ind --></label>
+        <name>Td_Ser_8_Ind__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tech Code --></label>
+        <name>Tech_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit</masterLabel>
+            <translation><!-- Debit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor Offset</masterLabel>
+            <translation><!-- Vendor Offset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor Offset Reversal</masterLabel>
+            <translation><!-- Vendor Offset Reversal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit code --></label>
+        <name>Unit_code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendoe control Number --></label>
+        <name>Vendoe_control_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Amount --></label>
+        <name>Vendor_Offset_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- delivery date --></label>
+        <name>delivery_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- rod key --></label>
+        <name>rod_key__c</name>
+    </fields>
+    <fields>
+        <label><!-- supplement address AAC --></label>
+        <name>supplement_address_AAC__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

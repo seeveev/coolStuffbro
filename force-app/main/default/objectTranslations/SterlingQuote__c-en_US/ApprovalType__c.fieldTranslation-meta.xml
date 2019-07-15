@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ApprovalType --></label>
+    <name>ApprovalType__c</name>
+    <picklistValues>
+        <masterLabel>RSM</masterLabel>
+        <translation><!-- RSM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SVP</masterLabel>
+        <translation><!-- SVP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_SCAC__c</fullName>
+    <description>Source table: rod / csc_dtl
+Source column: rod_del_scac /csc_dtl_del_scac</description>
+    <externalId>false</externalId>
+    <label>Delivery SCAC</label>
+    <length>6</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

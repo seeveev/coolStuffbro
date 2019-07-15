@@ -1,0 +1,356 @@
+<apex:page standardStylesheets="false" showHeader="false" docType="html-5.0">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="format-detection" content="telephone=no"/>
+    </head>
+    
+    <script type="text/javascript">
+        (function() { 
+            function handlePageLoad() {
+                var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+                document.getElementsByClassName('prechatform')[0].setAttribute('action',decodeURIComponent(endpointMatcher.exec(document.location.search)[1]));
+            } 
+            if (window.addEventListener) {
+                window.addEventListener('load', handlePageLoad, false);
+            } else { 
+                window.attachEvent('onload', handlePageLoad, false);
+            }
+        })();
+//Added the code(P). 
+function setReason(){
+    MyWindow=window.open('https://c.cs52.visual.force.com/apex/PatientSearch','MyWindow',width=600,height=300);
+    return false;
+}
+
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' 
+rel='stylesheet' type='text/css' />
+<style>
+<!-- phani added -->
+    .btn{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    text-decoration: none;
+    }
+    html, button, input, select, textarea {
+    font-family: Arial;
+    color: #777;
+    }
+    body {
+    margin: 10px;
+    }
+    #eg-chat-header {
+    float: left;
+    width: 100%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    }
+    #eg-chat-header .wrap {
+    background: #00A2E2;
+    border-top: 1px solid #bbb;
+    min-height: 72px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    }
+    #eg-chat-header .heading {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    font-family: Arial;
+    margin: 10px 10px 0 10px;
+    }
+    #eg-chat-header .heading .chatbubble {
+    display: inline;
+    }
+    #eg-chat-header .closechat {
+    height: 16px;
+    width: 16px;
+    margin-top: 8px;
+    float: right;
+    margin-right: 8px;
+    }
+    #eg-chat-header .heading .chatbubble h1 {
+    font-weight: 600;
+    }
+    
+    
+    .clear {
+    clear: both;
+    }
+    #eg-chat-sidebar {
+    float: right;
+    height: 100px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: #CCC;
+    display: none;
+    }
+    #eg-chat-sidebar .sideFrameDiv {
+    height: 80px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 0 7px 7px 0;
+    margin: 10px 0 10px 0;
+    border-style: solid;
+    border-width: 1px 1px 1px 0px;
+    border-color: #CCC;
+    box-shadow: 2px 2px 5px #888;
+    }
+    #eg-chat-content {
+    width: 100%;
+    margin-top: 11px;
+    float: left;
+    }
+    .eg-chat-login, .eg-chat-survey, .eg-chat-thanks {
+    border: 1px solid #cccccc;
+    clear: both;
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    }
+    #eg-chat-content #s_border {
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    }
+    .eg-chat-login .form-fields, .eg-chat-survey .form-fields, .eg-chat-thanks .form-fields {
+    padding-top: 28px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    color: #444;
+    line-height: 1.7;
+    border-radius: 4px 4px 0px 0px;
+    -webkit-border-radius: 4px 4px 0px 0px;
+    -moz-border-radius: 4px 4px 0px 0px;
+    height: 199px;
+    overflow-y: hidden;
+    clear: both;
+    }
+    .eg-chat-login .form-fields {
+    padding-bottom: 28px;
+    }
+    .eg-chat-login .form-fields .s_viewport, .eg-chat-survey .form-fields .s_viewport, .eg-chat-thanks .form-fields .s_viewport {
+    position: relative;
+    }
+    .eg-chat-login .form-fields .overview, .eg-chat-survey .form-fields .overview, .eg-chat-thanks .form-fields .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    }
+    .eg-chat-login .form-fields .s_viewport #s_chat-intro, .eg-chat-survey .form-fields .s_viewport #s_chat-intro, .eg-chat-thanks .form-fields .s_viewport #s_chat-intro {
+    font-size: 2em;
+    font-weight: bold;
+    }
+    .eg-chat-login label, .eg-chat-survey label, .eg-chat-thanks label {
+    color: #444444;
+    margin-left: 2px;
+    }
+    fieldset > legend, .overview > label {
+    font-weight: bold;
+    }
+    .eg-chat-login #issue-question {
+    margin: 0 0 6px 0;
+    color: #444;
+    font-size: 14px;
+    }
+    .eg-chat-login .form-fields select, .eg-chat-survey .form-fields select, .eg-chat-thanks .form-fields select {
+    height: 30px;
+    font-size: 14px;
+    background: #dce3e7;
+    border-color: #444;
+    border-style: solid;
+    border-right: 1px;
+    border-top: 0px;
+    outline: 0;
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+    }
+    .eg-chat-login .form-fields select.empty, .eg-chat-survey .form-fields select.empty, .eg-chat-thanks .form-fields select.empty {
+    color: grey;
+    margin-bottom: 20px;
+    }
+    .eg-chat-login .form-fields select option, .eg-chat-survey .form-fields select option, .eg-chat-thanks .form-fields select option {
+    color: #000;
+    background: #fff;
+    }
+    .eg-chat-login .form-fields select option:first-child, .eg-chat-survey .form-fields select option:first-child, .eg-chat-thanks .form-fields select option:first-child {
+    color: #000;
+    }
+    .eg-chat-login .form-fields select option[disabled]:first-child, .eg-chat-survey .form-fields select option[disabled]:first-child, .eg-chat-thanks .form-fields select option[disabled]:first-child {
+    display: none;
+    }
+    .eg-chat-login .form-fields .s_viewport #invalidSelection, .eg-chat-survey .form-fields .s_viewport #invalidSelection, .eg-chat-thanks .form-fields .s_viewport #invalidSelection {
+    display: none;
+    color: red;
+    }
+    .eg-chat-login .form-fields .overview #disclaimer, .eg-chat-survey .form-fields .overview #disclaimer, .eg-chat-thanks .form-fields .overview #disclaimer {
+    color: #333;
+    }
+    #eg-chat-content .s_submit-section {
+    height: 69px;
+    background: #F2F5F7;
+    background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#f2f5f7), to(#f2f5f7));
+    background-image: linear-gradient(to bottom, #f2f5f7, #f2f5f7);
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid #ccc;
+    border-top: hidden;
+    margin-bottom: 12px;
+    }
+    #eg-chat-content .s_submit-section .footer {
+    color: #d1d3d5;
+    display: inline;
+    float: left;
+    left: 10px;
+    top: 25px;
+    position: relative;
+    font-size: 9pt;
+    }
+    .submit-wrap {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    float: right;
+    margin: 5px;
+    }
+    #eg-chat-content .s_submit-section .submit-wrap {
+    margin: 14px;
+    }
+    button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    }
+    input[type=submit], input[type=button] {
+    border: 0;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    background-color: #00a2e2;
+    box-shadow: -1px 0px #aedaec, 0px 1px #046f9c, -2px 1px #aedaec, -1px 2px #046f9c, -3px 2px #aedaec, -2px 3px #046f9c, -4px 3px #aedaec, -3px 4px #046f9c;
+    -ms-box-shadow: -1px 0px #aedaec, 0px 1px #046f9c, -2px 1px #aedaec, -1px 2px #046f9c, -3px 2px #aedaec, -2px 3px #046f9c, -4px 3px #aedaec, -3px 4px #046f9c;
+    -webkit-box-shadow: -1px 0px #aedaec, 0px 1px #046f9c, -2px 1px #aedaec, -1px 2px #046f9c, -3px 2px #aedaec, -2px 3px #046f9c, -4px 3px #aedaec, -3px 4px #046f9c;
+    -moz-box-shadow: -1px 0px #aedaec, 0px 1px #046f9c, -2px 1px #aedaec, -1px 2px #046f9c, -3px 2px #aedaec, -2px 3px #046f9c, -4px 3px #aedaec, -3px 4px #046f9c;
+    }
+    input[type=submit]:hover, input[type=button]:hover, input[type=submit]:focus, input[type=button]:focus {
+    background-color: #009cda;
+    }
+    .form-group {
+    margin-bottom: 15px;
+    }
+    .form-control {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+    label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    }
+</style>
+<apex:form styleClass="prechatform form-inline">
+    
+    <div id="eg-chat-global-wrap">
+        <div id="eg-chat-header">
+            <div class="wrap">
+                <div class="heading">
+                    <div class="chatbubble">
+                        <a class="closechat" href="javascript:window.close()" title="Close Window"></a>
+                        <h1 style="display:none">Highmark Chat</h1> 
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="eg-chat-sidebar"><div class="sideFrameDiv"></div></div>
+        <div id="eg-chat-content">
+            <div class="eg-chat-login" id="s_border">
+                <div class="form-fields" id="wrapper" style="overflow: auto; position: relative; height: 423px;">
+                    <div class="s_viewport" id="scroller">
+                        <div class="overview">
+                            <div id="s_chat-intro">Chat with an agent today!</div>
+                            <div class="form-group">
+                                <label for="prechat_firstname">First Name</label>
+                                <input class="form-control" type="text" name="liveagent.prechat:custfirst" id="prechat_firstname" value=" "/>
+                                <input type="hidden" name="liveagent.prechat.save:custfirst" value="Description" />
+                            </div>
+                         
+        <!--
+<div id="issue-question">First Name:</div>
+<input type="text" name="liveagent.prechat:custfirst" id="prechat_firstname" value=" "/>
+<input type="hidden" name="liveagent.prechat.save:custfirst" value="First_Name__c" />
+<div id="issue-question">Last Name:</div>
+<input type="text" name="liveagent.prechat:custlast" id="prechat_lastname" value=" "/>
+<input type="hidden" name="liveagent.prechat.save:custlast" value="Last_Name__c" />
+<div id="issue-question">Email Address:</div>
+<input type="text" name="liveagent.prechat:custemail" id="prechat_custemail" value=" "/>
+<input type="hidden" name="liveagent.prechat.save:custemail" value="Customer_Email__c" />
+-->
+                           
+                            
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            
+            
+            
+
+<input type= "hidden" name= "liveagent.prechat.findorcreate.map: Case" value= "First Name, Description;" />
+
+            
+            
+            
+            <div class="s_submit-section">
+                <div class="footer"/>
+                <div class="submit-wrap">
+                    <input onclick="setReason();" type="submit" value="START CHAT" id="prechat_submit" class="btn"/>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</apex:form>
+</apex:page>

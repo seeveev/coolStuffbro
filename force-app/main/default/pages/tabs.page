@@ -1,0 +1,8 @@
+<apex:page controller="opportunityList2Con">
+<apex:form >
+ <apex:commandButton value="First" action="{!firstBtnClick}" disabled="{!previousButtonEnabled}" status="status2" reRender="pageBlock"></apex:commandButton>
+<apex:commandButton value="Previous" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" status="status2" reRender="pageBlock"></apex:commandButton>
+<apex:commandButton value="Next" action="{!nextBtnClick}" reRender="pageBlock" disabled="{!nextButtonDisabled}" status="status2"></apex:commandButton>
+<apex:commandButton value="Last" action="{!lastBtnClick}" reRender="pageBlock" disabled="{!nextButtonDisabled}" status="status2"></apex:commandButton>
+</apex:form>
+</apex:page>

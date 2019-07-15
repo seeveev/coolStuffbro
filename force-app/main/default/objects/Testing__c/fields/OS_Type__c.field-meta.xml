@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OS_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>computer parts</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Windows</fullName>
+                <default>false</default>
+                <label>Windows</label>
+            </value>
+            <value>
+                <fullName>IOS</fullName>
+                <default>false</default>
+                <label>IOS</label>
+            </value>
+            <value>
+                <fullName>LINUX</fullName>
+                <default>false</default>
+                <label>LINUX</label>
+            </value>
+            <value>
+                <fullName>apple mouse</fullName>
+                <default>false</default>
+                <label>apple mouse</label>
+            </value>
+            <value>
+                <fullName>windows harddisk</fullName>
+                <default>false</default>
+                <label>windows harddisk</label>
+            </value>
+            <value>
+                <fullName>apple mointors</fullName>
+                <default>false</default>
+                <label>apple mointors</label>
+            </value>
+            <value>
+                <fullName>apple headset</fullName>
+                <default>false</default>
+                <label>apple headset</label>
+            </value>
+            <value>
+                <fullName>windows keyboard</fullName>
+                <default>false</default>
+                <label>windows keyboard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

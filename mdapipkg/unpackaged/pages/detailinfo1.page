@@ -1,0 +1,33 @@
+<apex:page controller="detailinfoController1" showHeader="false" sidebar="false" >
+  <apex:form >
+      <apex:pageblock >
+            
+            <apex:pageBlockSection title="search results" collapsible="true" id="mySection" columns="2">
+            <apex:pageBlockTable var="hir1" value="{!Lsthier1}">
+               <apex:column value="{!hir1.BTN_Phone__c}" headerValue="Phone"/>
+                 <apex:column value="{!hir1.Account_id__c}" headerValue="Account Id"/>
+                 <apex:column value="{!hir1.Company_name__c}" headerValue="Company Name"/>
+                 <apex:column value="{!hir1.Name__c}" headerValue="Name"/>
+                 <apex:column value="{!hir1.WTN__c}" headerValue="WTN Number"/>
+                 </apex:pageBlockTable>
+                
+            <script>colorPageBlock(document.getElementById("{!$Component.srchinfo}"), "#1271F7");</script>
+               </apex:pageBlockSection>
+        <!--         to get the detail when you click on the btn number. --> 
+               <apex:pageBlockSection title="details" >
+               <apex:detail subject="{!$CurrentPage.parameters.detailId}"/>
+               </apex:pageBlockSection>
+                <apex:pageBlockSection title="A/R info" columns="2" id="mysection1">
+                                  <apex:outputField value="{!objarinfo.Account_Id__c}"/>
+                                  <apex:outputText value="{!objarinfo.Bill_Date__c}" label="Bill Date "/>
+                                  <apex:outputField value="{!objarinfo.Library_id__c}"/>
+ 
+                                <!--  <apex:column value="{!A_R_info__c.Phone_Number__c}" headerValue="Phone Number"/>
+                                  <apex:column value="{!A_R_info__c.Bill_Date__c}" headerValue="Bill Date"/> -->
+
+                                   <script>colorPageBlock(document.getElementById("{!$Component.mysection1}"),"#1271F6");</script>
+                          
+                          </apex:pageBlockSection>
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

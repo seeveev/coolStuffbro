@@ -1,0 +1,12 @@
+<apex:page controller="searchcontroller">
+    
+    <apex:form >
+    	<apex:pageblock title="You can search all Accounts here">
+        	<apex:pageblocksection title="Search">
+                <input type="string" value="{!searchText}"/>
+                <apex:commandButton action="{!searchaccounts}" value="search accounts"/>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+    
+</apex:page>

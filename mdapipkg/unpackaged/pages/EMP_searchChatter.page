@@ -1,0 +1,118 @@
+<apex:page controller="EMP_Search_Controller1" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" >
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap, 'css/bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.BootstrapYAMM, 'yamm/yamm.css')}"/><!-- mega menu -->
+    <apex:stylesheet value="{!URLFOR($Resource.FontAwesome, '4.3.0/css/font-awesome.min.css')}"/>
+    <apex:stylesheet value="{!$Resource.EMP_AssociatePortalPage_CSS}" />
+    
+    <!-- Bootstrap core JavaScript -->
+    <apex:includeScript value="{!URLFOR($Resource.jQuery, 'js/jquery-1.10.2.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.Bootstrap, 'js/bootstrap.min.js')}"/>
+   
+    <script type="text/javascript">
+   
+    
+    function openSearchPage() {
+        var searchTerm = jQuery("#searchTxt").val();
+        if(searchTerm.length === 0 || !searchTerm.trim()) {
+            jQuery("#errorMsg").text(' Enter a search term!');
+            return false;
+        }
+        searchTerm = '{!$Site.Prefix}/apex/EMP_AssociatePortalPage?page=EMP_search&str=' + searchTerm;
+        jQuery("#errorMsg").text('');
+        
+        var newWin = window.open(searchTerm, '_self');
+        newWin.focus();
+    }
+    
+    function searchEnterKeyPressed(evt)
+    {
+        // look for window.event in case event isn't passed in
+        evt = evt || window.event;
+        if (evt.keyCode == 13)
+        {
+            openSearchPage();
+            return false;
+        }
+        return true;
+    }
+    </script>
+    
+    <div id="container" class="form-inline">
+        <div class="">
+            <h2>
+                Search Conversations
+            </h2>
+            <p style="font-size: 10pt; color:#666;">
+                Enter text below and click search to view matching groups, posts, and comments.
+            </p>
+            <div class="form-group width-80-percent">
+                <input id="searchTxt" type="text"  class="form-control input-width-100-percent"
+                       placeholder = "Please enter search text here..."
+                       onkeypress="return searchEnterKeyPressed(event);" value="{!$CurrentPage.parameters.str}" /><br/>
+            </div>
+            &nbsp;
+            <button onclick="javascript:openSearchPage()" class="btn btn-success" style="vertical-align: top;">Search</button>    
+        </div><br/>
+        
+        <apex:repeat value="{!groupKeys}" var="groupKey">
+            <apex:repeat id="repeatBlock" value="{!allFeedItemWrappers[groupKey]}" var="feeds" >
+                <div class="">
+                    <div class="media-body">
+                        <div class="media" >
+                            <div class="media-left">
+                                <apex:outputLink value="{!$Site.Prefix}/_ui/core/userprofile/UserProfilePage?u={!feeds.feedItemObj.CreatedByID}">
+                                    <apex:image id="theImage" value="{!feeds.UserPhoto}" width="60" height="60"/>
+                                </apex:outputLink>
+                            </div>
+                            
+                            <div class="media-body">
+                                <apex:outputLink value="/Employees/{!feeds.feedItemObj.parentId}"> <i class="fa fa-users fa-3" style="color: orange;"></i> {!groupKey} </apex:outputLink> 
+                                <span style="color:#83c600; font-weight:bold;"> &ndash; </span>
+                                <apex:outputLink value="{!$Site.Prefix}/_ui/core/userprofile/UserProfilePage?u={!feeds.feedItemObj.CreatedByID}" styleclass="media-heading">
+                                    <i class="fa fa-user" style="color: orange;"></i>
+                                    {!feeds.feedItemObj.CreatedBy.firstName}&nbsp;{!feeds.feedItemObj.CreatedBy.lastName}
+                                </apex:outputLink>
+                                <a href="/Employees/{!feeds.feedItemObj.id}" class="btn btn-default btn-xs" >
+                                    <i class="fa fa-chevron-circle-right fa-6" style="color:#83c600;"></i> </a>
+                                <br/> 
+                                <span class="chatter-date" ><apex:outputField value=" {!feeds.feedItemObj.CreatedDate}" /></span>
+                                <br/>
+                                <apex:outputText escape="false" value="{!feeds.feedItemObj.Body}" />
+                                <!--Feed Comments -->
+                                <div id="{!feeds.feedItemObj.Id}-comment-container" style="{!IF(feeds.FeedComments.size > 0,'display:block','display:none')}" >
+                                    <div class="media pad-left well margin-right" style="margin-top:10px; margin-right:10px;">
+                                        <div class="media-body">
+                                            <div class="{!feeds.feedItemObj.Id}-comments" id="commentsDiv">
+                                                <apex:repeat value="{!feeds.FeedComments}" var="comment">
+                                                    <div class="pad-bottom">
+                                                        <div class="media-left">
+                                                            <apex:outputLink value="{!$Site.Prefix}/_ui/core/userprofile/UserProfilePage?u={!comment.FeedCommentItem.CreatedByID}" >
+                                                                <apex:image id="theImag" value="{!comment.UserPhoto}" width="60" height="60"/>
+                                                            </apex:outputLink>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <apex:outputLink value="{!$Site.Prefix}/_ui/core/userprofile/UserProfilePage?u={!comment.FeedCommentItem.CreatedByID}" 
+                                                                             styleclass="media-heading">
+                                                                {!comment.FeedCommentItem.CreatedBy.firstName}&nbsp;{!comment.FeedCommentItem.CreatedBy.lastName}
+                                                            </apex:outputLink>
+                                                            &nbsp; <br/>
+                                                            <span class="chatter-date" ><apex:outputField value=" {!comment.FeedCommentItem.CreatedDate}" /></span>
+                                                            <br/>
+                                                            <apex:outputText value="{!comment.FeedCommentItem.CommentBody}"  id="MyCommentID" />
+                                                        </div>
+                                                    </div>
+                                                </apex:repeat>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="featurette-divider" style="margin-top:auto;" />
+            </apex:repeat>
+        </apex:repeat>
+        
+    </div>
+</apex:page>

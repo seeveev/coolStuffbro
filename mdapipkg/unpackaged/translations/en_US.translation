@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Force.com --></label>
+        <name>Force_com</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Garage --></label>
+        <name>Garage</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Suggestion Box --></label>
+        <name>Suggestion_Box</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- bah --></label>
+        <name>bah</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- AvaTripLegs --></label>
+        <name>AvaTripLegs</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AvaTripLeng --></label>
+        <name>AvaTripLeng</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- names --></label>
+        <name>names</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- App Filtered View --></label>
+        <name>App_Filtered_View</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Css --></label>
+        <name>Css</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- MyData --></label>
+        <name>MyData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- One View --></label>
+        <name>One_View</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Search Details --></label>
+        <name>Search_Details</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Start Here --></label>
+        <name>Start_Here</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Top Accounts and Opportunities --></label>
+        <name>Top_Accounts_and_Opportunities</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Towers --></label>
+        <name>Towers</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- proj --></label>
+        <name>proj</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>Contact_address_change-5</fullName>
+        </flows>
+        <fullName>Contact_address_change</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Testing_record_creation-3</fullName>
+            <screens>
+                <fields>
+                    <name>Description</name>
+                </fields>
+                <fields>
+                    <name>Name</name>
+                </fields>
+                <name>Main_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Thankyoumessage</name>
+                </fields>
+                <name>Thank_you</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>country</name>
+                </fields>
+                <name>testing_tesitng</name>
+            </screens>
+        </flows>
+        <fullName>Testing_record_creation</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>Participate_Yes</name>
+            </choices>
+            <choices>
+                <name>Participate_No</name>
+            </choices>
+            <fullName>Survey_customers-1</fullName>
+            <screens>
+                <fields>
+                    <name>Customer_Response</name>
+                </fields>
+                <fields>
+                    <name>WelcomeMessage</name>
+                </fields>
+                <name>Greet_Customer</name>
+            </screens>
+        </flows>
+        <fullName>Survey_customers</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>Update_Status-1</fullName>
+        </flows>
+        <fullName>Update_Status</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>New_Lead-1</fullName>
+            <screens>
+                <fields>
+                    <name>Company_Name</name>
+                </fields>
+                <fields>
+                    <name>Last_Name</name>
+                </fields>
+                <name>New_Lead</name>
+            </screens>
+        </flows>
+        <fullName>New_Lead</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>New_Customer_Flow-1</fullName>
+            <screens>
+                <fields>
+                    <name>Company_Name</name>
+                </fields>
+                <fields>
+                    <name>First_Name</name>
+                </fields>
+                <fields>
+                    <name>Last_Name</name>
+                </fields>
+                <fields>
+                    <name>Opportunity_Amount</name>
+                </fields>
+                <fields>
+                    <name>Opportunity_Stage</name>
+                </fields>
+                <name>New_Customer_Flow</name>
+            </screens>
+        </flows>
+        <fullName>New_Customer_Flow</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Suggestion --></label>
+        <name>New_Suggestion</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Testing contact --></label>
+        <name>Testing_contact</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- BTN Count --></description>
+        <label><!-- BTN Count --></label>
+        <name>BTN_Count</name>
+        <sections>
+            <label><!-- hierarchys --></label>
+            <name>hierarchys</name>
+        </sections>
+    </reportTypes>
+</Translations>

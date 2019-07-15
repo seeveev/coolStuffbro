@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ProductCatalog</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ProductCatalogs</value>
+    </caseValues>
+    <fields>
+        <label><!-- ChargeCode --></label>
+        <name>ChargeCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- DPIEnvironment --></label>
+        <name>DPIEnvironment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- ItemCode --></label>
+        <name>ItemCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- NPA --></label>
+        <name>NPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- NXX --></label>
+        <name>NXX__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductRate --></label>
+        <name>ProductRate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceType --></label>
+        <name>ServiceType__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tariff --></label>
+        <name>Tariff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip --></label>
+        <name>Zip__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

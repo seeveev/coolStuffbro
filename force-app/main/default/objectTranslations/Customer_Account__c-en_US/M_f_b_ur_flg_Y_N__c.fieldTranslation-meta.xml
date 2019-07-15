@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- MY ftr business user flag Y/N --></label>
+    <name>M_f_b_ur_flg_Y_N__c</name>
+</CustomFieldTranslation>

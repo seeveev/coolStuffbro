@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Provisioning</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Provisionings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- CF Busy Fixed --></label>
+        <name>CF_Busy_Fixed__c</name>
+    </fields>
+    <fields>
+        <label><!-- CF No Answer Fixed --></label>
+        <name>CF_No_Ans_Fixed__c</name>
+    </fields>
+    <fields>
+        <label><!-- CF Remote Access PIN --></label>
+        <name>CF_Rmt_Acc_PIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cut-Thru Attendant --></label>
+        <name>Cut_Thru_Attendant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cut-Thru To Pager --></label>
+        <name>Cut_Thru_To_Pager__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 1 CF Choice --></label>
+        <name>DRING_Line_1_CF_Chce__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 1 Patrn --></label>
+        <name>DRING_Line_1_Patrn__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 1 --></label>
+        <name>DRING_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 2 CF Choice --></label>
+        <name>DRING_Line_2_CF_Choice__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 2 Patrn --></label>
+        <name>DRING_Line_2_Patrn__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 2 --></label>
+        <name>DRING_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 3 CF Choice --></label>
+        <name>DRING_Line_3_CF_Choice__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 3 Patrn --></label>
+        <name>DRING_Line_3_Patrn__c</name>
+    </fields>
+    <fields>
+        <label><!-- DRING Line 3 --></label>
+        <name>DRING_Line_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distinctive Ring Main # --></label>
+        <name>Distinctive_Ring_Main__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hunt Group Number --></label>
+        <name>Hunt_Group_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hunt Member --></label>
+        <name>Hunt_Member__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hunt Pilot --></label>
+        <name>Hunt_Pilot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hunt Sequence Or Circle --></label>
+        <name>Hunt_Seq_Or_Circle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hunt Member Sequence --></label>
+        <name>Hunt_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intercept Removal Date --></label>
+        <name>Intercept_Rml_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SO Postdate --></label>
+        <name>Last_SO_Postdate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last SO To Update --></label>
+        <name>Last_SO_To_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Msg Routing Boxes --></label>
+        <name>Msg_Routing_Boxes__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Of Paths --></label>
+        <name>Of_Paths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operater Intercept Number --></label>
+        <name>Opt_Intercept_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pager Company --></label>
+        <name>Pager_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pager PIN # --></label>
+        <name>Pager_PIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pager # --></label>
+        <name>Pager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Fax # --></label>
+        <name>Primary_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remote Call Forward To --></label>
+        <name>Rmt_Call_Fwd_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type Of Hunting --></label>
+        <name>Type_Of_Hunting__c</name>
+    </fields>
+    <fields>
+        <label><!-- VM/CF Number Of Rings --></label>
+        <name>VM_CF_No_Of_Rings__c</name>
+    </fields>
+    <fields>
+        <label><!-- VM Family Sub Mailbox --></label>
+        <name>VM_Fmly_Sub_Mailbox__c</name>
+    </fields>
+    <fields>
+        <label><!-- VM Remark --></label>
+        <name>VM_Remark__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weekday Wake-up # --></label>
+        <name>Weekday_Wake_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weekend Wake-up # --></label>
+        <name>Weekend_Wake_up__c</name>
+    </fields>
+    <layouts>
+        <layout>Provisioning Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

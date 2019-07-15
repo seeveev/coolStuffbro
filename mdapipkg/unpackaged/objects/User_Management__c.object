@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Agency_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Agency Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DHAM - BARDA</fullName>
+                    <default>false</default>
+                    <label>DHAM - BARDA</label>
+                </value>
+                <value>
+                    <fullName>DHGO - CMS</fullName>
+                    <default>false</default>
+                    <label>DHGO - CMS</label>
+                </value>
+                <value>
+                    <fullName>DHAF - OIG</fullName>
+                    <default>false</default>
+                    <label>DHAF - OIG</label>
+                </value>
+                <value>
+                    <fullName>DHRA - PSC</fullName>
+                    <default>false</default>
+                    <label>DHRA - PSC</label>
+                </value>
+                <value>
+                    <fullName>DHRC - CDC</fullName>
+                    <default>false</default>
+                    <label>DHRC - CDC</label>
+                </value>
+                <value>
+                    <fullName>DHRF - FDA</fullName>
+                    <default>false</default>
+                    <label>DHRF - FDA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Middle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Middle Name</label>
+        <length>12</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Office_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Office Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>750401 OFFICE OF INSPECTOR GENERAL</fullName>
+                    <default>false</default>
+                    <label>750401 OFFICE OF INSPECTOR GENERAL</label>
+                </value>
+                <value>
+                    <fullName>00100 OS DCG, Washington DC</fullName>
+                    <default>false</default>
+                    <label>00100 OS DCG, Washington DC</label>
+                </value>
+                <value>
+                    <fullName>75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</fullName>
+                    <default>false</default>
+                    <label>75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</label>
+                </value>
+                <value>
+                    <fullName>75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</fullName>
+                    <default>false</default>
+                    <label>75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</label>
+                </value>
+                <value>
+                    <fullName>00NAF CMS NAF CONTRACTS</fullName>
+                    <default>false</default>
+                    <label>00NAF CMS NAF CONTRACTS</label>
+                </value>
+                <value>
+                    <fullName>00500 00500 CMS, Baltimore, MD</fullName>
+                    <default>false</default>
+                    <label>00500 00500 CMS, Baltimore, MD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <label>User Management</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>User Management Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Users Management</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

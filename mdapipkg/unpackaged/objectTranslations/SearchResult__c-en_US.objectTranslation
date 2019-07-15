@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SearchResult</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SearchResults</value>
+    </caseValues>
+    <fields>
+        <label><!-- FindResult --></label>
+        <name>FindResult__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

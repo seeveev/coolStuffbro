@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Schedule Portal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Schedule Portal</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Opportunity --></label>
+        <name>New_Opportunity__c</name>
+        <relationshipLabel><!-- Schedule Portal --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>Street_Address__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

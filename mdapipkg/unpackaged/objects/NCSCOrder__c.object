@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Represents Order returned by searchOrders service, Name == orderNumber</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>AAC__c</fullName>
+        <description>Activity Address Code
+
+Source table: rod / csc_mst 
+Source column: rod_aac_id / csc_mst_aac
+Web service name: Order Service(CSC)
+Web service field: SALE_BY_ORD_NR.SALE_AAC</description>
+        <externalId>false</externalId>
+        <label>AAC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ACC__c</fullName>
+        <description>Source table:  csc_mst
+Source column: csc_mst_acc
+Web service name:Order Service(CSC)
+Web service field:</description>
+        <externalId>false</externalId>
+        <label>ACC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Access_Code__c</fullName>
+        <description>AAC Access Code</description>
+        <externalId>false</externalId>
+        <label>Access Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Attn__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Order Address Attn</description>
+        <externalId>false</externalId>
+        <label>Address Attn</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Email__c</fullName>
+        <description>Order delivery contact email</description>
+        <externalId>false</externalId>
+        <label>Address Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Order Address Name</description>
+        <externalId>false</externalId>
+        <label>Address Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Type_Description__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 AddressType Description</description>
+        <externalId>false</externalId>
+        <label>Address Type Description</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Type_Id__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Address Type Id</description>
+        <externalId>false</externalId>
+        <label>Address Type Id</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Type_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 AddressType Name</description>
+        <externalId>false</externalId>
+        <label>Address Type Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Type_Status__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 AddressType Status</description>
+        <externalId>false</externalId>
+        <label>Address Type Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Closed_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table:  rod_auto_cls_flg
+Source column: auto closed flag
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Auto Closed Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Carrier_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Carrier Name</description>
+        <externalId>false</externalId>
+        <label>Carrier Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Carrier_Tracking_Freight_Bill_Number__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Carrier Tracking Freight Bill Number</description>
+        <externalId>false</externalId>
+        <label>Carrier Tracking Freight Bill Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Carrier_Tracking_Freight_On_Board_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Carrier Tracking Freight On Board Code</description>
+        <externalId>false</externalId>
+        <label>Carrier Tracking Freight On Board Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Carrier_Tracking_Freight_On_Board_Detail__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Carrier Tracking Freight On Board Details</description>
+        <externalId>false</externalId>
+        <label>Carrier Tracking Freight On Board Detail</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Carrier_Tracking_Number__c</fullName>
+        <description>surchargeCode Order CarrierTrackingDetails TrackingNumber</description>
+        <externalId>false</externalId>
+        <label>Carrier Tracking Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Discrepancy Orders</relationshipLabel>
+        <relationshipName>Discrepancy_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>Order delivery city</description>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closed_date__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_cls_dte / csc_mst_cls_dte
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Closed date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Closed_user__c</fullName>
+        <description>Source table:  rod / csc_mst
+Source column: rod_cls_usr / csc_mst_cls_usr
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Closed user</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Comments for the order</description>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <description>The name of the ordering company/agency</description>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Discrepancy Orders</relationshipLabel>
+        <relationshipName>Discrepancy_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Email_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_cust_email_flg
+Web service: name N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Customer  Email Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date_Received__c</fullName>
+        <description>Date the order was received</description>
+        <externalId>false</externalId>
+        <label>Date Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_SCAC_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Delivery SCAC Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delivery_SCAC_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Delivery SCAC Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Source table:  rod / csc_mst
+Source column: rod_poc_eml_adr / csc_mst_poc_eml_adr
+Web service: name: Contact service(ACIS)
+Web service field: e_mail</description>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <length>75</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expedite_Action_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table:  rod / csc_mst
+Source column: rod_exp_act_flg / csc_mst_exp_act_flg
+Web service: name:  N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Expedite Action Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Action_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_exp_act_dte / csc_mst_exp_act_dte
+Web service: name:  N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Expedite Action date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_expd_dte / csc_mst_expd_dte
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Expedite Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_mst
+Source column: rod_expedite / csc_mst_expedite
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Expedite Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Export_Type__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Export Type</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_DIC__c</fullName>
+        <externalId>false</externalId>
+        <label>DIC</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_RIC__c</fullName>
+        <externalId>false</externalId>
+        <label>RIC</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_Unit_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_Unit_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FSS19_dist__c</fullName>
+        <externalId>false</externalId>
+        <label>Dist</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_m_s__c</fullName>
+        <externalId>false</externalId>
+        <label>M-S</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_nsn__c</fullName>
+        <externalId>false</externalId>
+        <label>NSN / Part #</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_sig__c</fullName>
+        <externalId>false</externalId>
+        <label>SIG</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_sup_add__c</fullName>
+        <externalId>false</externalId>
+        <label>SUPADD</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FSS19_unt__c</fullName>
+        <externalId>false</externalId>
+        <label>Units/Qty</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_poc_fax_nbr / csc_mst_poc_fax_nbr
+Web service: name: Contact service(ACIS)
+Web service field: fax</description>
+        <externalId>false</externalId>
+        <label>Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_poc_fst_nam / csc_mst_poc_fst_nam
+Web service name: Contact service(ACIS)
+Web service field:  name_last</description>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Follow_up_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod 
+Source column: rod_foll_up_flg
+Web service: name :N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Follow up Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fulfillment_Method_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Fulfillment Method Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fulfillment_Method_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Fulfillment Method Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GECO_Number__c</fullName>
+        <description>NCSC - CSC GECO number
+
+Source table: csc_mst 
+Source column: csc_mst_geco_nbr
+Web service: name:  Order Service(CSC)
+Web service field: SALE_BY_WEB_OR_NR.SALE_POS_ORDER_NR</description>
+        <externalId>false</externalId>
+        <label>GECO Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interested_Party_Email__c</fullName>
+        <description>Source table:  rod
+Source column: rod_interested_party_eml
+Web service name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Interested Party Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>International_Phone__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_poc_intl_phn / csc_mst_poc_intl_phn
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>International Phone</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_poc_lst_nam / csc_mst_poc_lst_nam
+Web service name: Contact service(ACIS)
+Web service field: name_first</description>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Rejected_Date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_rev_last_rej_dte / csc_mst_rev_last_rej_dte
+Web service: name:  N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Last  Rejected Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Legacy_Key__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_key / csc_mst_key
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>true</externalId>
+        <label>Legacy Key</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manager_Approval__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_mgr_apr_usr / csc_mst_mgr_apr_usr
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Manager  Approval</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manager_Approved_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_mgr_apr_dte / csc_mst_mgr_apr_dte
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Manager Approved date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>NCSC_WIP_Date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_ncsc_wip_dte / csc_mst_ncsc_wip_dte
+Web service name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>NCSC WIP Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Non_FSS_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table:  rod
+Source column: rod_non_fss_flg
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Non FSS Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Date__c</fullName>
+        <description>Date the order was placed
+
+
+Source table: csc_mst 
+Source column: csc_mst_ord_dte
+Web service: name : Order Service(CSC)
+Web service field: SALE_BY_ORD_NR.SALE_GREG_DATE</description>
+        <externalId>false</externalId>
+        <label>Order Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_Number_Scope__c</fullName>
+        <description>Returned by fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Order Number Scope</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Number_Suffix__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number Suffix</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originated_User__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_ssr_ori_usr /csc_mst_ssr_ori_usr
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Originated User</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originated_date__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_ssr_ori_dte / csc_mst_ssr_ori_dte
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Originated date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PIN__c</fullName>
+        <description>Identification number used in conjunction with the AAC Also called Access code or ACC</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identification number used in conjunction with the AAC Also called Access code or ACC</inlineHelpText>
+        <label>PIN</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Num__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Packing_Facility_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Packing Facility Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Packing_Facility_Description__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Packing Facility Description</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Packing_Facility_Type__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Packing Facility Type</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <description>Order delivery contact phone number
+
+Source table: rod / csc_mst 
+Source column: rod_poc_phn_nbr / csc_mst_poc_phn_nbr
+Web service: name: Contact service(ACIS)
+Web service field: phone</description>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Pickup_SCAC_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Pickup SCAC Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pickup_SCAC_Name__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Pickup SCAC Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_WIP_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_ssr_lst_dte
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Previous WIP Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Previous_WIP_user__c</fullName>
+        <description>Source table: rod
+Source column: rod_ssr_lst_usr
+Web service: name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Previous WIP user</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Received_Date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_dte_rec / csc_mst_dte_rec
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RecordTypeTemp__c</fullName>
+        <externalId>false</externalId>
+        <formula>$RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecordTypeTemp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rep_Approval__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_ssr_apr_usr / csc_mst_rep_apr_usr
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Rep Approval</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rep_Approved_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_ssr_apr_dte / csc_mst_rep_apr_dte
+Web service name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Rep Approved date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Requisition_Number_Ext__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_req_ext / csc_mst_tck_ext
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Requisition Number Ext</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requisition_Number_Suffix__c</fullName>
+        <description>Source table: rod 
+Source column: rod_req_sfx
+Web service name: Input to Order Service(FSS19)
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Requisition Number Suffix</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requisition_Number__c</fullName>
+        <description>NCSC - FSS19 Requisition Number
+
+Source table: rod / csc_mst
+Source column: rod_req_nbr  /  csc_mst_tck_nbr 
+Web service name:Input to Order Service(FSS19/CSC)
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Requisition Number</label>
+        <length>14</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requisition_Suffix__c</fullName>
+        <description>Requisition Suffix to lookup order information on FSS 19.</description>
+        <externalId>false</externalId>
+        <label>Suffix</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Review_Assigned_date__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_rev_asg_dte / csc_mst_rev_asg_dte
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Review Assigned date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Review_Closed_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_rev_cls_dte / csc_mst_rev_cls_dte
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Review Closed date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Review_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table:   rod / csc_mst
+Source column: rod_rev_flg / csc_mst_rev_flg
+Web service: name:  N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Review Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Review_Reject_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table:  rod / csc_mst
+Source column: rod_rev_reject_flg / csc_mst_rev_rej_flg
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Review Reject Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Review_User__c</fullName>
+        <description>Source table: rod / csc_mst 
+Source column: rod_rev_usr / csc_mst_rev_usr
+Web service: name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Review User</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Session_Number__c</fullName>
+        <description>NCSC - Advantage Session Number
+Source table: csc_mst
+Source column: csc_mst_ses_nbr
+Web service name: Order Service(ACIS)
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Session Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipped_Date__c</fullName>
+        <description>Order Shipped Date</description>
+        <externalId>false</externalId>
+        <label>Shipped Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>2 character order delivery state code</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_sts / csc_mst_sts
+Web service: name N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_Location_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Store Location Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_Location_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Store Location Description</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Store Number</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Address_2__c</fullName>
+        <description>Order delivery street address line 2</description>
+        <externalId>false</externalId>
+        <label>Street Address 2</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Address_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address 3</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Address__c</fullName>
+        <description>Order delivery street address line 1</description>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Superviso_Approved_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_sup_apr_dte / csc_mst_sup_apr_dte
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Superviso Approved date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Supervisor_Approval__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_sup_apr_usr / csc_mst_sup_apr_usr
+Web service name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>Supervisor Approval</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Surcharge_Code__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0 Order surchargeCode</description>
+        <externalId>false</externalId>
+        <label>Surcharge Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <description>Source table: rod_poc_ttl_key
+Source column: title
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transportation_Description__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Transportation Description</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transportation_Mode__c</fullName>
+        <description>fas.gsa.gov/services/Order/v1.0</description>
+        <externalId>false</externalId>
+        <label>Transportation Mode</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_typ / csc_mst_typ
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Assign_Counter__c</fullName>
+        <description>Source table: rod 
+Source column:  rod_user_assign_counter
+Web service: name: N/A
+Web service field:  N/A</description>
+        <externalId>false</externalId>
+        <label>User Assign Counter</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WIP_Assigned_Date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_wip_asg_dte / csc_mst_wip_asg_dte
+Web service name:
+Web service field:</description>
+        <externalId>false</externalId>
+        <label>WIP Assigned Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WIP_User__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_ssr_wip_usr / csc_mst_ssr_wip_usr 
+Web service name:N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>WIP User</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WIP_date__c</fullName>
+        <description>Source table: rod / csc_mst
+Source column: rod_ssr_wip_dte / csc_mst_ssr_wip_dte
+Web service: name: N/A
+Web service field: N/A</description>
+        <externalId>false</externalId>
+        <label>WIP date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zipcode__c</fullName>
+        <description>Order delivery zipcode 5 or 5+4 are acceptable.</description>
+        <externalId>false</externalId>
+        <label>Zipcode</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Discrepancy Order</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Order Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Discrepancy Orders</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CSC</fullName>
+        <active>true</active>
+        <description>CSC Order</description>
+        <label>CSC</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>EDD</fullName>
+        <active>true</active>
+        <label>EDD</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>FSS19</fullName>
+        <active>true</active>
+        <description>FSS19 Order</description>
+        <label>FSS19</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

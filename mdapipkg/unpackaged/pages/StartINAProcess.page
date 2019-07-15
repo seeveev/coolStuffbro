@@ -1,0 +1,121 @@
+<apex:page standardController="ZAddress__c" extensions="StartINACLASS" >
+<apex:form >
+<script type="text/javascript">
+    var __sfdcSessionId = '{!GETSESSIONID()}';
+</script>
+<script src="/soap/ajax/28.0/connection.js" type="text/javascript"></script>
+<script src="/soap/ajax/28.0/apex.js" type="text/javascript"></script>
+<script type="text/javascript">
+function schedulepopup(windowname) {           
+            blanket_size(windowname);
+            window_pos(windowname);
+            toggle('blanket');
+            toggle(windowname);  
+            return false;  
+          
+} 
+
+
+</script>
+
+<style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup 
+            displays in the center of the screen. First set the width. Then set 
+            margin-left to negative half of what the width is. You can add 
+            the height property for a fixed size pop up if you want.*/
+            width: 500px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+    </style>
+        <apex:pageMessages id="msg" ></apex:pageMessages>
+      <apex:pageBlock >
+          <apex:pageblockButtons >
+                     <!--     <apex:commandlink action="{!showPopup}" target="_blank">
+                               <apex:commandButton value="Submit" action="{!showPopup}" rerender="tstpopup,msg"/>
+                               </apex:commandLink>  -->
+                               <apex:commandButton value="Cancel" action="{!cancel}" />
+
+          </apex:pageblockButtons>
+          <apex:pageBlockTable value="{!lstDisList}" var="re">
+             <!--<apex:column headerValue="" >
+               <apex:inputcheckbox v alue="{!re.bolSelected }" />  
+              </apex:column>      -->
+              <apex:column >
+                  <apex:commandlink action="{!showPopup1}" onclick="window.open('https://c.na12.visual.force.com/apex/{!re.objZAdd.id}','_blank');">
+                       <apex:commandButton value="Submit" action="{!showPopup}" rerender="tstpopup,msg">
+                           <!--<apex:param assignTo="{!paramval}" name="paramval" value="{!re.objZAdd.id}"/>-->
+                       </apex:commandButton>
+                       <apex:param assignTo="{!paramval}" name="paramval" value="{!re.objZAdd.id}"  />
+                   </apex:commandLink> 
+              
+      <!--         <apex:commandlink action="{!showPopup}" target="_blank">                           </apex:commandLink>  -->
+
+                           <!--<apex:commandButton value="Submit" action="{!showPopup}" rerender="tstpopup,msg"/>
+                           <apex:param assignTo="{!paramval}" name="paramval" value="{!re.objZAdd.id}"  />-->
+              </apex:column>  
+        <!--   <apex:column >
+                           <div style="padding-left:23em;">               
+                 <input type="button" class="btn" value="Submit for INA" Class="generate-button" onclick="window.open('{!URLFOR($Action.Contract.New,null,[ctrc7_lkid=re.objZAdd.Id],false)}','_blank');schedulepopup('generatePopDiv');"/> 
+                 &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+                        </apex:column>   -->
+    
+               <apex:column value="{!re.objZAdd.StreetNrFirst__c} {!re.objZAdd.StreetDirection__c} {!re.objZAdd.StreetName__c} {!re.objZAdd.StreetSuffix__c} {!re.objZAdd.Locality__c} {!re.objZAdd.Postcode__c} {!re.objZAdd.Country__c} " headerValue="Z Address "/>
+               <apex:column value="{!re.objZAdd.NPA__c}-{!re.objZAdd.NXX__c} " headerValue="Exchange(NPA-NXX)" />
+                               
+              
+          </apex:pageBlockTable>
+      </apex:pageBlock>
+      
+       <apex:outputPanel id="tstpopup">
+        <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+            <apex:pageblock >
+                                <apex:pageblockButtons >
+                                <apex:commandButton value="Save record" action="{!closePopup}" rerender="tstpopup"/>
+                                <apex:commandButton value="Cancel" action="{!cancel}" rerender="tstpopup" />
+                                </apex:pageblockButtons>
+                                <apex:pageblockSection >
+                                <apex:inputtext value="{!strPopMsg}" label="Circuit ID" />                                
+                               </apex:pageblockSection>
+            
+            
+            </apex:pageblock>
+            <!--
+                     <div align="center"><font size="4"> Circuit Price Quote Id </font>
+             <br/><br/>  <apex:inputtext value="{!strPopMsg}" label="Circuit ID" /> <br/><br/>
+                <apex:commandButton value="Save record" action="{!closePopup}" rerender="tstpopup">
+                  
+                
+                </apex:commandbutton>
+                <apex:commandButton value="Cancel" action="{!cancel}" rerender="tstpopup" />
+                 </div> -->
+             <!--   <apex:commandlink action="{!closePopup}" target="_blank">
+                    <apex:commandButton value="Save record"/>
+                </apex:commandLink> -->
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+</apex:form>
+</apex:page>

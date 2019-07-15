@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GAN</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GANS</value>
+    </caseValues>
+    <fields>
+        <label><!-- GAN Account Name --></label>
+        <name>GAN_Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GAN Description --></label>
+        <name>GAN_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- GAN Number --></label>
+        <name>GAN_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

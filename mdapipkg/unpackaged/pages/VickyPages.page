@@ -1,0 +1,23 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="account" sidebar="false"> 
+   <apex:form > 
+   <apex:pageBlock >
+   <apex:pageMessages />
+ 
+   <apex:pageBlockTable value="{!accounts}" var="a" >
+      <apex:column value="{!a.name}" onclick="{!accounts}"/>
+      
+       <apex:pageBlockTable value="{!account.Contacts}" var="contact"/>
+         <apex:inputField value="{!a.Industry}"/>
+      
+      
+    <!--   <apex:column value="{!a.phone}" />
+      
+     <apex:column headerValue="Industry">
+     <apex:pageBlockTable value="{!account.Contacts}" var="contact">
+         <apex:inputField value="{!a.Industry}"/>
+      </apex:column> -->
+
+   </apex:pageBlockTable>
+   </apex:pageBlock>
+   </apex:form>
+</apex:page>

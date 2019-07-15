@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>sample 2</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>sample 2s</value>
+    </caseValues>
+    <fields>
+        <label><!-- Isfrontier --></label>
+        <name>Isfrontier__c</name>
+    </fields>
+    <fields>
+        <label><!-- textfield --></label>
+        <name>textfield__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- it already created. --></errorMessage>
+        <name>rule_1</name>
+    </validationRules>
+</CustomObjectTranslation>

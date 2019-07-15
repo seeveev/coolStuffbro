@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Td_Code1__c</fullName>
+    <description>Target Table:zla
+Target Column:    zla_action_TD_code1__c</description>
+    <externalId>false</externalId>
+    <label>Action Td Code1</label>
+    <length>1</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

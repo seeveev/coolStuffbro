@@ -1,0 +1,14 @@
+<apex:page standardController="Schedule__c" extensions="ScheduleOverrideController" >
+<apex:form >
+    <apex:pageblock >
+        <apex:pageblockbuttons >
+            <apex:commandButton value="Save" action="{!saveSch}"/>
+        </apex:pageblockbuttons>
+        <apex:pageBlockSection >
+            <apex:inputField value="{!objSC.Contract__c}"/>
+            <apex:inputField value="{!objSC.Schedule_Start_Date__c}"/>
+            <apex:inputField value="{!objSC.Schedule_End_Date__c}"/>
+        </apex:pageBlockSection>
+    </apex:pageblock>
+</apex:form>
+</apex:page>

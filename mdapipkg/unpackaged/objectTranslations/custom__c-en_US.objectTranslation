@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>custom</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>customs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- custom --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DivisionHide --></label>
+        <name>DivisionHide__c</name>
+    </fields>
+    <fields>
+        <label><!-- Division --></label>
+        <name>Division__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- author --></label>
+        <name>author__c</name>
+        <picklistValues>
+            <masterLabel>bruce</masterLabel>
+            <translation><!-- bruce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>micheal</masterLabel>
+            <translation><!-- micheal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>paul</masterLabel>
+            <translation><!-- paul --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>category__c</name>
+        <picklistValues>
+            <masterLabel>events</masterLabel>
+            <translation><!-- events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>general</masterLabel>
+            <translation><!-- general --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>issues</masterLabel>
+            <translation><!-- issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>stakeholders</masterLabel>
+            <translation><!-- stakeholders --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>date__c</name>
+    </fields>
+    <fields>
+        <label><!-- legacy case key --></label>
+        <name>leagcy_key__c</name>
+    </fields>
+    <layouts>
+        <layout>custom Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select a value --></errorMessage>
+        <name>CategoryMandatory</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Search --></label>
+        <name>Search</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- See1 --></label>
+        <name>See1</name>
+    </webLinks>
+</CustomObjectTranslation>

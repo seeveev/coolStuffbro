@@ -1,0 +1,50 @@
+<apex:page controller="mysearch" >
+  <!-- Begin Default Content REMOVE THIS 
+  <h1>Congratulations</h1>
+  This is your new Page: searchmy
+  <!-- End Default Content REMOVE THIS -->
+  <apex:form >
+  <apex:pageBlock title="SEARCH">
+  
+                  <apex:pageBlockSection title="SEARCH HIERARCHY">
+                  <apex:outputLabel value="Enter Hierarchy Name" for="Name"/> 
+                  <apex:inputText id="Name" />
+                        <apex:commandButton value="search" action="{!searchdata}"/>  
+                        <apex:commandButton value="currentpage" action="{!currentpage}"/>                  
+                  </apex:pageBlockSection>
+                  
+
+                  <apex:pageBlockSection title="click the button to get the results">
+                      <apex:commandButton value="hierarchyname" action="{!hierarchyname}" />
+                      
+                  </apex:pageBlockSection>
+                  
+                             <!--                 <apex:outputPanel id="searchresults">
+                       <apex:pageBlock title="results" >
+                            <apex:pageBlockTable var="hira" value="{!hierarchy}">    
+                                     <apex:column value="{!hira.Name__c}" headerValue="Name"/>
+                                      <apex:column value="{!hira.BTN_Phone__c}" headerValue="phone"/>
+ 
+                             </apex:pageBlockTable> 
+                               
+                           
+                           </apex:pageBlock>
+                      </apex:outputPanel>   -->
+                  
+                  
+                  
+    
+       <apex:pageBlockSection title="displaying directly" columns="1" id="accountMemosInfo" rendered="true">
+                               <apex:outputPanel >
+                                    <apex:pageBlockTable var="hir" value="{!lsthir}">    
+                                        <apex:column value="{!hir.Name__c}" headerValue="Account Name"/>
+                                        <apex:column value="{!hir.BTN_Phone__c}" headerValue="phone"/>
+
+                                    </apex:pageBlockTable>
+                                  </apex:outputPanel>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+  
+  
+  </apex:form>
+</apex:page>

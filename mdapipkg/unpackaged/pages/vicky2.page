@@ -1,0 +1,21 @@
+<apex:page >
+<apex:form >
+<apex:page standardController="Account" recordSetVar="contact ">
+<apex:pageBlock title="Contacts">
+<apex:pageBlockTable value="{!account.Contacts}" var="contacts">
+<apex:column value="{!contacts.Name}"/>
+<apex:column value="{!contacts.MailingCity}"/>
+<apex:column value="{!contacts.Phone}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:page>
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: vicky2
+   <apex:pageBlock >
+          <apex:commandButton value="next"/>
+           <apex:commandButton value="previous"/>
+          </apex:pageBlock>
+  <!-- End Default Content REMOVE THIS -->
+</apex:form>
+</apex:page>

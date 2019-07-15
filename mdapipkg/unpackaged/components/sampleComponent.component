@@ -1,0 +1,8 @@
+<apex:component >
+    <apex:form >
+        <apex:pageBlock title="Sample ANish Jaffa" >
+            <apex:inputText title="Name"/>
+            <apex:commandButton action="{!save}" value="Account Group" id="theButton"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:component>

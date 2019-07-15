@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Directory</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Directorys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description Line --></label>
+        <name>Description_Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Code 1 --></label>
+        <name>Directory_Code_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Code 2 --></label>
+        <name>Directory_Code_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Code 3 --></label>
+        <name>Directory_Code_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Code 4 --></label>
+        <name>Directory_Code_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Code 5 --></label>
+        <name>Directory_Code_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Listing Code --></label>
+        <name>Directory_Listing_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Directory Mailing Address --></label>
+        <name>Directory_Mailing_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sequence Number --></label>
+        <name>Last_Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line number --></label>
+        <name>Line_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- List With Phone Number --></label>
+        <name>List_With_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Listing Sequence --></label>
+        <name>Listing_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Number --></label>
+        <name>Reference_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

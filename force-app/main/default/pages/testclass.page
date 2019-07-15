@@ -1,0 +1,298 @@
+<apex:page >
+  <!-- 
+  
+  @isTest
+private class treenodes155Test {
+
+    static testMethod void myUnitTest() {
+        hierarchy__c objHir = new hierarchy__c();
+        objHir.billing_id__c='222';
+        objHir.BTN_Phone__c='175';
+        objHir.BTN_Name__c='(123) 456-7890';
+        //objHir.BTN_Name__c='1234567890';
+        objHir.BTN_Phone__c='123';
+        objHir.Company_name__c='Verizon Wireless';
+        objHir.Customer_Number__c='6090453';
+        objHir.Account_Id__c='76543278';
+        objHir.City__c='ROC';
+        objHir.State__c='ROC1';
+        objHir.GAN__c='134';
+        objHir.GAN_Name__c='Rochester Eye';
+        objHir.Library_Id__c='AZ';
+        objHir.Service_Street_Address__c='123 Roxbury Rd, Suite 21, ROC, NY 14618';
+        objHir.Summary_Id__c='111';
+        objHir.Summary_master_phone__c='123';
+        objHir.WTN_ID__c='76543278';
+        objHir.Level__c='MEMBER';
+        objHir.WTN__c ='1234567890';
+        objHir.WTN_Seq__c='1';
+        insert objHir;
+        
+        
+        
+        Credit_History__c objCreditHistory = new Credit_History__c();
+        objCreditHistory.Account_Id__c='76543278';
+        objCreditHistory.Type_Of_Business__c='Resi';
+        objCreditHistory.Business_Owner_1__c='Peter';
+        objCreditHistory.Business_Owner_2__c='Kathy';
+        objCreditHistory.Busi_Owner_1_Ph__c='5857771041';
+        insert objCreditHistory;
+       
+        Provisioning__c objProvisioning = new Provisioning__c();
+        objProvisioning.Account_Id__c='76543278';
+        objProvisioning.Hunt_Group_Number__c='9213';
+        objProvisioning.DRING_Line_1__c='Title';
+        objProvisioning.Last_SO_To_Update__c='921354623';
+        objProvisioning.Out_of__c='3';
+        insert objProvisioning;
+        
+        ISP__c objISP =new ISP__c();    
+        objISP.Account_Id__c='76543278';
+        objISP.Domain_Name__c='ghyr';
+        objISP.Network_Size__c='/29';
+        objISP.Product_Plan1__c='101';
+        objISP.Provisioning_Status__c='Active';
+        insert objISP;
+        
+        Special_Access_Info__c objSpecialAccessInfo = new Special_Access_Info__c();
+        objSpecialAccessInfo.Account_Id__c='76543278';
+        objSpecialAccessInfo.CIR_Number__c='875.12';
+        objSpecialAccessInfo.OLOC__c='Hyperlink';
+        objSpecialAccessInfo.PIU__c='45362';
+        objSpecialAccessInfo.TA01__c='You did this';
+        objSpecialAccessInfo.TLOC__c='Anything for this';
+        insert objSpecialAccessInfo;
+        
+        Customer_Account__c objCustomerAccount = new Customer_Account__c();
+        objCustomerAccount.Account_Id__c='76543278';
+        objCustomerAccount.Address_Line_1__c='188 Greystone lane';
+        objCustomerAccount.Address_Line_2__c='Suite 23';
+        objCustomerAccount.Bill_Cycle__c='20';
+        objCustomerAccount.Dish_Ac_No__c='7865432';
+        insert objCustomerAccount;
+        
+        
+                        
+        Current_Pending_Promotions__c objCurrPenPro = new Current_Pending_Promotions__c();
+        objCurrPenPro.Name='currpend';
+        objCurrPenPro.Account_Id__c='76543278';
+        objCurrPenPro.Promotion_Des__c='TERM BUS CUSTOM VALUE';
+        Date dt = System.today();
+        objCurrPenPro.InDATE__c=dt;
+        objCurrPenPro.Credit_END__c=dt;
+        objCurrPenPro.Ordered_S_E_Product__c='FBLCV';
+        objCurrPenPro.DISC_ITEM__c='FBLCV';
+        objCurrPenPro.Cancel_Date__c=dt;
+        objCurrPenPro.Promo_Status__c='H';
+        objCurrPenPro.Ac_Auto_R_Y_N__c='Y';
+        objCurrPenPro.Cancel_Amount__c=76.45;
+        insert objCurrPenPro;
+                
+        Dish_Transaction_History__c objDisTr = new Dish_Transaction_History__c();
+        objDisTr.Name='distr';
+        objDisTr.Account_Id__c='76543278';
+        objDisTr.Old_Dish_Acct_No__c='1234527';
+        objDisTr.SO_Number__c='76542';
+        objDisTr.Nw_Dish_Acct_No__c='54321';
+        objDisTr.Dish_S_E__c='DSHT';
+        objDisTr.Dish_S_E_Act__c='Reweq';
+        objDisTr.Changed_By__c='Kathy';
+        objDisTr.Change_date__c=dt;
+        insert objDisTr;
+        
+        A_R_info__c objAR = new A_R_info__c();
+        objAR.Account_Id__c='76543278';
+        objAR.Bill_Date__c=dt;
+        objAR.Phone_Number__c='76543278';
+        objAR.Bill_Cycle__c='11';
+        objAR.Last_Pay_Date__c=dt;
+        objAR.Prior_Bill__c=3036.78;
+        objAR.Payment__c=3036.78;
+        objAR.Adjustments__c=0.00;
+        objAR.Net_Bill__c=0.00;
+        objAR.AdjC_LocalSvc__c=-1310.17;
+        objAR.P_P_O_C_C__c=16.50;
+        objAR.Toll_Charges__c=0.00;
+        objAR.Total_Taxes__c=224.72;        
+        insert objAR;
+    
+        Payment_Info__c objPayment = new Payment_Info__c();
+        objPayment.Account_Id__c='76543278';
+        objPayment.Batch_Name__c='ROC0228008';
+        objPayment.Billing_Number__c='76543278';
+        objPayment.Payement_Rcvd_Date__c=dt;
+        objPayment.Posted_Pay_Date__c=dt;
+        objPayment.Posted_Pay_Amt__c=281.63;
+        objPayment.Post_Time__c='180600';
+        objPayment.Posted_pay_type__c='R05';
+        objPayment.Bank_Deposit_ID__c='283';
+        objPayment.Posted_Ref_No1__c='2816543';
+        objPayment.Posted_By__c='Yunh';
+        insert objPayment;
+    
+        Adjustments__c objAdj = new Adjustments__c();
+        objAdj.Account_Id__c='76543278';
+        objAdj.Charge_Code__c='564';
+        objAdj.Account_Number__c='897651';
+        objAdj.Reference_Number__c='9543';
+        objAdj.Batch_Name__c='Tretyu';
+        objAdj.Posted_By__c='GIBSONP';
+        objAdj.Date_Posted__c=dt;
+        objAdj.Description__c='ISDN ARC ADJUSTMENT';
+        objAdj.Type__c='Kiyt';
+        objAdj.Amount__c=-3.13;
+        objAdj.Phone_Number__c='76543278';
+        insert objAdj;
+        
+        SelectedWTNRecord__c objNewSWTn = new SelectedWTNRecord__c();
+        objNewSWTn.name='1234';
+        insert objNewSWTn;
+        
+        RecentTNs__c objRT = new RecentTNs__c();
+        objRT.recent_Phone__c='1234567890';
+        objRT.hierarchy__c = objHir.id;
+        insert objRT;
+        
+        treenodes155 objTreeNode = new treenodes155();
+        objTreeNode.objHierarchyFilter = objHir;// objHierarchyFilter
+        objTreeNode.showCityState();
+        objTreeNode.strSearchByValue='Account Name';
+        objTreeNode.showCityState();
+        
+        objTreeNode.searchData();
+        objTreeNode.strColumnValue='1234567890';
+        objTreeNode.searchData();
+        objTreeNode.strFilterButtonName='Show Filter';
+        objTreeNode.strState='ROC1';
+        objTreeNode.strCity='ROC';
+        objTreeNode.searchData();
+    
+    objTreeNode.strFilterButtonName='Show FilterFalse';
+        objTreeNode.objHierarchyFilter.BTN_Name__c='';
+        objTreeNode.objHierarchyFilter.BTN_Phone__c='';
+        objTreeNode.objHierarchyFilter.City__c='';
+        objTreeNode.objHierarchyFilter.State__c='';
+         objTreeNode.searchData();
+         
+        objTreeNode.strFilterButtonName='Show FilterFalse';
+        objTreeNode.objHierarchyFilter.BTN_Name__c='Verizon Wireless';
+        objTreeNode.objHierarchyFilter.BTN_Phone__c='6090453';
+        objTreeNode.objHierarchyFilter.City__c='ROC';
+        objTreeNode.objHierarchyFilter.State__c='ROC1';
+         objTreeNode.searchData();
+        
+        objTreeNode.strSearchByValue='Company Name';
+        objTreeNode.searchData();
+        objTreeNode.strFilterButtonName='Show Filter';
+        objTreeNode.objHierarchyFilter.Company_name__c='Verizon Wireless';
+        objTreeNode.objHierarchyFilter.Customer_Number__c='6090453';
+        objTreeNode.objHierarchyFilter.City__c='ROC';
+        objTreeNode.objHierarchyFilter.State__c='ROC1';
+        objTreeNode.searchData();
+        objTreeNode.strFilterButtonName='Show FilterFalse';
+        objTreeNode.searchData();
+
+    objTreeNode.strSearchByValue='Telephone Number';
+    objTreeNode.searchData();
+        
+        objTreeNode.strSearchByValue='Account Name';
+        objTreeNode.searchData();
+        
+        objTreeNode.strSearchByValue='Company Name';
+        objTreeNode.searchData();
+        
+        String strPhoneNum='';
+        for(Integer intLoop=1;intLoop<=10;intLoop++){
+          strPhoneNum=strPhoneNum+intLoop;
+          objTreeNode.createPhoneNumber(strPhoneNum);
+        }
+         
+         objTreeNode.getHierarchy();
+         objTreeNode.getAccount();
+         objTreeNode.strFilterButtonName='Show Filter';
+         objTreeNode.showFilterSection();
+         objTreeNode.strFilterButtonName='Show FilterFalse';
+         objTreeNode.showFilterSection();
+         objTreeNode.getaccts();
+         objTreeNode.getRecentTns();
+         objTreeNode.RecentTNsAction();
+         objTreeNode.showButtonOperation();
+         objTreeNode.test();
+         objTreeNode.PrepareSummaryViewURL();
+         objTreeNode.summT();
+         objTreeNode.getpgtest();
+         objTreeNode.PrepareBTNViewURL();
+         objTreeNode.PrepareSummaryNameURL();
+         objTreeNode.getState();
+         objTreeNode.getItems();
+         objTreeNode.objCustomerAccountInfo();
+         objTreeNode.getSearchColumnNames('GAN');
+         objTreeNode.getSearchColumnNames('BTN');
+         objTreeNode.getSearchColumnNames('Order Number');
+         objTreeNode.getSearchColumnNames('Trouble Ticket Number');
+         objTreeNode.getSearchColumnNames('Circuit ID');
+         objTreeNode.getSearchColumnNames('CLLI');
+         objTreeNode.getSearchColumnNames('Product');
+         objTreeNode.getSearchColumnNames('USI');
+         objTreeNode.getSearchColumnNames('Summary Master TN');
+         objTreeNode.getSearchColumnNames('Customer Name');
+         objTreeNode.getSearchColumnNames('WTN');
+         objTreeNode.strSearchByValue='Customer Name';
+    objTreeNode.searchSelectedUserData();
+    
+    objTreeNode.strSearchCriteria='Account';
+         objTreeNode.searchSelectedUserData();
+         
+         
+         objTreeNode.strSearchByValue='Telephone Number';
+         objTreeNode.searchSelectedUserData();
+         
+         
+         objTreeNode.redirectToOrderURL();
+         
+         //objHir.BTN_Name__c='1234567890';
+         //update objHir;
+         //objTreeNode.strSearchByValue='Account Name';
+        //objTreeNode.searchData();
+         
+        /*Test.setCurrentPageReference(new PageReference('Page.myPage')); 
+        System.currentPageReference().getParameters().put('btnNum', '123');
+        System.currentPageReference().getParameters().put('strColumnValueSearch', '(1234567890)');
+        System.currentPageReference().getParameters().put('searchLevel', 'Summary');
+        SummaryPageController5 objSumm = new SummaryPageController5();
+        
+       /* Test.setCurrentPageReference(new PageReference('Page.myPage')); 
+        System.currentPageReference().getParameters().put('btnNum', '123');
+        System.currentPageReference().getParameters().put('strColumnValueSearch', '(1234567890)');
+        System.currentPageReference().getParameters().put('searchLevel', '');
+        SummaryPageController5 objSumm1 = new SummaryPageController5();
+        
+        objSumm.getCountVal();
+        objSumm.activateWTNTab();
+        objSumm.openContract();
+        objSumm.getaccts();
+        objSumm.getMonths();
+        objSumm.getYears();
+        objSumm.getSelectedProductBTNValues();
+        objSumm.getItems();
+        objSumm.getMonths();
+        String strAdjustmentTelephone = '123-(456)-7890';
+        //objSumm.pullAccountInventoryData();
+        objSumm.calContractData();
+        objSumm.searchTaxInfo();
+        
+        
+        SummaryPageConExtForAccountSummary15 objSumP = new SummaryPageConExtForAccountSummary15(objSumm);*/
+    }
+}
+  
+  
+  
+  
+  
+  
+  -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

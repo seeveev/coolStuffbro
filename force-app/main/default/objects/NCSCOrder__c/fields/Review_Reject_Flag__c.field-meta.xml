@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Reject_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source table:  rod / csc_mst
+Source column: rod_rev_reject_flg / csc_mst_rev_rej_flg
+Web service: name: N/A
+Web service field: N/A</description>
+    <externalId>false</externalId>
+    <label>Review Reject Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

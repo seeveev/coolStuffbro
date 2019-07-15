@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_FSS_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source table:  rod
+Source column: rod_non_fss_flg
+Web service: name: N/A
+Web service field: N/A</description>
+    <externalId>false</externalId>
+    <label>Non FSS Flag</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

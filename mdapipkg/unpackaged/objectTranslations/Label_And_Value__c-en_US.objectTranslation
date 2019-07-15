@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Label And Value</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Label And Values</value>
+    </caseValues>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Code --></label>
+        <name>Item_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Id --></label>
+        <name>Product_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E --></label>
+        <name>S_E__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

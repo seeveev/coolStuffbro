@@ -1,0 +1,17 @@
+<apex:page standardController="Account" tabStyle="Account" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: assign2
+  <!-- End Default Content REMOVE THIS -->
+  
+  <apex:pageBlock title="name">   
+  <apex:pageBlockTable var="a" value="{!Account}" >
+  <apex:column value="{!a.Name}"/>
+  
+  </apex:pageBlockTable>
+   
+  
+  </apex:pageBlock>
+  
+  
+</apex:page>

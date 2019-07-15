@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <choices>
+        <name>Participate_No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Participate_Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Yes</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Want_to_Participate</name>
+        <label>Want to Participate?</label>
+        <locationX>641</locationX>
+        <locationY>193</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Customer_Response</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Participate_Yes</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Script for gathering customer satisfaction data</description>
+    <interviewLabel>Survey customers {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Survey customers</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>Greet_Customer</name>
+        <label>Greet Customer</label>
+        <locationX>389</locationX>
+        <locationY>185</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>WelcomeMessage</name>
+            <fieldText>Hello. My name is [Your First Name] from Acme Wireless Customer Relations.
+
+According to our records, you are currently a Preferred Repair customer. We are very interested in hearing about your experience with this service. Do you have time to answer a few short questions?</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Customer_Response</name>
+            <choiceReferences>Participate_Yes</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Customer Response</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <status>InvalidDraft</status>
+</Flow>

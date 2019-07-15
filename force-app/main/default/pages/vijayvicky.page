@@ -1,0 +1,20 @@
+<apex:page controller="vickycontrols" >
+   
+   <apex:form >
+   
+   
+      <apex:commandButton value="Submit" action="{!Submitt}"  />
+
+   
+   </apex:form>
+   
+   
+   <apex:pageBlock title="Product">
+   
+   
+
+
+   </apex:pageBlock>
+
+
+</apex:page>

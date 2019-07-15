@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Search By --></label>
+    <name>Search_By__c</name>
+    <picklistValues>
+        <masterLabel>BTN</masterLabel>
+        <translation><!-- BTN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CLLI</masterLabel>
+        <translation><!-- CLLI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Circuit ID</masterLabel>
+        <translation><!-- Circuit ID --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Name</masterLabel>
+        <translation><!-- Customer Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAN</masterLabel>
+        <translation><!-- GAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order Number</masterLabel>
+        <translation><!-- Order Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product</masterLabel>
+        <translation><!-- Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Summary Master TN</masterLabel>
+        <translation><!-- Summary Master TN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trouble Ticket Number</masterLabel>
+        <translation><!-- Trouble Ticket Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>USI</masterLabel>
+        <translation><!-- USI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WTN</masterLabel>
+        <translation><!-- WTN --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

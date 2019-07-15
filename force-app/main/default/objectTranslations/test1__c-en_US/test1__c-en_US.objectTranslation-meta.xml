@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>test</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>test</value>
+    </caseValues>
+    <layouts>
+        <layout>test Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>vijay testing layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- shilpa --></label>
+        <name>shilpa</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- vijay --></label>
+        <name>vijay</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- vijay1 --></label>
+        <name>vijay1</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- vijay12 --></label>
+        <name>vijay12</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

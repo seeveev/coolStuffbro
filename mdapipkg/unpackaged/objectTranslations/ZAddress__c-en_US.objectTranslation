@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ZAddress</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Zaddresss</value>
+    </caseValues>
+    <fields>
+        <label><!-- AddressText --></label>
+        <name>AddressText__c</name>
+    </fields>
+    <fields>
+        <label><!-- AddressType --></label>
+        <name>AddressType__c</name>
+        <picklistValues>
+            <masterLabel>PostalAddress</masterLabel>
+            <translation><!-- PostalAddress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceAddress</masterLabel>
+            <translation><!-- ServiceAddress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BuildingName --></label>
+        <name>BuildingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuildingNumber --></label>
+        <name>BuildingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuildingSubNumber --></label>
+        <name>BuildingSubNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit Price QuoteId --></label>
+        <name>Circuit_Price_QuoteId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsInFrontierFootprint --></label>
+        <name>IsInFrontierFootprint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Locality --></label>
+        <name>Locality__c</name>
+    </fields>
+    <fields>
+        <label><!-- NPA --></label>
+        <name>NPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- NXX --></label>
+        <name>NXX__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postcode --></label>
+        <name>Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line Item Number --></label>
+        <name>Quote_Line_Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Line Item --></label>
+        <name>Quote_Line_Number__c</name>
+        <relationshipLabel><!-- Zaddresss --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ServiceControlNumber --></label>
+        <name>ServiceControlNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceSequenceNumber --></label>
+        <name>ServiceSequenceNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- StateOrProvince --></label>
+        <name>StateOrProvince__c</name>
+    </fields>
+    <fields>
+        <label><!-- SterlingQuoteItem --></label>
+        <name>SterlingQuoteItem__c</name>
+        <relationshipLabel><!-- Zaddresss --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- StreetDirection --></label>
+        <name>StreetDirection__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetName --></label>
+        <name>StreetName__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetNrFirst --></label>
+        <name>StreetNrFirst__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetSubDescription --></label>
+        <name>StreetSubDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetSuffix --></label>
+        <name>StreetSuffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subdivision --></label>
+        <name>Subdivision__c</name>
+    </fields>
+    <fields>
+        <label><!-- WireCenter --></label>
+        <name>WireCenter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Z Service Address --></label>
+        <name>Z_Service_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- unit Designator --></label>
+        <name>unit_Designator__c</name>
+    </fields>
+    <fields>
+        <label><!-- unit number --></label>
+        <name>unit_number__c</name>
+    </fields>
+    <layouts>
+        <layout>ZAddress Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,45 @@
+<apex:page standardController="Case" extensions="ClsCase" showHeader="true" sidebar="true" >
+<style>
+.container
+{
+   overflow:auto;  
+   height:5px;  
+   align:bottom;
+}
+</style>
+<apex:form >
+    <apex:image url="https://c.na12.content.force.com/servlet/servlet.FileDownload?file=015U000000065P1" width="250" height="50" />
+    <apex:pageBlock title="Find Section" id="block">
+        <apex:pageblockButtons >
+           <apex:commandButton value="Back to Search" action="{!BackToSearch}" />
+        </apex:pageblockButtons>
+        <apex:pageblockSection title="Case Fields" columns="2">
+                   <apex:pageBlockTable id="blocktab" value="{!FindResult}" var="findVar" style="width: 800px height: 100px"  rendered="{!NOT(ISNULL(FindResult))}" >
+                        <!--<apex:column value="{!findVar.Name}"/>-->
+                        <apex:column >
+                            <apex:commandLink reRender="refreshdata" >
+                                {!findVar.Name}
+                                <apex:param name="qp" value="{!findVar.id}"/>
+                            </apex:commandLink>
+                           
+                        </apex:column>
+                    </apex:pageBlockTable>            
+        </apex:pageblockSection>
+        
+        <apex:pageblockSection title="Filtered Data"  id="blockSection"  >
+            <apex:outputPanel id="refreshdata" >
+                <apex:pageBlockTable id="blocktab" value="{!FindStoreResult}" var="merD" style="width: 800px" rendered="{!NOT(ISNULL(FindStoreResult))}" >
+                    <apex:column value="{!merD.CaseNumber}"/>
+                    <apex:column value="{!merD.Type}"/>
+                    <apex:column value="{!merD.Subject}"/>
+                    <apex:column value="{!merD.Priority}"/>
+                    <apex:column value="{!merD.Yes__c}"/>
+                    <apex:column value="{!merD.No__c}"/>
+                    <apex:column value="{!merD.Not_Applicable__c}"/>
+                </apex:pageBlockTable>
+                  
+            </apex:outputPanel>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

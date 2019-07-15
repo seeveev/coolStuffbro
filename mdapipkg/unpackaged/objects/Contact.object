@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableCustomerPortal</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnablePartnerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableSelfService</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Merge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewContact</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewCustomerPortal</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewPartnerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewSelfService</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AccountId</fullName>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>(1 AND 2 AND 3)</booleanFilter>
+            <errorMessage>You cannot create a contact for an inactive account or an account you do not own.</errorMessage>
+            <filterItems>
+                <field>Account.Inactive_Company__c</field>
+                <operation>equals</operation>
+                <value>false</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.OwnerId</field>
+                <operation>equals</operation>
+                <valueField>$User.Id</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>notEqual</operation>
+                <value>Frontier System Administrator, System Administrator</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssistantName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AssistantPhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Birthdate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ChkBoxTrue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ChkBoxTrue</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Position</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>C Level</fullName>
+                    <default>false</default>
+                    <label>C Level</label>
+                </value>
+                <value>
+                    <fullName>Day to Day</fullName>
+                    <default>false</default>
+                    <label>Day to Day</label>
+                </value>
+                <value>
+                    <fullName>Decision Maker</fullName>
+                    <default>false</default>
+                    <label>Decision Maker</label>
+                </value>
+                <value>
+                    <fullName>Influencer</fullName>
+                    <default>false</default>
+                    <label>Influencer</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Customer</fullName>
+                    <default>false</default>
+                    <label>Customer</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Competitor</fullName>
+                    <default>false</default>
+                    <label>Competitor</label>
+                </value>
+                <value>
+                    <fullName>Agent</fullName>
+                    <default>false</default>
+                    <label>Agent</label>
+                </value>
+                <value>
+                    <fullName>Recruit - Employee Candidate</fullName>
+                    <default>false</default>
+                    <label>Recruit - Employee Candidate</label>
+                </value>
+                <value>
+                    <fullName>Recruit</fullName>
+                    <default>false</default>
+                    <label>Recruit</label>
+                </value>
+                <value>
+                    <fullName>D &amp; B Contact</fullName>
+                    <default>false</default>
+                    <label>D &amp; B Contact</label>
+                </value>
+                <value>
+                    <fullName>Send Communication</fullName>
+                    <default>false</default>
+                    <label>Send Communication</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Department</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HomePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>IndividualId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Industry__c</fullName>
+        <description>Contact&apos;s Industry</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Industry</inlineHelpText>
+        <label>Industry</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agriculture</fullName>
+                    <default>false</default>
+                    <label>Agriculture</label>
+                </value>
+                <value>
+                    <fullName>Automotive</fullName>
+                    <default>false</default>
+                    <label>Automotive</label>
+                </value>
+                <value>
+                    <fullName>Business Services</fullName>
+                    <default>false</default>
+                    <label>Business Services</label>
+                </value>
+                <value>
+                    <fullName>Colleges &amp; Universities</fullName>
+                    <default>false</default>
+                    <label>Colleges &amp; Universities</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Consumer Goods</fullName>
+                    <default>false</default>
+                    <label>Consumer Goods</label>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                    <label>Education</label>
+                </value>
+                <value>
+                    <fullName>Energy</fullName>
+                    <default>false</default>
+                    <label>Energy</label>
+                </value>
+                <value>
+                    <fullName>Financial Services</fullName>
+                    <default>false</default>
+                    <label>Financial Services</label>
+                </value>
+                <value>
+                    <fullName>Government</fullName>
+                    <default>false</default>
+                    <label>Government</label>
+                </value>
+                <value>
+                    <fullName>Healthcare</fullName>
+                    <default>false</default>
+                    <label>Healthcare</label>
+                </value>
+                <value>
+                    <fullName>High Technology</fullName>
+                    <default>false</default>
+                    <label>High Technology</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Lodging &amp; Hospitality</fullName>
+                    <default>false</default>
+                    <label>Lodging &amp; Hospitality</label>
+                </value>
+                <value>
+                    <fullName>Manufacturing</fullName>
+                    <default>false</default>
+                    <label>Manufacturing</label>
+                </value>
+                <value>
+                    <fullName>Media &amp; Entertainment</fullName>
+                    <default>false</default>
+                    <label>Media &amp; Entertainment</label>
+                </value>
+                <value>
+                    <fullName>Metals &amp; Mining</fullName>
+                    <default>false</default>
+                    <label>Metals &amp; Mining</label>
+                </value>
+                <value>
+                    <fullName>Non-Profit</fullName>
+                    <default>false</default>
+                    <label>Non-Profit</label>
+                </value>
+                <value>
+                    <fullName>Personal Services</fullName>
+                    <default>false</default>
+                    <label>Personal Services</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceuticals</fullName>
+                    <default>false</default>
+                    <label>Pharmaceuticals</label>
+                </value>
+                <value>
+                    <fullName>Real Estate</fullName>
+                    <default>false</default>
+                    <label>Real Estate</label>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Telecommunications</fullName>
+                    <default>false</default>
+                    <label>Telecommunications</label>
+                </value>
+                <value>
+                    <fullName>Travel &amp; Transportation</fullName>
+                    <default>false</default>
+                    <label>Travel &amp; Transportation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Languages__c</fullName>
+        <externalId>false</externalId>
+        <label>Languages</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastCURequestDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LastCUUpdateDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Secondary</fullName>
+                    <default>false</default>
+                    <label>Secondary</label>
+                </value>
+                <value>
+                    <fullName>Tertiary</fullName>
+                    <default>false</default>
+                    <label>Tertiary</label>
+                </value>
+                <value>
+                    <fullName>Primary</fullName>
+                    <default>false</default>
+                    <label>Primary</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MailingAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OtherAddress</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OtherPhone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ReportsToId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Row_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Siebel Contact Row ID</description>
+        <externalId>true</externalId>
+        <label>Row Id</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Zone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>(GMT) Casablanca, Monrovia</fullName>
+                    <default>false</default>
+                    <label>(GMT) Casablanca, Monrovia</label>
+                </value>
+                <value>
+                    <fullName>(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisban, London</fullName>
+                    <default>false</default>
+                    <label>(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisban, London</label>
+                </value>
+                <value>
+                    <fullName>(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</fullName>
+                    <default>false</default>
+                    <label>(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</label>
+                </value>
+                <value>
+                    <fullName>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</fullName>
+                    <default>false</default>
+                    <label>(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</label>
+                </value>
+                <value>
+                    <fullName>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</fullName>
+                    <default>false</default>
+                    <label>(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</label>
+                </value>
+                <value>
+                    <fullName>(GMT+01:00) Sarajevo, Skopje, Sofija, Vilnius, Warsaw, Zagreb</fullName>
+                    <default>false</default>
+                    <label>(GMT+01:00) Sarajevo, Skopje, Sofija, Vilnius, Warsaw, Zagreb</label>
+                </value>
+                <value>
+                    <fullName>(GMT+01:00) West Central Africa</fullName>
+                    <default>false</default>
+                    <label>(GMT+01:00) West Central Africa</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Athens, Istanbul, Minsk</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Athens, Istanbul, Minsk</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Bucharest</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Bucharest</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Cairo</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Cairo</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Harare, Pretoria</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Harare, Pretoria</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Helsinki, Riga, Tallinn</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Helsinki, Riga, Tallinn</label>
+                </value>
+                <value>
+                    <fullName>(GMT+02:00) Jerusalem</fullName>
+                    <default>false</default>
+                    <label>(GMT+02:00) Jerusalem</label>
+                </value>
+                <value>
+                    <fullName>(GMT+03:00) Baghdad</fullName>
+                    <default>false</default>
+                    <label>(GMT+03:00) Baghdad</label>
+                </value>
+                <value>
+                    <fullName>(GMT+03:00) Kuwait, Riyadh</fullName>
+                    <default>false</default>
+                    <label>(GMT+03:00) Kuwait, Riyadh</label>
+                </value>
+                <value>
+                    <fullName>(GMT+03:00) Moscow, St. Petersburg, Volgograd</fullName>
+                    <default>false</default>
+                    <label>(GMT+03:00) Moscow, St. Petersburg, Volgograd</label>
+                </value>
+                <value>
+                    <fullName>(GMT+03:00) Nairobi</fullName>
+                    <default>false</default>
+                    <label>(GMT+03:00) Nairobi</label>
+                </value>
+                <value>
+                    <fullName>(GMT+03:30) Tehran</fullName>
+                    <default>false</default>
+                    <label>(GMT+03:30) Tehran</label>
+                </value>
+                <value>
+                    <fullName>(GMT+04:00) Abu Dhabi, Muscat</fullName>
+                    <default>false</default>
+                    <label>(GMT+04:00) Abu Dhabi, Muscat</label>
+                </value>
+                <value>
+                    <fullName>(GMT+04:00) Baku, Tbilisi, Yerevan</fullName>
+                    <default>false</default>
+                    <label>(GMT+04:00) Baku, Tbilisi, Yerevan</label>
+                </value>
+                <value>
+                    <fullName>(GMT+04:30) Kabul</fullName>
+                    <default>false</default>
+                    <label>(GMT+04:30) Kabul</label>
+                </value>
+                <value>
+                    <fullName>(GMT+05:00) Ekaterinburg</fullName>
+                    <default>false</default>
+                    <label>(GMT+05:00) Ekaterinburg</label>
+                </value>
+                <value>
+                    <fullName>(GMT+05:00) Islamabad, Karachi, Tashkent</fullName>
+                    <default>false</default>
+                    <label>(GMT+05:00) Islamabad, Karachi, Tashkent</label>
+                </value>
+                <value>
+                    <fullName>(GMT+05:30) Calcutta, Chennai, Mumbai, New Delhi</fullName>
+                    <default>false</default>
+                    <label>(GMT+05:30) Calcutta, Chennai, Mumbai, New Delhi</label>
+                </value>
+                <value>
+                    <fullName>(GMT+05:45) Kathmandu</fullName>
+                    <default>false</default>
+                    <label>(GMT+05:45) Kathmandu</label>
+                </value>
+                <value>
+                    <fullName>(GMT+06:00) Almaty, Novosibirsk</fullName>
+                    <default>false</default>
+                    <label>(GMT+06:00) Almaty, Novosibirsk</label>
+                </value>
+                <value>
+                    <fullName>(GMT+06:00) Astana, Dhaka</fullName>
+                    <default>false</default>
+                    <label>(GMT+06:00) Astana, Dhaka</label>
+                </value>
+                <value>
+                    <fullName>(GMT+06:00) Sri Jayawardenepura</fullName>
+                    <default>false</default>
+                    <label>(GMT+06:00) Sri Jayawardenepura</label>
+                </value>
+                <value>
+                    <fullName>(GMT+06:30) Rengoon</fullName>
+                    <default>false</default>
+                    <label>(GMT+06:30) Rengoon</label>
+                </value>
+                <value>
+                    <fullName>(GMT+07:00) Bangkok, Hanoi, Jakarta</fullName>
+                    <default>false</default>
+                    <label>(GMT+07:00) Bangkok, Hanoi, Jakarta</label>
+                </value>
+                <value>
+                    <fullName>(GMT+07:00) Krasnoyarsk</fullName>
+                    <default>false</default>
+                    <label>(GMT+07:00) Krasnoyarsk</label>
+                </value>
+                <value>
+                    <fullName>(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</fullName>
+                    <default>false</default>
+                    <label>(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</label>
+                </value>
+                <value>
+                    <fullName>(GMT+08:00) Irkutsk, Ulaan Bataar</fullName>
+                    <default>false</default>
+                    <label>(GMT+08:00) Irkutsk, Ulaan Bataar</label>
+                </value>
+                <value>
+                    <fullName>(GMT+08:00) Kuala Lumpur, Singapore</fullName>
+                    <default>false</default>
+                    <label>(GMT+08:00) Kuala Lumpur, Singapore</label>
+                </value>
+                <value>
+                    <fullName>(GMT+08:00) Perth</fullName>
+                    <default>false</default>
+                    <label>(GMT+08:00) Perth</label>
+                </value>
+                <value>
+                    <fullName>(GMT+08:00) Taipei</fullName>
+                    <default>false</default>
+                    <label>(GMT+08:00) Taipei</label>
+                </value>
+                <value>
+                    <fullName>(GMT+09:00) Osaka, Sapporo, Tokyo</fullName>
+                    <default>false</default>
+                    <label>(GMT+09:00) Osaka, Sapporo, Tokyo</label>
+                </value>
+                <value>
+                    <fullName>(GMT+09:00) Seoul</fullName>
+                    <default>false</default>
+                    <label>(GMT+09:00) Seoul</label>
+                </value>
+                <value>
+                    <fullName>(GMT+09:00) Yakutsk</fullName>
+                    <default>false</default>
+                    <label>(GMT+09:00) Yakutsk</label>
+                </value>
+                <value>
+                    <fullName>(GMT+09:30) Adelaide</fullName>
+                    <default>false</default>
+                    <label>(GMT+09:30) Adelaide</label>
+                </value>
+                <value>
+                    <fullName>(GMT+09:30) Darwin</fullName>
+                    <default>false</default>
+                    <label>(GMT+09:30) Darwin</label>
+                </value>
+                <value>
+                    <fullName>(GMT+10:00) Brisbane</fullName>
+                    <default>false</default>
+                    <label>(GMT+10:00) Brisbane</label>
+                </value>
+                <value>
+                    <fullName>(GMT+10:00) Canberra, Melbourne, Sydney</fullName>
+                    <default>false</default>
+                    <label>(GMT+10:00) Canberra, Melbourne, Sydney</label>
+                </value>
+                <value>
+                    <fullName>(GMT+10:00) Guam, Port Moresby</fullName>
+                    <default>false</default>
+                    <label>(GMT+10:00) Guam, Port Moresby</label>
+                </value>
+                <value>
+                    <fullName>(GMT+10:00) Hobart</fullName>
+                    <default>false</default>
+                    <label>(GMT+10:00) Hobart</label>
+                </value>
+                <value>
+                    <fullName>(GMT+10:00) Vladivostok</fullName>
+                    <default>false</default>
+                    <label>(GMT+10:00) Vladivostok</label>
+                </value>
+                <value>
+                    <fullName>(GMT+11:00) Magadan, Solomon Is., New Caledonia</fullName>
+                    <default>false</default>
+                    <label>(GMT+11:00) Magadan, Solomon Is., New Caledonia</label>
+                </value>
+                <value>
+                    <fullName>(GMT+12:00) Auckland, Wellington</fullName>
+                    <default>false</default>
+                    <label>(GMT+12:00) Auckland, Wellington</label>
+                </value>
+                <value>
+                    <fullName>(GMT+12:00) Fiji, Kamchatka, Marshall Is.</fullName>
+                    <default>false</default>
+                    <label>(GMT+12:00) Fiji, Kamchatka, Marshall Is.</label>
+                </value>
+                <value>
+                    <fullName>(GMT+13:00) Nuku&apos;alofa</fullName>
+                    <default>false</default>
+                    <label>(GMT+13:00) Nuku&apos;alofa</label>
+                </value>
+                <value>
+                    <fullName>(GMT-01:00) Azores</fullName>
+                    <default>false</default>
+                    <label>(GMT-01:00) Azores</label>
+                </value>
+                <value>
+                    <fullName>(GMT-01:00) Cape Verde Is.</fullName>
+                    <default>false</default>
+                    <label>(GMT-01:00) Cape Verde Is.</label>
+                </value>
+                <value>
+                    <fullName>(GMT-02:00) Mid-Atlantic</fullName>
+                    <default>false</default>
+                    <label>(GMT-02:00) Mid-Atlantic</label>
+                </value>
+                <value>
+                    <fullName>(GMT-03:00) Brasilia</fullName>
+                    <default>false</default>
+                    <label>(GMT-03:00) Brasilia</label>
+                </value>
+                <value>
+                    <fullName>(GMT-03:00) Buenos Aires, Georgetown</fullName>
+                    <default>false</default>
+                    <label>(GMT-03:00) Buenos Aires, Georgetown</label>
+                </value>
+                <value>
+                    <fullName>(GMT-03:00) Greenland</fullName>
+                    <default>false</default>
+                    <label>(GMT-03:00) Greenland</label>
+                </value>
+                <value>
+                    <fullName>(GMT-03:30) Newfoundland</fullName>
+                    <default>false</default>
+                    <label>(GMT-03:30) Newfoundland</label>
+                </value>
+                <value>
+                    <fullName>(GMT-04:00) Atlantic Time (Canada)</fullName>
+                    <default>false</default>
+                    <label>(GMT-04:00) Atlantic Time (Canada)</label>
+                </value>
+                <value>
+                    <fullName>(GMT-04:00) Caracas, La Paz</fullName>
+                    <default>false</default>
+                    <label>(GMT-04:00) Caracas, La Paz</label>
+                </value>
+                <value>
+                    <fullName>(GMT-04:00) Santiago</fullName>
+                    <default>false</default>
+                    <label>(GMT-04:00) Santiago</label>
+                </value>
+                <value>
+                    <fullName>(GMT-05:00) Bogota, Lima, Quito</fullName>
+                    <default>false</default>
+                    <label>(GMT-05:00) Bogota, Lima, Quito</label>
+                </value>
+                <value>
+                    <fullName>(GMT-05:00) Eastern Time (US &amp; Canada)</fullName>
+                    <default>false</default>
+                    <label>(GMT-05:00) Eastern Time (US &amp; Canada)</label>
+                </value>
+                <value>
+                    <fullName>(GMT-05:00) Indiana (East)</fullName>
+                    <default>false</default>
+                    <label>(GMT-05:00) Indiana (East)</label>
+                </value>
+                <value>
+                    <fullName>(GMT-06:00) Central America</fullName>
+                    <default>false</default>
+                    <label>(GMT-06:00) Central America</label>
+                </value>
+                <value>
+                    <fullName>(GMT-06:00) Central Time (US &amp; Canada)</fullName>
+                    <default>false</default>
+                    <label>(GMT-06:00) Central Time (US &amp; Canada)</label>
+                </value>
+                <value>
+                    <fullName>(GMT-06:00) Mexico City</fullName>
+                    <default>false</default>
+                    <label>(GMT-06:00) Mexico City</label>
+                </value>
+                <value>
+                    <fullName>(GMT-06:00) Saskatchewan</fullName>
+                    <default>false</default>
+                    <label>(GMT-06:00) Saskatchewan</label>
+                </value>
+                <value>
+                    <fullName>(GMT-07:00) Arizona</fullName>
+                    <default>false</default>
+                    <label>(GMT-07:00) Arizona</label>
+                </value>
+                <value>
+                    <fullName>(GMT-07:00) Chihuahua, La Paz, Mazatlan</fullName>
+                    <default>false</default>
+                    <label>(GMT-07:00) Chihuahua, La Paz, Mazatlan</label>
+                </value>
+                <value>
+                    <fullName>(GMT-07:00) Mountain Time (US &amp; Canada)</fullName>
+                    <default>false</default>
+                    <label>(GMT-07:00) Mountain Time (US &amp; Canada)</label>
+                </value>
+                <value>
+                    <fullName>(GMT-08:00) Pacific Time (US &amp; Canada); Tijuana</fullName>
+                    <default>false</default>
+                    <label>(GMT-08:00) Pacific Time (US &amp; Canada); Tijuana</label>
+                </value>
+                <value>
+                    <fullName>(GMT-09:00) Alaska</fullName>
+                    <default>false</default>
+                    <label>(GMT-09:00) Alaska</label>
+                </value>
+                <value>
+                    <fullName>(GMT-10:00) Hawaii</fullName>
+                    <default>false</default>
+                    <label>(GMT-10:00) Hawaii</label>
+                </value>
+                <value>
+                    <fullName>(GMT-11:00) Midway Island, Samoa</fullName>
+                    <default>false</default>
+                    <label>(GMT-11:00) Midway Island, Samoa</label>
+                </value>
+                <value>
+                    <fullName>(GMT-12:00) Eniwetok, Kwajalein</fullName>
+                    <default>false</default>
+                    <label>(GMT-12:00) Eniwetok, Kwajalein</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <listViews>
+        <fullName>AllContacts</fullName>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.PHONE3</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.DEPARTMENT</columns>
+        <columns>CONTACT.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Contacts</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>BirthdaysThisMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.BIRTHDATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Birthdays This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>MyContacts</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_A</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>a</value>
+        </filters>
+        <label>My Contacts - A</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_B</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>b</value>
+        </filters>
+        <label>My Contacts - B</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_C</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>C</value>
+        </filters>
+        <label>My Contacts - C</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_D</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>D</value>
+        </filters>
+        <label>My Contacts - D</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_E</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>E</value>
+        </filters>
+        <label>My Contacts - E</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_F</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>F</value>
+        </filters>
+        <label>My Contacts - F</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_G</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>G</value>
+        </filters>
+        <label>My Contacts - G</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_H</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Hartman</value>
+        </filters>
+        <label>My Contacts - H</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_I</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>I</value>
+        </filters>
+        <label>My Contacts - I</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_J</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>J</value>
+        </filters>
+        <label>My Contacts - J</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_K</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>K</value>
+        </filters>
+        <label>My Contacts - K</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_L</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>L</value>
+        </filters>
+        <label>My Contacts - L</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_M</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>M</value>
+        </filters>
+        <label>My Contacts - M</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_N</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>N</value>
+        </filters>
+        <label>My Contacts - N</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_O</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>O</value>
+        </filters>
+        <label>My Contacts - O</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_P</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>P</value>
+        </filters>
+        <label>My Contacts - P</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_Q</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>Q</value>
+        </filters>
+        <label>My Contacts - Q</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_R</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>R</value>
+        </filters>
+        <label>My Contacts - R</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_S</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>S</value>
+        </filters>
+        <label>My Contacts - S</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_T</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>T</value>
+        </filters>
+        <label>My Contacts - T</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_U</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>U</value>
+        </filters>
+        <label>My Contacts - U</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_V</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>V</value>
+        </filters>
+        <label>My Contacts - V</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Contacts_WXYZ</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.FIRST_NAME</columns>
+        <columns>CONTACT.LAST_NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.ADDRESS1_CITY</columns>
+        <columns>CONTACT.ADDRESS1_STATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.LAST_NAME</field>
+            <operation>startsWith</operation>
+            <value>W,X,Y,Z</value>
+        </filters>
+        <label>My Contacts - WXYZ</label>
+    </listViews>
+    <listViews>
+        <fullName>NewLastWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <label>New Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTACT.PHONE1</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE1</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE3</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE4</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE5</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE6</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTACT.PHONE1</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact.MailingStreet}+{!Contact.MailingCity}+{!Contact.MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Contact.FirstName} {!Contact.LastName}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Google_Info</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Info</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://google.com?q={!Contact.Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact.MailingCountry}&amp;csz={!Contact.MailingCity}+{!Contact.MailingState}+{!Contact.MailingPostalCode}+&amp;addr={!Contact.MailingStreet}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooWeather</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://weather.yahoo.com/search/weather2?p={!Contact.MailingPostalCode}</url>
+    </webLinks>
+</CustomObject>

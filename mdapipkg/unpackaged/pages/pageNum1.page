@@ -1,0 +1,31 @@
+<apex:page renderAs="PDF" applyBodyTag="false" applyHtmlTag="false" showHeader="false">
+<head>
+    <style>
+        @page {
+            size: letter;
+            margin: 25mm;
+            @top-center {
+                content: "Sample";
+            }
+            @bottom-left {
+               <!-- content: "Page " counter(page) " of " counter(pages); -->
+               font-size: 29px;
+                content: "footerfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooterfooter";
+                
+            }
+        }
+        .page-break {
+            display:block;
+            page-break-after:always;
+        }
+        body {
+             font-family: 'Arial Unicode MS'; 
+        }
+        
+    </style>
+    </head>
+    <div class="page-break">Page A</div>
+    <div class="page-break">Page B</div>
+    <div>Page C</div>
+
+</apex:page>

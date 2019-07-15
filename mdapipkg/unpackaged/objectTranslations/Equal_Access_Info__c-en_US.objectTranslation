@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Equal Access Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Equal Access Infos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Reference Number --></label>
+        <name>Carrier_Ref_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Notify Date --></label>
+        <name>Customer_Notify_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Time --></label>
+        <name>Effective_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preffered Carrier Code --></label>
+        <name>Preffered_CCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preffered Carrier Description --></label>
+        <name>Preffered_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RRN --></label>
+        <name>RRN__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAC --></label>
+        <name>SAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seq # --></label>
+        <name>Seq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Order Number --></label>
+        <name>Service_Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Code --></label>
+        <name>Source_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Code Descrition --></label>
+        <name>Source_Descrition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <layouts>
+        <layout>Equal Access Info Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

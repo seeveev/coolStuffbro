@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tool Used</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tool Used</value>
+    </caseValues>
+    <fields>
+        <label><!-- DD Calc Times --></label>
+        <name>DD_Calc_Times__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tool --></label>
+        <name>Tool__c</name>
+    </fields>
+    <fields>
+        <label><!-- Users --></label>
+        <name>Users__c</name>
+        <relationshipLabel><!-- Tool Used --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

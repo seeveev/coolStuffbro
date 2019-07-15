@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Date_Time_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Date/Time 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date_Time_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Date/Time 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Datecombination__c</fullName>
+        <externalId>false</externalId>
+        <formula>(( Date_Time_2__c - Date_Time_1__c  ) * 1440 ) / 10000</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Datecombination</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Full__c</fullName>
+        <externalId>false</externalId>
+        <formula>first_name__c +&quot; &quot; + last_name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Full</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sample_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sample Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sample_names__c</fullName>
+        <externalId>false</externalId>
+        <label>Sample names</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Name</fullName>
+                    <default>false</default>
+                    <label>Name</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>first_name__c</fullName>
+        <externalId>false</externalId>
+        <label>first name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>languag__c</fullName>
+        <externalId>false</externalId>
+        <label>languag</label>
+        <length>225</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>last_name__c</fullName>
+        <externalId>false</externalId>
+        <label>last name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>tax_paid__c</fullName>
+        <externalId>false</externalId>
+        <label>tax paid</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>samples</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>samples Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>sampless</pluralLabel>
+    <recordTypes>
+        <fullName>sample</fullName>
+        <active>true</active>
+        <label>sample</label>
+        <picklistValues>
+            <picklist>Sample_names__c</picklist>
+            <values>
+                <fullName>Name</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Ruleforprofile</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ NOT( ISBLANK( Date__c )) ,
+ ISBLANK(first_name__c) , 
+NOT($Profile.Name = &quot;System Administrator&quot;) 
+)</errorConditionFormula>
+        <errorMessage>Get well soon nana</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>error_prompt</fullName>
+        <active>true</active>
+        <description>this is an rule which should say .. if the value is not entered into the field.</description>
+        <errorConditionFormula>AND( ISPICKVAL( Sample_names__c , &apos;price&apos;) ,
+               ISBLANK(  tax_paid__c ) )</errorConditionFormula>
+        <errorMessage>orey jaffaa .. dobinaiyaa kalluuu</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>namerule</fullName>
+        <active>false</active>
+        <description>this is a validation rule to calculate the name</description>
+        <errorConditionFormula>OR ( 
+ISPICKVAL(Sample_names__c,  &apos; Price&apos; ) ,
+ ISBLANK( tax_paid__c ) )</errorConditionFormula>
+        <errorMessage>ERROR ERROR</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>rule_2</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED(  languag__c )</errorConditionFormula>
+        <errorMessage>orey yedhava.. value marchaku ra</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

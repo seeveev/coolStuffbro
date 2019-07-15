@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_Approved_date__c</fullName>
+    <description>Source table: rod / csc_mst
+Source column: rod_mgr_apr_dte / csc_mst_mgr_apr_dte
+Web service name:N/A
+Web service field: N/A</description>
+    <externalId>false</externalId>
+    <label>Manager Approved date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

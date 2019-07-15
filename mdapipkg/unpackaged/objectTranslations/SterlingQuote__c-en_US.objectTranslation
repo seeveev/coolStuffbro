@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SterlingQuote</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SterlingQuotes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- SterlingQuotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Additional To --></label>
+        <name>AdditionalAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional To Name --></label>
+        <name>AdditionalName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ApprovalType --></label>
+        <name>ApprovalType__c</name>
+        <picklistValues>
+            <masterLabel>RSM</masterLabel>
+            <translation><!-- RSM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SVP</masterLabel>
+            <translation><!-- SVP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bill To --></label>
+        <name>BillingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To Name --></label>
+        <name>BillingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- CPQQuoteId --></label>
+        <name>CPQQuoteId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- SterlingQuotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>CreatedBy__c</name>
+        <relationshipLabel><!-- SterlingQuotes (Created By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount --></label>
+        <name>Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExpediteIncluded --></label>
+        <name>ExpediteIncluded__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExpirationDate --></label>
+        <name>ExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grand Total --></label>
+        <name>GrandTotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Syncing --></label>
+        <name>IsSyncing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By --></label>
+        <name>LastModifiedBy__c</name>
+        <relationshipLabel><!-- SterlingQuotes (Last Modified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Line Items --></label>
+        <name>LineItemCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Note --></label>
+        <name>Note__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name --></label>
+        <name>OpportunityId__c</name>
+        <relationshipLabel><!-- SterlingQuotes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- QuoteTo --></label>
+        <name>QuoteToAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote To Name --></label>
+        <name>QuoteToName__c</name>
+    </fields>
+    <fields>
+        <label><!-- QuoteType --></label>
+        <name>QuoteType__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renew</masterLabel>
+            <translation><!-- Renew --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quote Number --></label>
+        <name>Quote_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFAQuoteId --></label>
+        <name>SFAQuoteId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ship To --></label>
+        <name>ShippingAddress__c</name>
+    </fields>
+    <fields>
+        <label><!-- ShippingHandling --></label>
+        <name>ShippingHandling__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ship To Name --></label>
+        <name>ShippingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- SubmittedBy --></label>
+        <name>SubmittedBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax --></label>
+        <name>Tax__c</name>
+    </fields>
+    <layouts>
+        <layout>SterlingQuote Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- SFA --></label>
+        <name>SFA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sterling --></label>
+        <name>Sterling</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

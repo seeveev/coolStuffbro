@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Payment Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Payment Infos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Deposit ID --></label>
+        <name>Bank_Deposit_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Name --></label>
+        <name>Batch_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account Id --></label>
+        <name>Billing_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Number --></label>
+        <name>Billing_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Sequence Number --></label>
+        <name>Billing_Seq_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payement Received Date --></label>
+        <name>Payement_Rcvd_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>Payment_Batch__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Date --></label>
+        <name>Payment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Batch ID --></label>
+        <name>Pending_Batch_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Payment Amount --></label>
+        <name>Pending_Pay_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Payment Type --></label>
+        <name>Pending_Pay_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pending Ref Number --></label>
+        <name>Pending_Ref_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Time --></label>
+        <name>Post_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Bill with --></label>
+        <name>Posted_Bill_with__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted By --></label>
+        <name>Posted_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Payment Amount --></label>
+        <name>Posted_Pay_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Payment Date --></label>
+        <name>Posted_Pay_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Ref No --></label>
+        <name>Posted_Ref_No1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted Ref No --></label>
+        <name>Posted_Ref_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted payment type --></label>
+        <name>Posted_pay_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment sequence number --></label>
+        <name>payment_seq_no__c</name>
+    </fields>
+    <fields>
+        <label><!-- pending capital credit member --></label>
+        <name>pending_cc_mem__c</name>
+    </fields>
+    <fields>
+        <label><!-- posted capital credit member number --></label>
+        <name>posted_cc_mno__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>sequence_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Payment Info Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

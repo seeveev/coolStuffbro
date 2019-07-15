@@ -1,0 +1,24 @@
+<apex:page >
+<style>
+#tabs { border-bottom: .1em solid #03c; margin: 0; padding: 0;}
+#tabs li { display:inline; border-top: .1em solid #03c; border-left: .1em solid #03c; border-right: .1em solid #03c; }
+#tabs li a { text-decoration: none; padding: 0.25em 1em; color: #000; }
+<!-- #page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, page4 #tab4 a{
+padding: 0.25em 1em;
+  background-color: #03c;
+color: #fff;
+}-->
+</style>
+<apex:form >
+    <ul id="tabs">
+        <li id="tab1"><apex:commandlink action="{!showtab1}" value="Tab1"></apex:commandlink></li>
+        <li id="tab2"><apex:commandlink action="{!showtab2}" value="Tab2"></apex:commandlink></li>
+        <li id="tab3"><apex:commandlink action="{!showtab3}" value="Tab3"></apex:commandlink></li>
+        <li id="tab4"><apex:commandlink action="{!showtab4}" value="Tab4"></apex:commandlink></li>
+    </ul>
+            <ul id="tabs">
+            <li id="tab1"><a href="BCCMails">Tab 4</a></li>
+            <li id="tab2"> <a href="">Tab 5</a></li>
+            <li id="tab3"><a href="">Tab 6</a></li>
+            <li id="tab4"><a href="">Tab 7</a></li>
+    </ul>    </apex:form> </apex:page>

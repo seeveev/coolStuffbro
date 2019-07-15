@@ -1,0 +1,121 @@
+<apex:page controller="commandlink" id="myPage" >
+    
+    <script>
+    function colorPageBlock(pageblock, color) {
+        if (pageblock != null) pageblock.firstChild.style.cssText = "background-color: " + color + ";";
+    }
+    </script>
+    
+    <!-- this script is to change the color of the column header -->
+    <style>
+        .headerRow .TableTitle {
+        background-color: #8EE5EE !important;
+        background-image: none !important; //This is needed if you want to overwrite the header background
+        color: #CC0000 !important; 
+        font-size:100% !important; 
+        }
+    </style>
+    
+    
+    <script language="javascript">
+    /**
+    <!-- Collapse PageBlockSection on Page Load
+        **/
+    
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function() {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+    -->
+        
+        function dotest() {
+        
+        if(document.getElementById('myPage:myForm:myBlock:mySection') != null){
+            twistSection(document.getElementById('myPage:myForm:myBlock:mySection').childNodes[0].childNodes[0]);
+        }
+    }
+    
+    addLoadEvent(dotest);
+    
+    </script>
+    
+    <apex:pageMessages id="msg" ></apex:pageMessages>
+    
+    <apex:form id="myForm">
+        <!-- search and enter value in text box -->
+        <apex:pageBlock title="search by dropdown" id="myBlock">
+            <b><apex:outputLabel value="Search By" for="searchtext" > 
+                <apex:selectList id="accts" value="{!strSearchByValue}" size="1" >
+                    
+                    <apex:selectOptions value="{!accts}"  >
+                    </apex:selectOptions>
+                    
+                </apex:selectList>
+                
+                <apex:inputText id="searchtext" value="{!strsearchtext}"/> 
+                
+                <apex:commandButton value="search" action="{!strbutton}" status="mySaveStatus1">
+                    <apex:actionStatus id="mySaveStatus1">
+                        <apex:facet name="start">
+                            <apex:outputPanel >
+                                <apex:image value="/img/loading32.gif" style="position:relative;left:5px; height:20px;"/>
+                            </apex:outputPanel>
+                        </apex:facet>
+                    </apex:actionStatus><br/>
+                </apex:commandButton>
+                
+                </apex:outputLabel> </b>           
+            
+            <apex:pageBlockSection title="search results"  id="mySection">
+                <apex:pageBlockTable var="hir" value="{!lsthier}" id="mytable">             
+                    <apex:column headerValue="Phone">
+                        <!--    <a href="/apex/detailinfo1?detailID={!hir.id}" style="text-decoration:underline" onclick="window.open(this.href, 'mywin', 'height=300,width=700'); return false;" >
+{!hir.BTN_Phone__c}         </a> -->
+                        <apex:commandLink value="{!hir.BTN_Phone__c}" target="_blank" action="{!searchSelectedUserData}" style="text-decoration:underline;"> 
+                            <apex:param assignTo="{!myparam}" name="myparam" value="{!hir.id}"/> 
+                        </apex:commandlink> 
+                    </apex:column>
+                    <apex:column headerValue="Name">  
+                        <apex:commandLink value="{!hir.Name__c}" action="{!searchSelectedUserData}" style="text-decoration:underline;">
+                            <apex:param assignTo="{!MP}" name="myparam1" value="abcd"/>
+                        </apex:commandlink>
+                    </apex:column>
+                    <apex:column value="{!hir.billing_id__c}" headerValue="Billing id"/>
+                    <script>colorPageBlock(document.getElementById("{!$Component.mytable}"), "#1271F6");</script>
+                    </apex:pageBlockTable>
+                    <script>colorPageBlock(document.getElementById("{!$Component.mySection}"), "#1271F6");</script>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Data from A/r info in table format" id="myarinfo">
+                    <apex:pageBlockTable var="ar" value="{!lstarinfo}" id="mytable">
+                        <apex:column value="{!ar.Account_Id__c}" headerValue="Account ID"/>
+                        <apex:column value="{!ar.Phone_Number__c}" headerValue="Phone Number"/>
+                        <apex:column value="{!ar.Bill_Date__c}" headerValue="Bill Date"/>
+                        
+                        <script>colorPageBlock(document.getElementById("{!$Component.mytable}"),"#1271F6");</script>
+                        </apex:pageblockTable>    
+                        <script>colorPageBlock(document.getElementById("{!$Component.myarinfo}"),"#1271F6");</script>
+                    </apex:pageBlockSection>           
+                    <apex:pageBlockSection title="A/R info" columns="2" id="mysection1">
+                        <apex:outputField value="{!objarinfo.Account_Id__c}"/>
+                        <apex:outputText value="{!objarinfo.Bill_Date__c}" label="Bill Date"/>
+                        <apex:outputField value="{!objarinfo.Library_id__c}"/>
+                        <apex:outputText value="{!msg}">  </apex:outputText>
+                        <!--  <apex:column value="{!A_R_info__c.Phone_Number__c}" headerValue="Phone Number"/>
+<apex:column value="{!A_R_info__c.Bill_Date__c}" headerValue="Bill Date"/> -->
+                        
+                        <script>colorPageBlock(document.getElementById("{!$Component.mysection1}"),"#1271F6");</script>
+                        
+                        </apex:pageBlockSection>
+                        </apex:pageBlock>
+                        </apex:form>
+                        </apex:page>

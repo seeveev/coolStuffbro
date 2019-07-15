@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Portal Menu</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Portal Menu&apos;s</value>
+    </caseValues>
+    <fields>
+        <label><!-- Label --></label>
+        <name>Label__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Menu --></label>
+        <name>Portal_Menu__c</name>
+        <relationshipLabel><!-- Portal Menu&apos;s --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portal Page --></label>
+        <name>Portal_Page__c</name>
+        <relationshipLabel><!-- Portal Menu&apos;s --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Style Class --></label>
+        <name>Style_Class__c</name>
+        <picklistValues>
+            <masterLabel>col-md-4</masterLabel>
+            <translation><!-- col-md-4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>col-xs-4 col-md-4 col-lg-4</masterLabel>
+            <translation><!-- col-xs-4 col-md-4 col-lg-4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>col-xs-6 col-md-6 col-lg-6</masterLabel>
+            <translation><!-- col-xs-6 col-md-6 col-lg-6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>col-xs-8 col-md-8 col-lg-8</masterLabel>
+            <translation><!-- col-xs-8 col-md-8 col-lg-8 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>URL__c</name>
+    </fields>
+    <layouts>
+        <layout>Portal Menu Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Chatter --></label>
+        <name>Chatter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mega Menu --></label>
+        <name>Mega_Menu</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Menu Item --></label>
+        <name>Menu_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Portal Menu --></label>
+        <name>Portal_Menu</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

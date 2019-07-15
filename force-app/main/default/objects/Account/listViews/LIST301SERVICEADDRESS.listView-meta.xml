@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LIST301SERVICEADDRESS</fullName>
+    <columns>SCMS_No__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS2_STREET</columns>
+    <columns>ACCOUNT.ADDRESS2_CITY</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>ACCOUNT.ADDRESS2_ZIP</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <label>LIST 301: SERVICE ADDRESS</label>
+</ListView>

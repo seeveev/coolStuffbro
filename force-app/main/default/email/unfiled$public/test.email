@@ -1,0 +1,8 @@
+<messaging:emailTemplate subject="{!relatedTo.what.Name}
+" recipientType="contact" relatedToType="Task">
+<messaging:plainTextEmailBody >
+Congratulations!
+This is your new Visualforce Email Template.
+{!relatedTo.what.Name}
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

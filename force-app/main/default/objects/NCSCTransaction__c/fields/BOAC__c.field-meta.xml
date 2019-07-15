@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BOAC__c</fullName>
+    <description>Target  Table: fin_305/zla
+Target Column: fin_305_boac/    zla_boac</description>
+    <externalId>false</externalId>
+    <label>BOAC</label>
+    <length>6</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

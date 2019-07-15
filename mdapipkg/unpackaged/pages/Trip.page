@@ -1,0 +1,81 @@
+<apex:page standardController="Trip__c" extensions="TripController"  >
+    <apex:form >
+        <apex:sectionHeader title="Trip Builder" subtitle="{!strNewEdit}"  id="pb"/>
+        <apex:pageblock title="Trip Planner" mode="edit">
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!pgSaveRecord}"/>
+                <apex:commandbutton value="Cancel"/>
+            </apex:pageblockbuttons>
+            <apex:pageblocksection title="Trip Details">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Name" />
+                    <apex:outputPanel >
+                        <!-- this CSS class is used to show the REQUIRED PIPE symbol-->
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputText value="{!objTrip.Name}" maxlength="25"/>
+                        </div>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Customer" />
+                    <apex:outputPanel >
+                        <!-- this CSS class is used to show the REQUIRED PIPE symbol-->
+                        <div class="requiredInput">
+                            <div class="requiredBlock"></div>
+                            <apex:inputfield value="{!objTrip.Customer__c}"/>
+                        </div>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageblocksection>
+            <apex:pageblocksection title="Trip Summary">
+                <apex:pageblocksectionItem >
+                    <apex:outputlabel value="Trip Legs" />
+                    <apex:outputtext value="{!intTripLegs}" />
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >
+                    <apex:outputlabel value="Available Trip Legs" />
+                    <apex:outputtext value="{!intAvailTripLegs}"/>
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >
+                    <apex:outputlabel value="Trip Length (d)" />
+                    <apex:outputtext value="{!intTripLength}"/>
+                </apex:pageblocksectionItem>
+                <apex:pageblocksectionItem >
+                    <apex:outputlabel value="Available Trip Length (d)" />
+                    <apex:outputtext value="{!intAvailTripLength}"/>
+                </apex:pageblocksectionItem>
+            </apex:pageblocksection>
+            <apex:pageblocksection title="Adventures" columns="1">
+                <apex:pageblocksectionItem >
+                    <apex:outputlabel value="Adventure Difficultly Level filter" />
+                    <apex:selectList value="{!strSelDiff}" size="1">
+                        <apex:selectOptions value="{!DiffValues}"/>
+                        <apex:actionSupport action="{!forAdventrueRecrods}" event="onchange"/>
+                    </apex:selectList>
+                </apex:pageblocksectionItem>
+  
+                <apex:pageblockTable value="{!lstWSTenSize}" var="adv">
+                    <apex:column headerValue="Select" >
+                        <apex:inputCheckbox value="{!adv.bolSelected}"/>
+                    </apex:column>
+                    <apex:column headerValue="Adventure Name" >
+                        <apex:outputLink value="/{!adv.objAdv.id}" target="_blank">{!adv.objAdv.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!adv.objAdv.Location__c}"/>
+                    <apex:column value="{!adv.objAdv.Difficult__c}"/>
+                    <apex:column value="{!adv.objAdv.Length_d__c}"/>
+                </apex:pageblockTable>
+                <apex:outputpanel layout="block" style="text-align:center;" >
+                    <apex:panelGroup >
+                        <apex:commandButton action="{!First}" disabled="{!hasnext}" reRender="pb" value="|< First"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton action="{!Previous}" disabled="{!hasnext}" value="< Previous" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:outputLabel style="font-size:10px; margin-bottom:0px;" > Page &nbsp;{!pageno} of {!lastPageno } </apex:outputLabel>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton action="{!Next}" disabled="{!hasPrevious}" value="Next >" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:commandButton action="{!Last}" disabled="{!hasPrevious}" value="Last >|" reRender="pb"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </apex:panelGroup>
+               </apex:outputpanel>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

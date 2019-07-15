@@ -1,0 +1,21 @@
+<apex:page controller="buttoncont">
+  <apex:form >
+  
+  <apex:commandButton value="my button redirects to google page" action="{!redirect}"/><br/>
+    <apex:commandButton value="display hierarchy data" action="{!displaydata}" />
+
+  <apex:pageblock >
+  
+ 
+  <apex:pageblockTable value="{!lstHier}" var="data">
+  <apex:column value="{!data.Account_id__c}" />
+  <apex:column value="{!data.BTN_Phone__c}" />
+
+      
+  </apex:pageblockTable>
+  </apex:pageblock>
+ 
+  </apex:form>
+  
+  
+  </apex:page>

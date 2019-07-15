@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dispute Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dispute Infos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Close Date --></label>
+        <name>Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed User --></label>
+        <name>Closed_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create Time --></label>
+        <name>Create_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Date --></label>
+        <name>Last_Mod_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Time --></label>
+        <name>Last_Mod_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open User --></label>
+        <name>Open_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <layouts>
+        <layout>Dispute Info Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Menu</fullName>
+    <active>true</active>
+    <label>Portal Menu</label>
+    <picklistValues>
+        <picklist>Style_Class__c</picklist>
+        <values>
+            <fullName>col-md-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>col-xs-4 col-md-4 col-lg-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>col-xs-6 col-md-6 col-lg-6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>col-xs-8 col-md-8 col-lg-8</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,76 @@
+<apex:page >
+<apex:form >
+ 
+<script>
+function changeColor(tid)
+{
+
+  document.getElementById(tid).style.color = "#7FFF00"; // forecolor
+ 
+}
+function changeC(idc)
+{ document.getElementById(idc).style.color="#FF0000"
+}
+</script>
+<div id="myid">Hello There !! this is blinking .. but y not stable</div><br/>
+
+<apex:commandButton value="change color" onclick="changeColor('myid'); return false;" />
+  <!-- <apex:commandButton value="change color1" onclick="changeC('myid'); return false;" /> -->
+</apex:form> 
+  
+</apex:page>
+
+
+
+
+
+
+
+<!--<script>
+ function changeFont{textid}
+ 
+    document.getElementById('change').onclick = changeColor;   
+    function changeColor() {
+        document.body.style.color = "#ff0000";
+        return false;
+    }   
+</script> -->
+
+
+<!-- 
+<a href="#" onclick="changeColor('myid'); return true;">Change Color</a>
+   {!PrintName}-->
+  
+  
+  
+
+  
+  <!--<script>
+function changeFont(input, textid)
+                 {
+                if(input.button) document.getElementById(textid).style.fontWeight = "bold";
+                else document.getElementById(textid).style.fontWeight = "normal";
+                }
+        </script> 
+  
+  
+  
+ <script>
+ function changeFont{textid}
+ 
+    document.getElementById('change').onclick = changeColor;   
+    function changeColor() {
+        document.body.style.color = "#ff0000";
+        return false;
+    }   
+</script>
+<apex:outputPanel layout="block">
+        <label for="Button">Click this box to change text font: </label>
+        <input id="button" type="button"
+        onclick="changeFont(this,'{!$Component.thePanel}');"/>
+        <apex:commandLink onclick="changecolor(this,{!$Component.thepanel}"/>
+    </apex:outputPanel>
+    
+    <apex:outputPanel id="thePanel" layout="block">Change me!
+    
+    </apex:outputPanel> -->

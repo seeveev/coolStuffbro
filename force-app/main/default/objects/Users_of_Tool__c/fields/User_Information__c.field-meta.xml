@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Information__c</fullName>
+    <externalId>false</externalId>
+    <formula>User_Record_Id__r.FirstName + &quot; &quot; + User_Record_Id__r.LastName + BR() 
++ &quot;Title : &quot; + User_Record_Id__r.Title + BR() 
++ &quot;Division : &quot; + User_Record_Id__r.Division + BR() 
++ &quot;Manager : &quot; + User_Record_Id__r.Manager.FirstName + &quot; &quot; + User_Record_Id__r.Manager.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>User Information</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

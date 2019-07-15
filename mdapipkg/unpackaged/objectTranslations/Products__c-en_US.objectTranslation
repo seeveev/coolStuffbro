@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Products</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Productss</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Flag A --></label>
+        <name>Active_Flag_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Name --></label>
+        <name>Bundle_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge Code --></label>
+        <name>Charge_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge Rate --></label>
+        <name>Charge_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit Id --></label>
+        <name>Circuit_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connect Date --></label>
+        <name>Connect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cust Owned/Maint Equipment --></label>
+        <name>Cust_Owned_Maint_Equipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- DC --></label>
+        <name>DC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disconnect Date --></label>
+        <name>Disconnect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generic SKU --></label>
+        <name>Generic_SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grouping Name --></label>
+        <name>Grouping_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- ICB Code/Flag --></label>
+        <name>ICB_Code_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN Service Order --></label>
+        <name>IN_Service_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- I(HSI/WIFI) --></label>
+        <name>I_HSI_WIFI__c</name>
+    </fields>
+    <fields>
+        <label><!-- InDATE --></label>
+        <name>InDATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number --></label>
+        <name>Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Sequence Number --></label>
+        <name>Item_Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- MRC/NRC FLag --></label>
+        <name>MRC_NRC_FLag__c</name>
+    </fields>
+    <fields>
+        <label><!-- NO Flag Tax(T) --></label>
+        <name>NO_Flag_Tax_T__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Reaccuring Charges --></label>
+        <name>Non_Reaccuring_Charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- OUT Service Order --></label>
+        <name>OUT_Service_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Out Date --></label>
+        <name>Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Code --></label>
+        <name>Package_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Description --></label>
+        <name>Package_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Name --></label>
+        <name>Package_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefix(P) --></label>
+        <name>Prefix_P__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductGroupingSequence --></label>
+        <name>ProductGroupingSequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product GroupId --></label>
+        <name>Product_GroupId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Group --></label>
+        <name>Product_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Rate --></label>
+        <name>Product_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reacuuring Charges --></label>
+        <name>Reacuuring_Charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Type Flag --></label>
+        <name>S_E_Type_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E --></label>
+        <name>S_E__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence --></label>
+        <name>Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Location --></label>
+        <name>Service_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type(ST) --></label>
+        <name>Service_Type_ST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Service_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status(S) --></label>
+        <name>Status_S__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacation Reactivation Date --></label>
+        <name>Vacation_Reactivation_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Products Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

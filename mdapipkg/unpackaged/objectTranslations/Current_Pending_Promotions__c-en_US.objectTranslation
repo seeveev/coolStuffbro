@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Current/Pending Promotions</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Current/Pending Promotionss</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Renewal --></label>
+        <name>Auto_Renewal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Number --></label>
+        <name>Billing_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Sequence Number --></label>
+        <name>Billing_Seq_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Amount --></label>
+        <name>Cancel_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Date --></label>
+        <name>Cancel_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit END --></label>
+        <name>Credit_END__c</name>
+    </fields>
+    <fields>
+        <label><!-- DISC ITEM --></label>
+        <name>DISC_ITEM__c</name>
+    </fields>
+    <fields>
+        <label><!-- InDATE --></label>
+        <name>InDATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Item --></label>
+        <name>Order_Item__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override --></label>
+        <name>Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo/Contr StartDate --></label>
+        <name>Pr_Contr_StrtDte__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo Exp Date --></label>
+        <name>Pr_Exp_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo Sequence --></label>
+        <name>Pr_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo ID --></label>
+        <name>Promo_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promotion Key --></label>
+        <name>Promotion_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promotion --></label>
+        <name>Promotion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>library_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>Current/Pending Promotions Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

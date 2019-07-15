@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Physical Address</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Physcial Addresss</value>
+    </caseValues>
+    <fields>
+        <label><!-- Building Name --></label>
+        <name>Building_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- CLLI_A --></label>
+        <name>CLLI_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- CLLI_B --></label>
+        <name>CLLI_B__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUST. INC. INDIC.1 --></label>
+        <name>CUST_INC_INDIC_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUST. INC. INDIC.2 --></label>
+        <name>CUST_INC_INDIC_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- City Abbreviation --></label>
+        <name>City_Abbreviation__c</name>
+    </fields>
+    <fields>
+        <label><!-- DSL Cable --></label>
+        <name>DSL_Cable__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExternalID --></label>
+        <name>ExternalID__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Tax Loc --></label>
+        <name>External_Tax_Loc__c</name>
+    </fields>
+    <fields>
+        <label><!-- FTTP Flag --></label>
+        <name>FTTP_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiber Drop-IN-Place Flag --></label>
+        <name>Fbr_Drp_In_P_Flg__c</name>
+    </fields>
+    <fields>
+        <label><!-- GEO Block --></label>
+        <name>GEO_Block__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Owners Identification --></label>
+        <name>H_Ows_Identifi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Update Date --></label>
+        <name>Last_Update_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Update Time --></label>
+        <name>Last_Update_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Update User --></label>
+        <name>Last_Update_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lattitude --></label>
+        <name>Lattitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local Franchise Agreement --></label>
+        <name>Loc_Fran_Agmt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Id --></label>
+        <name>Location_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Longitude --></label>
+        <name>Longitude__c</name>
+    </fields>
+    <fields>
+        <label><!-- MAP Number --></label>
+        <name>MAP_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Zone --></label>
+        <name>Message_Zone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overridden Tax Loc --></label>
+        <name>Over_Tax_Loc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAM Flag --></label>
+        <name>SAM_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- SAM Sequence Number --></label>
+        <name>SAM_Seq_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- S/O L/C Assignment --></label>
+        <name>S_O_L_C_Asg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Control Number --></label>
+        <name>Ser_Cntl_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Location ID --></label>
+        <name>Ser_Loc_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Abbreviation --></label>
+        <name>State_Abbre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Code --></label>
+        <name>Status_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Sub Description --></label>
+        <name>Str_Sub_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Direction --></label>
+        <name>Street_Direction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Name --></label>
+        <name>Street_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Number --></label>
+        <name>Street_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Subtitle --></label>
+        <name>Street_Subtitle__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUBDivision Abbreviation --></label>
+        <name>SubDiv_Abbre__c</name>
+    </fields>
+    <fields>
+        <label><!-- TAX District --></label>
+        <name>TAX_District__c</name>
+    </fields>
+    <fields>
+        <label><!-- Video Flag --></label>
+        <name>Video_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wire Center --></label>
+        <name>Wire_Center__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zipcode --></label>
+        <name>Zipcode__c</name>
+    </fields>
+    <layouts>
+        <layout>Physical Address Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

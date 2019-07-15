@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Abandoned</masterLabel>
+        <translation><!-- Abandoned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Accepted</masterLabel>
+        <translation><!-- Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denied</masterLabel>
+        <translation><!-- Denied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Draft</masterLabel>
+        <translation><!-- Draft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expired</masterLabel>
+        <translation><!-- Expired --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Final</masterLabel>
+        <translation><!-- Final --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICB Approved</masterLabel>
+        <translation><!-- ICB Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ICB Pending Approval</masterLabel>
+        <translation><!-- ICB Pending Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INA Accepted</masterLabel>
+        <translation><!-- INA Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INA Pending</masterLabel>
+        <translation><!-- INA Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INA Rejected</masterLabel>
+        <translation><!-- INA Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Review</masterLabel>
+        <translation><!-- In Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Eng. Accepted</masterLabel>
+        <translation><!-- Internal Eng. Accepted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Eng. Pending</masterLabel>
+        <translation><!-- Internal Eng. Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal Eng. Rejected</masterLabel>
+        <translation><!-- Internal Eng. Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management Approved</masterLabel>
+        <translation><!-- Management Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management Pending Approval</masterLabel>
+        <translation><!-- Management Pending Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Presented</masterLabel>
+        <translation><!-- Presented --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SE Pending</masterLabel>
+        <translation><!-- SE Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SE Rejected</masterLabel>
+        <translation><!-- SE Rejected --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

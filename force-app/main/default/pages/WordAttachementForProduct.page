@@ -1,0 +1,30 @@
+<apex:page showheader="false" >
+    <table border="1" width="100%">
+        <tr width="100%">
+            <td width="10%"></td>
+            <td width="70%" valign="top"> </td>
+            <td valign="top" width="20%">
+                <apex:image id="theImage1" value="{!$Resource.BigLogo}" width="100%" height="100"/>
+            </td>
+        </tr>
+        <tr width="100%">
+            <td width="10%"></td>
+            <td width="70%" valign="top">
+                <apex:outputtext value="Solution Name Proposal For:"/><br/><br/><br/>
+                <apex:outputtext value="Account Name"/><br/><br/><br/>
+                <apex:outputtext value="Month Day, Year"/><br/>
+                <apex:outputtext value="Quote Number"/>
+                <apex:image id="theImage2" value="{!$Resource.MainLogo}" width="100%" height="100%"     />
+                
+            </td>
+            <td valign="top" width="20%"> </td>
+        </tr>
+        <tr width="100%">
+            <td width="10%"></td>
+            <td width="70%" valign="top">
+                
+            </td>
+            <td width="20%"> </td>
+        </tr>
+    </table>
+</apex:page>

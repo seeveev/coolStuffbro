@@ -1,0 +1,15 @@
+<apex:page standardController="sample_2__c" extensions="INA">
+<apex:form >      
+
+<apex:pageBlock >      <apex:pageBlockButtons >
+            
+                    <apex:commandButton action="{!INA}" value="INA" rendered="{!if(str==null && sample_2__c.Isfrontier__c!=null,true,false)}" />
+            
+            </apex:pageBlockButtons>
+</apex:pageBlock>
+
+
+</apex:form>
+
+
+</apex:page>

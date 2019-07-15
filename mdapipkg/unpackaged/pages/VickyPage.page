@@ -1,0 +1,50 @@
+<apex:page standardController="account" extensions="clsvickypage" recordSetVar="accounts">
+     <apex:form >   
+         
+             <apex:pageBlock title="contact information">
+             <apex:pageBlockTable value="{!accounts}" var="con" >
+             
+             <apex:column value="{!con.name}"/>
+           <!--  <apex:column value="{!con.phone}"/>
+             <apex:column value="{!con.fax}"/>  -->
+                        
+          </apex:pageBlockTable>              
+                                 
+  <apex:pageBlock title="display contacts" >    
+     
+          <apex:dataTable value="{!account.contacts}" var="con" >
+               <apex:column > 
+                   <apex:commandLink >
+                   {!con.name}
+                   <apex:param name="cid" value="{!con.id}"/>
+                   </apex:commandLink>
+                  </apex:column>
+          <apex:column value="{!con.name}"/>  
+       <apex:column >
+              <apex:commandLink >
+       
+         {!con.phone}
+         {!con.lastname}
+         <apex:param name="cid" value="{!con.id}"/>
+         </apex:commandLink>
+          <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="true" title="false"/>
+     </apex:column>
+          </apex:dataTable>
+ </apex:pageBlock>
+          </apex:pageblock>
+          <apex:detail subject="{!$CurrentPage.parameters.cid}" relatedList="true" title="false"/>
+     </apex:form>
+     </apex:page>
+     
+     
+  <!-- Begin Default Content REMOVE THIS
+  <h1>Congratulations</h1> 
+  Account information::{!Account.name}<br/> 
+  {!Account.phone}
+  Hello{!$User.FirstName}!!!!
+
+    <br>
+  This is your new Page: VickyPage  </br>
+  <b> why is this happening ..</b>
+
+  <!--End Default Content REMOVE THIS -->

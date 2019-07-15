@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- pending capital credit member --></label>
+    <name>pending_cc_mem__c</name>
+</CustomFieldTranslation>

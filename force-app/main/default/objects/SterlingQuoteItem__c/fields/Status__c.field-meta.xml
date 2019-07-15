@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>In Review</fullName>
+                <default>false</default>
+                <label>In Review</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Presented</fullName>
+                <default>false</default>
+                <label>Presented</label>
+            </value>
+            <value>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+                <label>Accepted</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>ICB Pending Approval</fullName>
+                <default>false</default>
+                <label>ICB Pending Approval</label>
+            </value>
+            <value>
+                <fullName>ICB Approved</fullName>
+                <default>false</default>
+                <label>ICB Approved</label>
+            </value>
+            <value>
+                <fullName>Management Pending Approval</fullName>
+                <default>false</default>
+                <label>Management Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Management Approved</fullName>
+                <default>false</default>
+                <label>Management Approved</label>
+            </value>
+            <value>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <label>Expired</label>
+            </value>
+            <value>
+                <fullName>Abandoned</fullName>
+                <default>false</default>
+                <label>Abandoned</label>
+            </value>
+            <value>
+                <fullName>INA Pending</fullName>
+                <default>false</default>
+                <label>INA Pending</label>
+            </value>
+            <value>
+                <fullName>INA Accepted</fullName>
+                <default>false</default>
+                <label>INA Accepted</label>
+            </value>
+            <value>
+                <fullName>INA Rejected</fullName>
+                <default>false</default>
+                <label>INA Rejected</label>
+            </value>
+            <value>
+                <fullName>Internal Eng. Pending</fullName>
+                <default>false</default>
+                <label>Internal Eng. Pending</label>
+            </value>
+            <value>
+                <fullName>Internal Eng. Accepted</fullName>
+                <default>false</default>
+                <label>Internal Eng. Accepted</label>
+            </value>
+            <value>
+                <fullName>Internal Eng. Rejected</fullName>
+                <default>false</default>
+                <label>Internal Eng. Rejected</label>
+            </value>
+            <value>
+                <fullName>SE Pending</fullName>
+                <default>false</default>
+                <label>SE Pending</label>
+            </value>
+            <value>
+                <fullName>SE Rejected</fullName>
+                <default>false</default>
+                <label>SE Rejected</label>
+            </value>
+            <value>
+                <fullName>Final</fullName>
+                <default>false</default>
+                <label>Final</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

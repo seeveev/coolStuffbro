@@ -1,0 +1,9 @@
+<apex:page >
+  <div style="float:left; position:absolute;">
+    <h3>Texttttttttttttttttttttt</h3>
+</div>
+<div style="float:left; position:relative">
+    <apex:outputLink style="text-align: right; float: right;" value="#top" title="Click to return to the top of the page."> seconddddddddddddddddddd
+    </apex:outputLink>
+</div>
+</apex:page>

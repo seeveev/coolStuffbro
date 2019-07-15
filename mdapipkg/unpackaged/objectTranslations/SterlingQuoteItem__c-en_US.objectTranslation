@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SterlingQuoteItem</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SterlingQuoteItems</value>
+    </caseValues>
+    <fields>
+        <label><!-- AddressDescription --></label>
+        <name>AddressDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- AddressText --></label>
+        <name>AddressText__c</name>
+    </fields>
+    <fields>
+        <label><!-- AddressType --></label>
+        <name>AddressType__c</name>
+        <picklistValues>
+            <masterLabel>PostalAddress</masterLabel>
+            <translation><!-- PostalAddress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ServiceAddress</masterLabel>
+            <translation><!-- ServiceAddress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AdjustedMRC --></label>
+        <name>AdjustedMRC__c</name>
+    </fields>
+    <fields>
+        <label><!-- AdjustedNRC --></label>
+        <name>AdjustedNRC__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuildingName --></label>
+        <name>BuildingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuildingNumber --></label>
+        <name>BuildingNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuildingSubNumber --></label>
+        <name>BuildingSubNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- CPQLineNumber --></label>
+        <name>CPQLineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>CreatedBy__c</name>
+        <relationshipLabel><!-- SterlingQuoteItems (Created By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- DataRegion --></label>
+        <name>DataRegion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- DiscountType --></label>
+        <name>DiscountType__c</name>
+        <picklistValues>
+            <masterLabel>ICB</masterLabel>
+            <translation><!-- ICB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INA</masterLabel>
+            <translation><!-- INA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSM</masterLabel>
+            <translation><!-- RSM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SVP</masterLabel>
+            <translation><!-- SVP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Discount_DiscountAmount --></label>
+        <name>Discount_DiscountAmountDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- GFItem --></label>
+        <name>GFItem__c</name>
+    </fields>
+    <fields>
+        <label><!-- ICBTerritories__c --></label>
+        <name>ICBTerritories_c__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newyork</masterLabel>
+            <translation><!-- Newyork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IsAddressQualified --></label>
+        <name>IsAddressQualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsContracted --></label>
+        <name>IsContracted__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsNewConstruction --></label>
+        <name>IsNewConstruction__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsPromoProduct --></label>
+        <name>IsPromoProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsTerm --></label>
+        <name>IsTerm__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsZAddressRequired --></label>
+        <name>IsZAddressRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- ItemCode --></label>
+        <name>ItemCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified By --></label>
+        <name>LastModifiedBy__c</name>
+        <relationshipLabel><!-- SterlingQuoteItems (Last Modified By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Line Number --></label>
+        <name>LineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Price --></label>
+        <name>ListPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Locality --></label>
+        <name>Locality__c</name>
+    </fields>
+    <fields>
+        <label><!-- MetroEQualificationType --></label>
+        <name>MetroEQualificationType__c</name>
+        <picklistValues>
+            <masterLabel>Exchange Match</masterLabel>
+            <translation><!-- Exchange Match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Match</masterLabel>
+            <translation><!-- No Match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terminal Match</masterLabel>
+            <translation><!-- Terminal Match --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- NPA --></label>
+        <name>NPA__c</name>
+    </fields>
+    <fields>
+        <label><!-- NXX --></label>
+        <name>NXX__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetworkDistance --></label>
+        <name>NetworkDistance__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumInstallments --></label>
+        <name>NumInstallments__c</name>
+    </fields>
+    <fields>
+        <label><!-- PSKU --></label>
+        <name>PSKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- PercentageDiscountAmount --></label>
+        <name>PercentageDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postcode --></label>
+        <name>Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product2__c</name>
+        <relationshipLabel><!-- SterlingQuoteItems --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>ProductCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductInterval --></label>
+        <name>ProductInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- PromoDiscountAmount --></label>
+        <name>PromoDiscountAmount__c</name>
+    </fields>
+    <fields>
+        <label><!-- PromoExpirationDate --></label>
+        <name>PromoExpirationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- PromoName --></label>
+        <name>PromoName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PromotionId --></label>
+        <name>PromotionId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- RequestedDueDate --></label>
+        <name>RequestedDueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SKU --></label>
+        <name>SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- ScheduleId --></label>
+        <name>ScheduleId__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceControlNumber --></label>
+        <name>ServiceControlNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>ServiceDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceSequenceNumber --></label>
+        <name>ServiceSequenceNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- StandardMRC --></label>
+        <name>StandardMRC__c</name>
+    </fields>
+    <fields>
+        <label><!-- StandardNRC --></label>
+        <name>StandardNRC__c</name>
+    </fields>
+    <fields>
+        <label><!-- StateOrProvince --></label>
+        <name>StateOrProvince__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Abandoned</masterLabel>
+            <translation><!-- Abandoned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final</masterLabel>
+            <translation><!-- Final --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICB Approved</masterLabel>
+            <translation><!-- ICB Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICB Pending Approval</masterLabel>
+            <translation><!-- ICB Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INA Accepted</masterLabel>
+            <translation><!-- INA Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INA Pending</masterLabel>
+            <translation><!-- INA Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INA Rejected</masterLabel>
+            <translation><!-- INA Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Eng. Accepted</masterLabel>
+            <translation><!-- Internal Eng. Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Eng. Pending</masterLabel>
+            <translation><!-- Internal Eng. Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal Eng. Rejected</masterLabel>
+            <translation><!-- Internal Eng. Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management Approved</masterLabel>
+            <translation><!-- Management Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management Pending Approval</masterLabel>
+            <translation><!-- Management Pending Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presented</masterLabel>
+            <translation><!-- Presented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE Pending</masterLabel>
+            <translation><!-- SE Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE Rejected</masterLabel>
+            <translation><!-- SE Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SterlingQuote --></label>
+        <name>SterlingQuote__c</name>
+        <relationshipLabel><!-- SterlingQuoteItems --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- StreetDirection --></label>
+        <name>StreetDirection__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetName --></label>
+        <name>StreetName__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetNrFirst --></label>
+        <name>StreetNrFirst__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetSubDescription --></label>
+        <name>StreetSubDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- StreetSuffix --></label>
+        <name>StreetSuffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subdivision --></label>
+        <name>Subdivision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>Subtotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- TermEndDateMismatch --></label>
+        <name>TermEndDateMismatch__c</name>
+    </fields>
+    <fields>
+        <label><!-- TermEndDate --></label>
+        <name>TermEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- TermLength --></label>
+        <name>TermLength__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>TotalPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Price --></label>
+        <name>UnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- WireCenter --></label>
+        <name>WireCenter__c</name>
+    </fields>
+    <fields>
+        <label><!-- unit Designator --></label>
+        <name>unit_Designator__c</name>
+    </fields>
+    <fields>
+        <label><!-- unit number --></label>
+        <name>unit_number__c</name>
+    </fields>
+    <layouts>
+        <layout>SterlingQuoteItem Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- submit_for_approval_custom --></label>
+        <name>submit_for_approval_custom</name>
+    </webLinks>
+</CustomObjectTranslation>

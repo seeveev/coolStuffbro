@@ -1,0 +1,101 @@
+<apex:page standardController="custom__c" extensions="ClsCustomV3" showHeader="false" sidebar="false" >
+<apex:form >
+    <apex:image url="https://c.na12.content.force.com/servlet/servlet.FileDownload?file=015U000000065P1" width="250" height="50" />
+    <apex:pageBlock title="Search Section">
+        <apex:pageblockButtons >
+           <apex:commandButton value="Search"  rerender="refreshdata"/>
+           <apex:commandButton value="download" action="{!download}"/>
+           <apex:commandButton action="{!editVal}" value="Edit" rendered="{!if(bolDisplaySaveButt==true,false,true)}"/>
+           <apex:commandButton action="{!save}" value="save" rendered="{!bolDisplaySaveButt}"/>
+             <apex:commandButton action="{!cancel}" value="cancel" />
+        </apex:pageblockButtons>
+        
+        
+        <apex:pageblockSection title="Search Fields" columns="2" >
+            <apex:pageBlockSectionItem rendered="{!bolShowAuthor}" >
+                <apex:outputLabel value="Author : " for="author" tabindex="1" />
+                <apex:selectList id="author" size="1" value="{!authorVal}" >
+                    <apex:selectOptions value="{!author}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Category : " for="category" tabindex="2" />
+                <apex:selectList id="category" size="1" value="{!categoryVal}" >
+                    <apex:selectOptions value="{!category}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="From Date : " for="fromDateField" tabindex="3" />
+                 <c:noDateLink >
+                    <apex:Inputfield id="fromDateField" value="{!fromDate.date__c}"  />
+                </c:noDateLink>
+            </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="To Date : " for="toDateField" tabindex="4" />
+                  <c:noDateLink >
+                      <apex:Inputfield id="toDateField" value="{!toDate.date__c}"  />
+                 </c:noDateLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Key Words : " for="keyWordField" tabindex="5" />
+                <apex:inputtext id="keyWordField" value="{!strKeySearch}"  />
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem rendered="{!bolShowDivision}" >
+                 <apex:outputLabel value="Division : " for="division" tabindex="2" />
+                <apex:selectList id="division" size="1" value="{!divisionVal}" >
+                    <apex:selectOptions value="{!Division}"/>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageblockSection>
+        
+        
+        <apex:pageblockSection title="Display Data Division" columns="1"  >
+            <apex:outputPanel id="refreshdata" >
+                <apex:pageMessage id="msge" summary="FROM date cannot be greater then TO date." severity="warning" strength="3" rendered="{!bolErrorMsg}" />
+                <apex:repeat value="{!DivisionListValue}" var="strDivision">    <!-- Division Repeat -->
+                    <b><apex:outputText value="{!strDivision}"><apex:param name="p1" value="{!strDivision}" assignTo="{!pass_param}" /></apex:outputText></b><br/><br/>
+                    
+                    <apex:variable var="cnt" value="{!0}" /> <!-- for column title count -->
+                    
+                    <apex:repeat value="{!CusList}" var="string1">
+                          <apex:pageblocktable value="{!string1}" var="merD" border="1" rendered="{!bolShowAuthor}">
+                                 <apex:column value="{!merD.Notes__c}" headerValue="{!lstTitle[cnt]}"/>
+                          </apex:pageblocktable>
+                          <apex:variable var="cnt" value="{!cnt+1}"/>
+                     </apex:repeat>
+                    
+                    <br/><br/>  
+                </apex:repeat>
+            </apex:outputPanel>
+        </apex:pageblockSection>
+        
+        
+        <apex:pageblockSection title="Display Data"  >
+            <apex:outputPanel id="refreshdata" >
+             <apex:pageMessage id="msge" summary="FROM date cannot be greater then TO date." severity="warning" strength="3" rendered="{!bolErrorMsg}" />
+                 <apex:outputText value="Division :: {!strDivOnReport}"/>
+
+                <apex:variable var="cnt" value="{!0}" /> <!-- for column title count -->
+               <apex:repeat value="{!CusList}" var="string1" id="theRepeat" >
+                     <apex:pageblocktable value="{!string1}" var="merD" border="1" rendered="{!bolShowAuthor}">
+                            <apex:column value="{!merD.Notes__c}" headerValue="{!lstTitle[cnt]}"/>
+                     </apex:pageblocktable>
+                     <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:repeat>
+                
+                <apex:variable var="cnt" value="{!0}" /> <!-- for column title count--> 
+                <apex:repeat value="{!CusList}" var="string1" id="theRepeatinput"  rendered="{!bolDisplaySaveButt}" >
+                     <apex:pageblocktable value="{!string1}" var="merD" border="1">
+                         <apex:column headerValue="{!lstTitle[cnt]}">
+                             <apex:inputField value="{!merD.Notes__c}" style="width: 560px; height: 80px" />
+                         </apex:column>
+                     </apex:pageblocktable>
+                     <apex:variable var="cnt" value="{!cnt+1}"/>
+                </apex:repeat>
+                
+            </apex:outputPanel>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

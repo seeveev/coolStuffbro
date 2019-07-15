@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Special Access Info</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Special Access Infos</value>
+    </caseValues>
+    <fields>
+        <label><!-- ABC --></label>
+        <name>ABC__c</name>
+    </fields>
+    <fields>
+        <label><!-- AID1 --></label>
+        <name>AID1__c</name>
+    </fields>
+    <fields>
+        <label><!-- AID2 --></label>
+        <name>AID2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATN --></label>
+        <name>ATN__c</name>
+    </fields>
+    <fields>
+        <label><!-- AT&amp;T CR Number --></label>
+        <name>AT_T_CR_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- BEST --></label>
+        <name>BEST__c</name>
+    </fields>
+    <fields>
+        <label><!-- CIR Number --></label>
+        <name>CIR_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRDD --></label>
+        <name>CRDD__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRO --></label>
+        <name>CRO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIGT --></label>
+        <name>DIGT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- FDR --></label>
+        <name>FDR__c</name>
+    </fields>
+    <fields>
+        <label><!-- FRQ --></label>
+        <name>FRQ__c</name>
+    </fields>
+    <fields>
+        <label><!-- HCUT --></label>
+        <name>HCUT__c</name>
+    </fields>
+    <fields>
+        <label><!-- HI CAP --></label>
+        <name>HI_CAP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCI --></label>
+        <name>NCI__c</name>
+    </fields>
+    <fields>
+        <label><!-- NC Code --></label>
+        <name>NC_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- OA01 --></label>
+        <name>OA01__c</name>
+    </fields>
+    <fields>
+        <label><!-- OCC CIR Number --></label>
+        <name>OCC_CIR_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- OLOC --></label>
+        <name>OLOC__c</name>
+    </fields>
+    <fields>
+        <label><!-- PIU --></label>
+        <name>PIU__c</name>
+    </fields>
+    <fields>
+        <label><!-- PON --></label>
+        <name>PON__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRD --></label>
+        <name>PRD__c</name>
+    </fields>
+    <fields>
+        <label><!-- PTD --></label>
+        <name>PTD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- QC Stage --></label>
+        <name>QC_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- RCDT --></label>
+        <name>RCDT__c</name>
+    </fields>
+    <fields>
+        <label><!-- RO --></label>
+        <name>RO__c</name>
+    </fields>
+    <fields>
+        <label><!-- SECNCI --></label>
+        <name>SECNCI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- TA01 --></label>
+        <name>TA01__c</name>
+    </fields>
+    <fields>
+        <label><!-- TG --></label>
+        <name>TG__c</name>
+    </fields>
+    <fields>
+        <label><!-- TLOC --></label>
+        <name>TLOC__c</name>
+    </fields>
+    <fields>
+        <label><!-- TSP --></label>
+        <name>TSP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tariff --></label>
+        <name>Tariff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type SVC --></label>
+        <name>Type_SVC__c</name>
+    </fields>
+    <fields>
+        <label><!-- UNE --></label>
+        <name>UNE__c</name>
+    </fields>
+    <fields>
+        <label><!-- USO Number --></label>
+        <name>USO_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Special Access Info Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

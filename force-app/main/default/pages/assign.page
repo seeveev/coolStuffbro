@@ -1,0 +1,13 @@
+<apex:page controller="assignclass">
+ 
+<apex:pageBlock title="Display ">
+<apex:pageBlockTable var="acc" value="{!values}">
+ <apex:column value="{!acc.Name__c}"/>
+
+
+</apex:pageBlockTable>
+
+
+</apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_test</fullName>
+    <active>false</active>
+    <errorConditionFormula>City__c ==&#39;Su&#39;</errorConditionFormula>
+    <errorMessage>City canot be SU</errorMessage>
+</ValidationRule>

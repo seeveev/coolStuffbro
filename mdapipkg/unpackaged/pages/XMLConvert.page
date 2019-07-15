@@ -1,0 +1,7 @@
+<apex:page controller="clsXMLconvert" >
+  <apex:form >
+      Enter String XML <br/>
+      <apex:inputTextarea value="{!setXMLInputValue}" cols="50" rows="20"/>
+      <apex:commandButton value="Convert String to XML" action="{!ConvertXML}"/>
+  </apex:form>
+</apex:page>

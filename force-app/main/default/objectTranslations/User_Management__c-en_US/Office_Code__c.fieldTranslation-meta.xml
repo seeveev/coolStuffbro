@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Office Code --></label>
+    <name>Office_Code__c</name>
+    <picklistValues>
+        <masterLabel>00100 OS DCG, Washington DC</masterLabel>
+        <translation><!-- 00100 OS DCG, Washington DC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00500 00500 CMS, Baltimore, MD</masterLabel>
+        <translation><!-- 00500 00500 CMS, Baltimore, MD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>00NAF CMS NAF CONTRACTS</masterLabel>
+        <translation><!-- 00NAF CMS NAF CONTRACTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>750401 OFFICE OF INSPECTOR GENERAL</masterLabel>
+        <translation><!-- 750401 OFFICE OF INSPECTOR GENERAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</masterLabel>
+        <translation><!-- 75M001 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT</masterLabel>
+        <translation><!-- 75M002 OFFICE OF ACQUISITION AND GRANTS MANAGEMENT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

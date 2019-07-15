@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>namerule</fullName>
+    <active>false</active>
+    <description>this is a validation rule to calculate the name</description>
+    <errorConditionFormula>OR ( 
+ISPICKVAL(Sample_names__c,  &#39; Price&#39; ) ,
+ ISBLANK( tax_paid__c ) )</errorConditionFormula>
+    <errorMessage>ERROR ERROR</errorMessage>
+</ValidationRule>

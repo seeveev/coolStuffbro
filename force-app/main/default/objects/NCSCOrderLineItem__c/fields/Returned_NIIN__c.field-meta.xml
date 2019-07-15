@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Returned_NIIN__c</fullName>
+    <description>Source table: rod / csc_dtl
+Source column: rod_zau_nsn / (csc_dtl_ret_nin /csc_dtl_ret_part_nbr)</description>
+    <externalId>false</externalId>
+    <label>Returned NIIN</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

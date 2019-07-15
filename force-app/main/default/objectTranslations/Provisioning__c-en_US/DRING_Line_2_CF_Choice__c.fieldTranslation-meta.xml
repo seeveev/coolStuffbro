@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- DRING Line 2 CF Choice --></label>
+    <name>DRING_Line_2_CF_Choice__c</name>
+</CustomFieldTranslation>

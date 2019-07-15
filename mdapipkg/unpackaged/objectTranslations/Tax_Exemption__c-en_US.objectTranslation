@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tax Exemption</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tax Exemptions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Charge --></label>
+        <name>Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration --></label>
+        <name>Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Date --></label>
+        <name>From_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item --></label>
+        <name>Item__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Author --></label>
+        <name>Tax_Author__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Certification Number --></label>
+        <name>Tax_Certi_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Type --></label>
+        <name>Tax_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- To Date --></label>
+        <name>To_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Tax Exemption Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

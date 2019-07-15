@@ -1,0 +1,46 @@
+<apex:page standardController="SterlingQuoteItem__c" extensions="StearlingQuoteItemViewController" tabStyle="SterlingQuoteItem__c" >
+    <apex:form >
+        <apex:sectionHeader title="Sterling Quote Item" subtitle="{!objSQi.Name}"/>
+        <apex:pageblock title="Sterling Quote Item Detail">
+            <apex:pageblockButtons >
+                <apex:commandButton value="Save"/>
+                <apex:commandButton value="Save & New"/>
+                <apex:commandButton value="Cancel"/>
+            </apex:pageblockButtons>
+            <apex:pageblockSection title="Information">
+                <apex:outputField value="{!objSQi.AddressDescription__c}"/>
+                <apex:outputField value="{!objSQi.AddressType__c}"/>
+                <apex:outputField value="{!objSQi.AddressText__c}"/>
+                <apex:outputField value="{!objSQi.Locality__c}"/>
+                <apex:outputField value="{!objSQi.StreetNrFirst__c}"/>
+                <apex:outputField value="{!objSQi.StateOrProvince__c}"/>
+                <apex:outputField value="{!objSQi.StreetName__c}"/>
+                <apex:outputField value="{!objSQi.Postcode__c}"/>
+                <apex:outputField value="{!objSQi.StreetSubDescription__c}"/>
+                <apex:outputField value="{!objSQi.Subdivision__c}"/>
+                <apex:outputField value="{!objSQi.StreetDirection__c}"/>
+                <apex:outputField value="{!objSQi.BuildingName__c}"/>
+                <apex:outputField value="{!objSQi.unit_number__c}"/>
+                <apex:outputField value="{!objSQi.BuildingNumber__c}"/>
+                <apex:outputField value="{!objSQi.unit_Designator__c}"/>
+                <apex:outputField value="{!objSQi.BuildingSubNumber__c}"/>
+        
+            </apex:pageblockSection>
+            
+            <apex:pageBlockSection title="Information" >
+          
+               <apex:outputField value="{!objSQi.Name}"/>
+                <apex:outputField value="{!objSQi.Name}"/>
+                <apex:outputField value="{!objSQi.Name}"/>
+            
+            
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+    <apex:outputpanel id="relList">
+        <!--<apex:relatedList list="NotesAndAttachments"  subject="{!$CurrentPage.parameters.id}" />-->
+        <!--<apex:relatedList list="NotesAndAttachments"  subject="{!SterlingQuoteItem__c}" />-->
+        <apex:relatedList list="Zaddresss__r" />
+    </apex:outputpanel>
+
+</apex:page>

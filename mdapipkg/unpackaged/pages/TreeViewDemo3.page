@@ -1,0 +1,197 @@
+<apex:page sidebar="false" controller="treenodes1" showheader="true" tabStyle="One_View__tab">
+<apex:form >
+<!-- Include the Jquery Script files 
+    <link rel="stylesheet" href="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.css')}"/>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.cookie.js')}" type="text/javascript"></script>
+    <script src="{!URLFOR($Resource.Jtreeview,'Jquerytreeview/jquery.treeview.js')}" type="text/javascript"></script> -->
+<!-- End of Javascript files 
+<script type="text/javascript">
+        $(function() {
+            $("#tree").treeview({
+                collapsed: false,
+                animated: "medium",
+                control:"#sidetreecontrol",
+                persist: "location"
+            });
+        })
+</script>
+<style>          
+ .headerStyle {
+     font-size:30px;                
+     font-color:red;                
+     backgroundcolor:red; 
+     text-decoration:none;           
+ }
+</style>
+<style>
+  .headerRow .TableTitle {
+    background-color: #8EE5EE !important;
+    background-image: none !important; //This is needed if you want to overwrite the header background
+    color: #CC0000 !important; 
+    font-size:100% !important; 
+  }
+  .container{
+        overflow:auto;
+        height:105px;
+    }
+ </style>
+<!-- Tree -->
+<!--<div class="treeheader" style="height:0px;">&nbsp;</div>
+<div id="sidetreecontrol"><a href="?#"><font style="color:blue;">Collapse All</font></a> | <a href="?#"><font style="color:blue;">Expand All</font></a></div>
+-->
+<apex:pageMessages id="msg" ></apex:pageMessages>
+<table border="0" cellspacing="3" cellpadding="3" width="100%">
+    <tr >
+        <td colspan="4" width="70%">
+            <apex:pageblock title="Search" >
+                <apex:outputpanel layout="block" styleclass="container">
+                    <b><apex:selectRadio value="{!strSearchCriteria}" style="font-size:13px;color:rgb(174,0,0);position:relative;left:0px;">
+                        <apex:selectOptions value="{!items}" />
+                    </apex:selectRadio></b><br/>
+                    
+                    <b><apex:outputLabel value="Search By  " for="accts"></apex:outputLabel></b>
+                    <apex:selectList id="accts" value="{!strSearchByValue}" size="1" title="Account">
+                        <apex:selectOptions value="{!accts}"></apex:selectOptions>
+                    </apex:selectList>
+                    <apex:InputText value="{!strColumnValue}"  label="Search Text" style="position:relative;left:20px;" />
+                    <b><apex:outputlabel value="City" for="city" style="position:relative;left:30px;" /></b>
+                    <apex:InputText id="city" value="{!strCity}" style="position:relative;left:40px;"  />
+                    <b><apex:outputLabel value="State  " for="state" style="position:relative;left:50px;"/></b>
+                    <apex:selectList id="state" value="{!strState}" size="1" style="position:relative;left:50px;">
+                        <apex:selectOptions value="{!state}"></apex:selectOptions>
+                    </apex:selectList>
+                    <apex:commandButton value="Search" action="{!searchData}" style="position:relative;left:70px;" /><br/><br/><br/>
+                </apex:outputpanel>
+            </apex:pageblock>
+            
+        </td>
+        <td colspan="2">
+                <apex:pageBlock title="Quick Links">
+                    <apex:outputpanel layout="block" styleclass="container" id="quickLinks">
+                        <apex:pageBlockSection columns="1" >
+                            <apex:panelGrid columns="3" border="0" styleClass="tableStyle" width="100%" columnClasses="colStyle1,colStyle2,colStyle3" rowClasses="rowstyle">
+                                <apex:outputPanel rendered="{!bolShowOrderButton}" >
+                                    <apex:commandButton value="Order" action="{!redirectToOrderURL}"/>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!If(bolShowOrderButton=true,false,true)}">
+                                   <br/>
+                                </apex:outputPanel>
+                                <apex:outputLink target="_blank" value="http://wcon.east.frontiercorp.com/corgs/Call_Center_DPI/DPI.htm">CORG</apex:outputLink>
+                                <apex:outputLink target="_blank" value="http://wss.czncorp.com/callctr/pulse/default.aspx" shape="Button">Pulse</apex:outputLink>
+                                
+                                <br/>
+                                <apex:outputLink target="_blank" value="http://wapps.czncorp.com/cert/main.cfm" >CERT</apex:outputLink>
+                                <apex:outputLink target="_blank" value="https://www3.onlinefinancialdocs.com/tf/FANMedia?tx=Startup&cz=c060413270517141319080417&cmd=logon_&doctype=list&qta=verify">Statement in DST</apex:outputLink>
+                                
+                                
+                                <br/>
+                                <apex:outputLink target="_blank" value="http://ncprism2.vmn.northcentralnetworks.com/BSCOST/">OST</apex:outputLink>
+                                <apex:outputLink target="_blank" value="https://frontier.cat.globysonline.com/Login.aspx?gru=437662910">Statement in Globys.</apex:outputLink>
+                                  <br/>
+                                <!--<apex:outputLink target="_blank" value="https://frontier.globysonline.com/cv/log.asp?gru=437662910">Globys</apex:outputLink>
+                                <apex:outputLink target="_blank" value="https://www3.onlinefinancialdocs.com/tf/FANMedia?tx=Startup&cz=c060413270517141319080417&cmd=logon_&doctype=list&qta=verify">DST</apex:outputLink>-->
+                            </apex:panelGrid>
+                        </apex:pageBlockSection>      
+                    </apex:outputpanel>          
+                </apex:pageBlock>
+            
+        </td>
+    </tr>
+    <tr >
+        <td colspan="6">
+            <apex:outputPanel id="searchResult">
+                <apex:pageblock title="Search on {!strSearchCriteria}" rendered="{!bolShowSearchResult}" >
+                    <apex:pageblockTable value="{!Hierarchy}" var="hir"  >
+                        <apex:column headerValue="Customer Name/GAN" headerClass="TableTitle">
+                            <apex:commandLink value="{!hir.Name__c} / {!hir.GAN__c}" action="{!searchSelectedUserData}" style="text-decoration:none;">
+                                <apex:param name="recID" value="{!hir.Name__c}~{!hir.id}~{!hir.GAN__c}"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        <apex:column value="{!hir.GAN__c}" headerValue="GAN" rendered="{!IF(strSearchByValue='GAN',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.BTN_Phone__c}" headerValue="BTN" rendered="{!IF(strSearchByValue='BTN',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.WTN__c}" headerValue="WTN" rendered="{!IF(strSearchByValue='WTN',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Circuit_Id__c}" headerValue="Circuit ID" rendered="{!IF(strSearchByValue='Circuit ID',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.CLLI__c}" headerValue="CLLI" rendered="{!IF(strSearchByValue='CLLI',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Summary_master_phone__c}" headerValue="Summary Master TN" rendered="{!IF(strSearchByValue='Summary Master TN',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Name__c}" headerValue="Product" rendered="{!IF(strSearchByValue='Product',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Name__c}" headerValue="USI" rendered="{!IF(strSearchByValue='USI',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Name__c}" headerValue="Order Number" rendered="{!IF(strSearchByValue='Order Number',true,false)}" headerClass="TableTitle"/>
+                        <apex:column value="{!hir.Name__c}" headerValue="Trouble Ticket Number" rendered="{!IF(strSearchByValue='Trouble Ticket Number',true,false)}" headerClass="TableTitle"/>
+                    </apex:pageblockTable>
+                    <apex:panelGrid columns="2">
+                      <apex:commandLink action="{!setHirar.previous}">Previous</apex:commandlink>
+                      <apex:commandLink action="{!setHirar.next}">Next</apex:commandlink>
+                    </apex:panelGrid>
+                </apex:pageblock>
+            </apex:outputPanel>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1" width="20%" valign="top">
+            <apex:pageblock id="tree"  rendered="{!bolShowTree}">
+            <div class="treeheader" style="height:0px;">&nbsp;</div>
+            <div class="treeheader" style="height:0px;"><b>Customer Account Hierarchy</b></div><br/><br/>
+            <div id="sidetreecontrol"><a href="?#"><font style="color:blue;">Collapse All</font></a> | <a href="?#"><font style="color:blue;">Expand All</font></a></div>
+
+            
+              <ul id="tree">
+                   <apex:repeat value="{!lstLocation}" var="parent1" id="hir1">
+                        <li><strong><apex:outputtext style="color:red;" escape="false" value="{!parent1}"/></strong>
+                                   
+                            <ul> 
+                                <li><apex:commandLink value="{!strSelectedName} / {!strGANValue}" reRender="panelGrid"  rendered="{!IF(parent1!='Accounts',true,false)}" action="{!PrepareSummaryNameURL}" style="font-weight:bold;color:blue;text-decoration:none;"/></li>
+                
+                               <apex:repeat value="{!objList}" var="parent" id="hir" rendered="{!IF(parent1=='Accounts',true,false)}">
+                                    <li>
+                                        <!--<apex:outputtext rendered="{!IF(parent.strLevel2Name==strSelectedSummary,true,false)}" style="font-weight:bold;color:blue;" escape="false" value="{!parent.strLevel2Name}"/>
+                                        <apex:outputtext rendered="{!IF(parent.strLevel2Name!=strSelectedSummary,true,false)}" style="color:black;" escape="false" value="{!parent.strLevel2Name}"/>-->
+                                        
+                                        <apex:commandLink value="{!parent.strLevel2Name}" reRender="panelGrid,quickLinks"  rendered="{!IF(AND(parent.strLevel2Name==strSelectedSummary,bolSecondLevel=true),true,false)}" action="{!PrepareSummaryViewURL}" style="font-weight:bold;color:blue;text-decoration:none;">
+                                            <apex:param value="{!parent.strLevel2Name}" name="childValue" />
+                                        </apex:commandLink>
+                                        <apex:commandLink value="{!parent.strLevel2Name}" reRender="panelGrid,quickLinks"  rendered="{!IF(AND(parent.strLevel2Name==strSelectedSummary,bolSecondLevel=false),true,false)}" action="{!PrepareSummaryViewURL}" style="color:black;text-decoration:none;">
+                                            <apex:param value="{!parent.strLevel2Name}" name="childValue" />
+                                        </apex:commandLink>
+                                        <apex:commandLink value="{!parent.strLevel2Name}" reRender="panelGrid,quickLinks"  rendered="{!IF(parent.strLevel2Name!=strSelectedSummary,true,false)}" action="{!PrepareSummaryViewURL}" style="color:black;text-decoration:none;">
+                                            <apex:param value="{!parent.strLevel2Name}" name="childValue" />
+                                        </apex:commandLink>
+                                                    
+                                         <ul>
+                                             <apex:repeat value="{!parent.lstLevel2Labels}" var="child">
+                                               <li><span class="formattextcon">
+                                                    <apex:commandLink value="{!child}" reRender="panelGrid,quickLinks"  rendered="{!IF(AND(child==strSelectedPhone,bolThirdLevel=true),true,false)}" action="{!PrepareBTNViewURL}" style="font-weight:bold;color:blue;text-decoration:none;">
+                                                        <apex:param value="{!child}" name="childValue" />
+                                                    </apex:commandLink>
+                                                    <apex:commandLink value="{!child}" reRender="panelGrid,quickLinks"  rendered="{!IF(AND(child==strSelectedPhone,bolThirdLevel=false),true,false)}" action="{!PrepareBTNViewURL}" style="color:black;text-decoration:none;">
+                                                        <apex:param value="{!child}" name="childValue" />
+                                                    </apex:commandLink>
+                                                    <apex:commandLink value="{!child}" reRender="panelGrid,quickLinks"  rendered="{!IF(child!=strSelectedPhone,true,false)}" action="{!PrepareBTNViewURL}" style="color:black;text-decoration:none;">
+                                                        <apex:param value="{!child}" name="childValue" />
+                                                    </apex:commandLink>
+                                                </span></li>
+                                             </apex:repeat>
+                                         </ul>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+
+                         </li>
+                    </apex:repeat>
+                </ul>
+                
+            </apex:pageblock>
+            <!-- End of Tree -->       
+        </td> 
+        <td colspan="5" valign="top">
+            <apex:outputPanel id="panelGrid" rendered="{!IF(OR(bolShowTree=true,bolShowSummaryView=true),true,false)}">
+                <!--<apex:iframe src="/apex/SummaryPage" width="100%" height="900px" />
+                <apex:iframe src="/apex/SummaryPage?childValue=99999999999&srcCriteria=Account" width="100%" height="900px" />-->
+                 <apex:iframe src="{!strSummaryViewURL}" width="100%" height="1500px" />
+            </apex:outputPanel>
+        </td>
+    </tr>
+</table>
+
+</apex:form>
+</apex:page>

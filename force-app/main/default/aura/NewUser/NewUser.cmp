@@ -1,0 +1,68 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="InsertUser_Controller">
+    <aura:attribute name="portalForm" type="Contact" default="{'sobjectType':'User_Management__c'}" />
+    
+    <div class="demo-only">
+        <div class="slds-form slds-form_compound">
+            <fieldset class="slds-form-element">
+                <legend class="slds-form-element__label slds-text-title_caps">USER INFORMATION</legend>
+                
+                <div class="slds-form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-3">
+                            <label class="slds-form-element__label" for="input-01">First Name</label>
+                            <input type="text"  value="" id="firstName" />
+                            <force:inputField value="{!v.portalForm.First_Name__c}" />
+                        </div>
+                        <div class="slds-form-element slds-size_1-of-3">
+                            <label class="slds-form-element__label" for="input-02">MI:</label>
+                            <input type="text" aura:id="Middle_Name__c"/>
+                        </div>
+                        <div class="slds-form-element slds-size_1-of-3">
+                            <label class="slds-form-element__label" for="input-03">Last Name</label>
+                            <input type="text" aura:id="Last_Name__c"/>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form-element">
+                <div class="slds-form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-04">Email</label>
+                            <input type="text" aura:id="Email__c"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-05">Work Phone</label>
+                            <input type="text" aura:id="Work_Phone__c"/>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div>
+                
+                   <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-06">Agency Code</label>
+                           <input type="text" aura:id="Agency_Code__c"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size_1-of-2">
+                            <label class="slds-form-element__label" for="input-07">Office Code</label>
+                           <input type="text" aura:id="Office_Code__c"/>
+                        </div>
+                    </div>
+
+            </fieldset>
+            <lightning:button label="Submit" onclick="{!c.submitForm}"/>
+            <button class="slds-button slds-button--neutral" onclick="{!c.submitForm}">Close</button>
+
+            <lightning:button label="Clear form" onclick="{!c.Clear}"/>
+            <lightning:button label="Close" onclick="{!c.Close}"/>
+        </div>
+    </div>
+    
+</aura:component>

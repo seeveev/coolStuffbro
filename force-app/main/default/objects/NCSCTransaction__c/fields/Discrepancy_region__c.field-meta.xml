@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discrepancy_region__c</fullName>
+    <description>Target Table: zau/zla
+Target Column:zau_discrep_reg/    zla_discrepancy_region/zsa_dis_rgn</description>
+    <externalId>false</externalId>
+    <label>Discrepancy region</label>
+    <length>1</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

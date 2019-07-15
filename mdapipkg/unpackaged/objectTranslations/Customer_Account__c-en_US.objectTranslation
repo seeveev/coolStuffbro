@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Accounts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Accept 3rd Party --></label>
+        <name>Accept_3rd_Party__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accept Col Calls --></label>
+        <name>Accept_Col_Calls__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>Account_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Password --></label>
+        <name>Account_Pwd__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>Address_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 2 --></label>
+        <name>Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 3 --></label>
+        <name>Address_Line_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Due Over 60 --></label>
+        <name>Amt_Due_Ovr_60__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Pay --></label>
+        <name>Auto_Pay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Separately Last Period --></label>
+        <name>B_Stly_Lst_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Number --></label>
+        <name>Bank_Ac_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Account Type --></label>
+        <name>Bank_Ac_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Draft --></label>
+        <name>Bank_Draft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Name --></label>
+        <name>Bank_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Number --></label>
+        <name>Bank_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bank Routing Number --></label>
+        <name>Bank_Rt_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Cycle --></label>
+        <name>Bill_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Method --></label>
+        <name>Bill_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Method Description --></label>
+        <name>Bill_Mtd_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Through Date --></label>
+        <name>Billed_Thr_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Number --></label>
+        <name>Billing_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Sequence Number --></label>
+        <name>Billing_Sq_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Block EBPP --></label>
+        <name>Block_EBPP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Block OBP --></label>
+        <name>Block_OBP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Circuit ID --></label>
+        <name>Circuit_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- City Abbreviation --></label>
+        <name>City_Abbreviation__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Number --></label>
+        <name>Company_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connect Date --></label>
+        <name>Connect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- County Code Description --></label>
+        <name>County_C_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- County Code --></label>
+        <name>County_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Rating --></label>
+        <name>Credit_Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Rating Description --></label>
+        <name>Credit_Rtg_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Balance --></label>
+        <name>Current_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Due Date --></label>
+        <name>Current_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cust OwnedMaint.Equip --></label>
+        <name>Cust_OwnM_Eq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Type --></label>
+        <name>Customer_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date o Last promotion &amp; Demotion --></label>
+        <name>Date_o_Lst_pro_Demo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detail Bills --></label>
+        <name>Detail_Bills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disconnect Date --></label>
+        <name>Disconnect_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dish Account Number --></label>
+        <name>Dish_Ac_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- EBPP Customer --></label>
+        <name>EBPP_Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled OBP --></label>
+        <name>Enrolled_OBP__c</name>
+    </fields>
+    <fields>
+        <label><!-- ExternalID --></label>
+        <name>ExternalID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federal Tax ID --></label>
+        <name>Federal_Tax_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Federal Tax Y/N --></label>
+        <name>Federal_Tax_Y_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fictitious Flag --></label>
+        <name>Fictitious_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handling Code Description --></label>
+        <name>Handling_C_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handling Code --></label>
+        <name>Handling_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interlata Carrier --></label>
+        <name>Interlata_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intralata Carrier --></label>
+        <name>Intralata_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Adjustment Amount --></label>
+        <name>Last_Adst_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Bill Cycle --></label>
+        <name>Last_Bill_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Bill Method --></label>
+        <name>Last_Bill_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Bill Period --></label>
+        <name>Last_Bill_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Credit Rating --></label>
+        <name>Last_Credit_Rtg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Amount --></label>
+        <name>Last_Pmt_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment Date --></label>
+        <name>Last_Pmt_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Statement Due Date --></label>
+        <name>Last_St_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library ID --></label>
+        <name>Library_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Mtd/Cyc/Per --></label>
+        <name>Lst_Mtd_Cyc_Per__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Statement Issue Amount --></label>
+        <name>Lst_Smt_Isue_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Statement Issue Date --></label>
+        <name>Lst_St_Isue_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Treatment Date --></label>
+        <name>Lst_Tmt_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- MY ftr business user flag Y/N --></label>
+        <name>M_f_b_ur_flg_Y_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name Format --></label>
+        <name>Name_Format__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nine Digit Zip Code --></label>
+        <name>Nine_D_Zip_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Prior Returned Checks --></label>
+        <name>No_Of_Pr_R_Chks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Prior Second Notices --></label>
+        <name>No_Of_Pr_S_Ntc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Prior Disconnects --></label>
+        <name>No_Of_Prior_Dcs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Bill Pay Customer --></label>
+        <name>Ol_Bill_Pay_Cust__c</name>
+    </fields>
+    <fields>
+        <label><!-- PIC Freeze --></label>
+        <name>PIC_Frfeeze__c</name>
+    </fields>
+    <fields>
+        <label><!-- PIN --></label>
+        <name>PIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- PLOC Freeze --></label>
+        <name>PLOC_Freeze__c</name>
+    </fields>
+    <fields>
+        <label><!-- Past Due Info --></label>
+        <name>Past_Due_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publish/Non-Publish --></label>
+        <name>Pbl_Non_Pbls__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Print Off --></label>
+        <name>Print_Off__c</name>
+    </fields>
+    <fields>
+        <label><!-- Private Line Type --></label>
+        <name>Priv_Line_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity Of Bills --></label>
+        <name>Quantity_Of_Bills__c</name>
+    </fields>
+    <fields>
+        <label><!-- Refused To Pay Tax --></label>
+        <name>Ref_To_Pay_Tax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Order Activity Since Last Bill --></label>
+        <name>S_O_A_S_Lst_Bill__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Code Description --></label>
+        <name>Sch_Code_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- School Code --></label>
+        <name>School_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type Description --></label>
+        <name>Ser_Type_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Area Control # --></label>
+        <name>Serv_Area_Contl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Service_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Code --></label>
+        <name>Source_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Abbreviation --></label>
+        <name>State_Abbreviation__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Tax Code --></label>
+        <name>State_Tax_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Tax Exempt --></label>
+        <name>State_Tax_Exempt__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tariff --></label>
+        <name>Tariff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Exempt Cat. --></label>
+        <name>Tax_Exempt_Cat__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taxing District --></label>
+        <name>Taxing_District__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toll Limit Code --></label>
+        <name>Toll_Limit_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toll Limit Description --></label>
+        <name>Toll_Limit_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Amount Since Last Bill --></label>
+        <name>Ttl_A_S_Lst_Bill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Taxing District Description --></label>
+        <name>Tx_Dist_Des__c</name>
+    </fields>
+    <layouts>
+        <layout>Customer Account Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

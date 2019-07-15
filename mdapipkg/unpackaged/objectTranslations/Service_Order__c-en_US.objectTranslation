@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Orders</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Orderss</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Cellular Number --></label>
+        <name>Contact_Cellular_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Telephone Number --></label>
+        <name>Contact_Telephone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Stage Code Description --></label>
+        <name>Current_Stage_Code_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Stage Code --></label>
+        <name>Current_Stage_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Desire Due Date --></label>
+        <name>Customer_Desire_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>Customer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date entered --></label>
+        <name>Date_entered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jeopardy Reason --></label>
+        <name>Jeopardy_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- M6/DPI Flag --></label>
+        <name>M6_DPI_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Memo ID --></label>
+        <name>Memo_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered Activity --></label>
+        <name>Ordered_ACTIVITY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered By First --></label>
+        <name>Ordered_By_First__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered By Last --></label>
+        <name>Ordered_By_Last__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered By TN --></label>
+        <name>Ordered_By_TN__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRILOC --></label>
+        <name>PRILOC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SECLOC --></label>
+        <name>SECLOC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Control Number --></label>
+        <name>Service_Control_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service TN --></label>
+        <name>Service_TN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Service_Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

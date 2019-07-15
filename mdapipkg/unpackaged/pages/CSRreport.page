@@ -1,0 +1,21 @@
+<apex:page controller="WrapperIntStringDisplayClass">
+
+<apex:form >
+             <apex:pageBlock >
+                    <apex:pageBlockSection >
+                        <apex:pageBlockTable value="{!lstwrapperIntString}" Var="w">
+                            <apex:column headervalue="Action">
+                            </apex:column>
+                        <apex:column headervalue="Products">
+                                {!w.Tid}
+                        </apex:column>
+                        <apex:column headerValue="hierarchy">
+                            {!w.Did}
+                        </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+            </apex:pageBlock>
+
+</apex:form>
+
+</apex:page>

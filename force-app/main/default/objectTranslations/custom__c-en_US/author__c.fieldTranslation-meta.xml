@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- author --></label>
+    <name>author__c</name>
+    <picklistValues>
+        <masterLabel>bruce</masterLabel>
+        <translation><!-- bruce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>micheal</masterLabel>
+        <translation><!-- micheal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>paul</masterLabel>
+        <translation><!-- paul --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

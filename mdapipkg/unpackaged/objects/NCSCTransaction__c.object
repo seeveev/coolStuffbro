@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>NCSC - Transactions related to a line item issue.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Action_Td_Cd_2__c</fullName>
+        <description>Target Table: zla
+Target Column:    zla_action_TD_code2__c</description>
+        <externalId>false</externalId>
+        <label>Action Td Cd 2</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Action_Td_Code1__c</fullName>
+        <description>Target Table:zla
+Target Column:    zla_action_TD_code1__c</description>
+        <externalId>false</externalId>
+        <label>Action Td Code1</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Ship_Date__c</fullName>
+        <description>Target Table:zla
+Target Column:zla_date_shipped</description>
+        <externalId>false</externalId>
+        <label>Actual Ship Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Adjusted_Quantity__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau/zsa
+Target Column:fin_305_qty/a15_qty/    zla_adj_qty/zau_qty/zsa_adj_qty</description>
+        <externalId>false</externalId>
+        <label>Adjusted Quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adjusted_Value__c</fullName>
+        <description>Target Table: zau
+Target Column: zau_extend_value</description>
+        <externalId>false</externalId>
+        <label>Adjusted Value</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Advice_Code__c</fullName>
+        <description>Target Table: fin_305/a15/zla/zsa
+Target Column: fin_305_advice_code/a15_advice_cde/    zla_advice_cde/zsa_adv_cde</description>
+        <externalId>false</externalId>
+        <label>Advice Code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Bureau_Code__c</fullName>
+        <description>Target Table: fin_305/zla
+Target Column: fin_305_agy_bur_cde/    zla_agency_bureau_cd</description>
+        <externalId>false</externalId>
+        <label>Agency Bureau Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <description>NCSC - Amount of the transaction</description>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>BOAC__c</fullName>
+        <description>Target  Table: fin_305/zla
+Target Column: fin_305_boac/    zla_boac</description>
+        <externalId>false</externalId>
+        <label>BOAC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Card_No_2__c</fullName>
+        <description>Target Table: zla
+Target Column:</description>
+        <externalId>false</externalId>
+        <label>Card No 2</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Card_Number__c</fullName>
+        <description>Target Table: zla
+Target Column:     zla_card_no_1</description>
+        <externalId>false</externalId>
+        <label>Card Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipName>Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Chargeback_Ind__c</fullName>
+        <description>Target Table: zla / zsa
+Target Column:     zla_chargeback_ind / zsa_chg_ind</description>
+        <externalId>false</externalId>
+        <label>Chargeback Ind</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City_Code__c</fullName>
+        <description>Target Table: fin_305/zla
+Target Column: fin_305_city_cde/    zla_city_cd</description>
+        <externalId>false</externalId>
+        <label>City Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipName>Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Price__c</fullName>
+        <description>Target Table:fin_305/zla/zsa
+Target Column:fin_305_cost_price/    zla_cost_price/zsa_cost_price</description>
+        <externalId>false</externalId>
+        <label>Cost Price</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Date__c</fullName>
+        <description>Target Table: zla / zsa / zkp
+Target Column:     zla_date_avail / zsa_dte_avail /zkp_tim</description>
+        <externalId>false</externalId>
+        <label>Current Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Cycle_Date__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_cycle_dte</description>
+        <externalId>false</externalId>
+        <label>Cycle Date</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DIC__c</fullName>
+        <description>Target Table: a15
+Target Column:a15_doc_id_ext</description>
+        <externalId>false</externalId>
+        <label>DIC</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DiscrepancyOrder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Discrepancy Order</label>
+        <referenceTo>NCSCOrder__c</referenceTo>
+        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipName>Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Discrepancy_region__c</fullName>
+        <description>Target Table: zau/zla
+Target Column:zau_discrep_reg/    zla_discrepancy_region/zsa_dis_rgn</description>
+        <externalId>false</externalId>
+        <label>Discrepancy region</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distribution_code__c</fullName>
+        <description>Target Table:fin_305/a15/zla
+Target Column:fin_305_dist/a15_dist/    zla_dist_cde</description>
+        <externalId>false</externalId>
+        <label>Distribution code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Doc_Id__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau
+Target Column:fin_305_doc_id/a15_doc_id/    zla_doc_id/zau_doc_id</description>
+        <externalId>false</externalId>
+        <label>Doc Id</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Excep_Bill_to_Ind__c</fullName>
+        <description>Target Table: zla
+Target Column:     zla_excep_bill_to_ind</description>
+        <externalId>false</externalId>
+        <label>Excep Bill to Ind</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Export_Domestic_code__c</fullName>
+        <description>Target Table: fin_305/zla
+Target Column: fin_305_exp_dom_ind/    zla_export_domestic_cd</description>
+        <externalId>false</externalId>
+        <label>Export Domestic code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ext_Sell_Val__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_ext_sell_val</description>
+        <externalId>false</externalId>
+        <label>Ext Sell Val</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Id__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_file_id</description>
+        <externalId>false</externalId>
+        <label>File Id</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_character_of_PO_number__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_com_ctr_cd</description>
+        <externalId>false</externalId>
+        <label>First character of PO number</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fund_Code__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau
+Target Column:fin_305_fund/a15_fund/    zla_fund_cde/zau_fund_cde</description>
+        <externalId>false</externalId>
+        <label>Fund Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hdr__c</fullName>
+        <description>Target Table:  zkp / zsa
+Target Column: zkp_hdr / zsa_hdr</description>
+        <externalId>false</externalId>
+        <label>Hdr</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Imq__c</fullName>
+        <description>Target Table: zla
+Target Column:     zla_imq</description>
+        <externalId>false</externalId>
+        <label>Imq</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inquiry_Code__c</fullName>
+        <description>Target Table: zau/zla/a15
+Target Column: zau_inq_cde/    zla_inquiry_cde/zsa_inq_cde /a15_routing_cde_inq</description>
+        <externalId>false</externalId>
+        <label>Inquiry Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Mgr__c</fullName>
+        <description>Target Table: zla
+Target Column:     zla_item_mgr</description>
+        <externalId>false</externalId>
+        <label>Item Mgr</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRA_Liability_Code__c</fullName>
+        <description>Target Table: zau
+Target Column: zau_liability</description>
+        <externalId>false</externalId>
+        <label>MRA Liability Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Media_Status__c</fullName>
+        <description>Target Table: a15
+Target Column: a15_m_s</description>
+        <externalId>false</externalId>
+        <label>Media Status</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mode_of_Ship__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_mode_of_ship</description>
+        <externalId>false</externalId>
+        <label>Mode of Ship</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NSN__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau/zsa
+Target Column:fin_305_nsn/a15_nsn/    zla_nsn/zau_nsn/zsa_nsn</description>
+        <externalId>false</externalId>
+        <label>NSN</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Cards__c</fullName>
+        <description>Target Table:zla
+Target Column:     zla_no_of_cards</description>
+        <externalId>false</externalId>
+        <label>No of Cards</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Line_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Order Line Item</label>
+        <referenceTo>NCSCOrderLineItem__c</referenceTo>
+        <relationshipLabel>Transactions</relationshipLabel>
+        <relationshipName>Transactions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Original_document_identifier_code__c</fullName>
+        <description>Target Table: zla
+Target Column:     zla_card_no_2</description>
+        <externalId>false</externalId>
+        <label>Original document identifier code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <description>Target Table: fin_305/zla/ vendor_offset
+Target Column: fin_305_manif_po_nbr/    zla_gbl_po_nr/    vendor_offset_po_nbr</description>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pending_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Target Table:fin_305/zkp/a15/zla/zau/zsa
+Target column: fin_305_pnd_flg/zkp_pnd_flg/a15_pnd_flg/    zla_pnd_flg/zau_pnd_flg/zsa_pnd_flg</description>
+        <externalId>false</externalId>
+        <label>Pending  Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Priority_code__c</fullName>
+        <description>Target Table:fin_305/a15/zla
+Target Column:fin_305_pri/a15_pri/    zla_priority_cde</description>
+        <externalId>false</externalId>
+        <label>Priority code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Problem_Type__c</fullName>
+        <description>Target Table: vendor_offset
+Target Column:     vendor_offset_prb_typ__c</description>
+        <externalId>false</externalId>
+        <label>Problem Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Project_code__c</fullName>
+        <description>Target Table:fin_305/a15/zla
+Target Column:fin_305_proj/a15_proj/    zla_project_cde</description>
+        <externalId>false</externalId>
+        <label>Project code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Id__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_record_id</description>
+        <externalId>false</externalId>
+        <label>Record Id</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>Target Table: fin_305
+Target Column: fin_305_region</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_Type__c</fullName>
+        <description>Target Table: zkp
+Target Column: zkp_rpt_typ</description>
+        <externalId>false</externalId>
+        <label>Report Type</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requisition_Number__c</fullName>
+        <description>Target Table:fin_305/zkp/a15/zla/zau/zsa
+Target Column: fin_305_req/zkp_req/a15_req/    zla_req/zau_req/zsa_req</description>
+        <externalId>false</externalId>
+        <label>Requisition Number</label>
+        <length>14</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requisition_Suffix__c</fullName>
+        <description>Target Table:fin_305/zkp/zla/zau/zsa
+Target Column:fin_305_sfx/zkp_sfx/    zla_sfx/zau_sfx/zsa_sfx</description>
+        <externalId>false</externalId>
+        <label>Requisition  Suffix</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Routing_Code_Reg__c</fullName>
+        <description>Target Table: a15
+Target Column: a15_routing_cde_reg</description>
+        <externalId>false</externalId>
+        <label>Routing Code Reg</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Routing_Code__c</fullName>
+        <description>Target Table: a15
+Target Column: a15_routing_cde</description>
+        <externalId>false</externalId>
+        <label>Routing Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Routing_Identifier_Code__c</fullName>
+        <description>Target Table: a15/zau/zla
+Target Column: a15_ric_to/zau_ric_to/    zla_ric</description>
+        <externalId>false</externalId>
+        <label>Routing Identifier Code</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rtg_Id__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_rtg_id</description>
+        <externalId>false</externalId>
+        <label>Rtg Id</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIG_code__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau
+Target Column:fin_305_signal/a15_signal/    zla_signal/zau_signal</description>
+        <externalId>false</externalId>
+        <label>SIG code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sell_Price__c</fullName>
+        <description>Target Table:fin_305/zla/zsa
+Target Column:fin_305_sell_price/    zla_sell_price/zsa_sell_price</description>
+        <externalId>false</externalId>
+        <label>Sell Price</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Code__c</fullName>
+        <description>Target Table: fin_305/zla
+Target Column: fin_305_state_cde/    zla_st_cd</description>
+        <externalId>false</externalId>
+        <label>State Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Td_Code__c</fullName>
+        <description>Target Table: fin_305/a15/zla
+Target Column: fin_305_t_d_cde/ a15_td/  zla_original_td_cde / zsa_acn_cde</description>
+        <externalId>false</externalId>
+        <label>Td Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Td_Ser_8_Ind__c</fullName>
+        <description>Target Table:fin_305
+Target Column:fin_305_td_ser_8_ind</description>
+        <externalId>false</externalId>
+        <label>Td Ser 8 Ind</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tech_Code__c</fullName>
+        <description>Target Table: zkp
+Target Column: zkp_tch</description>
+        <externalId>false</externalId>
+        <label>Tech Code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>NCSC - Type of transaction</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+                <value>
+                    <fullName>Debit</fullName>
+                    <default>false</default>
+                    <label>Debit</label>
+                </value>
+                <value>
+                    <fullName>Vendor Offset</fullName>
+                    <default>false</default>
+                    <label>Vendor Offset</label>
+                </value>
+                <value>
+                    <fullName>Vendor Offset Reversal</fullName>
+                    <default>false</default>
+                    <label>Vendor Offset Reversal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unit_code__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau/zsa
+Target Column:fin_305_unt/a15_unt/    zla_unt/zau_unt/zsa_unt</description>
+        <externalId>false</externalId>
+        <label>Unit code</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendoe_control_Number__c</fullName>
+        <description>Target Table: vendor_offset
+ Target Column:     vendor_offset_cont_nbr__c</description>
+        <externalId>false</externalId>
+        <label>Vendoe control Number</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Amount__c</fullName>
+        <description>Target Table: vendor_offset
+Target Column:     vendor_offset_amount__c</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>delivery_date__c</fullName>
+        <description>Target Table: a15
+Target Column: a15_rdd</description>
+        <externalId>false</externalId>
+        <label>delivery date</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>rod_key__c</fullName>
+        <description>Target Table:fin_305/zkp/a15/zla/zau/ vendor_offset/zsa
+Target Column:</description>
+        <externalId>false</externalId>
+        <label>rod key</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>supplement_address_AAC__c</fullName>
+        <description>Target Table:fin_305/a15/zla/zau
+Target Column:fin_305_sup_add/a15_sup_add/    zla_sup_add/zau_sup_add</description>
+        <externalId>false</externalId>
+        <label>supplement address AAC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Transaction</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>T-{0}</displayFormat>
+        <label>Transaction Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Transactions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

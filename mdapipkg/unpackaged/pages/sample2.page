@@ -1,0 +1,15 @@
+<apex:page standardController="opportunity" extensions="opportunitypage" >
+           <apex:pageBlock >
+              <apex:pageBlockSection title="diplay field" columns="2" >
+                  <apex:outputField value="{!objOpp.Name}"/>
+                    <apex:outputField value="{!objOpp.CloseDate}"/>
+              
+              
+              
+              </apex:pageBlockSection>
+           
+           </apex:pageBlock> 
+            
+           
+
+</apex:page>

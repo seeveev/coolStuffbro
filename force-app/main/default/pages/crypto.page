@@ -1,0 +1,24 @@
+<apex:page controller="ISVC_cryptoCurrencyCallout" >
+    <apex:form >
+        <apex:pageBlock >
+            <table style="width:100%">
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th> 
+                    <th>Price</th>
+                    <th>Price change in 1h</th>
+                </tr>
+                <apex:repeat value="{!cryptoResp}" var="cr">
+                    <apex:repeat value="{!cr}" var="c">
+                        <tr>
+                            <td>{!c.rank}</td>
+                            <td>{!c.name}</td>
+                            <td> {!c.price_usd}</td>
+                            <td>{!c.percent_change_1h}</td>
+                        </tr>
+                    </apex:repeat>
+                </apex:repeat>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

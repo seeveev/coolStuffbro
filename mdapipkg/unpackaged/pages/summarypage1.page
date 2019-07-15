@@ -1,0 +1,847 @@
+<apex:page sidebar="false" controller="SummaryPageController1"  showheader="false">
+    <style>
+        .tableStyle {border-collapse: collapse; border-spacing: 0px 0px; }
+        .colStyle1 { width: 14.5%;text-align:right; padding-top:3px; padding-bottom:5px}
+        .colStyle2 { width: 10%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle3 { width: 14.5%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle4 { width: 10%; padding-left:20px; padding-top:5px; padding-bottom:5px}
+        .colStyle5 { width: 14.5%;text-align:right; padding-top:5px; padding-bottom:5px}
+        .colStyle6 { width: 10%; padding-left:20px; padding-top:5px; padding-bottom:4px}
+        .rowstyle { border-bottom-style:solid; border-bottom-width:1px;border-bottom-color:#E8E8E8 }
+    </style>
+    <script>
+        function colorPageBlock(pageblock, color) {
+            if (pageblock != null) pageblock.firstChild.style.cssText = "background-color: " + color + ";";
+        }
+    </script>
+    <style>
+       .activeTab {background-color: #1271F6; color:white; 
+             background-image:none;background-size:100px 100px;
+             }
+       .inactiveTab {background-color: lightgrey; color:black; 
+                 background-image:none
+                 }
+  </style>
+<style>
+  .headerRow .TableTitle {
+    background-color: #8EE5EE !important;
+    background-image: none !important; //This is needed if you want to overwrite the header background
+    color: #CC0000 !important; 
+    font-size:100% !important; 
+  }
+ </style>
+<apex:pageMessages id="msg" ></apex:pageMessages>
+<apex:form >
+       <apex:pageBlock > 
+                <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel" tabClass="activeTab" inactiveTabClass="inactiveTab" >
+                    <apex:tab label="Summary" name="name11" id="tabOne1" style="background-color: white;" rendered="{!IF(strSearchlevel='1',true,false)}" >
+                         <apex:outputPanel id="SummaryCustomerName1" rendered="true">
+                            <apex:pageBlock title="TOTAL BTN Numbers are {!strBTNPhoneCount}">
+                                 <!--<apex:pageblockTable value="{!lstHierarchyCustomerNameSearch}" var="cusName" rendered="{!IF(lstHierarchyCustomerNameSearch.size<=10,true,false)}">
+                                    <apex:column headerValue="BTN Phone" headerClass="TableTitle" >
+                                        <apex:outputText rendered="{!IF(cusName.BTN_Phone__c!=null,true,false)}">{!cusName.BTN_Phone__c}</apex:outputText>
+                                        <apex:outputText rendered="{!IF(cusName.Circuit_Id__c!=null,true,false)}">{!cusName.Circuit_Id__c}</apex:outputText>
+                                    </apex:column>
+                                </apex:pageblockTable>-->
+                                <apex:pageblockTable value="{!setUniqueCount}" var="cusName" rendered="{!IF(lstHierarchyCustomerNameSearch.size<=10,true,false)}">
+                                    <apex:column headerValue="BTN Phone" headerClass="TableTitle" >
+                                        <apex:outputText >{!cusName}</apex:outputText>
+                                    </apex:column>
+                                </apex:pageblockTable>
+                            </apex:pageBlock>
+                        </apex:outputPanel>
+                    </apex:tab>
+                    <apex:tab label="Summary" name="name1" id="tabOne" style="background-color: white;" rendered="{!IF(strSearchlevel='1',false,true)}" >                                                           
+                        <apex:outputPanel id="SummaryCustomerName" rendered="false">
+                            <apex:pageBlock title="Last 5 Cases of Customer Contacts">
+                            </apex:pageBlock>
+                        </apex:outputPanel>
+                        <apex:outputPanel id="BTNLevel" rendered="true">
+                            <apex:outputText value="Summary View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" /> 
+                            <br/><br/>   
+                            <table border="0" width="100%">
+                              <tr>
+                                <th></th>
+                                <th> Sales Opportunities</th>
+                                <th>Account Health</th>
+                                <th align="center">Monthly Charges</th>
+                              </tr>
+                              <tr>
+                                <td width="5%" ><br/></td>
+                                <td width="30%" valign="top" ><br/>
+                                    <apex:outputlabel >Broadband : </apex:outputlabel><br/>
+                                    <apex:outputlabel >Package : </apex:outputlabel><br/>
+                                    <apex:outputlabel >Fsecure : </apex:outputlabel><br/>
+                                    <apex:outputlabel >Long Distance : </apex:outputlabel><br/>
+                                    <apex:outputlabel >DISH : </apex:outputlabel><br/>
+                                    <apex:outputlabel >CPE : </apex:outputlabel><br/>
+                                    <br/>
+                                </td>
+                                <td width="30%" valign="top">
+                                    <br/>
+                                    <table border="0">
+                                        <tr>
+                                            <td><apex:outputlabel >Disputes </apex:outputlabel><br/></td>
+                                            <td><apex:image id="th1" value="{!disputeInfoDB}" width="20" height="20"/></td>
+                                        </tr>
+                                        <!--<tr>
+                                            <td><apex:outputlabel >Treatment </apex:outputlabel><br/></td>
+                                            <td><apex:image id="th2" value="{!$Resource.green}" width="20" height="20"/></td>
+                                        </tr>-->
+                                        <tr>
+                                            <td><apex:outputlabel >Tax Exempt </apex:outputlabel><br/></td>
+                                            <td><apex:image id="th3" value="{!$Resource.yellow}" width="20" height="20"/></td>
+                                        </tr>
+                                    </table>
+                                   <br/>
+                                </td>
+                                <td width="35%">
+                                    <apex:chart height="200" width="300" data="{!data}" >
+                                        <!--<apex:legend position="left" />-->
+                                        
+                                        <apex:axis type="Numeric" position="left" fields="data3"  title="$"/>
+                                        <apex:axis type="Category" position="bottom" fields="name"  title="">
+                                            <apex:chartLabel rotate="315"/>
+                                        </apex:axis>
+                                        <apex:barSeries tips="true" title="Monthly Sales" orientation="vertical" colorSet="#00F" axis="lefT"  xField="name" yField="data3">
+                                            <apex:chartTips height="10" width="50"/>
+                                        </apex:barSeries>
+                                        
+                                   </apex:chart>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!--<table border="5">
+                                <tr>
+                                    <td COLSPAN="2">
+                                        <apex:outputlabel >test</apex:outputlabel>
+                                        <apex:outputlabel >test1</apex:outputlabel>
+                                        <apex:outputlabel >tes2t</apex:outputlabel>
+                                    </td>
+                                    <td COLSPAN="2"></td>
+                                    <td COLSPAN="2">
+                                        <apex:chart height="200" width="500" data="{!data}" >
+                                            <apex:legend position="left" />
+                                            
+                                            <apex:axis type="Numeric" position="left" fields="data3"  title=""/>
+                                            <apex:axis type="Category" position="bottom" fields="name"  title="">
+                                                <apex:chartLabel rotate="315"/>
+                                            </apex:axis>
+                                            <apex:barSeries tips="true" title="Monthly Sales, ss, bb" orientation="vertical" colorSet="#00F,#0F0,#F00" axis="left"  xField="name" yField="data3,data2,data1">
+                                                <apex:chartTips height="20" width="120"/>
+                                            </apex:barSeries>
+                                            
+                                       </apex:chart>
+                                    </td>
+                                </tr>
+                            </table>-->
+                               <br/><br/>                        
+                               <apex:pageBlockSection title="Customer Info" id="Basicinfo">                                                                       
+                                    <apex:outputText value="{!objCustomerAccount.First_Name__c} {!objCustomerAccount.Last_Name__c}" label="Customer Name" rendered="{!IF(objCustomerAccount.Name_Format__c='Y',true,false)}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Last_Name__c}{!objCustomerAccount.First_Name__c}" label="Customer Name" rendered="{!IF(objCustomerAccount.Name_Format__c='N',true,false)}"/>
+                                    <apex:outputText value="{!objPhysicalAddress.Street_Number__c} {!objPhysicalAddress.Street_Direction__c} {!objPhysicalAddress.Street_Name__c} {!objPhysicalAddress.Street_Subtitle__c}  {!objPhysicalAddress.City_Abbreviation__c}   {!objPhysicalAddress.State_Abbre__c}{!objPhysicalAddress.Zipcode__c}" label="Service Address"/>
+                                    <apex:outputText value="{!objCustomerAccount.Billing_Number__c}" label="Bill to Number"/>                                    
+                                    <apex:outputText value="{!objCreditHistory.Ssn__c}" label="SSN"/>
+                                    <apex:outputText value="{!objCustomerAccount.Address_Line_1__c} {!objCustomerAccount.Address_Line_2__c} {!objCustomerAccount.Address_Line_3__c} {!objCustomerAccount.City__c} {!objCustomerAccount.State_Abbreviation__c} {!objCustomerAccount.Nine_D_Zip_Code__c}" label="Bill To Address"/>
+                                    <apex:outputText value="{!objCustomerAccount.Federal_Tax_ID__c}" label="Tax ID"/>
+                                    <apex:outputField value="{!objCustomerAccount.Account_Pwd__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Service_Type__c} - {!objCustomerAccount.Ser_Type_Des__c}" label="Service Type"/>
+                                    <apex:outputText value="{!objCustomerAccount.PIN__c}" label="PIN #"/>
+                                    <apex:outputText value="Active" label="Status"  rendered="{!IF(objCustomerAccount.Disconnect_Date__c!=null,false,true)}"/>
+                                    <apex:outputText value="Inactive" label="Status" rendered="{!IF(objCustomerAccount.Disconnect_Date__c!=null,true,false)}"/>
+
+                                    <!--<apex:outputField value="{!objCustomerAccount.Status__c}"/>-->
+                                    <apex:outputField value="{!objCreditHistory.Cust_Auth_ID__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Connect_Date__c}"/>
+                                    <apex:outputText value="{!objCreditHistory.Authorized_Name__c}" label="Auth User"/>
+                                    <apex:outputField value="{!objCustomerAccount.Disconnect_Date__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Account_Number__c}" label="Account Number"/>
+                                    <apex:outputField value="{!objCustomerAccount.Bill_Cycle__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Current_Due_Date__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Pbl_Non_Pbls__c}" label="Published/Non Published"/>                                                                                                             
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Basicinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                               </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Current Billing Info" id="Currentbillinginfo" rendered="false">
+                                    <apex:outputField value="{!objCustomerAccount.Past_Due_Info__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Pmt_Date__c}"/>                                    
+                                    <apex:outputField value="{!objCustomerAccount.Amt_Due_Ovr_60__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Pmt_Amt__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Lst_St_Isue_Date__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Current_Balance__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Lst_Smt_Isue_Amt__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bill_Method__c}" label="Payment Option" />
+                                    <apex:outputField value="{!objCustomerAccount.Last_St_Due_Date__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.M_f_b_ur_flg_Y_N__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Ol_Bill_Pay_Cust__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Cust_OwnM_Eq__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Adst_Amt__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Currentbillinginfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="A/R Info" id="ARInformation" columns="1">
+                                    <apex:commandButton value="{!strButtonName}" action="{!prevSixMonths}" reRender="ARInformation" style="position:relative;left:450px;"/>
+                                    
+                                    <apex:pageblockTable value="{!lstARInfoForSixMonths}" var="arinfo">
+                                        <b><apex:column value="{!arinfo.strTitle}"  headerValue="Bill Date" headerClass="TableTitle"/></b>
+                                        <apex:column value="{!arinfo.strCurrent}" headerValue="Current" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev1Month}" headerValue="{!strMonth2}" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev2Month}" headerValue="{!strMonth3}" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev3Month}" headerValue="{!strMonth4}" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev4Month}" headerValue="{!strMonth5}" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev5Month}" headerValue="{!strMonth6}" headerClass="TableTitle" rendered="{!first6months}"/>
+                                        <apex:column value="{!arinfo.strPrev6Month}" headerValue="{!strMonth7}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                        <apex:column value="{!arinfo.strPrev7Month}" headerValue="{!strMonth8}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                        <apex:column value="{!arinfo.strPrev8Month}" headerValue="{!strMonth9}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                        <apex:column value="{!arinfo.strPrev9Month}" headerValue="{!strMonth10}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                        <apex:column value="{!arinfo.strPrev10Month}" headerValue="{!strMonth11}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                        <apex:column value="{!arinfo.strPrev11Month}" headerValue="{!strMonth12}" headerClass="TableTitle" rendered="{!second6months}"/>
+                                    </apex:pageblockTable>
+                                            
+                                    <script>colorPageBlock(document.getElementById("{!$Component.ARInformation}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Payments" id="paymentSec" columns="1">
+                                       <!--<apex:pageBlockSection title="Pending Payment" id="Pendinginfo" >-->
+                                            <b><apex:outputLabel value="Pending Payment"/></b>
+                                            <apex:pageblockTable value="{!lstPaymentInfo}" var="payInfo"  >
+                                                <apex:column value="{!payInfo.pending_cc_mem__c}" headerClass="TableTitle" headervalue="C/C Member"/>
+                                                <apex:column value="{!payInfo.Phone_Number__c}" headerClass="TableTitle" headervalue="Phone Number"/>
+                                                <apex:column value="{!payInfo.Payment_Date__c}" headerClass="TableTitle" headervalue="Payment Date"/>
+                                                <apex:column value="{!payInfo.Pending_Batch_ID__c}" headerClass="TableTitle" headervalue="Batch ID"/>
+                                                <apex:column value="{!payInfo.payment_seq_no__c}" headerClass="TableTitle" headervalue="Seq"/>
+                                                <apex:column value="{!payInfo.Pending_Ref_No__c}" headerClass="TableTitle" headervalue="Ref No"/>
+                                                <apex:column value="{!payInfo.Pending_Pay_Type__c}" headerClass="TableTitle" headervalue="Type"/>
+                                                <apex:column value="{!payInfo.Pending_Pay_Amt__c}" headerClass="TableTitle" headervalue="Amount"/>         
+                                            </apex:pageblockTable>
+                                            <!--<script>colorPageBlock(document.getElementById("{!$Component.Pendinginfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                        <apex:pageBlockSection title="Payment History" id="Paymenthistory">-->
+                                            <b><apex:outputLabel value="Payment History"/></b>
+                                             <apex:pageblockTable value="{!lstPaymentInfo}" var="payInfo">
+                                                <apex:column value="{!payInfo.Batch_Name__c}" headerClass="TableTitle" headervalue="Batch Name"/>
+                                                <apex:column value="{!payInfo.Billing_Number__c}" headerClass="TableTitle" headervalue="Billing TN"/>
+                                                <apex:column value="{!payInfo.Payement_Rcvd_Date__c}" headerClass="TableTitle" headervalue="Received Date"/>
+                                                <apex:column value="{!payInfo.Posted_Pay_Date__c}" headerClass="TableTitle" headervalue="Post Date"/>
+                                                <apex:column value="{!payInfo.Post_Time__c}" headerClass="TableTitle" headervalue="Post Time"/>
+                                                <apex:column value="{!payInfo.Posted_pay_type__c}" headerClass="TableTitle" headervalue="Pay Type"/>
+                                                <apex:column value="{!payInfo.Posted_Pay_Amt__c}" headerClass="TableTitle" headervalue="Payment Amount"/>
+                                                <apex:column value="{!payInfo.Bank_Deposit_ID__c}" headerClass="TableTitle" headervalue="BankDepID"/>
+                                                <apex:column value="{!payInfo.Posted_Ref_No1__c}" headerClass="TableTitle" headervalue="Reference Number" />
+                                                <apex:column value="{!payInfo.Posted_By__c}" headerClass="TableTitle" headervalue="Posted By"/>
+                                            </apex:pageblockTable>
+                                            <!--<script>colorPageBlock(document.getElementById("{!$Component.Paymenthistory}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>-->
+                                    <script>colorPageBlock(document.getElementById("{!$Component.paymentSec}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                              <!--  <apex:pageBlockSection title="Reassignment" id="reAssignmentSec">
+                                    <script>colorPageBlock(document.getElementById("{!$Component.reAssignmentSec}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>-->
+                          </apex:outputPanel>
+                    </apex:tab>                                                                                       
+                    <apex:tab label="Billing" name="billName" id="tabBilling" style="background-color:white;"  rendered="{!IF(strSearchlevel='1',false,true)}">
+                        <apex:tabPanel switchType="client" selectedTab="name1" id="subTabPanel1" tabClass="activeTab" inactiveTabClass="inactiveTab">
+                             
+                            <apex:tab label="Subscriber Billing" id="BTNtabTwo" style="background-color:white;">
+                                <apex:outputText value="Billing > Subscriber Billing View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                               <apex:pageBlockSection title="Subscriber Billing Inquiry" id="Subscriberbillinginquiry">
+                                    <apex:outputText value="{!objCustomerAccount.Service_Type__c} - {!objCustomerAccount.Ser_Type_Des__c}" label="Service Type"/>
+                                    <apex:outputField value="{!objCustomerAccount.State_Tax_Code__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bill_Method__c} - {!objCustomerAccount.Bill_Mtd_Des__c}" label="Bill Method A/C"/>
+                                    <apex:outputField value="{!objCustomerAccount.Federal_Tax_Y_N__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Credit_Rating__c} - {!objCustomerAccount.Credit_Rtg_Des__c}" label="Credit Rating"/>
+                                    <apex:outputText value="{!objCustomerAccount.PIN__c}" label="PIN #"/>
+                                    <apex:outputText value="{!objCustomerAccount.Toll_Limit_Code__c} - {!objCustomerAccount.Toll_Limit_Des__c}" label="Toll Limit"/>
+                                    <apex:outputText value="{!objCustomerAccount.Account_Number__c}" label="Account #"/>
+                                    <apex:outputText value="{!objCustomerAccount.School_Code__c} - {!objCustomerAccount.Sch_Code_Des__c}" label="School Code"/>
+                                    <apex:outputText value="{!objCustomerAccount.Quantity_Of_Bills__c}" label="Qty of bills"/>
+                                    <apex:outputText value="{!objCustomerAccount.County_Code__c} - {!objCustomerAccount.County_C_Des__c}" label="County Code"/>
+                                    <apex:outputField value="{!objCustomerAccount.Auto_Pay__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Taxing_District__c} - {!objCustomerAccount.Tx_Dist_Des__c}" label="Tax District"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bill_Cycle__c}" label="Billing Cycle"/>
+                                    <apex:outputText value="{!objCustomerAccount.Handling_Code__c} - {!objCustomerAccount.Handling_C_Des__c}" label="Handling Code"/>
+                                    <apex:outputField value="{!objCustomerAccount.Billed_Thr_Date__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Priv_Line_Type__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Lst_Mtd_Cyc_Per__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bank_Ac_Type__c}" label="Account Type"/>
+                                    <apex:outputField value="{!objCustomerAccount.Detail_Bills__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bank_Number__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Connect_Date__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Bank_Ac_Number__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Disconnect_Date__c}"/>                                    
+                                    <apex:outputText value="{!objCustomerAccount.Enrolled_OBP__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Block_OBP__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Print_Off__c}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Tax_Exempt_Cat__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Subscriberbillinginquiry}"), "{!strPageBlockSectionColorCode}");</script>
+                              </apex:pageBlockSection>
+                             </apex:tab>
+                            <apex:tab label="Credit & Prior Billing" id="BTNtabThree" style="background-color: white;" rendered="false"  >
+                            <apex:outputText value="Billing > Credit & Prior Billing View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Credit and Prior Billing Info." id="Creditandpriorbillinginfo">
+                                    <apex:outputField value="{!objCustomerAccount.Credit_Rating__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Bill_Cycle__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.State_Tax_Code__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Billed_Thr_Date__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Bill_Method__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.B_Stly_Lst_Period__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.S_O_A_S_Lst_Bill__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.No_Of_Prior_Dcs__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.No_Of_Pr_R_Chks__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.No_Of_Pr_S_Ntc__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Ttl_A_S_Lst_Bill__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Bill_Period__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Last_Credit_Rtg__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Creditandpriorbillinginfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:tab> 
+
+                            <apex:tab label="Deposit Info" id="BTNtabFive" style="background-color: white;" >
+                                <apex:outputText value="Billing > Deposit Info View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" /><br/><br/>
+                                <apex:outputLabel value="Telephone #  "/>
+                                <apex:inputtext value="{!strDipositRefundTelephone}" />
+                                <apex:commandButton value="Search" action="{!searchDepositInfoOnTelephone}" reRender="depINfo,depDetails"/><br/><br/>
+                                    
+                                    <apex:pageblockTable id="depINfo" value="{!lstDepositRefund}" var="depoInfo">
+                                       <apex:column headerValue="Telephone Number" headerClass="TableTitle" >
+                                           <apex:commandlink rerender="depDetails" >
+                                               {!depoInfo.Phone_Number__c}
+                                               <apex:param value="{!depoInfo.id}" name="selDepRefPhone"/>
+                                           </apex:commandLink>
+                                       </apex:column>
+                                        <apex:column value="{!depoInfo.Deposit_Date__c}" headerValue="Date" headerClass="TableTitle"/>
+                                        <apex:column value="{!depoInfo.Deposit_Amount__c}" headerValue="Amount" headerClass="TableTitle"/>
+                                        <apex:column value="{!depoInfo.Deposit_Code__c}" headerValue="Code" headerClass="TableTitle"/>
+                                        <apex:column value="{!depoInfo.Dpsit_Description__c}" headerValue="Description" headerClass="TableTitle"/>
+                                        <apex:column value="{!depoInfo.Deposit_Intreset__c}" headerValue="Interest" headerClass="TableTitle"/> 
+                                        <apex:column value="{!depoInfo.method_Dscriptn__c}" headerValue="Method & Description" headerClass="TableTitle"/>                                                                                                     
+                                    </apex:pageblockTable><br/><br/>
+                                    <apex:outputPanel id="depDetails">
+                                        <apex:pageBlockSection title="Deposit Details" columns="1" rendered="{!IF(DepositRefund==null,false,true)}" id="Depositdetails" >
+                                            <apex:panelGrid columns="6" border="0" styleClass="tableStyle" width="100%" columnClasses="colStyle1,colStyle2,colStyle3,colStyle4,colStyle5,colStyle6" rowClasses="rowstyle">
+                                                <apex:outputText value="Deposit Refund Information" style="font-weight:bold;" styleClass="labStyle"/>
+                                                <apex:outputText value="" styleClass="labStyle"/>
+                                                <apex:outputText value="Deposit and Interest Refund Information" style="font-weight:bold;"  styleClass="labStyle"/>
+                                                <apex:outputText value="" styleClass="labStyle"/>
+                                                <apex:outputText value="Deposit Interest Information" style="font-weight:bold;"  styleClass="labStyle"/>
+                                                <apex:outputText value="" styleClass="labStyle"/>
+                                            
+                                                <apex:outputText value="To Date" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refnd_ToDate__c}"/>
+                                                <apex:outputText value="Refund To Date" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_Refnd_ToDate__c}"/>
+                                                <apex:outputText value="Interest To Date" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_ToDate__c}"/>
+                                                <apex:outputText value="Date" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refund_Date__c}"/>
+                                                <apex:outputText value="Last Date" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_Refnd_Lst_Date__c}"/>
+                                                <apex:outputText value="Thru" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Deposit_Int_THRU__c}"/>
+                                                <apex:outputText value="Amount" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Deposit_Amount__c}"/>
+                                                <apex:outputText value="Refund Amount" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refund_Amount__c}"/>
+                                                <apex:outputText value="Amount to Post" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_amt_to_Post__c}"/>
+                                                
+                                                <apex:outputText value="Check #" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refnd_chck_no__c}"/>
+                                                <apex:outputText value="Refund Check #" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_Refnd_Chk_No__c}"/>
+                                                <apex:outputText value="Thru" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.THRU__c}"/>
+                                                
+                                                <apex:outputText value="Code" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refund_Code__c}"/>
+                                                <apex:outputText value="Code" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_Refnd_Code__c}"/>
+                                                <apex:outputText value="" styleClass="labStyle"/>
+                                                <apex:outputText value=""/>
+                                                
+                                                <apex:outputText value="Account" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Refnd_Acct__c}"/>
+                                                <apex:outputText value="Account" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Int_Refnd_Acct__c}"/>
+                                                <apex:outputText value="" styleClass="labStyle"/>
+                                                <apex:outputText value=""/>
+                                                
+                                                <apex:outputText value="Amount to Post" styleClass="labStyle"/>
+                                                <apex:outputField value="{!DepositRefund.Ref_Amt_To_Post__c}"/>
+                                            </apex:panelGrid>
+                                            <script>colorPageBlock(document.getElementById("{!$Component.Depositdetails}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:outputPanel>
+                                
+                            </apex:tab>
+                            <apex:tab label="Credit History" id="BTNtabSix" style="background-color: white;" rendered="false">
+                                <apex:outputText value="Billing > Credit History View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Disconnect/Credit Info" id="Disconnectcreditinfo">
+                                    <apex:outputField value="{!objCustomerAccount.Disconnect_Date__c}"/>
+                                    <apex:outputField value="{!objCustomerAccount.Connect_Date__c}" />
+                                    <apex:outputField value="{!objCustomerAccount.Credit_Rating__c}" />
+                                    <apex:outputField value="{!objCustomerAccount.Last_Bill_Cycle__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Disconnectcreditinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Business Credit Info" id="Businesscreditinfo">
+                                    <apex:outputField value="{!objCreditHistory.Type_Of_Business__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Related_Hotspot_No__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Hotspot_HSI_Info__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Misc_Info_1__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Misc_Info_2__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Misc_Info_3__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Business_Owner_1__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Busi_Owner_1_Ph__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Business_Owner_2__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Busi_Owner_2_Ph__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Managers_Name__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Managers_Phone__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Businesscreditinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Customer Info" id="Customerinfo">
+                                    <apex:outputField value="{!objCreditHistory.Customer_SSN__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Customer_DL__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Previous_Phone__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Employer_Name__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Employer_Phone__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Hire_Date__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Customerinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Spouse Info" id="Spouseinfo">
+                                    <apex:outputField value="{!objCreditHistory.Spouse_DL__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Spouse_Emp_Add__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Spouse_Emp_Nme__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Spouse_Nme_Frst__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Spouse_Nme_Lst__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Spouse_SSN__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.x3rd_Party_Code__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Spouseinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Housing Info" id="Housinginfo">
+                                    <apex:outputField value="{!objCreditHistory.Residence_Info__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Landlord_Name__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Landlord_Phone__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Landlord_Name__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Authorized_Name__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Housinginfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                                <apex:pageBlockSection title="Contact Info" id="Contactinfo">
+                                    <apex:outputField value="{!objCreditHistory.Guarantors_Name__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Guarantors_Phone__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Nearest_Relative__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Rnship_To_Sub__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Relative_Phone__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Relatives_Address__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Oth_Adlt_Rmate_1__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Oth_Adlt_Rmate_2__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Oth_Adlt_Rmate_3__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.Oth_Adlt_Rmate_4__c}"/>
+                                    <apex:outputField value="{!objCreditHistory.CBR__c}"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Contactinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:tab>
+                            <apex:tab label="Adjustments" id="BTNtabSeven" style="background-color: white;" >
+                                <apex:outputText value="Billing > Adjustments View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" /><br/><br/>
+                                <apex:outputLabel value="Telephone #  "/>
+                                <apex:inputtext value="{!strAdjustmentTelephone}" />
+                                
+                                <apex:outputLabel value="Month  " for="month"></apex:outputLabel>
+                                <apex:selectList id="month" value="{!strSelectedMonth}" size="1" title="Month">
+                                    <apex:selectOptions value="{!months}"></apex:selectOptions>
+                                </apex:selectList>
+                                <apex:outputLabel value="Year  " for="year"></apex:outputLabel>
+                                <apex:selectList id="year" value="{!strSelectedYear}" size="1" title="Year">
+                                    <apex:selectOptions value="{!years}"></apex:selectOptions>
+                                </apex:selectList>
+                                
+                                <apex:commandButton value="Filter" action="{!searchDepositInfoOnTelephone}" reRender="AdjuINfo"/><br/><br/>
+                                    
+                                    <apex:pageblockTable id="AdjuINfo" value="{!lstAdjustments}" var="adj">
+                                       <apex:column value="{!adj.Phone_Number__c}" headerValue="Telephone Number" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Charge_Code__c}" headerValue="Charge Code" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Account_Number__c}" headerValue="Account#" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Reference_Number__c}" headerValue="Ref #" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Batch_Name__c}" headerValue="Batch Name" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Date__c}" headerValue="Date" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Date_Posted__c}" headerValue="Posted" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Posted_By__c}"  headerValue="Posted By" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Type__c}"  headerValue="Type" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Description__c}" headerValue="Description" headerClass="TableTitle"/>
+                                        <apex:column value="{!adj.Amount__c}" headerValue="Amount" headerClass="TableTitle"/>                                                                                                     
+                                    </apex:pageblockTable>
+                            </apex:tab>
+                            <apex:tab label="Dispute Info" id="BTNtabEight" style="background-color:white;">
+                            <apex:outputText value="Billing > Dispute Info View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Dispute Info" columns="1" id="Disputeinfo">
+                                    <apex:pageblockTable value="{!lstDisputeInfo}" var="dispInfo" width="100%" >
+                                        <apex:column value="{!dispInfo.Date__c}" width="100px" headerValue="Date" headerClass="TableTitle"/>
+                                        <apex:column value="{!dispInfo.Status__c}" width="400px" headerValue="Status" headerClass="TableTitle"/>
+                                        <apex:column value="{!dispInfo.Amount__c}" width="200px" headerValue="Amount" headerClass="TableTitle"/>
+                                        <apex:column value="{!dispInfo.Category__c}" width="300px" headerValue="Category" headerClass="TableTitle"/>
+                                        <apex:column value="{!dispInfo.Open_User__c}" width="500px" headerValue="Open User" headerClass="TableTitle"/>
+                                        <apex:column value="{!dispInfo.Closed_User__c}" width="500px" headerValue="Closed User" headerClass="TableTitle"/>
+                                    </apex:pageblockTable>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Disputeinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:tab>
+                            <apex:tab label="EAS/LMS History" id="BTNtabNine" style="background-color: white;" rendered="false" >
+                            <apex:outputText value="Billing > EAS/LMS History View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                            </apex:tab>
+                            <apex:tab label="TAX Info" id="BTNtabTen" style="background-color: white;" rendered="false"  >
+                            <apex:outputText value="Billing > Tax Info View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                            </apex:tab>
+                            <apex:tab label="Treatment       ." id="BTNtabElevel" style="background-color: white;" rendered="false"  >
+                            <apex:outputText value="Billing > Treatment View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Treatment Info." id="Treatmentinfo">
+                                    <apex:pageblockTable value="{!lstTreatment}" var="trt">
+                                        <apex:column value="{!trt.Type__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Date__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Cmitmnt_Status__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Details__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Last_Bill_Cycle__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Lst_Crdit_Rtng__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Date_of_trtmnt__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Notice_Amt__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Past_Due_trtmnt__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Service_Rep__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Notice_Due_Date__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Treatmnt_Amt__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!trt.Balance_Details__c}" headerClass="TableTitle"/>
+  
+                                    </apex:pageblockTable>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Treatmentinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:tab>
+                            <apex:tab label="Tax Exemption" id="BTNtabTwelve" style="background-color: white;" >
+                            <apex:outputText value="Billing > Tax Exemption View" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Tax Exemption Info." columns="1" id="Taxexemptioninfo">
+                                    <apex:pageblockTable value="{!lstTaxExcemption}" var="taxExem">
+                                        <apex:column value="{!taxExem.Phone_Number__c}" headerValue="Telephone Number" width="100px" headerClass="TableTitle"/>
+                                        <apex:column value="{!taxExem.Tax_Type__c}" width="100px" headerValue="Tax Type" headerClass="TableTitle"/>
+                                        <apex:column value="{!taxExem.Tax_Author__c}" width="100px" headerValue="Tax Author" headerClass="TableTitle"/>
+                                        <apex:column value="{!taxExem.Expiration__c}" width="100px" headerValue="Expiration" headerClass="TableTitle"/>
+                                        <apex:column value="{!taxExem.Tax_Certi_No__c}" width="100px" headerValue="Tax Certificate Number" headerClass="TableTitle"/>
+                                    </apex:pageblockTable>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Taxexemptioninfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:tab>
+                            <apex:tab label="Equal Access" id="equalAccessTab" style="background-color: white;">
+                                <apex:outputText value="Billing > Equal Access" style="font-size:20px;color:rgb(174,0,0);position:relative;left:300px;" />
+                                <apex:pageBlockSection title="Equal Access" id="Equalaccess">
+                                    <apex:outputText value="{!strInterLateCarrier}" label="InterLata Carrier" />
+                                    <apex:outputField value="{!objCustomerAccount.PIC_Frfeeze__c}"/>
+                                    <apex:outputText value="{!strInterLateDate}" label="Effective Date" />
+                                    <apex:outputField value="{!objCustomerAccount.PLOC_Freeze__c}"/>
+                                    <apex:outputText value="{!strIntraLateCarrier}" label="IntraLata Carrier" />
+                                    <apex:outputField value="{!objCustomerAccount.Accept_Col_Calls__c}"/>
+                                    <apex:outputText value="{!strIntraLateDate}" label="Effective Date" />
+                                    <apex:outputField value="{!objCustomerAccount.Accept_3rd_Party__c}"/>
+                                    <apex:outputText value="{!IF(lstDisputeInfo.size>0,'Yes','No')}" label="Account In Dispute" />
+                                    <apex:outputText value="{!objCustomerAccount.Lst_Tmt_Date__c}" label="Treatment Info"/>
+                                    <apex:outputText value="{!objCreditHistory.Red_Flag__c}" label="Open Red Flag"/>                                                                        
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Equalaccess}"), "{!strPageBlockSectionColorCode}");</script>                                    
+                                </apex:pageBlockSection>
+                            </apex:tab>
+                        </apex:tabPanel>
+                    </apex:tab>
+                    <!--<apex:tab label="Service Orders" name="name2" id="tabTwo" style="background-color: white;"  rendered="{!IF(lstHierarchyCustomerNameSearch.size>0,false,false)}" >content for tab two</apex:tab>
+                    <apex:tab label="Trouble Tickets" name="name3" id="tabThree" style="background-color: white;"  rendered="{!IF(lstHierarchyCustomerNameSearch.size>0,false,false)}" >content for tab Three</apex:tab>
+                    <apex:tab label="Contracts" name="name5" id="tabFive" style="background-color: white;"  rendered="{!IF(lstHierarchyCustomerNameSearch.size>0,false,false)}" >content for tab Five</apex:tab>
+                    
+                    <apex:tab label="Inventory" name="name4" id="tabFour" style="background-color: white;"  rendered="{!IF(strSearchlevel='1',false,false)}" >content for tab Four</apex:tab>-->
+                    <apex:tab label="Detail Inventory" name="name6" id="tabSix" style="background-color: white;"  rendered="{!IF(strSearchlevel='1',false,true)}" >
+                            <apex:pageBlock title="TN Information" >
+                                <apex:outputLabel value="Telephone #  "/>
+                                <apex:inputtext value="{!strTNInformationTelephone}" />
+                                <apex:commandButton value="Search" action="{!searchTNInfoOnTelephone}" reRender="TNtab,Basicinfo"/><br/><br/>
+                                    
+                            
+                                <apex:pageBlockSection title="Customer Info" id="Basicinfo">
+                                
+                                   <!-- <apex:inputtext /> 
+                                   <apex:commandButton value="Search"/>-->
+                                    <apex:outputText value="{!objCustomerAccount.First_Name__c} {!objCustomerAccount.Last_Name__c}" label="Customer Name" rendered="{!IF(objCustomerAccount.Name_Format__c='Y',true,false)}"/>
+                                    <apex:outputText value="{!objCustomerAccount.Last_Name__c}{!objCustomerAccount.First_Name__c}" label="Customer Name" rendered="{!IF(objCustomerAccount.Name_Format__c='N',true,false)}"/>
+                                    <apex:outputText value="{!objPhysicalAddress.Street_Number__c} {!objPhysicalAddress.Street_Direction__c} {!objPhysicalAddress.Street_Name__c} {!objPhysicalAddress.Street_Subtitle__c} {!objPhysicalAddress.State_Abbre__c} {!objPhysicalAddress.City_Abbreviation__c} {!objPhysicalAddress.Zipcode__c}" label="Physical Address"/>
+                                    <apex:outputText value="{!strServiceTN}" label="Service TN"/>
+                                    <apex:outputText value="{!objCustomerAccount.Service_Type__c} - {!objCustomerAccount.Ser_Type_Des__c}" label="Service Type"/>
+                                    <script>colorPageBlock(document.getElementById("{!$Component.Basicinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                </apex:pageBlockSection>
+                            </apex:pageBlock>
+                            <apex:tabpanel id="TNtab" switchType="client" tabClass="activeTab" inactiveTabClass="inactiveTab" >
+                                <apex:tab label="Circuit Info" name="TNName1" id="TN1" style="background-color:white;" rendered="false" >content for tab two</apex:tab>
+                                <apex:tab label="Service & Equipment" name="TNName2" id="TN2" style="background-color:white;" >
+                                    <apex:pageblock >
+                                        <apex:pageBlockSection title="Products & Services" id="Productsservices">
+                                            <apex:pageblockTable value="{!lstProductsTN}" var="serProd">
+                                               <apex:column value="{!serProd.S_E__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Description__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Item_Number__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Item_Sequence_Number__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Prefix_P__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.NO_Flag_Tax_T__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Active_Flag_A__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Charge_Rate__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.InDATE__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.IN_Service_Order__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.Out_Date__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.OUT_Service_Order__c}" headerClass="TableTitle"/>
+                                               <apex:column value="{!serProd.DC__c}" headerClass="TableTitle"/>                                             
+                                            </apex:pageblockTable>
+                                            <script>colorPageBlock(document.getElementById("{!$Component.Productsservices}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:pageblock>
+                                </apex:tab>
+                                
+                                <apex:tab label="Directory Listing" name="TNName4" id="TN4" style="background-color:white;" rendered="false">content for tab Five</apex:tab>
+                                <apex:tab label="Equal Access" name="TNName5" id="TN5" style="background-color:white;" rendered="false">
+                                    <apex:pageBlock >
+                                        <apex:pageBlockSection title="Equal Access Info" id="Equalaccessinfo">
+                                            <apex:outputField value="{!objEqualAccess.Account_Id__c}"/>
+                                            <script>colorPageBlock(document.getElementById("{!$Component.Equalaccessinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                        <apex:pageBlockSection title="Equal Access History" id="Equalaccesshistory">
+                                            <apex:pageblockTable value="{!lstEqualAccess}" var="EqualAccess">
+                                               <apex:column value="{!EqualAccess.Account_Id__c}" headerClass="TableTitle"/>
+                                                                                           
+                                            </apex:pageblockTable>
+                                            <script>colorPageBlock(document.getElementById("{!$Component.Equalaccesshistory}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:pageBlock>
+                                </apex:tab>
+                                <apex:tab label="Special Access" name="TNName6" id="TN6" style="background-color:white;" rendered="false">
+                                    <apex:pageBlock >
+                                        <apex:pageBlockSection title="Special Access Info" id="Specialaccessinfo">
+                                            <apex:outputField value="{!objSpecialAccessInfo.Customer__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.ABC__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.AID1__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.AT_T_CR_No__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.ATN__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.BEST__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.CIR_Number__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.CRO__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.DIGT__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.Due_Date__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.FDR__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.FRQ__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.HCUT__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.HI_CAP__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.NC_Code__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.NCI__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.OCC_CIR_No__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.OLOC__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.PIU__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.PON__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.OA01__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.QC_Stage__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.RCDT__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.RO__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.SECNCI__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.Tariff__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.TG__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.TSP__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.Type_SVC__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.UNE__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.USO_Number__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.AID2__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.TA01__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.PRD__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.CRDD__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.TLOC__c}"/>
+                                            <apex:outputField value="{!objSpecialAccessInfo.PTD__c}"/>
+                                            <script>colorPageBlock(document.getElementById("{!$Component.Specialaccessinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:pageBlock>
+                                </apex:tab>
+                                <apex:tab label="Promotion Information" name="TNName7" id="TN7" style="background-color:white;" >
+                                    <apex:pageBlockSection title="Current & Pending Promotions" columns="1" id="Currentpendingpromotion">
+                                        <apex:pageblockTable value="{!lstCurrentPendingPromotionsTN}" var="currPending">
+                                           <apex:column value="{!currPending.Promotion__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.InDATE__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Credit_END__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Order_Item__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.DISC_ITEM__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Status__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Cancel_Date__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Cancel_Amount__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Auto_Renewal__c}" width="100px" headerClass="TableTitle"/>
+                                           <apex:column value="{!currPending.Override__c}" width="100px" headerClass="TableTitle"/ >                                                                                                                            
+                                        </apex:pageblockTable>
+                                        <script>colorPageBlock(document.getElementById("{!$Component.Currentpendingpromotion}"), "{!strPageBlockSectionColorCode}");</script>
+                                    </apex:pageBlockSection>
+                                    <apex:pageBlockSection title="Available Promotions" id="Availablepromotion">
+                                        <apex:pageblockTable value="{!lstAvailablePromotionsTN}" var="availPromo">
+                                           <apex:column value="{!availPromo.Promotions__c}" headerClass="TableTitle"/>
+                                           <apex:column value="{!availPromo.Descriptions__c}" headerClass="TableTitle"/>                                                                                       
+                                        </apex:pageblockTable>
+                                        <script>colorPageBlock(document.getElementById("{!$Component.Availablepromotion}"), "{!strPageBlockSectionColorCode}");</script>
+                                    </apex:pageBlockSection>
+                                </apex:tab>
+                                <apex:tab label="Provisioning Information" name="TNName8" id="TN8" style="background-color:white;" rendered="false">
+                                    <apex:pageBlock >
+                                        <apex:pageBlockSection title="Provisioning Information" columns="3" id="Provisioninginfo">
+                                               <apex:outputField value="{!objProvisioningTN.Opt_Intercept_No__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Intercept_Rml_Date__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.CF_Busy_Fixed__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.CF_No_Ans_Fixed__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.CF_Rmt_Acc_PIN__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.VM_CF_No_Of_Rings__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.VM_Fmly_Sub_Mailbox__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Msg_Routing_Boxes__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.VM_Remark__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Pager__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Pager_PIN__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Pager_Company__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Cut_Thru_Attendant__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Distinctive_Ring_Main__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.DRING_Line_1__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.DRING_Line_2__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.DRING_Line_3__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Of_Paths__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Hunt_Group_Number__c }"/>
+                                               <apex:outputField value="{!objProvisioningTN.Hunt_Member__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Hunt_Pilot__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Hunt_Sequence__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Hunt_Seq_Or_Circle__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Type_Of_Hunting__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Weekday_Wake_up__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Weekend_Wake_up__c}"/>
+                                               <apex:outputField value="{!objProvisioningTN.Cut_Thru_To_Pager__c}"/>
+                                               
+                                               <apex:outputField value="{!objProvisioningTN.Last_SO_To_Update__c }"/>
+                                               <apex:outputField value="{!objProvisioningTN.Last_SO_Postdate__c}"/>
+                                               <script>colorPageBlock(document.getElementById("{!$Component.Provisioninginfo}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:pageBlock>
+                                </apex:tab>
+                                
+                                <apex:tab label="Dish History" name="TNName10" id="TN210" style="background-color:white;" rendered="false">
+                                    <apex:pageBlockSection title="DISH Transaction History" id="Dishtransactionhistory">
+                                        <apex:pageblockTable value="{!lstDishTransactionHistory}" var="dishTrans">
+                                           <apex:column value="{!dishTrans.Account_Id__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Old_Dish_Acct_No__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Nw_Dish_Acct_No__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Dish_S_E__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Dish_S_E_Act__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.SO_Number__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Changed_By__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!dishTrans.Change_date__c}" headerClass="TableTitle"/>                                                                                                     
+                                        </apex:pageblockTable>
+                                        <script>colorPageBlock(document.getElementById("{!$Component.Dishtransactionhistory}"), "{!strPageBlockSectionColorCode}");</script>
+                                    </apex:pageBlockSection>
+                                    <apex:pageBlockSection title="Handshake Transaction History"  id="Handshaketransactionhistory">
+                                        <apex:pageblockTable value="{!lstHandshakeTransactionHistory}" var="handShakeTrans">
+                                           <apex:column value="{!handShakeTrans.Account_Id__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!handShakeTrans.Dish_Account_Number__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!handShakeTrans.Customer_Name__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!handShakeTrans.Core__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!handShakeTrans.Activity__c}" headerClass="TableTitle"/>
+                                            <apex:column value="{!handShakeTrans.Date_Time__c}" headerClass="TableTitle"/>                                                        
+                                        </apex:pageblockTable>
+                                        <script>colorPageBlock(document.getElementById("{!$Component.Handshaketransactionhistory}"), "{!strPageBlockSectionColorCode}");</script>
+                                    </apex:pageBlockSection>
+                                </apex:tab>
+                                <apex:tab label="ISP" name="TNName11" id="TN11" style="background-color:white;">
+                                    <apex:pageBlockSection title="ISP Information" columns="2" id="Ispinfo">
+                                        <apex:outputField value="{!objISPTN.Domain_Name__c}"/>
+                                        <apex:outputField value="{!objISPTN.Network_Size__c}"/>
+                                        <apex:outputField value="{!objISPTN.Security_Type__c}"/>
+                                        <apex:outputField value="{!objISPTN.LAN_Network__c}"/>
+                                        <apex:outputField value="{!objISPTN.Security_Info__c}"/>
+                                        <apex:outputField value="{!objISPTN.Filter_In_Line__c}"/>
+                                        <apex:outputField value="{!objISPTN.User_Name__c}"/>
+                                        <apex:outputField value="{!objISPTN.Wall_Mount__c}"/>
+                                        <apex:outputField value="{!objISPTN.Password__c}"/>
+                                        <apex:outputField value="{!objISPTN.Splitter_Y_N__c}"/>
+                                        <apex:outputField value="{!objISPTN.Contact_Phone_Number__c}"/>
+                                        <apex:outputField value="{!objISPTN.Full_Install_Y_N__c}"/>
+                                        <apex:outputField value="{!objISPTN.Product_Plan__c}"/>
+                                        <apex:outputField value="{!objISPTN.Modem_Type__c}"/>
+                                        <apex:outputField value="{!objISPTN.Frontiernet_Lookout__c}"/>
+                                        <apex:outputField value="{!objISPTN.Modem_Vendor__c}"/>
+                                        <apex:outputField value="{!objISPTN.WAN_Static_IP__c}"/>
+                                        <apex:outputField value="{!objISPTN.OPS_System__c}"/>
+                                        <script>colorPageBlock(document.getElementById("{!$Component.Ispinfo}"), "{!strPageBlockSectionColorCode}");</script>    
+                                    </apex:pageBlockSection>
+                                </apex:tab>
+                                <apex:tab label="Physical Address" name="TNName12" id="TN12" style="background-color:white;" rendered="false">content for tab Five</apex:tab>
+                                <apex:tab label="Toll       ." name="TNName13" id="TN13" style="background-color:white;" rendered="false">
+                                    <apex:outputLabel value="Telephone #  "/>
+                                    <apex:inputtext value="{!strTollTelephone}" />
+                                    <apex:commandButton value="Search" action="{!searchTollOnTelephone}" reRender="tollINfo,tollDetails"/><br/><br/>
+                                    <apex:pageblockTable id="tollINfo" value="{!lstTool}" var="tool">
+                                       <apex:column headerValue="IXC" headerClass="TableTitle" >
+                                           <apex:commandlink rerender="tollDetails" >
+                                               {!tool.IXC__c}
+                                               <apex:param value="{!tool.id}" name="selToll"/>
+                                           </apex:commandLink>
+                                       </apex:column>
+                                        <apex:column value="{!tool.Date__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.Time__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.Mins__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.Place_Called__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.Phone_Number__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.CTPOS__c}" headerClass="TableTitle"/>
+                                        <apex:column value="{!tool.Amount__c}" headerClass="TableTitle"/>  
+                                        <apex:column value="{!tool.Reference_No__c}" headerClass="TableTitle"/>                                                                                                      
+                                    </apex:pageblockTable><br/><br/>
+                                    <apex:outputPanel id="tollDetails">
+                                        <apex:pageBlockSection title="Toll Details" columns="3" rendered="{!IF(TollDetails==null,false,true)}" >
+                                            <apex:outputField value="{!TollDetails.Account_Id__c}"/>
+                                            <apex:outputField value="{!TollDetails.Billing_Number__c}" />
+                                            <apex:outputField value="{!TollDetails.Rate_Class__c}" />
+                                            <apex:outputField value="{!TollDetails.Rate_Class_Des__c}" />
+                                            <apex:outputField value="{!TollDetails.MIN_SEC_Billed__c}" />
+                                            <apex:outputField value="{!TollDetails.Inter_Chnge_Cr__c}" />
+                                            <apex:outputField value="{!TollDetails.Intrchng_Car_Des__c}" />
+                                            <apex:outputField value="{!TollDetails.Rate_Period__c}" />
+                                            <apex:outputField value="{!TollDetails.Rate_Prd_Des__c}" />
+                                            <apex:outputField value="{!TollDetails.Conversation_Time__c}" />
+                                            <apex:outputField value="{!TollDetails.Date__c}" />
+                                            <apex:outputField value="{!TollDetails.Charge__c}" />
+                                            <apex:outputField value="{!TollDetails.Settlement_Code__c}" />
+                                            <apex:outputField value="{!TollDetails.Time__c}" />
+                                            <apex:outputField value="{!TollDetails.State_Tax__c}" />
+                                            <apex:outputField value="{!TollDetails.Local_Tax__c}" />
+                                            <apex:outputField value="{!TollDetails.IOC_Code__c}" />
+                                            <apex:outputField value="{!TollDetails.From_TN__c}" />
+                                            <apex:outputField value="{!TollDetails.Calling_Plan__c}" />
+                                            <apex:outputField value="{!TollDetails.Library_Code__c}" />
+                                            <apex:outputField value="{!TollDetails.TO_TN__c}" />
+                                            <apex:outputField value="{!TollDetails.Split_Call__c}" />
+                                            <apex:outputField value="{!TollDetails.Recordng_Methd__c}" />
+                                            <apex:outputField value="{!TollDetails.Record_ID__c}" />
+                                            <apex:outputField value="{!TollDetails.Record_ID_Desc__c}" />
+                                            <apex:outputField value="{!TollDetails.Bill_Date__c}" />
+                                            <apex:outputField value="{!TollDetails.Return_Code__c}" />
+                                            <apex:outputField value="{!TollDetails.Msg_Type_Code__c}" />
+                                            <apex:outputField value="{!TollDetails.Msg_Dscriptin__c}" />
+                                            <apex:outputField value="{!TollDetails.Bill_Format__c}" />
+                                            <apex:outputField value="{!TollDetails.Serial_Number__c}" />
+                                            <apex:outputField value="{!TollDetails.LEG_Number__c}" />
+                                            <apex:outputField value="{!TollDetails.From_RAO__c}" />
+                                            <apex:outputField value="{!TollDetails.Jurisdiction__c}" />
+                                            <apex:outputField value="{!TollDetails.Billing_RAO__c}" />
+                                            <apex:outputField value="{!TollDetails.Adjusted_By__c}" />
+                                            <apex:outputField value="{!TollDetails.Rebate_Info__c}" />
+                                            <apex:outputField value="{!TollDetails.Print_ref_No__c}" />
+                                            <apex:outputField value="{!TollDetails.Overflow_Digits__c}" />
+                                            <script>colorPageBlock(document.getElementById("{!$Component.tolldetails}"), "{!strPageBlockSectionColorCode}");</script>
+                                        </apex:pageBlockSection>
+                                    </apex:outputPanel>
+                                </apex:tab>
+                            </apex:tabpanel>
+                    </apex:tab>  
+                    <apex:tab label="Memos" name="TNName3" id="TN33" style="background-color:white;" rendered="{!IF(strSearchlevel='1',false,true)}" >
+                        <apex:pageblock >
+                            <apex:pageBlockSection title="Memo Info" id="Memoinfo">
+                                <apex:pageblockTable value="{!lstMemo}" var="memo">
+                                   <apex:column value="{!memo.Account_Id__c}" headerClass="TableTitle"/>
+                                                                          
+                                </apex:pageblockTable>
+                                <script>colorPageBlock(document.getElementById("{!$Component.Memoinfo}"), "{!strPageBlockSectionColorCode}");</script>
+                            </apex:pageBlockSection>
+                        </apex:pageblock>
+                    </apex:tab>            
+                </apex:tabPanel>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

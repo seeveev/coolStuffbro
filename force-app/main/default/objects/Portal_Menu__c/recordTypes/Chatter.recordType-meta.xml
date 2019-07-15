@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chatter</fullName>
+    <active>true</active>
+    <label>Chatter</label>
+    <picklistValues>
+        <picklist>Style_Class__c</picklist>
+        <values>
+            <fullName>col-md-4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(approval_type__c, &#39;INA&#39;),&#39;http://google.com&#39;,&#39;&#39;)</formula>
+    <label>Show URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

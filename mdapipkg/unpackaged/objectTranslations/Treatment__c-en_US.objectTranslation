@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Treatment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Treatments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balance Details --></label>
+        <name>Balance_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commitment Status --></label>
+        <name>Cmitmnt_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of treatment --></label>
+        <name>Date_of_trtmnt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Details --></label>
+        <name>Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Bill Cycle --></label>
+        <name>Last_Bill_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Credit Rating --></label>
+        <name>Lst_Crdit_Rtng__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum CutOff Amount --></label>
+        <name>Min_Cutoff_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSF Check Number --></label>
+        <name>NSF_Chck_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSF Post Date --></label>
+        <name>NSF_Post_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSF Reference --></label>
+        <name>NSF_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notice Amount --></label>
+        <name>Notice_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notice Due Date --></label>
+        <name>Notice_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Past Due at Time of treatment --></label>
+        <name>Past_Due_trtmnt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Representative --></label>
+        <name>Service_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Treatment Amount --></label>
+        <name>Treatmnt_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

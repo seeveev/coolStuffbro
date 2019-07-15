@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AvaTripLegs</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AvaTripLegs</shortDescription>
+        <value>20</value>
+    </labels>
+    <labels>
+        <fullName>AvaTripLeng</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AvaTripLeng</shortDescription>
+        <value>30</value>
+    </labels>
+    <labels>
+        <fullName>names</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>names</shortDescription>
+        <value>vijay; anand;</value>
+    </labels>
+</CustomLabels>

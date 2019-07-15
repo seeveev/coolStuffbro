@@ -1,0 +1,22 @@
+<apex:page standardController="User" extensions="ClsUser" showHeader="false" sidebar="false" >
+<apex:form >
+    
+    <apex:pageBlock title="Search Section">
+        <apex:pageblockButtons >
+           <apex:commandButton action="{!UpdateUserExternalID}" value="Get External ID"/>
+        </apex:pageblockButtons>
+        
+        
+        <apex:pageblockSection title="Search Fields" columns="2" >
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Email ID : " for="emailID" tabindex="1" />
+                <apex:inputtext id="emailID" value="{!strEmailID }" />
+            </apex:pageBlockSectionItem>
+           
+        </apex:pageblockSection>
+        
+        
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

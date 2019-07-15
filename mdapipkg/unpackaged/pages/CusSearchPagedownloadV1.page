@@ -1,0 +1,71 @@
+<apex:page standardController="custom__c" extensions="ClsCustom" showHeader="false" sidebar="false" contentType="application/msword" cache="true">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word">
+
+<style type="text/css">
+    @page Section1 {mso-footer:f1;}
+    div.Section1{page:Section1;}
+    p.MsoFooter, li.MsoFooter, div.MsoFooter{
+    mso-pagination:widow-orphan;
+    tab-stops:center 216.0pt right 432.0pt;}
+    
+    body {
+        font-family: Arial Unicode MS;
+        font-size:9pt;
+        
+    }
+    td {
+        font-size:11pt;
+        font-family:Tahoma;
+    }
+</style>
+<body>
+    <div class="Section1">
+    <apex:pageblock >
+        <table border="0" width="100%">
+            <tr>
+                <table>
+                    <tr>
+                        <td>
+                             <center>
+                                 <apex:image url="https://c.na12.content.force.com/servlet/servlet.ImageServer?id=015U00000007k0u&oid=00DU0000000HA7c&lastMod=1333297660000" width="100" height="70"  />
+    <!--                             <apex:image url="http://www.theapchannel.com/accounts-payable/files/publisher/publisher/GSA%20Logo%20Resize_1.jpg" width="100" height="70"  />
+                               <apex:image url="{!$Resource.WARImageLogo}" width="50" height="50"/>-->
+    
+                             </center>
+                            <!-- <img width="124″ height="54″ src="{!$Resource.WARImageLogo}"/>-->
+                        </td>
+                        <td>
+                            <center><b><font size="2">
+                                <apex:outputText value="The Office of General Suppliers and Services"/><br/>
+                                <apex:outputText value="{!strSecondTitle}"/><br/>
+                                <apex:outputText value="{!strDivOnReport}"/><br/>
+                                <apex:outputText value="Weekly Activity Report: {!fDt} to {!tDt}"/><br/>
+                           </font></b></center>
+                        </td>
+                    </tr><br/><br/>
+                </table>
+            </tr>
+            <br/><br/>
+            <apex:variable var="cnt" value="{!0}" /> <!-- for column title count -->
+            <apex:repeat value="{!CusList}" var="string1" id="theRepeat" >
+                <tr bgcolor="#AAAAAA"><b><left><apex:outputText value="{!lstTitle[cnt]}"/></left></b></tr>
+                <tr>
+                     <apex:datatable value="{!string1}" var="merD" border="0">
+                            <apex:column value="{!merD.Notes__c}"/>
+                     </apex:datatable>
+                     <apex:variable var="cnt" value="{!cnt+1}"/><br/>
+                 </tr><br/>
+            </apex:repeat>
+        </table>
+    </apex:pageblock>
+    
+    <div style="mso-element:footer" id="f1">
+        <p class="MsoFooter"><span style='mso-field-code:" FILENAME "'> </span>
+        <span style='mso-tab-count:2'></span><span style='mso-field-code:" PAGE "'></span><span style='mso-field-code:" NUMPAGES "'></span></p>
+    </div>
+</div>
+</body>
+</html> 
+</apex:page>

@@ -1,0 +1,66 @@
+<apex:page standardController="Opportunity" tabStyle="Opportunity" extensions="OpportunityView_Complex">
+
+
+    <apex:form >
+        <apex:pageBlock title="New Opportunity" mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!saveOpportunity}" rendered="{!if(strOppID==null,true,false)}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+                <apex:commandButton value="Edit" action="{!editOpportunity}" rendered="{!if(strOppID==null,false,true)}"/>
+            </apex:pageBlockButtons>
+           
+            <apex:pageBlockSection title="Opportunity Information" columns="2" rendered="{!if(strOppID==null,true,false)}">
+               <!--     <apex:inputField value="{!objOpp.Name}"/> -->
+                    <apex:inputField value="{!objOpp.Name}" required="true"/>
+                    <apex:inputField value="{!objOpp.Accountid}" required="true"/>
+                    <apex:inputField value="{!objOpp.CloseDate}"/>
+                    <apex:inputField value="{!objOpp.Type}"/>
+                    <apex:inputField value="{!objOpp.LeadSource}"/>
+                    <apex:inputField value="{!objOpp.RecordTypeid}"/>
+                    <apex:inputField value="{!objOpp.TotalOpportunityQuantity}"/>
+                    <apex:inputField value="{!objOpp.StageName}"/>
+                    <apex:inputField value="{!objOpp.Campaignid}"/>
+                    <apex:inputField value="{!objOpp.ForecastCategoryName}"/>
+                    <apex:inputField value="{!objOpp.Amount}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Opportunity Information" columns="2" rendered="{!if(strOppID==null,false,true)}">
+                  <!--  <apex:outputField value="{!objOpp.Name}"/> -->
+                    <apex:outputField value="{!objOpp.Accountid}"/>
+                    <apex:outputField value="{!objOpp.CloseDate}"/>
+                    <apex:outputField value="{!objOpp.Type}"/>
+                    <apex:outputField value="{!objOpp.LeadSource}"/>
+                    <apex:outputField value="{!objOpp.RecordTypeid}"/>
+                    <apex:outputField value="{!objOpp.TotalOpportunityQuantity}"/>
+                    <apex:outputField value="{!objOpp.StageName}"/>
+                    <apex:outputField value="{!objOpp.Campaignid}"/>
+                    <apex:outputField value="{!objOpp.ForecastCategoryName}"/>
+                    <apex:outputField value="{!objOpp.Amount}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Additional Information" columns="2">
+                  
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Description" columns="2" rendered="{!bolRecordType2}">
+                    <apex:inputField value="{!objOpp.Description}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Description" columns="2" rendered="{!AND(bolRecordType2,bolReadOnlyMode)}">
+                    <apex:outputField value="{!objOpp.Description}"/>
+            </apex:pageBlockSection>
+            
+            
+            <apex:pageblocktable value="{!lstOppLineItem }" var="oli" rendered="{!AND(bolRecordType1,bolReadOnlyMode)}">
+                <apex:column value="{!oli.CPE_NRC_Price_c__c}" headerValue="CPE NRC Price"/>
+            </apex:pageblocktable> <br/><br/><br/>
+            
+            <apex:pageblocktable value="{!lstQuote}" var="oQ" rendered="{!AND(bolRecordType1,bolReadOnlyMode)}">
+                <apex:column value="{!oQ.AdditionalCity}" headerValue="Additional City"/>
+            </apex:pageblocktable>
+            
+            
+            
+                 
+        </apex:pageBlock>
+    </apex:form>
+    </apex:page>

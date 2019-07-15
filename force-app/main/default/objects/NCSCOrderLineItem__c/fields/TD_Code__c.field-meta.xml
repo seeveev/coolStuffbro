@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TD_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>TD Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>00	CTC</fullName>
+                <default>false</default>
+                <label>00	CTC</label>
+            </value>
+            <value>
+                <fullName>01	CANCELED, OUT OF STOCK</fullName>
+                <default>false</default>
+                <label>01	CANCELED, OUT OF STOCK</label>
+            </value>
+            <value>
+                <fullName>02	TELEPHONE RFS&#39;S</fullName>
+                <default>false</default>
+                <label>02	TELEPHONE RFS&#39;S</label>
+            </value>
+            <value>
+                <fullName>03	STOCK DIRECT DELIVERY</fullName>
+                <default>false</default>
+                <label>03	STOCK DIRECT DELIVERY</label>
+            </value>
+            <value>
+                <fullName>04	REFERRAL</fullName>
+                <default>false</default>
+                <label>04	REFERRAL</label>
+            </value>
+            <value>
+                <fullName>06	CANCELED, DISCONTINUED ITEM</fullName>
+                <default>false</default>
+                <label>06	CANCELED, DISCONTINUED ITEM</label>
+            </value>
+            <value>
+                <fullName>07	NON-STOCK, DIRECT DELIVERY</fullName>
+                <default>false</default>
+                <label>07	NON-STOCK, DIRECT DELIVERY</label>
+            </value>
+            <value>
+                <fullName>09	CANCELLATION</fullName>
+                <default>false</default>
+                <label>09	CANCELLATION</label>
+            </value>
+            <value>
+                <fullName>10	STOCK ISSUE</fullName>
+                <default>false</default>
+                <label>10	STOCK ISSUE</label>
+            </value>
+            <value>
+                <fullName>11	STOCK ISSUE SUBSTITUTE</fullName>
+                <default>false</default>
+                <label>11	STOCK ISSUE SUBSTITUTE</label>
+            </value>
+            <value>
+                <fullName>15	SUPPLEMENTAL</fullName>
+                <default>false</default>
+                <label>15	SUPPLEMENTAL</label>
+            </value>
+            <value>
+                <fullName>20	BACK ORDER NORMAL</fullName>
+                <default>false</default>
+                <label>20	BACK ORDER NORMAL</label>
+            </value>
+            <value>
+                <fullName>21	BACK ORDER SUBSTITUTE ITEM</fullName>
+                <default>false</default>
+                <label>21	BACK ORDER SUBSTITUTE ITEM</label>
+            </value>
+            <value>
+                <fullName>22	BACK ORDER WAREHOUSE REFUSAL</fullName>
+                <default>false</default>
+                <label>22	BACK ORDER WAREHOUSE REFUSAL</label>
+            </value>
+            <value>
+                <fullName>23	FUTURE DELIVERY, CREATION</fullName>
+                <default>false</default>
+                <label>23	FUTURE DELIVERY, CREATION</label>
+            </value>
+            <value>
+                <fullName>24	BACK ORDER ADMINISTRATIVE</fullName>
+                <default>false</default>
+                <label>24	BACK ORDER ADMINISTRATIVE</label>
+            </value>
+            <value>
+                <fullName>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</fullName>
+                <default>false</default>
+                <label>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</label>
+            </value>
+            <value>
+                <fullName>30	STOCK BACKORDER RELEASE</fullName>
+                <default>false</default>
+                <label>30	STOCK BACKORDER RELEASE</label>
+            </value>
+            <value>
+                <fullName>31	STOCK BACKORDER RELEASE SUBSTITUTE</fullName>
+                <default>false</default>
+                <label>31	STOCK BACKORDER RELEASE SUBSTITUTE</label>
+            </value>
+            <value>
+                <fullName>33	FUTURE RELEASE NORMAL</fullName>
+                <default>false</default>
+                <label>33	FUTURE RELEASE NORMAL</label>
+            </value>
+            <value>
+                <fullName>40	STOCK REPLENDISHMENT</fullName>
+                <default>false</default>
+                <label>40	STOCK REPLENDISHMENT</label>
+            </value>
+            <value>
+                <fullName>41	STOCK REPLENDISHMENT SUBSTITUTE</fullName>
+                <default>false</default>
+                <label>41	STOCK REPLENDISHMENT SUBSTITUTE</label>
+            </value>
+            <value>
+                <fullName>48	DI CREATION, OTHER GOV&#39;T. (FPI,BMP,GPO,CP)</fullName>
+                <default>false</default>
+                <label>48	DI CREATION, OTHER GOV&#39;T. (FPI,BMP,GPO,CP)</label>
+            </value>
+            <value>
+                <fullName>80	REPOSITION STOCK REQUEST (WITHIN REGION)</fullName>
+                <default>false</default>
+                <label>80	REPOSITION STOCK REQUEST (WITHIN REGION)</label>
+            </value>
+            <value>
+                <fullName>81	ITW (INTER-WAREHOUSE TRANSFER)</fullName>
+                <default>false</default>
+                <label>81	ITW (INTER-WAREHOUSE TRANSFER)</label>
+            </value>
+            <value>
+                <fullName>82	CSC DISCREPANCIES</fullName>
+                <default>false</default>
+                <label>82	CSC DISCREPANCIES</label>
+            </value>
+            <value>
+                <fullName>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</fullName>
+                <default>false</default>
+                <label>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</label>
+            </value>
+            <value>
+                <fullName>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</fullName>
+                <default>false</default>
+                <label>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</label>
+            </value>
+            <value>
+                <fullName>96	WAREHOUSE DENIALS</fullName>
+                <default>false</default>
+                <label>96	WAREHOUSE DENIALS</label>
+            </value>
+            <value>
+                <fullName>97	PSUEDO RECEIPTS</fullName>
+                <default>false</default>
+                <label>97	PSUEDO RECEIPTS</label>
+            </value>
+            <value>
+                <fullName>98	MISDIRECTED FREIGHT</fullName>
+                <default>false</default>
+                <label>98	MISDIRECTED FREIGHT</label>
+            </value>
+            <value>
+                <fullName>99	BOWEN SPECIAL PROJECT</fullName>
+                <default>false</default>
+                <label>99	BOWEN SPECIAL PROJECT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

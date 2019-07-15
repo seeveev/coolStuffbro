@@ -1,0 +1,29 @@
+<apex:page >
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<table rules="all">
+  <tr>
+    <th colspan="4">2013</th>
+  </tr>
+  <tr>
+    <td colspan="2" >Q1</td>
+    <td colspan="2">Q2</td>
+  
+  <tr>
+    <td>Guests</td>
+    <td>Gtr</td>
+    <td>guests</td>
+    <td>Gtr</td>
+  </tr>
+ </tr> 
+</table>
+</body>
+</html>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Page__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Portal Page</label>
+    <referenceTo>Portal_Page__c</referenceTo>
+    <relationshipLabel>Portal Menu&#39;s</relationshipLabel>
+    <relationshipName>Portal_Menu</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

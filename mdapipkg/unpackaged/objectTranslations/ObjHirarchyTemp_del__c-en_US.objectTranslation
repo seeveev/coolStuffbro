@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ObjHirarchyTemp</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ObjHirarchyTemp</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+        <picklistValues>
+            <masterLabel>April</masterLabel>
+            <translation><!-- April --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>August</masterLabel>
+            <translation><!-- August --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>December</masterLabel>
+            <translation><!-- December --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>February</masterLabel>
+            <translation><!-- February --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>January</masterLabel>
+            <translation><!-- January --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July</masterLabel>
+            <translation><!-- July --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>June</masterLabel>
+            <translation><!-- June --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March</masterLabel>
+            <translation><!-- March --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>November</masterLabel>
+            <translation><!-- November --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>October</masterLabel>
+            <translation><!-- October --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>September</masterLabel>
+            <translation><!-- September --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Region1</masterLabel>
+            <translation><!-- Region1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region2</masterLabel>
+            <translation><!-- Region2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region3</masterLabel>
+            <translation><!-- Region3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Search By --></label>
+        <name>Search_By__c</name>
+        <picklistValues>
+            <masterLabel>BTN</masterLabel>
+            <translation><!-- BTN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLLI</masterLabel>
+            <translation><!-- CLLI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Circuit ID</masterLabel>
+            <translation><!-- Circuit ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Name</masterLabel>
+            <translation><!-- Customer Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN</masterLabel>
+            <translation><!-- GAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Number</masterLabel>
+            <translation><!-- Order Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Summary Master TN</masterLabel>
+            <translation><!-- Summary Master TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trouble Ticket Number</masterLabel>
+            <translation><!-- Trouble Ticket Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USI</masterLabel>
+            <translation><!-- USI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WTN</masterLabel>
+            <translation><!-- WTN --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>State1</masterLabel>
+            <translation><!-- State1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State2</masterLabel>
+            <translation><!-- State2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State3</masterLabel>
+            <translation><!-- State3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- View --></label>
+        <name>View__c</name>
+        <picklistValues>
+            <masterLabel>Account Hierarchy</masterLabel>
+            <translation><!-- Account Hierarchy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Location Hierarchy</masterLabel>
+            <translation><!-- Location Hierarchy --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- City canot be SU --></errorMessage>
+        <name>Check_for_test</name>
+    </validationRules>
+</CustomObjectTranslation>

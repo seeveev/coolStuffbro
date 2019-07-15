@@ -1,0 +1,5 @@
+<apex:page controller="passingParamtersCont" >
+    <apex:form >
+        <apex:commandButton value="URL"  action="{!prepareURL}"/>
+    </apex:form>
+</apex:page>

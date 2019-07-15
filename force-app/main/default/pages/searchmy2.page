@@ -1,0 +1,86 @@
+<apex:page controller="search2" id="myPage" >
+
+    <script>
+        function colorPageBlock(pageblock, color) {
+            if (pageblock != null) pageblock.firstChild.style.cssText = "background-color: " + color + ";";
+        }
+    </script>
+    <script language="javascript">
+/**
+    <!-- Collapse PageBlockSection on Page Load-->
+    **/
+
+    function addLoadEvent(func) {
+      var oldonload = window.onload;
+      if (typeof window.onload != 'function') {
+        window.onload = func;
+      } else {
+        window.onload = function() {
+          if (oldonload) {
+            oldonload();
+          }
+          func();
+        }
+      }
+    }
+
+    function dotest() {
+     
+     if(document.getElementById('myPage:myForm:myBlock:mySection') != null){
+         twistSection(document.getElementById('myPage:myForm:myBlock:mySection').childNodes[0].childNodes[0]);
+     }
+    }
+
+    addLoadEvent(dotest);
+
+</script>
+ 
+
+<apex:form id="myForm">
+            <!-- search and enter value in text box -->
+            <apex:pageBlock title="search by dropdown" id="myBlock">
+            <apex:outputLabel value="search by" for="searchtext" >
+          <apex:selectList id="accts" value="{!strSearchByValue}" size="1">
+          <apex:selectOptions value="{!accts}"  >
+          </apex:selectOptions>
+          
+          </apex:selectList>
+
+            <apex:inputText id="searchtext" value="{!strsearchtext}"/> 
+           
+            <apex:commandButton value="search" action="{!strbutton}"/>
+              </apex:outputLabel>            
+            
+            <apex:pageBlockSection title="search results" collapsible="true" id="mySection">
+              <apex:pageBlockTable var="hir" value="{!lsthier}">
+              
+               <apex:column headerValue="Phone">
+         <a href="/apex/detailinfo1?detailID={!hir.id}" style="text-decoration:underline" onclick="window.open(this.href, 'mywin', 'height=300,width=700'); return false;" >
+                {!hir.BTN_Phone__c}
+              
+               
+               
+ <!-- <apex:commandLink value="{!hir.BTN_Phone__c}" action="{!searchSelectedUserData}" style="text-decoration:underline;"/> 
+                  <apex:param assignTo="{!myparam}" name="myparam" value="{!hir.id}"/> -->
+</a>
+
+             
+                </apex:column>
+                    <a href="/apex/treatmentdetail?detailID={!hir.id}" style="text-decoration:underline" onclick="window.open(this.href, 'mywin', 'height=300,width=700'); return false;" >
+
+                <apex:column value="{!hir.Name__c}" headerValue="Name">  
+              <!--   <apex:commandLink value="{!hir.Name__c}" action="{!searchSelectedUserData}" style="text-decoration:underline;"/>
+                 <apex:param assignTo="{!MP}" name="myparam" value="abcd"/>-->
+             
+                </apex:column>
+                </a>
+                 <apex:column value="{!hir.billing_id__c}" headerValue="Billing id"/>
+                </apex:pageBlockTable>
+            <script>colorPageBlock(document.getElementById("{!$Component.srchinfo}"), "#1271F6");</script>
+               </apex:pageBlockSection>
+                         <!-- <apex:pageBlockSection title="popup testing">
+                          </apex:pageBlockSection>  -->           
+                        </apex:pageBlock>
+                        
+</apex:form>
+</apex:page>

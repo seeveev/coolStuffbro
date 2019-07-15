@@ -1,0 +1,36 @@
+<apex:page standardController="custom__c" extensions="ClsCustom" showHeader="false" sidebar="false" cache="true">
+<apex:pageblock >
+   <!--<apex:image url="https://c.na12.content.force.com/servlet/servlet.FileDownload?file=015U000000065P1" width="250" height="50" />
+  <apex:image url="http://images.google.com/intl/en_ALL/images/logos/images_logo_lg.gif" width="250" height="50" />-->
+    <apex:image url="http://www.wesco.com/media/gsa.jpg" width="250" height="50" />
+  <br/><br/>
+  <b>
+   <apex:outputText >The Office of General Supplies and Services</apex:outputText> <br/>
+   <apex:outputText >Center for Innovative Acquisition Development</apex:outputText> <br/>
+   <apex:outputText value="{!$User.Division}"/> <br/>
+   <apex:outputText value="Weekly Activity Report: {!fDt} to {!tDt}"/> <br/><br/>
+   </b>
+   
+  <apex:pageblockSection >
+  <style type="text/css">
+  
+  body {
+   font-family: Arial Unicode MS;
+   font-size:9pt;
+  }
+
+
+  td {
+    font-size:11pt;
+    font-family:Tahoma;
+  }
+
+    </style>
+            <apex:outputPanel id="refreshdata" >
+                <apex:pageBlockTable value="{!customs}" var="merD">
+                    <apex:column value="{!merD.Notes__c}"/>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+  </apex:pageblockSection>
+</apex:pageblock>
+</apex:page>

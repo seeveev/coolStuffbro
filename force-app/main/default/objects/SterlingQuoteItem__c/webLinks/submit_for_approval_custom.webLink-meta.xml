@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>submit_for_approval_custom</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>submit for approval custom</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://cs8.salesforce.com/p/process/Submit?retURL=%2F{!SterlingQuoteItem__c.Id}&amp;id={!SterlingQuoteItem__c.Id}</url>
+</WebLink>

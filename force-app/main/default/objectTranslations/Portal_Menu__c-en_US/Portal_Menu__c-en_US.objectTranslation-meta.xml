@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Portal Menu</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Portal Menu&#39;s</value>
+    </caseValues>
+    <layouts>
+        <layout>Portal Menu Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Chatter --></label>
+        <name>Chatter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Mega Menu --></label>
+        <name>Mega_Menu</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Menu Item --></label>
+        <name>Menu_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Portal Menu --></label>
+        <name>Portal_Menu</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

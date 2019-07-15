@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>page component</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>page components</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Chatter --></label>
+        <name>Chatter</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Content --></label>
+        <name>Content</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Chatter Group --></label>
+        <name>Chatter_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class Tag --></label>
+        <name>Class_Tag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Component Order --></label>
+        <name>Component_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Main Content --></label>
+        <name>Main_Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- page component --></label>
+        <name>Parent_component__c</name>
+        <relationshipLabel><!-- Parent component --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portal Page --></label>
+        <name>Portal_Page__c</name>
+        <relationshipLabel><!-- page components --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- VFPageName --></label>
+        <name>VFPageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Video ID --></label>
+        <name>Video_ID__c</name>
+    </fields>
+    <layouts>
+        <layout>chatter</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>page component Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Chatter --></label>
+        <name>Chatter</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Content --></label>
+        <name>Content</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

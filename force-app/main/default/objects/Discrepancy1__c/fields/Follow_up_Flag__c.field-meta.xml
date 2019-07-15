@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Follow_up_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source table: rod 
+Source column: rod_foll_up_flg
+Web service: name :N/A
+Web service field: N/A</description>
+    <externalId>false</externalId>
+    <label>Follow up Flag</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

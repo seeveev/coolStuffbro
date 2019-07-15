@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expedite_Shipment_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source table: rod / csc_dtl
+Source column: rod_exp_ship_flg / csc_dtl_exp_ship_flg</description>
+    <externalId>false</externalId>
+    <label>Expedite Shipment Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

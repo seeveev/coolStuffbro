@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- DiscountType --></label>
+    <name>DiscountType__c</name>
+    <picklistValues>
+        <masterLabel>ICB</masterLabel>
+        <translation><!-- ICB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INA</masterLabel>
+        <translation><!-- INA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RSM</masterLabel>
+        <translation><!-- RSM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SVP</masterLabel>
+        <translation><!-- SVP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

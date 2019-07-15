@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agency_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Agency Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DHAM - BARDA</fullName>
+                <default>false</default>
+                <label>DHAM - BARDA</label>
+            </value>
+            <value>
+                <fullName>DHGO - CMS</fullName>
+                <default>false</default>
+                <label>DHGO - CMS</label>
+            </value>
+            <value>
+                <fullName>DHAF - OIG</fullName>
+                <default>false</default>
+                <label>DHAF - OIG</label>
+            </value>
+            <value>
+                <fullName>DHRA - PSC</fullName>
+                <default>false</default>
+                <label>DHRA - PSC</label>
+            </value>
+            <value>
+                <fullName>DHRC - CDC</fullName>
+                <default>false</default>
+                <label>DHRC - CDC</label>
+            </value>
+            <value>
+                <fullName>DHRF - FDA</fullName>
+                <default>false</default>
+                <label>DHRF - FDA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

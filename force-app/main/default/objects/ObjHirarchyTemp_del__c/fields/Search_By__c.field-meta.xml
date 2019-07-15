@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Search_By__c</fullName>
+    <externalId>false</externalId>
+    <label>Search By</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GAN</fullName>
+                <default>false</default>
+                <label>GAN</label>
+            </value>
+            <value>
+                <fullName>BTN</fullName>
+                <default>false</default>
+                <label>BTN</label>
+            </value>
+            <value>
+                <fullName>Customer Name</fullName>
+                <default>false</default>
+                <label>Customer Name</label>
+            </value>
+            <value>
+                <fullName>Order Number</fullName>
+                <default>false</default>
+                <label>Order Number</label>
+            </value>
+            <value>
+                <fullName>Trouble Ticket Number</fullName>
+                <default>false</default>
+                <label>Trouble Ticket Number</label>
+            </value>
+            <value>
+                <fullName>WTN</fullName>
+                <default>false</default>
+                <label>WTN</label>
+            </value>
+            <value>
+                <fullName>Circuit ID</fullName>
+                <default>false</default>
+                <label>Circuit ID</label>
+            </value>
+            <value>
+                <fullName>CLLI</fullName>
+                <default>false</default>
+                <label>CLLI</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>USI</fullName>
+                <default>false</default>
+                <label>USI</label>
+            </value>
+            <value>
+                <fullName>Summary Master TN</fullName>
+                <default>false</default>
+                <label>Summary Master TN</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,24 @@
+<apex:page standardController="account" >
+    <apex:includeScript value="{!URLFOR($Resource.sliderjquery, 'js/easySlider.js')}"/>
+    <apex:form >
+        <apex:pageBlock title="Sample ANish Jaffa" >
+            <apex:outputField value="{!account.name}" label="Name"/>
+            <apex:inputText title="Name"/>
+            <apex:commandButton action="{!save}" value="ASGS Group" id="theButton"/>
+        </apex:pageBlock>
+    </apex:form>
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    <c:sampleComponent />
+    
+</apex:page>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Deposit/Refund</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Deposit/Refunds</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Amount --></label>
+        <name>Deposit_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Code --></label>
+        <name>Deposit_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Date --></label>
+        <name>Deposit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Interest THRU --></label>
+        <name>Deposit_Int_THRU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Intrest --></label>
+        <name>Deposit_Intreset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Method --></label>
+        <name>Deposit_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Description --></label>
+        <name>Dpsit_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest Refund Account --></label>
+        <name>Int_Refnd_Acct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit and Interest Refund Amount --></label>
+        <name>Int_Refnd_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest Refund Check Number --></label>
+        <name>Int_Refnd_Chk_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest Refund Code --></label>
+        <name>Int_Refnd_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest Refund Last Date --></label>
+        <name>Int_Refnd_Lst_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest Refund ToDate --></label>
+        <name>Int_Refnd_ToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit And Interest ToDate --></label>
+        <name>Int_ToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest amount to Post --></label>
+        <name>Int_amt_to_Post__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Ref Amount To Post --></label>
+        <name>Ref_Amt_To_Post__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund Account --></label>
+        <name>Refnd_Acct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund ToDate --></label>
+        <name>Refnd_ToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund check number --></label>
+        <name>Refnd_chck_no__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund Amount --></label>
+        <name>Refund_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund Code --></label>
+        <name>Refund_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit Refund Date --></label>
+        <name>Refund_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- THRU --></label>
+        <name>THRU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deposit method and Description --></label>
+        <name>method_Dscriptn__c</name>
+    </fields>
+    <layouts>
+        <layout>Deposit/Refund Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

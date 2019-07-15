@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ICBTerritories__c --></label>
+    <name>ICBTerritories_c__c</name>
+    <picklistValues>
+        <masterLabel>Alabama</masterLabel>
+        <translation><!-- Alabama --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arizona</masterLabel>
+        <translation><!-- Arizona --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>California</masterLabel>
+        <translation><!-- California --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Newyork</masterLabel>
+        <translation><!-- Newyork --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Texas</masterLabel>
+        <translation><!-- Texas --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

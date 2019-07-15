@@ -1,0 +1,24 @@
+<apex:page controller="mysearchcls" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="search by">
+                <apex:outputLabel value="Enter search text" for="Name" >
+                    <apex:inputText title="Name" id="Name" value="{!strINputVal}"/>   
+                    <apex:commandButton value="search" action="{!search}"/>
+                </apex:outputLabel>           
+            </apex:pageBlockSection>
+            
+            <apex:pageBlock title="results" >
+                <apex:pageBlockTable var="hir" value="{!lsthir}">    
+                    <apex:column value="{!hir.Name__c}" headerValue="Name"/>
+                    <apex:column value="{!hir.BTN_Phone__c}" headerValue="phone"/>
+                    
+                </apex:pageBlockTable> 
+                
+                
+            </apex:pageBlock>
+            
+            
+        </apex:pageBlock>                
+    </apex:form>
+</apex:page>

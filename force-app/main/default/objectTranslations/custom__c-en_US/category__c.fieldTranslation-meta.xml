@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>category__c</name>
+    <picklistValues>
+        <masterLabel>events</masterLabel>
+        <translation><!-- events --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>general</masterLabel>
+        <translation><!-- general --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>issues</masterLabel>
+        <translation><!-- issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>stakeholders</masterLabel>
+        <translation><!-- stakeholders --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

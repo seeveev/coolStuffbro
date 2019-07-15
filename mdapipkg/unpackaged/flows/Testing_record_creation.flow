@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Testing record creation  {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Testing record creation</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Inserting_data_in_tables</name>
+        <label>Inserting data in tables</label>
+        <locationX>301</locationX>
+        <locationY>284</locationY>
+        <connector>
+            <targetReference>Thank_you</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Country__c</field>
+            <value>
+                <elementReference>Description</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Name</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Testing__c</object>
+    </recordCreates>
+    <screens>
+        <name>Main_Screen</name>
+        <label>Main Screen</label>
+        <locationX>568</locationX>
+        <locationY>185</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Inserting_data_in_tables</targetReference>
+        </connector>
+        <fields>
+            <name>Name</name>
+            <dataType>String</dataType>
+            <fieldText>Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Description</name>
+            <fieldText>Description</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>testing_tesitng</name>
+        <label>testing tesitng</label>
+        <locationX>587</locationX>
+        <locationY>73</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Main_Screen</targetReference>
+        </connector>
+        <fields>
+            <name>country</name>
+            <dataType>String</dataType>
+            <fieldText>country</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Thank_you</name>
+        <label>Thank you</label>
+        <locationX>302</locationX>
+        <locationY>426</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Thankyoumessage</name>
+            <fieldText>Thank you for your interest</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>testing_tesitng</startElementReference>
+    <status>Draft</status>
+</Flow>

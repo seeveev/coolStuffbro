@@ -1,0 +1,89 @@
+<apex:page standardcontroller="SEcode__c" extensions="SnEController1">
+    <!-- Javascript function to check all rows in the table -->
+    <script>
+        function selectAll(cb)
+        {
+           var inputElem = document.getElementsByTagName("input");
+           for(var i=0;i<inputElem.length;i++)
+             {
+                     if(inputElem[i].id.indexOf("select")!=-1)
+                           inputElem[i].checked = cb.checked; 
+                 
+              }
+        }
+        //This function will Execute when user click on Individual Records
+        function selectAllUn(cb)
+        {
+           var inputElem = document.getElementsByTagName("input");
+           var totChecked = 0;
+           var totUnChecked = 0;
+           //Check how many are checked and how many are unchecked
+           for(var i=0;i<inputElem.length;i++)
+           {
+                 // If all below check box is selected and u uncheck any one
+                 var iss = new String(inputElem[i].name);
+                 if(iss.indexOf('table:all')!=-1){
+                     inputElem[i].checked = false;
+                 }
+                 else{
+                     if(inputElem[i].name.indexOf('select') > 0){
+                          if(inputElem[i].checked)
+                              totChecked ++;
+                          else
+                              totUnChecked ++;
+                     } 
+                 }      
+        }
+
+        //If all are checked then Make CheckAll checkbox as true
+        if(totUnChecked ==0){
+            for(var i=0;i<inputElem.length;i++){ 
+                var iss = new String(inputElem[i].name);
+                if(iss.indexOf('table:all')!=-1){
+                     inputElem[i].checked = true;
+                 }
+            }
+        }
+      } 
+        
+
+    </script>
+    <!-- End of Javascript function -->
+    <apex:form >
+        <apex:pageBlock title="Filtered S&E Code">
+    
+        <apex:pageblockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="{!out_sne_check}">
+                </apex:outputText>
+            </apex:pageBlockSectionItem>      
+        </apex:pageblockSection>    
+    
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Select" action="{!Select_SnE}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/>
+            </apex:pageBlockButtons>   
+            
+            
+            <apex:pageBlockSection title="Please Check the Appropriate S&E Code" >
+            
+                <apex:pageblockTable value="{!pubGrpList}" var="pbGr" id="table">   
+                          
+                   <apex:column >
+                        <apex:facet name="header">
+                            <apex:inputCheckbox onclick="selectAll(this)"  id="all" value="{!bolSelectAllCheckBox}" />
+                        </apex:facet>
+                        <apex:inputCheckbox value="{!pbGr.selected}" id="select"  onclick="selectAllUn(this)" />
+                    </apex:column>
+                    
+                    <apex:column value="{!pbGr.pubGrp.Name}"/>
+                    <apex:column value="{!pbGr.pubGrp.StageName}"/>
+                    <apex:column value="{!pbGr.pubGrp.Account.Name}"/>
+                                   </apex:pageblockTable>                                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+  
+
+
+</apex:page>

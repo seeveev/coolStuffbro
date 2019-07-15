@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>EAS/LMS Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>EAS/LMS Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed/Non Billed --></label>
+        <name>Billed_Non_Billd__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Subtotal Minutes --></label>
+        <name>Billed_Subttl_Min__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billed Subtotal Message --></label>
+        <name>Billed_Subttl_Msg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Number --></label>
+        <name>Billing_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Messages --></label>
+        <name>Messages__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minutes --></label>
+        <name>Minutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Date --></label>
+        <name>Starting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- To NPA/NXX --></label>
+        <name>To_NPA_NXX__c</name>
+    </fields>
+    <fields>
+        <label><!-- UNBilled Subtotal Minutes --></label>
+        <name>UNBil_Sbttl_Min__c</name>
+    </fields>
+    <fields>
+        <label><!-- UNBilled Subtotal Message --></label>
+        <name>UNBil_Sbttl_Msg__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

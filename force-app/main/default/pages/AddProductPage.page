@@ -1,0 +1,120 @@
+<apex:page standardController="OpportunityLineItem" extensions="OppItemEditController" tabStyle="Opportunity"  >
+<style type="text/css">
+        .custPopup{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            /* These are the 3 css properties you will need to change so the popup
+            displays in the center of the screen. First set the width. Then set
+            margin-left to negative half of what the width is. You can add
+            the height property for a fixed size pop up if you want.*/
+            width: 700px;
+            margin-left: -250px;
+            top:100px;
+        }
+        .popupBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+    </style>
+    
+     <apex:sectionHeader title="Opportunity" subtitle="Products"/>
+     <apex:form >
+         <apex:pageblock title="Filter Criteria">
+             <!--<apex:outputText value="Please enter the NPA/NXX"/><br/>-->
+             <apex:outputText value="Please enter the Search Product"/><br/>
+             <apex:inputText value="{!strSearchProduct}" />
+             <apex:outputText value="            "/>
+             <!--<apex:commandButton value="Search NPA/NXX" action="{!getOnlySearchProducts}"/><br/>-->
+             <apex:commandButton value="Search" action="{!getOnlySearchProducts}"/><br/>
+             <apex:messages style="color:red" />
+         </apex:pageblock>
+         
+         <!-- to display all and all products  -->
+         <apex:pageblock title="Products" rendered="{!IF(bolShowRecords=false,true,false)}">
+             <apex:pageblockButtons >
+                 <apex:commandButton value="Select" action="{!getOnlySelectedProducts}"/>
+             </apex:pageblockButtons>
+             <apex:pageblockTable value="{!lstClsSelectedProducts}" var="allProducts">
+                  <apex:column >
+                    <apex:inputCheckbox value="{!allProducts.bolIsSelected}"/>
+                 </apex:column>
+                 <apex:column value="{!allProducts.strProductName}" headerValue="Product Name"/>
+                 <apex:column value="{!allProducts.strTrafficCode}" headerValue="Traffice Code"/>
+                 <apex:column value="{!allProducts.strSECode}" headerValue="S&E Code"/>
+                 <apex:column value="{!allProducts.strProductDesc}" headerValue="Product Description"/>
+                 <apex:column value="{!allProducts.strMRC}" headerValue="MRC"/>
+                 <apex:column value="{!allProducts.objSQI.DiscountType__c}" headerValue="Discount Type"/>
+                 <!--<apex:column value="{!allProducts.objSQI.LineNumber__c}" headerValue="Line Number"/>-->
+             </apex:pageblockTable>
+         </apex:pageblock> 
+         <!-- to display all and selected products -->
+         <apex:pageblock title="Selected Products" rendered="{!IF(bolShowRecords=false,false,true)}">
+              <apex:pageblockButtons >
+                 <apex:commandButton value="Save" action="{!saveProducts}"/>
+             </apex:pageblockButtons>
+             <apex:pageblockTable value="{!lstClsSelectedProductsToDB}" var="selProducts">
+                 <apex:column value="{!selProducts.strProductName}" headerValue="Product Name"/>
+                 <apex:column headerValue="Quanitity">
+                        <apex:inputtext value="{!selProducts.strQuantity}"/>
+                 </apex:column>
+                 <apex:column headerValue="Term Length">
+                     <apex:inputtext value="{!selProducts.strTerm}"/>
+                 </apex:column>
+                 <apex:column headerValue="Renewal MRC">
+                     <apex:inputtext value="{!selProducts.strRenewalMRC}"/>
+                 </apex:column>
+                 <apex:column headerValue="MRC">
+                     <apex:inputtext value="{!selProducts.strMRC}" />
+                 </apex:column>
+                 <apex:column headerValue="CPE NRC">
+                     <apex:inputtext value="{!selProducts.strCPENRC}"/>
+                 </apex:column>
+                 <apex:column headerValue="NRC">
+                     <apex:inputtext value="{!selProducts.strNRC}" />
+                 </apex:column>
+                 <apex:column headerValue="Discount Type">
+                     <apex:inputfield value="{!selProducts.objSQI.DiscountType__c}"/>
+                 </apex:column>
+                 <!--<apex:column headerValue="Line Number">
+                     <apex:inputtext value="{!selProducts.objSQI.LineNumber__c}" />
+                 </apex:column>-->
+                 
+             </apex:pageblockTable>
+         </apex:pageblock>
+         
+         <!--<apex:commandButton value="Show Pop up" action="{!showPopup}" rerender="tstpopup"/>-->
+         
+        <apex:outputPanel id="tstpopup">
+            <apex:outputPanel styleClass="popupBackground" layout="block" rendered="{!displayPopUp}"/>
+            <apex:outputPanel styleClass="custPopup" layout="block" rendered="{!displayPopUp}">
+                <apex:pageBlock title="Sterling Quote" >
+                    <apex:pageblockbuttons location="Bottom" >
+                        <apex:commandButton value="Save" action="{!saveQuoteAndItem}" rerender="tstpopup"/>
+                        <apex:commandButton value="Close" action="{!closePopup}" immediate="true" rerender="tstpopup"/>
+                    </apex:pageblockbuttons>
+                    <apex:pageblocksection >
+                        <apex:inputfield value="{!objSteQuote.ExpediteIncluded__c}" required="true"/>
+                        <apex:inputfield value="{!objSteQuote.ExpirationDate__c}" required="true"/>
+                        <apex:inputfield value="{!objSteQuote.Name}" required="true"/>
+                        <apex:inputfield value="{!objSteQuote.GrandTotal__c}" required="true"/>
+                    </apex:pageblocksection>
+                </apex:pageBlock>
+                <!--<apex:commandButton value="Hide Pop up" action="{!closePopup}" rerender="tstpopup"/>-->
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+     </apex:form>
+</apex:page>

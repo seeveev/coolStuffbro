@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pickup_SCAC_name__c</fullName>
+    <description>Source table: rod / csc_dtl
+Source column: rod_pkp_scac_nam / csc_dtl_pkp_scac_nam</description>
+    <externalId>false</externalId>
+    <label>Pickup SCAC name</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

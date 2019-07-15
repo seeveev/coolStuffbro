@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Doc_Id__c</fullName>
+    <description>Target Table:fin_305/a15/zla/zau
+Target Column:fin_305_doc_id/a15_doc_id/    zla_doc_id/zau_doc_id</description>
+    <externalId>false</externalId>
+    <label>Doc Id</label>
+    <length>3</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

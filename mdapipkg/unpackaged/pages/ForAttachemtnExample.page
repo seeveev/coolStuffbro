@@ -1,0 +1,14 @@
+<apex:page controller="ForAttachementExampleContr" >
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageblockButtons location="top" >
+            <apex:commandbutton value="Create PDF" action="{!saveFileToOpp}"/>
+        </apex:pageblockButtons>
+        <apex:pageblockTable value="{!lstOppLinITem}" var="op">
+            <apex:column value="{!op.CPE_NRC_Price_c__c}"/>
+            <apex:column value="{!op.OpportunityId}"/>
+            <apex:column value="{!op.PricebookEntryId}"/>
+        </apex:pageblockTable>
+    </apex:pageBlock>
+</apex:form>   
+</apex:page>

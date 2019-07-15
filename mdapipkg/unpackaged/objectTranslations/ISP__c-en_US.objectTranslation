@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ISP</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ISPs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone Number --></label>
+        <name>Contact_Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domain Name --></label>
+        <name>Domain_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter In-Line --></label>
+        <name>Filter_In_Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frontiernet Lookout --></label>
+        <name>Frontiernet_Lookout__c</name>
+    </fields>
+    <fields>
+        <label><!-- Full Install Y/N --></label>
+        <name>Full_Install_Y_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- LAN Network --></label>
+        <name>LAN_Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modem Type --></label>
+        <name>Modem_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modem Vendor --></label>
+        <name>Modem_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Size --></label>
+        <name>Network_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- OPS System --></label>
+        <name>OPS_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Password --></label>
+        <name>Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Plan --></label>
+        <name>Product_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Info --></label>
+        <name>Security_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Type --></label>
+        <name>Security_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Splitter Y/N --></label>
+        <name>Splitter_Y_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Name --></label>
+        <name>User_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- WAN Static IP --></label>
+        <name>WAN_Static_IP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wall Mount --></label>
+        <name>Wall_Mount__c</name>
+    </fields>
+    <fields>
+        <label><!-- sequence Number --></label>
+        <name>sequence_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>ISP Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

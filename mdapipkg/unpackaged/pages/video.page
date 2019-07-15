@@ -1,0 +1,12 @@
+<apex:page >
+    <!--    <apex:iframe width="840" height="510"
+src="https://www.youtube.com/embed/L0PGs-wMQR4" frameborder="0"/>-->
+    
+    <div id="wistia_xlrkcgp58f" class="wistia_embed" style="width:640px; height:359px; ">&nbsp;</div>
+    <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+    <script>
+        wistiaEmbed = Wistia.embed("xlrkcgp58f", {
+            videoFoam: true
+        });
+    </script>
+</apex:page>

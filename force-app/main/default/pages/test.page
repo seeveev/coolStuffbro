@@ -1,0 +1,17 @@
+<apex:page Controller="hierarchy1" >
+          <apex:pageBlock title="pageblock 1">
+                 <apex:pageBlockSection title="pageblock section 1">
+                   <apex:pageBlockTable value="{!lsthierarchy}" var="res">
+                       
+
+
+                   </apex:pageBlockTable>                       
+                                                     
+                 </apex:pageBlockSection>
+        
+          </apex:pageBlock>       
+               
+                 
+                 
+  
+</apex:page>

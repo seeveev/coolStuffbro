@@ -1,0 +1,20 @@
+<apex:page standardController="opportunity" extensions="trainingcontroller">
+        <apex:form >
+                <apex:pageBlock >
+                        <apex:pageblockSection title="data">
+                            <apex:pageblockTable value="{!section}" var="pg">
+                             <apex:column value="{!pg.id}"/>
+                            
+                            
+                            </apex:pageblockTable>
+                        
+                        
+                        </apex:pageblockSection>
+                
+                
+                </apex:pageBlock>
+        </apex:form>
+
+
+
+</apex:page>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Field_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Facilities Available</fullName>
+                    <default>false</default>
+                    <label>Facilities Available</label>
+                </value>
+                <value>
+                    <fullName>Facilities Not Available,ICB Required</fullName>
+                    <default>false</default>
+                    <label>Facilities Not Available,ICB Required</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IntervalNotAvailable__c</fullName>
+        <externalId>false</externalId>
+        <label>IntervalNotAvailable</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>IntervalAvailable</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Service_del__c</fullName>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>B1/POTS</fullName>
+                    <default>false</default>
+                    <label>B1/POTS</label>
+                </value>
+                <value>
+                    <fullName>Long Distance</fullName>
+                    <default>false</default>
+                    <label>Long Distance</label>
+                </value>
+                <value>
+                    <fullName>Toll Free</fullName>
+                    <default>false</default>
+                    <label>Toll Free</label>
+                </value>
+                <value>
+                    <fullName>DSL</fullName>
+                    <default>false</default>
+                    <label>DSL</label>
+                </value>
+                <value>
+                    <fullName>Centrex/Centranet</fullName>
+                    <default>false</default>
+                    <label>Centrex/Centranet</label>
+                </value>
+                <value>
+                    <fullName>Winback</fullName>
+                    <default>false</default>
+                    <label>Winback</label>
+                </value>
+                <value>
+                    <fullName>Voice Mail &amp; additional Features on existing service</fullName>
+                    <default>false</default>
+                    <label>Voice Mail &amp; additional Features on existing service</label>
+                </value>
+                <value>
+                    <fullName>Analog Trunks</fullName>
+                    <default>false</default>
+                    <label>Analog Trunks</label>
+                </value>
+                <value>
+                    <fullName>IP Address Changes</fullName>
+                    <default>false</default>
+                    <label>IP Address Changes</label>
+                </value>
+                <value>
+                    <fullName>ISDN BRI</fullName>
+                    <default>false</default>
+                    <label>ISDN BRI</label>
+                </value>
+                <value>
+                    <fullName>ISDN PRI</fullName>
+                    <default>false</default>
+                    <label>ISDN PRI</label>
+                </value>
+                <value>
+                    <fullName>MIPT (area specific product)</fullName>
+                    <default>false</default>
+                    <label>MIPT (area specific product)</label>
+                </value>
+                <value>
+                    <fullName>DIA T1 w/out router</fullName>
+                    <default>false</default>
+                    <label>DIA T1 w/out router</label>
+                </value>
+                <value>
+                    <fullName>EIA Metro-E</fullName>
+                    <default>false</default>
+                    <label>EIA Metro-E</label>
+                </value>
+                <value>
+                    <fullName>SIP Trunking</fullName>
+                    <default>false</default>
+                    <label>SIP Trunking</label>
+                </value>
+                <value>
+                    <fullName>IP Connect</fullName>
+                    <default>false</default>
+                    <label>IP Connect</label>
+                </value>
+                <value>
+                    <fullName>Metro-E Upgrade</fullName>
+                    <default>false</default>
+                    <label>Metro-E Upgrade</label>
+                </value>
+                <value>
+                    <fullName>SONET</fullName>
+                    <default>false</default>
+                    <label>SONET</label>
+                </value>
+                <value>
+                    <fullName>Frame Relay</fullName>
+                    <default>false</default>
+                    <label>Frame Relay</label>
+                </value>
+                <value>
+                    <fullName>Private Line DS1 (On-Net)</fullName>
+                    <default>false</default>
+                    <label>Private Line DS1 (On-Net)</label>
+                </value>
+                <value>
+                    <fullName>Dedicated PL</fullName>
+                    <default>false</default>
+                    <label>Dedicated PL</label>
+                </value>
+                <value>
+                    <fullName>Wireless Hot Spots</fullName>
+                    <default>false</default>
+                    <label>Wireless Hot Spots</label>
+                </value>
+                <value>
+                    <fullName>Wireless Hot Spots1</fullName>
+                    <default>false</default>
+                    <label>Wireless Hot Spots1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>ProductDueDateMatrix</label>
+    <nameField>
+        <label>ProductDueDateMatrix Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>ProductDueDateMatrixs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Calculate_Due_Date</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Calculate Due Date</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/</url>
+    </webLinks>
+</CustomObject>

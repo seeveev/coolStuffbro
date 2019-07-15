@@ -1,0 +1,11 @@
+<apex:page controller="product1" >
+
+
+
+ <apex:form >
+ 
+            <apex:selectList id="accts" value="{!strSearchByValue}" size="1" >
+   </apex:selectList>
+ </apex:form>
+
+ </apex:page>

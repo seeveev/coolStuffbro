@@ -1,0 +1,46 @@
+<apex:page standardController="custom__c" extensions="ClsAddReport"
+    showHeader="false" sidebar="false">
+    <apex:form >
+            width="250" height="50" />
+        <apex:pageBlock >
+            <apex:pageblockButtons >
+                <apex:commandButton action="{!NewRecord}" value="New Record" rendered="{!bolShowExisRecod}"/>
+                <apex:commandButton action="{!saveRecord}" value="Save" rendered="{!bolSave}" />
+                <apex:commandButton action="{!cancel}" value="Exit" />
+            </apex:pageblockButtons>
+            
+            <!-- This will dispay the current user data -->
+            <apex:pageblockSection title="Existing Records" columns="1" rendered="{!bolShowExisRecod}" > 
+                <apex:pageblockTable value="{!AllRecord}" var="recVal">
+                    <apex:column value="{!recVal.category__c}"/>
+                    <apex:column value="{!recVal.Notes__c}"/>
+                    <apex:column value="{!recVal.date__c}"/>
+                </apex:pageblockTable>
+            </apex:pageblockSection>
+
+            <apex:pageblockSection title="Enter Data" columns="2" rendered="{!bolSave}" >
+                    <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Owner  " for="fromDateField" tabindex="3" />
+                         <apex:outputText id="fromDateField" value="{!strAuthor }"  />
+                    </apex:pageBlockSectionItem>
+                     <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Division " for="fromDiv" tabindex="3" />
+                         <apex:outputText id="fromDiv" value="{!strDivision}"  />
+                    </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!CustomRecod.category__c}"  required="true"  />
+                    <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Date  " for="fromDateField" tabindex="3" />
+                         <c:noDateLink >
+                            <apex:Inputfield id="fromDateField" value="{!CustomRecod.date__c}" label="Suraj" required="true"    />
+                        </c:noDateLink>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                         <apex:outputLabel value="Notes(*) " for="lblNotes" tabindex="3" />
+                          <apex:inputTextarea id="lblNotes" value="{!CustomRecod.Notes__c}" cols="50" rows="10"  required="true"  />
+                    </apex:pageBlockSectionItem>
+ 
+            </apex:pageblocksection>
+           
+            </apex:pageblock>
+    </apex:form>
+</apex:page>

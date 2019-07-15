@@ -1,0 +1,9 @@
+<apex:page controller="LookupVFPageCont" >
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblockSection >
+                <apex:inputfield value="{!objCase.Contact_Lookup__c}"/>
+            </apex:pageblockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

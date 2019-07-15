@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Billing Detail 1</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Billing Detail 1&apos;s</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Number --></label>
+        <name>Billing_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Sequence Number --></label>
+        <name>Billing_Seq_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number --></label>
+        <name>Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Tax Code --></label>
+        <name>Other_Tax_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package Number --></label>
+        <name>Package_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prefix Code --></label>
+        <name>Prefix_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Activity --></label>
+        <name>S_E_Activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Classification --></label>
+        <name>S_E_Classification__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Federal Taxable Amount --></label>
+        <name>S_E_Fed_Tx_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Federal Tax --></label>
+        <name>S_E_Federal_Tax__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E From Date --></label>
+        <name>S_E_From_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Item Description --></label>
+        <name>S_E_Item_Des__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Monthly Charge Amount --></label>
+        <name>S_E_M_Chr_Amt__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Proration Other CHG AND CR --></label>
+        <name>S_E_P_Otr_C_A_CR__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E Quantity --></label>
+        <name>S_E_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E State TAX --></label>
+        <name>S_E_State_TAX__c</name>
+    </fields>
+    <fields>
+        <label><!-- S&amp;E ToDate --></label>
+        <name>S_E_ToDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Order Number --></label>
+        <name>Service_Order_No__c</name>
+    </fields>
+    <layouts>
+        <layout>Billing Detail 1 Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

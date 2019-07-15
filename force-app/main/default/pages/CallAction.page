@@ -1,0 +1,17 @@
+<apex:page controller="changecolor">
+
+
+<apex:form >
+        <script>
+function changeColor(id)
+{
+
+  document.getElementById(id).style.color = "#ff0000"; // forecolor
+ 
+}
+</script>
+         <div id="myid">Hello There !!</div><br/>
+
+  <a href="#" onclick="changecolor('myid');return false;">change color</a>
+</apex:form>
+</apex:page>

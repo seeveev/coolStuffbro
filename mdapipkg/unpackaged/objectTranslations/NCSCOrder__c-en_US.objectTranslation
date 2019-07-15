@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Discrepancy Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Discrepancy Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- AAC --></label>
+        <name>AAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACC --></label>
+        <name>ACC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Access Code --></label>
+        <name>Access_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Attn --></label>
+        <name>Address_Attn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Email --></label>
+        <name>Address_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Name --></label>
+        <name>Address_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type Description --></label>
+        <name>Address_Type_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type Id --></label>
+        <name>Address_Type_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type Name --></label>
+        <name>Address_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type Status --></label>
+        <name>Address_Type_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Closed Flag --></label>
+        <name>Auto_Closed_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Name --></label>
+        <name>Carrier_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Tracking Freight Bill Number --></label>
+        <name>Carrier_Tracking_Freight_Bill_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Tracking Freight On Board Code --></label>
+        <name>Carrier_Tracking_Freight_On_Board_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Tracking Freight On Board Detail --></label>
+        <name>Carrier_Tracking_Freight_On_Board_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Tracking Number --></label>
+        <name>Carrier_Tracking_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Discrepancy Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed date --></label>
+        <name>Closed_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed user --></label>
+        <name>Closed_user__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Discrepancy Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer  Email Flag --></label>
+        <name>Customer_Email_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Received --></label>
+        <name>Date_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery SCAC Code --></label>
+        <name>Delivery_SCAC_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery SCAC Name --></label>
+        <name>Delivery_SCAC_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedite Action Flag --></label>
+        <name>Expedite_Action_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedite Action date --></label>
+        <name>Expedite_Action_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedite Date --></label>
+        <name>Expedite_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedite Flag --></label>
+        <name>Expedite_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Export Type --></label>
+        <name>Export_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- DIC --></label>
+        <name>FSS19_DIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- RIC --></label>
+        <name>FSS19_RIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Code --></label>
+        <name>FSS19_Unit_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>FSS19_Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dist --></label>
+        <name>FSS19_dist__c</name>
+    </fields>
+    <fields>
+        <label><!-- M-S --></label>
+        <name>FSS19_m_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- NSN / Part # --></label>
+        <name>FSS19_nsn__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIG --></label>
+        <name>FSS19_sig__c</name>
+    </fields>
+    <fields>
+        <label><!-- SUPADD --></label>
+        <name>FSS19_sup_add__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units/Qty --></label>
+        <name>FSS19_unt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow up Flag --></label>
+        <name>Follow_up_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fulfillment Method Code --></label>
+        <name>Fulfillment_Method_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fulfillment Method Name --></label>
+        <name>Fulfillment_Method_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GECO Number --></label>
+        <name>GECO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interested Party Email --></label>
+        <name>Interested_Party_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- International Phone --></label>
+        <name>International_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last  Rejected Date --></label>
+        <name>Last_Rejected_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Key --></label>
+        <name>Legacy_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager  Approval --></label>
+        <name>Manager_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager Approved date --></label>
+        <name>Manager_Approved_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCSC WIP Date --></label>
+        <name>NCSC_WIP_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non FSS Flag --></label>
+        <name>Non_FSS_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Date --></label>
+        <name>Order_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number Scope --></label>
+        <name>Order_Number_Scope__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number Suffix --></label>
+        <name>Order_Number_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Originated User --></label>
+        <name>Originated_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Originated date --></label>
+        <name>Originated_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Identification number used in conjunction with the AAC Also called Access code or ACC --></help>
+        <label><!-- PIN --></label>
+        <name>PIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO Number --></label>
+        <name>PO_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Packing Facility Code --></label>
+        <name>Packing_Facility_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Packing Facility Description --></label>
+        <name>Packing_Facility_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Packing Facility Type --></label>
+        <name>Packing_Facility_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pickup SCAC Code --></label>
+        <name>Pickup_SCAC_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pickup SCAC Name --></label>
+        <name>Pickup_SCAC_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous WIP Date --></label>
+        <name>Previous_WIP_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous WIP user --></label>
+        <name>Previous_WIP_user__c</name>
+    </fields>
+    <fields>
+        <label><!-- Received Date --></label>
+        <name>Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecordTypeTemp --></label>
+        <name>RecordTypeTemp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rep Approval --></label>
+        <name>Rep_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rep Approved date --></label>
+        <name>Rep_Approved_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requisition Number Ext --></label>
+        <name>Requisition_Number_Ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requisition Number Suffix --></label>
+        <name>Requisition_Number_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requisition Number --></label>
+        <name>Requisition_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Requisition_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Assigned date --></label>
+        <name>Review_Assigned_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Closed date --></label>
+        <name>Review_Closed_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Flag --></label>
+        <name>Review_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Reject Flag --></label>
+        <name>Review_Reject_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review User --></label>
+        <name>Review_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session Number --></label>
+        <name>Session_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipped Date --></label>
+        <name>Shipped_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Location Code --></label>
+        <name>Store_Location_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Location Description --></label>
+        <name>Store_Location_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Number --></label>
+        <name>Store_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address 2 --></label>
+        <name>Street_Address_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address 3 --></label>
+        <name>Street_Address_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address --></label>
+        <name>Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Superviso Approved date --></label>
+        <name>Superviso_Approved_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supervisor Approval --></label>
+        <name>Supervisor_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surcharge Code --></label>
+        <name>Surcharge_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transportation Description --></label>
+        <name>Transportation_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transportation Mode --></label>
+        <name>Transportation_Mode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Assign Counter --></label>
+        <name>User_Assign_Counter__c</name>
+    </fields>
+    <fields>
+        <label><!-- WIP Assigned Date --></label>
+        <name>WIP_Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- WIP User --></label>
+        <name>WIP_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- WIP date --></label>
+        <name>WIP_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zipcode --></label>
+        <name>Zipcode__c</name>
+    </fields>
+    <layouts>
+        <layout>Discrepancy Order Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- CSC Order --></description>
+        <label><!-- CSC --></label>
+        <name>CSC</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EDD --></label>
+        <name>EDD</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FSS19 Order --></description>
+        <label><!-- FSS19 --></label>
+        <name>FSS19</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<apex:page standardController="project__c" extensions="ClsSearchVendors" >
+    <apex:form >
+        <apex:sectionHeader title="Select Questions and Answers for Vendor Search" />
+        <apex:pageblock id="pageBlock1">
+            <apex:pageblockButtons >
+                <apex:commandButton value="Group Master" action="{!pageRedirect}" />
+            </apex:pageblockButtons>
+            <apex:repeat value="{!lstQuestion}" var="varQuestion" id="theRepeat">
+                <apex:pageBlockSection title="{!varQuestion.Name}">
+                    <apex:actionRegion > 
+                            <b><apex:outputText value="Answers" /></b><br/>
+                            <apex:selectList id="slActual" size="7" multiselect="true" style="width:200px;">
+                                <apex:selectOptions value="{!options}"/>
+                            </apex:selectList> &nbsp;&nbsp;&nbsp;
+                    </apex:actionRegion>
+                </apex:pageBlockSection>
+            </apex:repeat>
+            <apex:pageBlockSection title="Selected Vendors will populate at bottom">
+                 <apex:actionRegion > 
+                 <b><apex:outputText value="Selected Vendors" /></b><br/>
+                    <apex:selectList id="slActual" size="7" multiselect="true" style="width:200px;">
+                        <apex:selectOptions value="{!options}"/>
+                    </apex:selectList> &nbsp;&nbsp;&nbsp;
+                 </apex:actionRegion>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,1532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object will hold the line item details for orders that have line items including CSC orders.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>A15_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_a15_flg / csc_dtl_rord_flg</description>
+        <externalId>false</externalId>
+        <label>A15 Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ADR_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_adr_flg / csc_dtl_adr_flg</description>
+        <externalId>false</externalId>
+        <label>ADR Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Code__c</fullName>
+        <description>Source table: rod
+Source column: rod_acq_code</description>
+        <externalId>false</externalId>
+        <label>Acquisition Code</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Export_Domestic_Code__c</fullName>
+        <description>Source table: rod
+Source column: rod_actual_ed</description>
+        <externalId>false</externalId>
+        <label>Actual Export/Domestic Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Documentation_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_add_doc_flg / csc_mst_add_doc_flg</description>
+        <externalId>false</externalId>
+        <label>Additional Documentation Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Adjusted_EDD_Prefix__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_trn_edd_prefix</description>
+        <externalId>false</externalId>
+        <label>Adjusted EDD Prefix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adjusted_NIIN__c</fullName>
+        <description>Source table: csc_trn
+Source column: rod_dis_nsn/ csc_trn_nin /csc_trn_part_nbr</description>
+        <externalId>false</externalId>
+        <label>Adjusted NIIN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adjusted_Quantity__c</fullName>
+        <description>Source table:   rod / csc_trn
+Source column: &quot;    rod_adj_qty / csc_trn_qty&quot;</description>
+        <externalId>false</externalId>
+        <label>Adjusted Quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adjusted_Unit_Price__c</fullName>
+        <description>Source table: rod / csc_trn
+Source column:     rod_adj_unt_prc / csc_trn_unt_prc</description>
+        <externalId>false</externalId>
+        <label>Adjusted Unit Price</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adjusted_Value__c</fullName>
+        <description>Source table:  rod / csc_trn
+Source column: &quot;    rod_adj_val / csc_trn_adj_val&quot;</description>
+        <externalId>false</externalId>
+        <label>Adjusted Value</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Analyst_Response_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_aco_rsp_dte</description>
+        <externalId>false</externalId>
+        <label>Analyst Response Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Date_to_Analyst__c</fullName>
+        <description>Source table: rod
+Source column: rod_aco_con_dte</description>
+        <externalId>false</externalId>
+        <label>Assigned Date to Analyst</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Resolve_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_auto_res_flg</description>
+        <externalId>false</externalId>
+        <label>Auto Resolve Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>B_Order__c</fullName>
+        <description>Unknown</description>
+        <externalId>false</externalId>
+        <label>B. Order</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_ac1_flg / csc_dtl_ac1_flg</description>
+        <externalId>false</externalId>
+        <label>Cancellation Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Carrier_Claim_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_car_clm_flg / csc_dtl_car_clm_flg</description>
+        <externalId>false</externalId>
+        <label>Carrier Claim Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Carrier_Claim_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_car_clm_nbr /csc_dtl_car_clm_nbr</description>
+        <externalId>false</externalId>
+        <label>Carrier Claim Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Carrier_Name__c</fullName>
+        <description>Source table: rod
+Source column: rod_carrier_name</description>
+        <externalId>false</externalId>
+        <label>Carrier Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>NCSC - Lookup to the parent order case.</description>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>Order_Line_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Discrepancies</relationshipLabel>
+        <relationshipName>Discrepancies</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_crd_flg / csc_dtl_cr_mis_flg</description>
+        <externalId>false</externalId>
+        <label>Credit   Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Memo_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_credit_memo_flg / csc_dtl_credit_memo_flg</description>
+        <externalId>false</externalId>
+        <label>Credit Memo Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Debit_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_dbt_flg / csc_dtl_ret_ovg_flg</description>
+        <externalId>false</externalId>
+        <label>Debit  Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Decision_Description__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_dec_oth / csc_dtl_oth_dsc</description>
+        <externalId>false</externalId>
+        <label>Decision Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_SCAC__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_del_scac /csc_dtl_del_scac</description>
+        <externalId>false</externalId>
+        <label>Delivery SCAC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Part Description</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DiscrepacnyOrder__c</fullName>
+        <description>This is the parent order that the line item is related to</description>
+        <externalId>false</externalId>
+        <label>Discrepancy Order</label>
+        <referenceTo>NCSCOrder__c</referenceTo>
+        <relationshipLabel>Discrepancies</relationshipLabel>
+        <relationshipName>Line_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Discrepant_NIIN__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_dis_nsn / ( csc_dtl_dis_nin /csc_dtl_dis_part_nbr)</description>
+        <externalId>false</externalId>
+        <label>Discrepant NIIN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discrepant_Prefix__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_dis_edd_prefix</description>
+        <externalId>false</externalId>
+        <label>Discrepant Prefix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discrepant_quantity__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_dis_qty / csc_dtl_dis_qty</description>
+        <externalId>false</externalId>
+        <label>Discrepant quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dispose_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_dispose_flg / csc_dtl_dispose_flg</description>
+        <externalId>false</externalId>
+        <label>Dispose Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EDD_Part_Number_Prefix__c</fullName>
+        <description>Source table:rod / csc_dtl 
+Source column: csc_dtl_ord_edd_prefix</description>
+        <externalId>false</externalId>
+        <label>EDD Part Number Prefix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDD_Prefix_Part_Number__c</fullName>
+        <description>EDD order prefix or part number</description>
+        <externalId>false</externalId>
+        <label>EDD Prefix/Part Number</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDD_Req_Number_Suffix__c</fullName>
+        <externalId>false</externalId>
+        <label>EDD Req Number Suffix</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDD_Req_Number__c</fullName>
+        <description>EDD requisition Number</description>
+        <externalId>false</externalId>
+        <label>EDD Req Number</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDD_Requisition_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_edd_req_nbr</description>
+        <externalId>false</externalId>
+        <label>EDD Requisition Number</label>
+        <length>14</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDD_Requisition_Suffix__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_edd_req_sfx</description>
+        <externalId>false</externalId>
+        <label>EDD Requisition Suffix</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_email_flg</description>
+        <externalId>false</externalId>
+        <label>Email Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Shipment_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_exp_ship_flg / csc_dtl_exp_ship_flg</description>
+        <externalId>false</externalId>
+        <label>Expedite Shipment Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Freight_Bill_Number__c</fullName>
+        <description>Source table: rod
+Source column: rod_freight_bill</description>
+        <externalId>false</externalId>
+        <label>Freight Bill Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GBL__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_gbl_nbr / csc_dtl_gbl_nbr</description>
+        <externalId>false</externalId>
+        <label>GBL</label>
+        <length>11</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GSA_Order_Item_Unit_Cost__c</fullName>
+        <description>Source table: rod
+Source column: rod_cost_prc</description>
+        <externalId>false</externalId>
+        <label>GSA Order Item Unit Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Item_Number_Prefix__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Number Prefix</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Number_Standard__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Number Standard</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Number_Suffix__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Number Suffix</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_Case_Key__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_key / csc_mst_key</description>
+        <externalId>false</externalId>
+        <label>Legacy Case Key</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legacy_case_dtl_Key__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_key</description>
+        <externalId>false</externalId>
+        <label>Legacy case dtl Key</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRA_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_mra_flg / csc_dtl_ret_cr_flg</description>
+        <externalId>false</externalId>
+        <label>MRA Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Manifest_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_man_nbr / csc_dtl_man_nbr</description>
+        <externalId>false</externalId>
+        <label>Manifest Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NCSC_Expedite_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_exped_flg</description>
+        <externalId>false</externalId>
+        <label>NCSC Expedite Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>NIIN__c</fullName>
+        <description>National Item Identification Number</description>
+        <externalId>false</externalId>
+        <label>NIIN</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NIIN_resolved_flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_res_flg</description>
+        <externalId>false</externalId>
+        <label>NIIN resolved flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>No_Action_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_no_action_flg / csc_dtl_no_action_flg</description>
+        <externalId>false</externalId>
+        <label>No Action Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Oder_Ship_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_shp_dte</description>
+        <externalId>false</externalId>
+        <label>Oder Ship Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_NIIN_NSN__c</fullName>
+        <description>Source table: rod / csc_dtl 
+Source column: rod_ord_nsn / csc_dtl_ord_nin /csc_dtl_ord_part_nbr</description>
+        <externalId>false</externalId>
+        <label>Order NIIN/NSN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Quantity__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_ord_qty / csc_dtl_ord_qty</description>
+        <externalId>false</externalId>
+        <label>Order Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Unit_Price__c</fullName>
+        <description>Source table: rod / csc_trn
+Source column: &quot;rod_ord_unt_prc / csc_trn_unt_prc&quot;</description>
+        <externalId>false</externalId>
+        <label>Order Unit Price</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Decision_flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_oth_flg / csc_dtl_oth_flg</description>
+        <externalId>false</externalId>
+        <label>Other Decision flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POD_Flag__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column:     rod_prf_flg / csc_dtl_trc_flg</description>
+        <externalId>false</externalId>
+        <label>POD Flag</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_po_nbr / csc_dtl_po_nbr</description>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pickup_SCAC__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_pkp_scac / csc_dtl_pkp_scac</description>
+        <externalId>false</externalId>
+        <label>Pickup SCAC</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pickup_SCAC_name__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_pkp_scac_nam / csc_dtl_pkp_scac_nam</description>
+        <externalId>false</externalId>
+        <label>Pickup SCAC name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Problem_Description__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column:     rod_prb_oth / csc_dtl_oth_prb_dsc</description>
+        <externalId>false</externalId>
+        <label>Problem Description</label>
+        <length>225</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Problem_Type__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column:     rod_prb_typ / csc_dtl_prb_typ</description>
+        <externalId>false</externalId>
+        <label>Problem Type</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QC_Net_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_qc_net_nbr</description>
+        <externalId>false</externalId>
+        <label>QC Net Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quality_Type__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_quality_typ /csc_dtl_quality_typ</description>
+        <externalId>false</externalId>
+        <label>Quality Type</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quality_zone_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_qlty_zone_flg / csc_dtl_qlty_zone_flg</description>
+        <externalId>false</externalId>
+        <label>Quality zone Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>Quantity of items on the line item</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Redeliver_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_rdliver_flg / csc_dtl_rdliver_flg</description>
+        <externalId>false</externalId>
+        <label>Redeliver Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Req_num_PO_num__c</fullName>
+        <externalId>false</externalId>
+        <label>Req #/PO #</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reship_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_re_shp_flg</description>
+        <externalId>false</externalId>
+        <label>Reship  Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reshipped_EDD_Prefix__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_rshp_edd_prefix</description>
+        <externalId>false</externalId>
+        <label>Reshipped EDD Prefix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reshipped_NIIN__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_a15_nsn / (csc_dtl_rshp_nin / csc_dtl_rshp_part_nbr)</description>
+        <externalId>false</externalId>
+        <label>Reshipped NIIN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reshipped_Quantity__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_a15_qty / csc_dtl_rshp_qty</description>
+        <externalId>false</externalId>
+        <label>Reshipped Quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Retain_N_C_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_retain_nc_flg / csc_dtl_retain_nc_flg</description>
+        <externalId>false</externalId>
+        <label>Retain N/C  Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Returned_EDD_Prefix__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_ret_edd_prefix</description>
+        <externalId>false</externalId>
+        <label>Returned EDD Prefix</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Returned_NIIN__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_zau_nsn / (csc_dtl_ret_nin /csc_dtl_ret_part_nbr)</description>
+        <externalId>false</externalId>
+        <label>Returned NIIN</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Returned_Quantity__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_zau_qty / csc_dtl_ret_qty</description>
+        <externalId>false</externalId>
+        <label>Returned Quantity</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Returned_Value__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_zau_adj_val / csc_dtl_ret_val</description>
+        <externalId>false</externalId>
+        <label>Returned Value</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sale_Price__c</fullName>
+        <description>The price of the item.</description>
+        <externalId>false</externalId>
+        <label>Sale Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Session_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Session #</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_Location_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Store Location Code</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_Location_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Store Location Description</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_number__c</fullName>
+        <description>This is the Store code.</description>
+        <externalId>false</externalId>
+        <label>Store Number</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Suffix__c</fullName>
+        <description>EDD Requisition Number Suffix</description>
+        <externalId>false</externalId>
+        <label>Suffix</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Surcharge_Code__c</fullName>
+        <description>Source table: rod
+Source column: rod_sur_chrg_cde</description>
+        <externalId>false</externalId>
+        <label>Surcharge Code</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TD_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>TD Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>00	CTC</fullName>
+                    <default>false</default>
+                    <label>00	CTC</label>
+                </value>
+                <value>
+                    <fullName>01	CANCELED, OUT OF STOCK</fullName>
+                    <default>false</default>
+                    <label>01	CANCELED, OUT OF STOCK</label>
+                </value>
+                <value>
+                    <fullName>02	TELEPHONE RFS&apos;S</fullName>
+                    <default>false</default>
+                    <label>02	TELEPHONE RFS&apos;S</label>
+                </value>
+                <value>
+                    <fullName>03	STOCK DIRECT DELIVERY</fullName>
+                    <default>false</default>
+                    <label>03	STOCK DIRECT DELIVERY</label>
+                </value>
+                <value>
+                    <fullName>04	REFERRAL</fullName>
+                    <default>false</default>
+                    <label>04	REFERRAL</label>
+                </value>
+                <value>
+                    <fullName>06	CANCELED, DISCONTINUED ITEM</fullName>
+                    <default>false</default>
+                    <label>06	CANCELED, DISCONTINUED ITEM</label>
+                </value>
+                <value>
+                    <fullName>07	NON-STOCK, DIRECT DELIVERY</fullName>
+                    <default>false</default>
+                    <label>07	NON-STOCK, DIRECT DELIVERY</label>
+                </value>
+                <value>
+                    <fullName>09	CANCELLATION</fullName>
+                    <default>false</default>
+                    <label>09	CANCELLATION</label>
+                </value>
+                <value>
+                    <fullName>10	STOCK ISSUE</fullName>
+                    <default>false</default>
+                    <label>10	STOCK ISSUE</label>
+                </value>
+                <value>
+                    <fullName>11	STOCK ISSUE SUBSTITUTE</fullName>
+                    <default>false</default>
+                    <label>11	STOCK ISSUE SUBSTITUTE</label>
+                </value>
+                <value>
+                    <fullName>15	SUPPLEMENTAL</fullName>
+                    <default>false</default>
+                    <label>15	SUPPLEMENTAL</label>
+                </value>
+                <value>
+                    <fullName>20	BACK ORDER NORMAL</fullName>
+                    <default>false</default>
+                    <label>20	BACK ORDER NORMAL</label>
+                </value>
+                <value>
+                    <fullName>21	BACK ORDER SUBSTITUTE ITEM</fullName>
+                    <default>false</default>
+                    <label>21	BACK ORDER SUBSTITUTE ITEM</label>
+                </value>
+                <value>
+                    <fullName>22	BACK ORDER WAREHOUSE REFUSAL</fullName>
+                    <default>false</default>
+                    <label>22	BACK ORDER WAREHOUSE REFUSAL</label>
+                </value>
+                <value>
+                    <fullName>23	FUTURE DELIVERY, CREATION</fullName>
+                    <default>false</default>
+                    <label>23	FUTURE DELIVERY, CREATION</label>
+                </value>
+                <value>
+                    <fullName>24	BACK ORDER ADMINISTRATIVE</fullName>
+                    <default>false</default>
+                    <label>24	BACK ORDER ADMINISTRATIVE</label>
+                </value>
+                <value>
+                    <fullName>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</fullName>
+                    <default>false</default>
+                    <label>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</label>
+                </value>
+                <value>
+                    <fullName>30	STOCK BACKORDER RELEASE</fullName>
+                    <default>false</default>
+                    <label>30	STOCK BACKORDER RELEASE</label>
+                </value>
+                <value>
+                    <fullName>31	STOCK BACKORDER RELEASE SUBSTITUTE</fullName>
+                    <default>false</default>
+                    <label>31	STOCK BACKORDER RELEASE SUBSTITUTE</label>
+                </value>
+                <value>
+                    <fullName>33	FUTURE RELEASE NORMAL</fullName>
+                    <default>false</default>
+                    <label>33	FUTURE RELEASE NORMAL</label>
+                </value>
+                <value>
+                    <fullName>40	STOCK REPLENDISHMENT</fullName>
+                    <default>false</default>
+                    <label>40	STOCK REPLENDISHMENT</label>
+                </value>
+                <value>
+                    <fullName>41	STOCK REPLENDISHMENT SUBSTITUTE</fullName>
+                    <default>false</default>
+                    <label>41	STOCK REPLENDISHMENT SUBSTITUTE</label>
+                </value>
+                <value>
+                    <fullName>48	DI CREATION, OTHER GOV&apos;T. (FPI,BMP,GPO,CP)</fullName>
+                    <default>false</default>
+                    <label>48	DI CREATION, OTHER GOV&apos;T. (FPI,BMP,GPO,CP)</label>
+                </value>
+                <value>
+                    <fullName>80	REPOSITION STOCK REQUEST (WITHIN REGION)</fullName>
+                    <default>false</default>
+                    <label>80	REPOSITION STOCK REQUEST (WITHIN REGION)</label>
+                </value>
+                <value>
+                    <fullName>81	ITW (INTER-WAREHOUSE TRANSFER)</fullName>
+                    <default>false</default>
+                    <label>81	ITW (INTER-WAREHOUSE TRANSFER)</label>
+                </value>
+                <value>
+                    <fullName>82	CSC DISCREPANCIES</fullName>
+                    <default>false</default>
+                    <label>82	CSC DISCREPANCIES</label>
+                </value>
+                <value>
+                    <fullName>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</fullName>
+                    <default>false</default>
+                    <label>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</label>
+                </value>
+                <value>
+                    <fullName>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</fullName>
+                    <default>false</default>
+                    <label>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</label>
+                </value>
+                <value>
+                    <fullName>96	WAREHOUSE DENIALS</fullName>
+                    <default>false</default>
+                    <label>96	WAREHOUSE DENIALS</label>
+                </value>
+                <value>
+                    <fullName>97	PSUEDO RECEIPTS</fullName>
+                    <default>false</default>
+                    <label>97	PSUEDO RECEIPTS</label>
+                </value>
+                <value>
+                    <fullName>98	MISDIRECTED FREIGHT</fullName>
+                    <default>false</default>
+                    <label>98	MISDIRECTED FREIGHT</label>
+                </value>
+                <value>
+                    <fullName>99	BOWEN SPECIAL PROJECT</fullName>
+                    <default>false</default>
+                    <label>99	BOWEN SPECIAL PROJECT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Timeframe_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_time_frame_flg / csc_dtl_time_frame_flg</description>
+        <externalId>false</externalId>
+        <label>Timeframe Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tracking_Number__c</fullName>
+        <description>Source table: rod
+Source column: rod_tracking_nbr</description>
+        <externalId>false</externalId>
+        <label>Tracking Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <description>Unit code Ex. EA for each.</description>
+        <externalId>false</externalId>
+        <label>Unit Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Contact_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_con_dte</description>
+        <externalId>false</externalId>
+        <label>Vendor Contact Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Control_Number__c</fullName>
+        <description>Source table: rod
+Source column: rod_ctr_nbr</description>
+        <externalId>false</externalId>
+        <label>Vendor Control Number</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_DUNS_Number__c</fullName>
+        <description>Source table: rod
+Source column: rod_cecs_nbr</description>
+        <externalId>false</externalId>
+        <label>Vendor DUNS Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Email_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_email_dte</description>
+        <externalId>false</externalId>
+        <label>Vendor Email Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_vnd_flg</description>
+        <externalId>false</externalId>
+        <label>Vendor Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Invoice_Number__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: csc_dtl_ven_invoice_nbr</description>
+        <externalId>false</externalId>
+        <label>Vendor Invoice Number</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Amount__c</fullName>
+        <description>Source table: rod / csc_dtl
+Source column: rod_vendor_offset_amt / csc_dtl_ven_off_amt</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_ven_off / csc_dtl_ven_off_flg</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Reverse_Amount__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_off_rev_amt</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Reverse Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Reverse_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_off_rev_dte</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Reverse Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Reverse_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod
+Source column: rod_ven_off_rev_flg</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Reverse Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Offset_Reverse_User__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_off_rev_usr</description>
+        <externalId>false</externalId>
+        <label>Vendor Offset Reverse User</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Response_Date__c</fullName>
+        <description>Source table: rod
+Source column: rod_ven_rsp_dte</description>
+        <externalId>false</externalId>
+        <label>Vendor Response Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Warranty_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Source table: rod / csc_dtl
+Source column: rod_wrnty_flg / csc_dtl_wrnty_flg</description>
+        <externalId>false</externalId>
+        <label>Warranty Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>hg__c</fullName>
+        <description>jkj</description>
+        <externalId>false</externalId>
+        <label>hg</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Discrepancy</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Line Item Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Discrepancies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

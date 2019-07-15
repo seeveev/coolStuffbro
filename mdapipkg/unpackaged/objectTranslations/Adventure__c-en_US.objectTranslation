@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Adventure</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Adventures</value>
+    </caseValues>
+    <fields>
+        <label><!-- Difficulty Level --></label>
+        <name>Difficult__c</name>
+        <picklistValues>
+            <masterLabel>One</masterLabel>
+            <translation><!-- One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Two</masterLabel>
+            <translation><!-- Two --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Group Size --></label>
+        <name>Group_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length (d) --></label>
+        <name>Length_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Group Size --></label>
+        <name>Max_Group_Size__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

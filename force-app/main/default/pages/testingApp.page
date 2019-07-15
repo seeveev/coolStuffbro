@@ -1,0 +1,31 @@
+<apex:page controller="MECHGROUP"> 
+    
+    <style>
+        .headergel
+        {
+        color:red;
+        }
+        .headerblue
+        {
+        
+        color:blue;
+        }
+    </style>
+    
+    <apex:form >
+        <apex:repeat value="{!ph}" var="test">
+            {!test.Name} -- {!test.Country__c} -- {!test.createddate} <br/>     
+        </apex:repeat> 
+      
+        <!--<apex:pageblock>
+            <apex:pageBlockTable value="{!ph}" var="test">
+                <apex:column value="{!test.Name}"/>
+                <apex:column value="{!test.country__c}"/>
+                <apex:column value="{!test.createddate}"/>
+
+            </apex:pageBlockTable>
+        </apex:pageblock>
+-->
+    </apex:form>
+    
+</apex:page>

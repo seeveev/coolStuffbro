@@ -1,0 +1,33 @@
+<apex:page standardController="page_component__c" extensions="CKTextDemoController" >
+<apex:pageMessages />
+    <apex:form id="theForm">
+        <apex:pageBlock >
+            
+            <apex:pageblocksection >
+                <apex:inputfield id="textresult"  value="{!oPageComponent.Chatter_Group__c}"/>
+                <apex:inputhidden id="hiddenField" value="{!oPageComponent.Main_Content__c}"/>
+                <apex:pageBlockSectionItem >
+                <span>Contents</span>
+               <textarea name="editor1" id="editor1" rows="10" cols="30">{!oPageComponent.Main_Content__c}</textarea>
+               </apex:pageBlockSectionItem>
+            </apex:pageblocksection>
+          <apex:commandButton value="save" action="{!save}"/>
+
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:includeScript value="{!URLFOR($Resource.richtextareaStatic1,'ckeditor/ckeditor.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.richtextareaStatic1,'samples/sample.js')}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    
+    <script>
+        var editor = CKEDITOR.replace( 'editor1' );
+        // The "change" event is fired whenever a change is made in the editor.
+        editor.on( 'change', function( evt ) {
+        var text_value = evt.editor.getData();
+        var field_length = text_value.length;
+        console.log('text_value-->' + text_value );
+        $("[id*='hiddenField']").val(text_value);
+        });
+    </script>
+</apex:page>

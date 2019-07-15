@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Service --></label>
+    <name>Service_del__c</name>
+    <picklistValues>
+        <masterLabel>Analog Trunks</masterLabel>
+        <translation><!-- Analog Trunks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B1/POTS</masterLabel>
+        <translation><!-- B1/POTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centrex/Centranet</masterLabel>
+        <translation><!-- Centrex/Centranet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DIA T1 w/out router</masterLabel>
+        <translation><!-- DIA T1 w/out router --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DSL</masterLabel>
+        <translation><!-- DSL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dedicated PL</masterLabel>
+        <translation><!-- Dedicated PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EIA Metro-E</masterLabel>
+        <translation><!-- EIA Metro-E --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frame Relay</masterLabel>
+        <translation><!-- Frame Relay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IP Address Changes</masterLabel>
+        <translation><!-- IP Address Changes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IP Connect</masterLabel>
+        <translation><!-- IP Connect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ISDN BRI</masterLabel>
+        <translation><!-- ISDN BRI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ISDN PRI</masterLabel>
+        <translation><!-- ISDN PRI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Long Distance</masterLabel>
+        <translation><!-- Long Distance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIPT (area specific product)</masterLabel>
+        <translation><!-- MIPT (area specific product) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metro-E Upgrade</masterLabel>
+        <translation><!-- Metro-E Upgrade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Line DS1 (On-Net)</masterLabel>
+        <translation><!-- Private Line DS1 (On-Net) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIP Trunking</masterLabel>
+        <translation><!-- SIP Trunking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SONET</masterLabel>
+        <translation><!-- SONET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toll Free</masterLabel>
+        <translation><!-- Toll Free --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voice Mail &amp; additional Features on existing service</masterLabel>
+        <translation><!-- Voice Mail &amp; additional Features on existing service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winback</masterLabel>
+        <translation><!-- Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wireless Hot Spots</masterLabel>
+        <translation><!-- Wireless Hot Spots --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wireless Hot Spots1</masterLabel>
+        <translation><!-- Wireless Hot Spots1 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Discrepancy</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Discrepancies</value>
+    </caseValues>
+    <fields>
+        <label><!-- A15 Flag --></label>
+        <name>A15_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- ADR Flag --></label>
+        <name>ADR_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acquisition Code --></label>
+        <name>Acquisition_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Export/Domestic Code --></label>
+        <name>Actual_Export_Domestic_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Documentation Flag --></label>
+        <name>Additional_Documentation_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted EDD Prefix --></label>
+        <name>Adjusted_EDD_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted NIIN --></label>
+        <name>Adjusted_NIIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Quantity --></label>
+        <name>Adjusted_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Unit Price --></label>
+        <name>Adjusted_Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Value --></label>
+        <name>Adjusted_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Analyst Response Date --></label>
+        <name>Analyst_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Date to Analyst --></label>
+        <name>Assigned_Date_to_Analyst__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auto Resolve Flag --></label>
+        <name>Auto_Resolve_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- B. Order --></label>
+        <name>B_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancellation Flag --></label>
+        <name>Cancellation_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Claim Flag --></label>
+        <name>Carrier_Claim_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Claim Number --></label>
+        <name>Carrier_Claim_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Carrier Name --></label>
+        <name>Carrier_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Discrepancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Discrepancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cost Price --></label>
+        <name>Cost_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit   Flag --></label>
+        <name>Credit_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Memo Flag --></label>
+        <name>Credit_Memo_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit  Flag --></label>
+        <name>Debit_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Decision Description --></label>
+        <name>Decision_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery SCAC --></label>
+        <name>Delivery_SCAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy Order --></label>
+        <name>DiscrepacnyOrder__c</name>
+        <relationshipLabel><!-- Discrepancies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Discrepant NIIN --></label>
+        <name>Discrepant_NIIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepant Prefix --></label>
+        <name>Discrepant_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepant quantity --></label>
+        <name>Discrepant_quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dispose Flag --></label>
+        <name>Dispose_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Part Number Prefix --></label>
+        <name>EDD_Part_Number_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Prefix/Part Number --></label>
+        <name>EDD_Prefix_Part_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Req Number Suffix --></label>
+        <name>EDD_Req_Number_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Req Number --></label>
+        <name>EDD_Req_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Requisition Number --></label>
+        <name>EDD_Requisition_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- EDD Requisition Suffix --></label>
+        <name>EDD_Requisition_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Flag --></label>
+        <name>Email_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedite Shipment Flag --></label>
+        <name>Expedite_Shipment_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Freight Bill Number --></label>
+        <name>Freight_Bill_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- GBL --></label>
+        <name>GBL__c</name>
+    </fields>
+    <fields>
+        <label><!-- GSA Order Item Unit Cost --></label>
+        <name>GSA_Order_Item_Unit_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number Prefix --></label>
+        <name>Item_Number_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number Standard --></label>
+        <name>Item_Number_Standard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number Suffix --></label>
+        <name>Item_Number_Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Number --></label>
+        <name>Item_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Case Key --></label>
+        <name>Legacy_Case_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy case dtl Key --></label>
+        <name>Legacy_case_dtl_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- MRA Flag --></label>
+        <name>MRA_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manifest Number --></label>
+        <name>Manifest_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- NCSC Expedite Flag --></label>
+        <name>NCSC_Expedite_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- NIIN --></label>
+        <name>NIIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- NIIN resolved flag --></label>
+        <name>NIIN_resolved_flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Action Flag --></label>
+        <name>No_Action_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oder Ship Date --></label>
+        <name>Oder_Ship_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order NIIN/NSN --></label>
+        <name>Order_NIIN_NSN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Quantity --></label>
+        <name>Order_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Unit Price --></label>
+        <name>Order_Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Decision flag --></label>
+        <name>Other_Decision_flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- POD Flag --></label>
+        <name>POD_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO Number --></label>
+        <name>PO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pickup SCAC --></label>
+        <name>Pickup_SCAC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pickup SCAC name --></label>
+        <name>Pickup_SCAC_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Problem Description --></label>
+        <name>Problem_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Problem Type --></label>
+        <name>Problem_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- QC Net Number --></label>
+        <name>QC_Net_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quality Type --></label>
+        <name>Quality_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quality zone Flag --></label>
+        <name>Quality_zone_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Redeliver Flag --></label>
+        <name>Redeliver_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Req #/PO # --></label>
+        <name>Req_num_PO_num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reship  Flag --></label>
+        <name>Reship_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reshipped EDD Prefix --></label>
+        <name>Reshipped_EDD_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reshipped NIIN --></label>
+        <name>Reshipped_NIIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reshipped Quantity --></label>
+        <name>Reshipped_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retain N/C  Flag --></label>
+        <name>Retain_N_C_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Returned EDD Prefix --></label>
+        <name>Returned_EDD_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Returned NIIN --></label>
+        <name>Returned_NIIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Returned Quantity --></label>
+        <name>Returned_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Returned Value --></label>
+        <name>Returned_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sale Price --></label>
+        <name>Sale_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Session # --></label>
+        <name>Session_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Location Code --></label>
+        <name>Store_Location_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Location Description --></label>
+        <name>Store_Location_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Number --></label>
+        <name>Store_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surcharge Code --></label>
+        <name>Surcharge_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- TD Code --></label>
+        <name>TD_Code__c</name>
+        <picklistValues>
+            <masterLabel>00	CTC</masterLabel>
+            <translation><!-- 00	CTC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01	CANCELED, OUT OF STOCK</masterLabel>
+            <translation><!-- 01	CANCELED, OUT OF STOCK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02	TELEPHONE RFS&apos;S</masterLabel>
+            <translation><!-- 02	TELEPHONE RFS&apos;S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03	STOCK DIRECT DELIVERY</masterLabel>
+            <translation><!-- 03	STOCK DIRECT DELIVERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04	REFERRAL</masterLabel>
+            <translation><!-- 04	REFERRAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06	CANCELED, DISCONTINUED ITEM</masterLabel>
+            <translation><!-- 06	CANCELED, DISCONTINUED ITEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07	NON-STOCK, DIRECT DELIVERY</masterLabel>
+            <translation><!-- 07	NON-STOCK, DIRECT DELIVERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09	CANCELLATION</masterLabel>
+            <translation><!-- 09	CANCELLATION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10	STOCK ISSUE</masterLabel>
+            <translation><!-- 10	STOCK ISSUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11	STOCK ISSUE SUBSTITUTE</masterLabel>
+            <translation><!-- 11	STOCK ISSUE SUBSTITUTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15	SUPPLEMENTAL</masterLabel>
+            <translation><!-- 15	SUPPLEMENTAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20	BACK ORDER NORMAL</masterLabel>
+            <translation><!-- 20	BACK ORDER NORMAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>21	BACK ORDER SUBSTITUTE ITEM</masterLabel>
+            <translation><!-- 21	BACK ORDER SUBSTITUTE ITEM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22	BACK ORDER WAREHOUSE REFUSAL</masterLabel>
+            <translation><!-- 22	BACK ORDER WAREHOUSE REFUSAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>23	FUTURE DELIVERY, CREATION</masterLabel>
+            <translation><!-- 23	FUTURE DELIVERY, CREATION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>24	BACK ORDER ADMINISTRATIVE</masterLabel>
+            <translation><!-- 24	BACK ORDER ADMINISTRATIVE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>26	RECREATION OF PARTIAL BACK ORDER QUANTITY</masterLabel>
+            <translation><!-- 26	RECREATION OF PARTIAL BACK ORDER QUANTITY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30	STOCK BACKORDER RELEASE</masterLabel>
+            <translation><!-- 30	STOCK BACKORDER RELEASE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31	STOCK BACKORDER RELEASE SUBSTITUTE</masterLabel>
+            <translation><!-- 31	STOCK BACKORDER RELEASE SUBSTITUTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>33	FUTURE RELEASE NORMAL</masterLabel>
+            <translation><!-- 33	FUTURE RELEASE NORMAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40	STOCK REPLENDISHMENT</masterLabel>
+            <translation><!-- 40	STOCK REPLENDISHMENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>41	STOCK REPLENDISHMENT SUBSTITUTE</masterLabel>
+            <translation><!-- 41	STOCK REPLENDISHMENT SUBSTITUTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>48	DI CREATION, OTHER GOV&apos;T. (FPI,BMP,GPO,CP)</masterLabel>
+            <translation><!-- 48	DI CREATION, OTHER GOV&apos;T. (FPI,BMP,GPO,CP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80	REPOSITION STOCK REQUEST (WITHIN REGION)</masterLabel>
+            <translation><!-- 80	REPOSITION STOCK REQUEST (WITHIN REGION) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>81	ITW (INTER-WAREHOUSE TRANSFER)</masterLabel>
+            <translation><!-- 81	ITW (INTER-WAREHOUSE TRANSFER) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>82	CSC DISCREPANCIES</masterLabel>
+            <translation><!-- 82	CSC DISCREPANCIES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>88	STOCK ISSUE SELF SERVICE STORE BACKORDER</masterLabel>
+            <translation><!-- 88	STOCK ISSUE SELF SERVICE STORE BACKORDER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL</masterLabel>
+            <translation><!-- 90	INVENTORY VALUE ADJUSTMENT, INCREASE NORMAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>96	WAREHOUSE DENIALS</masterLabel>
+            <translation><!-- 96	WAREHOUSE DENIALS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>97	PSUEDO RECEIPTS</masterLabel>
+            <translation><!-- 97	PSUEDO RECEIPTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>98	MISDIRECTED FREIGHT</masterLabel>
+            <translation><!-- 98	MISDIRECTED FREIGHT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>99	BOWEN SPECIAL PROJECT</masterLabel>
+            <translation><!-- 99	BOWEN SPECIAL PROJECT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Timeframe Flag --></label>
+        <name>Timeframe_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>Tracking_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Code --></label>
+        <name>Unit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Contact Date --></label>
+        <name>Vendor_Contact_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Control Number --></label>
+        <name>Vendor_Control_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor DUNS Number --></label>
+        <name>Vendor_DUNS_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Email Date --></label>
+        <name>Vendor_Email_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Flag --></label>
+        <name>Vendor_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Invoice Number --></label>
+        <name>Vendor_Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Amount --></label>
+        <name>Vendor_Offset_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Flag --></label>
+        <name>Vendor_Offset_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Reverse Amount --></label>
+        <name>Vendor_Offset_Reverse_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Reverse Date --></label>
+        <name>Vendor_Offset_Reverse_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Reverse Flag --></label>
+        <name>Vendor_Offset_Reverse_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Offset Reverse User --></label>
+        <name>Vendor_Offset_Reverse_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Response Date --></label>
+        <name>Vendor_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Warranty Flag --></label>
+        <name>Warranty_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- hg --></label>
+        <name>hg__c</name>
+    </fields>
+    <layouts>
+        <layout>Discrepancy Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

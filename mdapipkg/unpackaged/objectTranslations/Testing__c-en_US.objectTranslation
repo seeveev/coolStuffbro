@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Testing</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Testings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formulae date cal --></label>
+        <name>Formulae_date_cal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+        <picklistValues>
+            <masterLabel>01</masterLabel>
+            <translation><!-- 01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02</masterLabel>
+            <translation><!-- 02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03</masterLabel>
+            <translation><!-- 03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04</masterLabel>
+            <translation><!-- 04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05</masterLabel>
+            <translation><!-- 05 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- computer parts --></label>
+        <name>OS_Type__c</name>
+        <picklistValues>
+            <masterLabel>IOS</masterLabel>
+            <translation><!-- IOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LINUX</masterLabel>
+            <translation><!-- LINUX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows</masterLabel>
+            <translation><!-- Windows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>apple headset</masterLabel>
+            <translation><!-- apple headset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>apple mointors</masterLabel>
+            <translation><!-- apple mointors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>apple mouse</masterLabel>
+            <translation><!-- apple mouse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>windows harddisk</masterLabel>
+            <translation><!-- windows harddisk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>windows keyboard</masterLabel>
+            <translation><!-- windows keyboard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- birth date --></label>
+        <name>birth_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- date --></label>
+        <name>date__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- final date --></label>
+        <name>final_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- processdate --></label>
+        <name>processdate__c</name>
+    </fields>
+    <fields>
+        <label><!-- year --></label>
+        <name>year__c</name>
+    </fields>
+    <layouts>
+        <layout>Testing Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>second layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- IOS --></label>
+        <name>IOS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Windows --></label>
+        <name>Windows</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

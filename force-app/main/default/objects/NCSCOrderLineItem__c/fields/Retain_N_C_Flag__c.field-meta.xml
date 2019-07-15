@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retain_N_C_Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source table: rod / csc_dtl
+Source column: rod_retain_nc_flg / csc_dtl_retain_nc_flg</description>
+    <externalId>false</externalId>
+    <label>Retain N/C  Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

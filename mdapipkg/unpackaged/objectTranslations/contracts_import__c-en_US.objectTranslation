@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>contracts import</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>contracts imports</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contract or Agreement --></label>
+        <name>Contract_or_Agreement__c</name>
+    </fields>
+    <fields>
+        <label><!-- title --></label>
+        <name>title__c</name>
+    </fields>
+    <fields>
+        <label><!-- url --></label>
+        <name>url__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

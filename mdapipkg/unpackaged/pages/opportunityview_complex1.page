@@ -1,0 +1,77 @@
+<apex:page standardController="Opportunity" tabStyle="Opportunity" extensions="OpportunityView_Complex1"> 
+
+<apex:form >
+    <apex:pageMessages />
+    <apex:pageBlock title="Opportunity Detail" mode="maindetail">    
+        <apex:pageBlockButtons location="top">
+            <apex:commandButton action="{!Edit}" id="editButton" value="Edit"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="2">
+            <apex:outputField value="{!Opportunity.Name}"/>
+            <apex:outputField value="{!Opportunity.CloseDate}"/>
+            <apex:outputField value="{!Opportunity.Accountid}"/>
+            <apex:outputField value="{!Opportunity.Type}"/>
+            <apex:outputField value="{!Opportunity.LeadSource}"/>
+            <apex:outputField value="{!Opportunity.RecordTypeid}"/>
+            <apex:outputField value="{!Opportunity.TotalOpportunityQuantity}"/>
+            <apex:outputField value="{!Opportunity.StageName}"/>
+            <apex:outputField value="{!Opportunity.Campaignid}"/>
+            <apex:outputField value="{!Opportunity.ForecastCategoryName}"/>
+            <apex:outputField value="{!Opportunity.Amount}"/>
+
+        </apex:pageBlockSection> 
+      <!--  <apex:pageBlockSection title="Manager Information" columns="2" >
+            <apex:outputField value="{!Opportunity.Mrg_Approved__c}"/>                  
+            <apex:outputField value="{!Opportunity.Mgr_Signed_Date__c}"/>                  
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Additional Information" columns="2" >
+        
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Description" columns="2" rendered="{!bolRecordType2}">
+            <apex:inputField value="{!Opportunity.Description}"/>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection title="Description" columns="2" >
+            <apex:outputField value="{!Opportunity.Description}"/>
+        </apex:pageBlockSection>--> 
+    </apex:pageblock>  
+
+    <apex:pageBlock title="Products">
+        <apex:pageblocktable value="{!lstOppLineItem }" var="oli" >
+        <apex:column >
+                <apex:outputlink value="/{!oli.id}"> View </apex:outputlink>
+            </apex:column>
+         <!--   <apex:column value="{!oli.CPE_NRC_Price__c}" headerValue="CPE NRC Price"/> -->
+            <apex:column value="{!oli.Quantity}" headerValue="Quantity"/>
+           
+            <apex:column value="{!oli.Term_months__c}" headerValue="Terms"/>
+          <!--  <apex:column value="{!oli.CPE_Gross_Margin__c}" headerValue="CPE Gross Margin"/> -->
+             <apex:column >
+                <apex:outputlink value="/{!oli.id}">{!oli.PricebookEntry.Name}</apex:outputlink>
+            </apex:column>
+        </apex:pageblocktable>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Quotes">
+        <apex:pageblocktable value="{!lstQuote}" var="oQ" >
+            <apex:column headerValue="Quote Name" >
+                
+       <!--         <apex:outputlink value="/apex/QuoteEdit_SterlingCPQ?qId={!oQ.id}&qName={!oQ.QuoteNumber}">{!oQ.Name}</apex:outputlink> -->
+                <apex:outputlink value="/{!oQ.id}">{!oQ.Name}</apex:outputlink>
+                
+            </apex:column>
+            
+            <apex:column value="{!oQ.QuoteNumber}" headerValue="Quote Number"/>
+            <apex:column value="{!oQ.ExpirationDate}" headerValue="Expiration Date"/>
+            <apex:column value="{!oQ.IsSyncing}" headerValue="Syncing"/>
+            <apex:column value="{!oQ.Discount}" headerValue="Discount"/>
+            <apex:column value="{!oQ.GrandTotal}" headerValue="Grand Total"/>
+            
+           
+        </apex:pageblocktable>
+    </apex:pageBlock>
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- View --></label>
+    <name>View__c</name>
+    <picklistValues>
+        <masterLabel>Account Hierarchy</masterLabel>
+        <translation><!-- Account Hierarchy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Location Hierarchy</masterLabel>
+        <translation><!-- Location Hierarchy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

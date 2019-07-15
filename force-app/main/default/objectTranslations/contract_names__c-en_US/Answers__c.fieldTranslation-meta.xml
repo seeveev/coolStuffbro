@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Answers --></label>
+    <name>Answers__c</name>
+    <relationshipLabel><!-- contracts --></relationshipLabel>
+</CustomFieldTranslation>

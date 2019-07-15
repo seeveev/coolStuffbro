@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dependebale__c</fullName>
+    <externalId>false</externalId>
+    <label>dependebale</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>checkbox__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>x</fullName>
+                <default>false</default>
+                <label>x</label>
+            </value>
+            <value>
+                <fullName>y</fullName>
+                <default>false</default>
+                <label>y</label>
+            </value>
+            <value>
+                <fullName>z</fullName>
+                <default>false</default>
+                <label>z</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>x</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

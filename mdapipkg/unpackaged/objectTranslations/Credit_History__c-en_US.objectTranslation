@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credit Historys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Holder DOB --></label>
+        <name>Account_DOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Account Rep --></label>
+        <name>Assigned_Ac_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Audit User ID --></label>
+        <name>Audit_User_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorized User DOB --></label>
+        <name>Authorized_DOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorized User Name --></label>
+        <name>Authorized_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Authorized User SS# --></label>
+        <name>Authorized_user_SS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bandruptcy Flag --></label>
+        <name>Bandruptcy_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Contact --></label>
+        <name>Billing_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Owner 1 Phone --></label>
+        <name>Busi_Owner_1_Ph__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Owner 2 Phone --></label>
+        <name>Busi_Owner_2_Ph__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Owner 1 --></label>
+        <name>Business_Owner_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Owner 2 --></label>
+        <name>Business_Owner_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- CBR # --></label>
+        <name>CBR__c</name>
+    </fields>
+    <fields>
+        <label><!-- CPNI Password Y/N --></label>
+        <name>CPNI_Y_N__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Authorization ID --></label>
+        <name>Cust_Auth_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer DL# --></label>
+        <name>Customer_DL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer SSN# --></label>
+        <name>Customer_SSN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Address --></label>
+        <name>Employer_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Name --></label>
+        <name>Employer_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Phone --></label>
+        <name>Employer_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guarantors Name --></label>
+        <name>Guarantors_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guarantors Phone --></label>
+        <name>Guarantors_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hire Date --></label>
+        <name>Hire_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hotspot/HSI # Info --></label>
+        <name>Hotspot_HSI_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord Name --></label>
+        <name>Landlord_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Landlord Phone --></label>
+        <name>Landlord_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Managers Name --></label>
+        <name>Managers_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Managers Phone# --></label>
+        <name>Managers_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 1B --></label>
+        <name>Misc_Info_1B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 1 --></label>
+        <name>Misc_Info_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 2B --></label>
+        <name>Misc_Info_2B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 2 --></label>
+        <name>Misc_Info_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 3B --></label>
+        <name>Misc_Info_3B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Misc Info 3 --></label>
+        <name>Misc_Info_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nearest Relative --></label>
+        <name>Nearest_Relative__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oth Adlt/Roommate 1 --></label>
+        <name>Oth_Adlt_Rmate_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oth Adlt/Roommate 2 --></label>
+        <name>Oth_Adlt_Rmate_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oth Adlt/Roommate 3 --></label>
+        <name>Oth_Adlt_Rmate_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oth Adlt/Roommate 4 --></label>
+        <name>Oth_Adlt_Rmate_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Phone --></label>
+        <name>Previous_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Red Flag --></label>
+        <name>Red_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Hotspot No --></label>
+        <name>Related_Hotspot_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relative Phone --></label>
+        <name>Relative_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relatives Address --></label>
+        <name>Relatives_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residence Info(Rent/Buy/Own) --></label>
+        <name>Residence_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship To Sub --></label>
+        <name>Rnship_To_Sub__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse DL# --></label>
+        <name>Spouse_DL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse DOB --></label>
+        <name>Spouse_DOB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse Employer Address --></label>
+        <name>Spouse_Emp_Add__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse Employer Name --></label>
+        <name>Spouse_Emp_Nme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse Name First --></label>
+        <name>Spouse_Nme_Frst__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse Name Last --></label>
+        <name>Spouse_Nme_Lst__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spouse SSN# --></label>
+        <name>Spouse_SSN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Social Security Number --></label>
+        <name>Ssn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type Of Business --></label>
+        <name>Type_Of_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vacation Reactivation Code --></label>
+        <name>Vacation_React_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3rd Party Notification Code --></label>
+        <name>x3rd_Party_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Credit History Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

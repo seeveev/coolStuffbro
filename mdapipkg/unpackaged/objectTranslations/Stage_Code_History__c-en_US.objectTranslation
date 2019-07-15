@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Stage Code History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stage Code Historys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library Id --></label>
+        <name>Library_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- New --></label>
+        <name>New__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Main Stage Code --></label>
+        <name>Next_Main__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Main Stage Code description --></label>
+        <name>Next_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old --></label>
+        <name>Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Id --></label>
+        <name>Order_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plant Trait --></label>
+        <name>Plant_Trait__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progr --></label>
+        <name>Progr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time --></label>
+        <name>Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- changed By --></label>
+        <name>changed_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- sequence Number --></label>
+        <name>sequence_Number__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

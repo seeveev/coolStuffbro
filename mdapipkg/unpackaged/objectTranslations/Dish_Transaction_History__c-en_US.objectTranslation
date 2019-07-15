@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dish Transaction History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dish Transaction Historys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Id --></label>
+        <name>Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Change date --></label>
+        <name>Change_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Changed By --></label>
+        <name>Changed_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dish S&amp;E Activity --></label>
+        <name>Dish_S_E_Act__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dish S&amp;E --></label>
+        <name>Dish_S_E__c</name>
+    </fields>
+    <fields>
+        <label><!-- Library id --></label>
+        <name>Library_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Dish Account Number --></label>
+        <name>Nw_Dish_Acct_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Dish Account Number --></label>
+        <name>Old_Dish_Acct_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- SO Number --></label>
+        <name>SO_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Seq_Number__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

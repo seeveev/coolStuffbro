@@ -1,0 +1,14 @@
+<apex:page controller="detailinfoController" showHeader="false" sidebar="false" >
+  <apex:form >
+      <apex:pageblock >
+            
+            <apex:pageBlockSection title="search results" collapsible="true" id="mySection">
+              <apex:pageBlockTable var="hir" value="{!Lsthier}">
+               <apex:column value="{!hir.BTN_Phone__c}" headerValue="Phone"/>
+                 <apex:column value="{!hir.billing_id__c}" headerValue="Billing id"/>
+                </apex:pageBlockTable>
+            <script>colorPageBlock(document.getElementById("{!$Component.srchinfo}"), "#1271F6");</script>
+               </apex:pageBlockSection>
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

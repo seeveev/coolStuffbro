@@ -1,0 +1,13 @@
+<apex:page >
+<apex:stylesheet value="/sCSS/21.0/sprites/1297816277000/Theme3/default/gc/versioning.css" />   
+<apex:stylesheet value="/sCSS/21.0/sprites/1297816277000/Theme3/default/gc/extended.css" />
+  <!-- Define Tab panel .css styles --> 
+    
+
+    <apex:tabPanel switchType="client" selectedTab="name2" id="AccountTabPanel"  tabClass="activeTab" inactiveTabClass="inactiveTab">
+       <br> <apex:tab label="One" name="name1" id="tabOne" labelWidth="100" status=""   > 
+        content for tab one</apex:tab></br>
+        <apex:tab label="Two" name="name2" id="tabTwo" labelWidth="100">
+        content for tab two</apex:tab>
+     </apex:tabPanel>
+</apex:page>

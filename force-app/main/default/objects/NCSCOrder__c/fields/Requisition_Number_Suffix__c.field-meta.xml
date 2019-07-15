@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requisition_Number_Suffix__c</fullName>
+    <description>Source table: rod 
+Source column: rod_req_sfx
+Web service name: Input to Order Service(FSS19)
+Web service field: N/A</description>
+    <externalId>false</externalId>
+    <label>Requisition Number Suffix</label>
+    <length>1</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
